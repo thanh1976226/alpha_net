@@ -1,0 +1,285 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title"> {{'HR_HR_MAN_CURD_TITLE_ADD_HR_MAN' | translate}}</div>
+</div>
+<div class="modal-body userFormAreaHeader" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal " method="post" ng-validate="validationOptions">
+            <div class="form-body pt-0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-12" >
+                                <div class="thumbnail pb-0" style="border: 0; box-shadow: none;background:none">
+                                    <input id="file" accept=".png,.jpg,.jpeg,.gif,.tif" type="file" style="display:none" />
+                                    <img id="imageId" ng-click="uploadImage()" class="img-circle h-200 w200" role="button" src="/images/default/uploadimg.png" alt="{{'HR_HR_MAN_CURD_LBL_HR_MAN_IMG' | translate}}" />
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center fs17">
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                <label class="control-label ">{{'HR_HR_MAN_LIST_COL_HR_MAN_AVATAR' | translate}}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_FULL_NAME' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.fullname" name="fullname" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_NAME' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorGender}">
+                            <div class="col-md-12">
+                                <i class="fa fa-key"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_SEX' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.gender" theme="bootstrap" on-select="changleSelect('gender')">
+                                        <ui-select-match placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_SEX' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat=" x.gender as x in checkGender | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.gender=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorGender" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_SEX' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <label class="control-label require ">{{'HR_HR_MAN_CURD_LBL_HR_MAN_DATE_OF_BIRTH' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class='input-group date' id='date-birthday'>
+                                    <input type='text' class="form-control input-date" name="birthday" ng-model="model.birthday" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_DATE_OF_BIRTH' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_PASSPORT' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.identitycard" name="identitycard" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_PASSPORT' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <label class="control-label">{{'HR_HR_MAN_CURD_LBL_HR_MAN_DATE_OF_ISSUE' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class='input-group date' id='dateto'>
+                                    <input type='text' class="form-control input-date" ng-model="model.identitycarddate" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_DATE_OF_ISSUE' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <label class="control-label">{{'HR_HR_MAN_CURD_LBL_HR_MAN_PLACE_OF_ISSUE' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.identitycardplace" name="identitycardplace" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_PLACE_OF_ISSUE' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorUnit}">
+                            <div class="col-md-12">
+                                <i class="fa fa-building-o"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_DEPARTMENT' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.unit" theme="bootstrap" on-select="changleSelect('unit')">
+                                        <ui-select-match placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_DEPARTMENT' | translate}}...">{{$select.selected.Title}}</ui-select-match>
+                                        <ui-select-choices repeat="x.GroupUserCode as x in treeDataunit | filter:$select.search">
+                                            {{x.Title}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.unit=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorUnit" class="label-color validation-message">
+                                  {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_DEPARTMENT' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorEmployeekind}">
+                            <div class="col-md-12">
+                                <i class="fa fa-tag"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_TYPE_OF_STAFF' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.employeekind" theme="bootstrap" on-select="changleSelect('employeekind')">
+                                        <ui-select-match placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_TYPE_OF_STAFF' | translate}}...">{{$select.selected.value}}</ui-select-match>
+                                        <ui-select-choices repeat="x.employeekind as x in loaihinhnhanvien | filter:$select.search">
+                                            {{x.value}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.employeekind=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorEmployeekind" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_TYPE_OF_STAFF' | translate}}
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group" ng-class="{ 'has-error': errorEmployeegroup}">
+                            <div class="col-md-12">
+                                <i class="fa fa-group"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_EMPLOYEE_GROUP' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.employeegroup" theme="bootstrap" on-select="changleSelect('employeegroup')">
+                                        <ui-select-match placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_EMPLOYEE_GROUP' | translate}}...">{{$select.selected.value}}</ui-select-match>
+                                        <ui-select-choices repeat="x.employeegroup as x in nhom | filter:$select.search">
+                                            {{x.value}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.employeegroup=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorEmployeegroup" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_EMPLOYEE_GROUP' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <label class="control-label">{{'HR_HR_MAN_CURD_LBL_HR_MAN_DOMICILE' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.birthofplace" name="Email" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_DOMICILE' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_ADDRESS' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.permanentresidence" name="permanentresidence" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_ADDRESS' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorphone}">
+                            <div class="col-md-12">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_PHONE' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type='text' class="form-control" name="phone" ng-model="model.phone" placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_PHONE' | translate}}..." ng-change="changleSelect('phone')" />
+                                <!--  <input type="text" class="form-control" ng-model="model.nationlaty" name="Email" placeholder="Quốc tịch..." />-->
+                                <span ng-show="errorphone" class="label-color validation-message">
+                                   {{'HR_HR_MAN_CURD_TXT_HR_MAN_PHONE' | translate}}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error': errorEmployeetype}">
+                            <div class="col-md-12">
+                                <i class="fa fa-joomla"></i>
+                                <label class="control-label require">{{'HR_HR_MAN_CURD_LBL_HR_MAN_EMPLOYEE_TYPE' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.employeetype" theme="bootstrap" on-select="changleSelect('employeetype')">
+                                        <ui-select-match placeholder="{{'HR_HR_MAN_CURD_COMBO_HR_MAN_EMPLOYEE_TYPE' | translate}}...">{{$select.selected.value}}</ui-select-match>
+                                        <ui-select-choices repeat="x.employeetype as x in kieunhanvien | filter:$select.search">
+                                            {{x.value}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.employeetype=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorEmployeetype" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_EMPLOYEE_TYPE' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                <label class="control-label">{{'HR_HR_MAN_CURD_LBL_HR_MAN_POSITION' | translate}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.position" theme="bootstrap">
+                                        <ui-select-match placeholder="{{'HR_HR_MAN_CURD_TXT_HR_MAN_POSITION' | translate}}...">{{$select.selected.Title}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in positionData | filter:$select.search">
+                                            {{x.Title}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.position=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr25" href="javascript:;">
+      {{'COM_BTN_ADD' | translate}}
+    </button>
+</div>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#file").change(function () {
+        readURL(this);
+    });
+</script>

@@ -1,0 +1,55 @@
+﻿<div id="contact-main" ng-controller="contact">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="mt-action-5">
+                <div class="col-md-3  form-group mr5 ">
+                    <label class="control-label">{{'SUP_CURD_TAB_CONTACT_LBL_CONTACTNAME' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.ContactName" class="form-control" type="text" placeholder="{{'SUP_CURD_TAB_CONTACT_TXT_CONTACTNAME' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ContactName='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <!--<div class="col-md-2  form-group mr5">
+                    <label class="control-label">Thư điện tử</label>
+                    <input ng-model="model.ContactEmail" class="form-control" type="text" placeholder="Thư điện tử..." />
+                </div>
+                <div class="col-md-2  form-group mr5">
+                    <label class="control-label">Số bàn</label>
+                    <input ng-model="model.ContactTelephone" class="form-control" type="text" placeholder="Số bàn..." />
+                </div>-->
+                <div class="col-md-3  form-group mr5">
+                    <label class="control-label">{{'SUP_CURD_TAB_CONTACT_LBL_CONTACTPHONE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.ContactMobilePhone" class="form-control" type="text" placeholder="{{'SUP_CURD_TAB_CONTACT_TXT_CONTACTPHONE' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ContactMobilePhone='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-2 pl-0 pt25">
+                    <button ng-click="search()" class="btn btn-accent">
+                        <i class="fa fa-search"></i>&nbsp;{{'COM_BTN_SEARCH' | translate}}
+                    </button>
+                </div>
+                <div class="col-lg-2 pl-0 pt25">
+                    <button ng-click="add()" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus"></i>&nbsp;{{'COM_BTN_ADD' | translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblData"></table>
+</div>
+

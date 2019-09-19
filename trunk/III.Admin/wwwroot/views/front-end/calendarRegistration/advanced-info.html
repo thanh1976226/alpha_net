@@ -1,0 +1,151 @@
+﻿<form method="post" name="forms.advancedForm" class="form-horizontal" ng-validate="validationOptions">
+    <div class="form-body">
+        <h4 class="form-section fw600 text-center">
+            <span class="pull-left">
+                <i class="fas fa-user-plus"></i> Thông tin bổ sung
+            </span>
+            <span class="pull-right" style="margin: -4px;padding: 5px 10px 0px 0px;">
+                <a ng-click="openMap()" title="Bản đồ" class="btn btn-circle btn-icon-only btn-round-red">
+                    <i class="fas fa-map-marker-alt fs15"></i>
+                </a>
+            </span>
+            <b style="font-size:x-large">Đăng ký lịch làm việc</b>
+        </h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Kỹ năng chính</label>
+                    <div class="col-md-12" style="padding: 0px">
+                        <div class="input-group" style="padding: 0px">
+                            <input type="text" class="form-control" id="mainSkill" placeholder="Kỹ năng chính..." ng-change="googleSearch('mainSkill')" ng-model="mainSkillStr" />
+                            <span class="input-group-btn">
+                                <button class="btn button-red" ng-click="addMainSkill()">Thêm</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="example example_markup">
+                        <div class="bs-example" id="main-skill">
+                            <input type="text" class="tag-input"  name="MainSkill" ng-model="modelInfoMore.MainSkill" value="" data-role="tagsinput">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Kỹ năng phụ</label>
+                    <div class="col-md-12" style="padding: 0px">
+                        <div class="input-group" style="padding: 0px">
+                            <input type="text" class="form-control" id="subSkill" placeholder="Kỹ năng phụ..." ng-change="googleSearch('subSkill')" ng-model="subSkillStr" />
+                            <span class="input-group-btn">
+                                <button class="btn button-red" ng-click="addSubSkill()">Thêm</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="example example_markup">
+                        <div class="bs-example" id="sub-skill">
+                            <input type="text" class="tag-input" name="SubSkill" ng-model="modelInfoMore.SubSkill" value="" data-role="tagsinput" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Thời gian thực tập(Nhập bằng chữ)</label>
+                    <input type="text" name="MainPracticeTime" class="form-control" placeholder="Thời gian thực tập..." ng-model="modelInfoMore.MainPracticeTime">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nơi làm việc</label>
+                    <input type="text" name="workplace" class="form-control" placeholder="Nơi làm việc..." ng-model="modelInfoMore.WorkPlace">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Thông tin laptop</label>
+                    <textarea type="text" name="LaptopInfo" class="form-control" ng-model="modelInfoMore.LaptopInfo" placeholder="Thông tin cấu hình laptop đang sử dụng..."></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Thông tin điện thoại</label>
+                    <textarea type="text" name="SmartphoneInfo" class="form-control" ng-model="modelInfoMore.SmartphoneInfo" placeholder="Thông tin cấu hình điện thoại đang sử dụng..."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="col-md-12 row">
+                        <label>Khả năng</label>
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="1">  &nbsp
+                        Lãnh đạo
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="2"> &nbsp
+                        Làm việc nhóm
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="3"> &nbsp
+                        Lắng nghe
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="4"> &nbsp
+                        Thuyết trình
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="5"> &nbsp
+                        Học và tự học
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="6"> &nbsp
+                        Giải quyết vấn đề
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="7"> &nbsp
+                        Tư duy sáng tạo
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="8"> &nbsp
+                        Giao tiếp
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Lương mong muốn</label>
+                    <input ng-model="modelInfoMore.SalaryHope" class="form-control" name="" placeholder="Nhập mức lương mong muốn..." num-thousand='true' awnum num-int='21'>
+                </div>
+                <div class="form-group">
+                    <label>Ngày bắt đầu làm</label>
+                    <div class='input-group date' id="can-join-date" data-provide="datepicker">
+                        <input ng-model="modelInfoMore.CanJoinDate" type='text' class="form-control" placeholder="Ngày bắt đầu làm việc" />
+                        <span class="input-group-addon" style="border: 1px solid #ccc; border-left: 0px">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right mt10">
+                <div class="btn-group pull-right actions">
+                    <a class="btn btn-default prev-step br4" ng-click="prevTab()">
+                        <span><i class="fas fa-arrow-left"></i>&nbsp;Quay lại</span>
+                    </a>
+                    <a class="btn btn-red ml10" ng-click="nextTab(2)">
+                        <span><i class="fas fa-arrow-right"></i>&nbsp;Tiếp tục</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

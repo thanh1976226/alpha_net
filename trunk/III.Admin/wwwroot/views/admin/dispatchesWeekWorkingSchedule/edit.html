@@ -1,0 +1,137 @@
+﻿<!--Start-datetimepicker-->
+<link href="../../../lib/assets/global/plugins/datetimepicker/material_icons/icon.css" rel="stylesheet" />
+<link href="../../../lib/assets/global/plugins/datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<link href="../../../lib/assets/global/plugins/datetimepicker/css/pmd-datetimepicker.css" rel="stylesheet" />
+<script src="../../../lib/assets/global/plugins/datetimepicker/language/bootstrap-datepicker.vi.js"></script>
+<script src="../../../lib/assets/global/plugins/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="../../../lib/assets/global/plugins/datetimepicker/js/moment-with-locales.js"></script>
+<!--End-datetimepicker-->
+<style>
+    .datepicker .active, .datepicker .active:hover, .datepicker table tr td.day:hover, .datepicker table tr td.focused, .datepicker table tr td.today {
+        background: none !important;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-edit icon-edit"></i>
+    <div class="modal-title custom-title" id="modal-title">{{'DWWS_TITLE_EDIT_EVENT' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="editform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <label class="control-label require">{{'DWWS_CURD_TAB_MANAGER_LBL_CHAIR' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" ng-model="model.Chair" name="Chair" placeholder="{{'DWWS_CURD_TAB_MANAGER_TXT_CHAIR' | translate}}..." />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.Chair=''" class="btn btn-default no-shadow">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            <label class="control-label require">{{'DWWS_CURD_TAB_MANAGER_LBL_CREATED_TIME' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="text" ng-model="model.CreatedTime" id="CreatedTime" name="CreatedTime" class="form-control" placeholder="{{'DWWS_CURD_TAB_MANAGER_TXT_CREATED_TIME' | translate}}..." />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.CreatedTime=''" class="btn btn-default no-shadow">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="far fa-clock" aria-hidden="true"></i>
+                            <label class="control-label">{{'DWWS_CURE_TAB_MANAGER_LBL_TIME_TO_START' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="text" ng-model="model.TimeStart" id="TimeStart" name="TimeStart" class="form-control" placeholder="{{'DWWS_CURE_TAB_MANAGER_TXT_TIME_TO_START' | translate}}..." />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.TimeStart=''" class="btn btn-default no-shadow">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="far fa-clock" aria-hidden="true"></i>
+                            <label class="control-label">{{'DWWS_CURD_TAB_MANAGER_LBL_END_TIME' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="text" ng-model="model.TimeEnd" id="TimeEnd" name="TimeEnd" class="form-control" placeholder="{{'DWWS_CURD_TAB_MANAGER_TXT_END_TIME' | translate}}..." />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.TimeEnd=''" class="btn btn-default no-shadow">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="fas fa-hospital-alt" aria-hidden="true"></i>
+                            <label class="control-label require">{{'DWWS_CURD_TAB_MANAGER_LBL_ROOM' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="text" class="form-control" ng-model="model.Room" name="Room" placeholder="{{'DWWS_CURD_TAB_MANAGER_TXT_ROOM' | translate}}..." />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.Room=''" class="btn btn-default no-shadow">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                            <label class="control-label require">{{'DWWS_CURD_TAB_MANAGER_LBL_PARTICIPANTS' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea class="form-control" placeholder="{{'DWWS_CURD_TAB_MANAGER_TXT_PARTICIPANTS' | translate}}..." name="Composition" rows="4" ng-model="model.Composition"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 text-right">
+                            <i class="fas fa-comments" aria-hidden="true"></i>
+                            <label class="control-label require">{{'DWWS_CURD_TAB_MANAGER_LBL_CONTENT' | translate}}</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea class="form-control" placeholder="{{'DWWS_CURD_TAB_MANAGER_TXT_CONTENT' | translate}}.." rows="6" ng-model="model.Content" name="Content"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-default" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-blue mr10" href="javascript:;">
+        {{'COM_BTN_EDIT' | translate}}
+    </button>
+</div>

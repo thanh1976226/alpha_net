@@ -1,0 +1,284 @@
+﻿<script type="text/javascript">
+    //quatrinhhoctaptaisubmit
+    // var buttons = document.getElementsByClassName('tablinks');
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    // var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent(id);
+        });
+    }
+    showContent('thongtinnguoilienhe');
+</script>
+<style type="text/css">
+
+
+    /*TAP NGANG */
+    /*quá trình học tập tại submit */
+    /* định dạng thẻ div chưa các button tab */
+    div.tab {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        margin-top: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+
+        /* định dạng các button tab */
+        div.tab button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+        margin-bottom: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+</style>
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color:aliceblue;padding-top:5px"></i> THÔNG TIN NGƯỜI LIÊN HỆ CỦA HỌC VIÊN</h3>
+</div>
+
+<div class="modal-footer" id="modal-footer">
+    <div class="tab">
+        <button class="tablinks active" name="thongtinnguoilienhe">Thông tin người liên hệ</button>
+        <button class="tablinks" name="lichsuthaydoi">Lịch sử thay đổi</button>
+
+    </div>
+    <div id="thongtinnguoilienhe" class="tabcontent">
+        <div class="portlet-body">
+            <div class="table-toolbar">
+
+                <div class="row" style="    padding-right: 13px;padding-left: 10px;">
+                    <DIV class="portlet-body form">
+                        <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions2">
+                            <div class="form-body">
+                                <div class=" col-md-6">
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Họ và tên</label>
+                                        <div class="col-md-8" style="height:45px;border:none">
+                                            <input type="text" class="form-control" ng-model="model.taxcode" name="taxcode" placeholder="Mã số thuế" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Công ty</label>
+                                        <div class="col-md-8" style="height:45px; border:none">
+                                            <input type="text" class="form-control" ng-model="model.bank" name="bank" placeholder="Tài khoản ngân hàng" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-user"></i> Di động</label>
+                                        <div class="col-md-8" style="height:45px; border:none">
+                                            <input type="text" class="form-control" ng-model="model.accountholder" name="accountholder" placeholder="Chủ tài khoản" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Email</label>
+                                        <div class="col-md-8" style="height:45px; border:none">
+                                            <input type="text" class="form-control" ng-model="model.accountnumber" name="accountnumber" placeholder="Số tài khoản" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Nghề nghiệp</label>
+                                        <div class="col-md-7 form-col-control" style=" border:none;    height: 45px;">
+                                            <div class="bs-component">
+                                                <div class="input-group col-md-12" style="height:45px; border:none">
+                                                    <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                        <ui-select-match placeholder="Nghề nghiệp...">{{$select.selected.cat_code}}</ui-select-match>
+                                                        <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                            {{x.cat_code}}
+                                                        </ui-select-choices>
+                                                    </ui-select>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;text-align:center;background-color:#dbd3d3;margin-left: -10px;   border: 1px solid #B8B8B8;" ng-click="submitQTLV()"><i class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="	glyphicon glyphicon-earphone"></i> Địa chỉ</label>
+                                        <div class="col-md-8" style="height:45px; border:none">
+                                            <input type="text" class="form-control" ng-model="model.nation" name="nation" placeholder="Dân tộc" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" col-md-6">
+
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Chức vụ</label>
+                                        <div class="col-md-7 form-col-control" style=" border:none;    height: 45px;">
+                                            <div class="bs-component">
+                                                <div class="input-group col-md-12" style="height:45px; border:none">
+                                                    <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                        <ui-select-match placeholder="Chức vụ...">{{$select.selected.cat_code}}</ui-select-match>
+                                                        <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                            {{x.cat_code}}
+                                                        </ui-select-choices>
+                                                    </ui-select>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;text-align:center;background-color:#dbd3d3;margin-left: -10px;   border: 1px solid #B8B8B8;" ng-click="submitQTLV()"><i class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="	glyphicon glyphicon-earphone"></i> Điện thoại nhà</label>
+                                        <div class="col-md-8" style="height:45px; border:none">
+                                            <input type="text" class="form-control" ng-model="model.phone" name="phone" placeholder="Điện thoại" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Quan hệ</label>
+                                        <div class="col-md-7 form-col-control" style=" border:none;    height: 45px;">
+                                            <div class="bs-component">
+                                                <div class="input-group col-md-12" style="height:45px; border:none">
+                                                    <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                        <ui-select-match placeholder="Quan hệ...">{{$select.selected.cat_code}}</ui-select-match>
+                                                        <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                            {{x.cat_code}}
+                                                        </ui-select-choices>
+                                                    </ui-select>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;text-align:center;background-color:#dbd3d3;margin-left: -10px;   border: 1px solid #B8B8B8;" ng-click="submitQTLV()"><i class="glyphicon glyphicon-plus"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Ghi chú</label>
+                                        <div class="col-md-8" style=" border:none">
+                                            <textarea rows="5" type="text" class="form-control" ng-model="model.educationallevel" name="educationallevel" placeholder="Trình độ văn hóa" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group pull-right" style="margin-top:10px;border:none; margin-right:12px">
+                                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Thêm mới</button>
+                                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+                                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="editQTLV()"><i class="fa fa-times"></i> Xoá bỏ</button>
+                                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px; " ng-click="submitQTLV()"><i class="fa fa-refresh"></i> Làm mới</button>
+                                    </div>
+                                </div>
+                                <!--<div class="col-md-12">
+
+                                </div>-->
+                                <div class=" col-md-12">
+                                    <table class="table dataTable table-bordered table-hover table-striped"
+                                           datatable
+                                           dt-options="dtOptions"
+                                           dt-columns="dtColumns"
+                                           dt-instance="dtInstance"
+                                           id="tblData"></table>
+                                </div>
+                                <!--<div class="col-md-12">
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-2 text-left"><i class="glyphicon glyphicon-th-large"></i> Địa chỉ</label>
+                                        <div class="col-md-10" style="height:45px;border:none">
+                                            <input type="text" class="form-control" ng-model="model.taxcode" name="taxcode" placeholder="Mã số thuế" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="border:none">
+                                        <label class="control-label col-md-2 text-left"><i class="glyphicon glyphicon-tint"></i> Ghi chú</label>
+                                        <div class="col-md-10" style="height:45px; border:none">
+                                            <input type="text" class="form-control" ng-model="model.bank" name="bank" placeholder="Tài khoản ngân hàng" />
+                                        </div>
+                                    </div>
+
+                                </div>-->
+                            </div>
+                        </form>
+                    </DIV>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="lichsuthaydoi" class="tabcontent">
+        <div class="portlet-body">
+            <div class="table-toolbar">
+
+                <div class="row" style="    padding-right: 13px;padding-left: 10px;">
+                    <DIV class="portlet-body form">
+                        <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions2">
+                            <div class="form-body">
+
+                                <div class="col-md-12">
+                                    <div class="form-group pull-left" style="margin-top:10px;border:none; margin-right:12px">
+                                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:137px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="submitQTLV()">Tên người liên hệ <i class="fa fa-caret-down"></i> </button>
+
+                                    </div>
+                                </div>
+                                <div class=" col-md-12">
+                                    <table class="table dataTable table-bordered table-hover table-striped"
+                                           datatable
+                                           dt-options="dtOptions"
+                                           dt-columns="dtColumns"
+                                           dt-instance="dtInstance"
+                                           id="tblData"></table>
+                                </div>
+
+                            </div>
+                        </form>
+                    </DIV>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+

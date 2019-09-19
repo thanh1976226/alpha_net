@@ -1,0 +1,231 @@
+﻿<style type="text/css">
+    .ui-select-match-close {
+        background-image: none;
+    }
+
+    .btn-system {
+        background-color: #37bc9b;
+        color: #ffffff;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+        .btn-system:hover {
+            color: #428bca;
+        }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <span class="modal-title" id="modal-title">Thêm Banner</span>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body" style="padding: 10px;">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Tiêu đề</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input class="form-control pTip-top-left-alt" data-val="true" data-val-required="Tiêu đề không được để trống" id="Title" name="Title" placeholder="Tiêu đề..." type="text">
+
+                            <!--<ui-select tagging ng-model="model.AssetCode" theme="bootstrap">
+                                <ui-select-match placeholder="{{'AA_CURD_COMBO_AA_ASSETCODE' | translate}}...">{{$select.selected.Code}} - {{$select.selected.Name}}</ui-select-match>
+                                <ui-select-choices repeat="x.Code as x in listAsset | filter: $select.search">
+                                    {{x.Code}} - {{x.Name}}
+                                </ui-select-choices>
+                            </ui-select>-->
+                            <!--<span class="input-group-btn">
+                                <button type="button" ng-click="model.AssetCode='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>-->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Link liên kết</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <textarea type="text" class="form-control" ng-model="model.ActNote" rows="4" name="Link liên kết" placeholder="Nhập link liên kết..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Mô tả</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <textarea type="text" class="form-control" ng-model="model.ActNote" rows="4" name="Mô tả" placeholder="Nhập mô tả..." />
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label">Ngày đăng</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group  date pick-datetime'>
+                            <span class="input-group-addon cursor">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input class="form-control" data-val="true" data-val-date="The field Ngày đăng must be a date." id="DatePost" name="DatePost" placeholder="Ngày đăng bài..." type="text" value="" />
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="DatePost" data-valmsg-replace="true"></span>
+                    </div>
+                </div>-->
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label">Thêm ảnh slider</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <div class="col-xs-6">
+                                <input data-val="true" data-val-required="Upload không được để trống" id="FileUpload" name="FileUpload" type="file" value="" style="position:absolute;visibility:hidden;" />
+                                <input class="btn btn-system btn-block" type="button" id="browseButton" value="Thêm ảnh từ máy" onclick="FileUpload.click()">
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="javascript:void(0);"
+                                   data-href="#modal-panel-frame"
+                                   class="btn btn-system btn-block"
+                                   data-event="popup-modal"
+                                   data-iframe-href="/assets/vendor/filemanager/dialog.php?type=1"
+                                   data-iframe-title="Responsive Filemanager"
+                                   data-iframe-height="500">
+                                    Browse server...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="fileupload-preview thumbnail mb20">
+                            <img data-src="holder.js/100%x200" style="text-align:center;height:auto" alt="holder">
+                        </div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="FileUpload" data-valmsg-replace="true"></span>
+
+                    </div>
+                </div>
+
+                <!--<div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">{{'AA_CURD_LBL_AA_ACTTITLE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input type="text" class="form-control" ng-model="model.ActTitle" name="ActTitle" placeholder="{{'AA_CURD_TXT_AA_ACTTITLE' | translate}}..." />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ActTitle='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Sắp xếp</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input type="text" class="form-control" ng-model="model.ActNote" rows="4" name="Sắp xếp" placeholder="Ordering..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Lựa chọn vị trí hiển thị</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <select class="form-control select2-single" id="Block" name="Block">
+                                <option value="">Lựa chọn block hiển thị</option>
+                                <option value="1">
+                                    Giữa của trang chủ
+                                </option>
+                                <option value="2">
+                                    Phía cuối bên phải của trang chủ
+                                </option>
+                                <option value="3">
+                                    Giữa của footer
+                                </option>
+                                <option value="4">
+                                    Phía cuối sidebar right
+                                </option>
+                                <option value="5">
+                                    Giữa sidebar right
+                                </option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Hiển thị</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <div class="bs-component">
+                                <div class="radio-custom mb5 radio-inline">
+                                    <input id="PublishedYes" name="Published" type="radio" value="True" />
+                                    <label for="PublishedYes">Yes</label>
+                                </div>
+                                <div class="radio-custom mb5 radio-inline">
+                                    <input id="PublishedNo" name="Published" type="radio" value="False" />
+                                    <label for="PublishedNo">No</label>
+                                </div>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">{{'AA_CURD_LBL_AA_ACTNOTE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" ng-model="model.ActNote" rows="4" name="Mô tả" placeholder="{{'AA_CURD_TXT_AA_ACTNOTE' | translate}}..." />
+                    </div>
+                </div>-->
+
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <!--<a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>-->
+    <div class="btn-group actions d-flex pull-right">
+        <div class="text-center pl20">
+            <a class="btn btn-icon-only btn-circle btn-outline green-custom" ng-click="submit()" href="javascript:;">
+                <span><i class="fa fa-plus"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+        </div>
+        <div class="text-center pl20">
+            <a class="btn btn-icon-only btn-circle btn-outline red-custom" ng-click="cancel()">
+                <span><i class="fa fa-close"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_CANCEL' | translate}}</p>
+        </div>
+    </div>
+</div>

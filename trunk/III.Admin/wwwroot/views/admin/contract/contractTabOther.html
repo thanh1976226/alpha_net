@@ -1,0 +1,24 @@
+﻿<div ng-controller="contractTabOther">
+    <!--<div class="row">
+        <form name="searchform" method="post" ng-validate="validationOptions">
+            <div class="col-md-2">
+                <div class="col-md-12">
+                    <ui-select tagging ng-model="currency.selected" theme="bootstrap">
+                        <ui-select-match placeholder="Chọn mã hợp đồng...">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="x in ContractCode | filter: $select.search">
+                            {{x}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </form>
+    </div>-->
+    <div style="background-color: #fff; border-radius: 5px;">
+        <table class="table dataTable table-hover table-striped"
+               datatable
+               dt-options="dtOptions"
+               dt-columns="dtColumns"
+               dt-instance="dtInstance"
+               id="tblDataContractOther"></table>
+    </div>
+</div>

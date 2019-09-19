@@ -1,0 +1,461 @@
+﻿<!--<link rel="stylesheet" href="../../css/cardJob/edit-tag.css" />
+<link rel="stylesheet" href="../../css/cardJob/board.css" />-->
+<link href="../../../css/admin/cardJob/edit-tag.css" rel="stylesheet" />
+<link href="../../../css/admin/cardJob/board.css" rel="stylesheet" />
+<style>
+    .bs-example {
+        margin: 200px 150px 0;
+    }
+
+    .popover-title {
+        text-transform: initial !important;
+    }
+
+        .popover-title .close {
+            position: relative;
+            bottom: 3px;
+        }
+
+    .btn.btn-mention {
+        border: 0;
+        background: transparent;
+        box-shadow: none !important;
+    }
+
+        .btn.btn-mention:hover {
+            border: 0;
+            background: #ccc;
+            box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.18) !important;
+        }
+
+    .btn.btn-close {
+        background-color: transparent;
+        border: 0;
+        box-shadow: none !important;
+    }
+
+        .btn.btn-close:hover {
+            background-color: #f1f1f1 !important;
+        }
+
+    input[type=checkbox]:checked + label.strikethrough {
+        text-decoration: line-through;
+        font-style: italic;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    .tag-people {
+        border-top: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        float: right !important;
+        margin-right: 2px;
+        width: 95%;
+    }
+
+        .tag-people div {
+            padding: 5px 5px;
+        }
+
+    .edit-check-item {
+        width: 95%;
+    }
+
+    .labelbodergroup {
+        margin-left: 24px;
+        margin-top: -12px;
+        position: absolute;
+        background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+        border: 1px solid #e9dada;
+        border-radius: 4px;
+        font-size: 11px;
+        padding: 3px 10px !important;
+    }
+
+    .table-toolbar {
+        background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+        border-radius: 4px !important;
+        border: 1px solid #e9dada;
+        padding-top: 15px;
+        box-shadow: 0px 5px 10px 2px rgba(127, 143, 166,0.2) !important;
+        padding-bottom: 15px;
+    }
+
+    .b-w {
+        background: #fff !important;
+    }
+
+    .c-w {
+        color: #fff;
+    }
+
+    /*thead {
+        border: 1px solid #CCC;
+        border-collapse: collapse;
+    }*/
+
+    table.dataTable thead th {
+        border-bottom: 1px solid #ccc !important;
+    }
+
+    th.sorting_disabled {
+        padding: 0px !important;
+        border-bottom: 1px solid #ccc !important;
+    }
+
+    table.dataTable thead tr th {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .ui-select-container {
+        width: 100%;
+        height: 35px;
+    }
+
+        .ui-select-container .ui-select-match {
+            width: 100%;
+        }
+
+    .ui-select-choices-row {
+        width: 100%;
+    }
+
+    .row.header {
+        background-color: #f1f1f1;
+    }
+
+    .pen body {
+        padding-top: 50px;
+    }
+
+    /* MODAL FADE LEFT RIGHT BOTTOM */
+    .modal.fade:not(.in).left .modal-dialog {
+        -webkit-transform: translate3d(-25%, 0, 0);
+        transform: translate3d(-25%, 0, 0);
+    }
+
+    .modal.fade:not(.in).right .modal-dialog {
+        -webkit-transform: translate3d(25%, 0, 0);
+        transform: translate3d(25%, 0, 0);
+    }
+
+    .modal.fade:not(.in).bottom .modal-dialog {
+        -webkit-transform: translate3d(0, 25%, 0);
+        transform: translate3d(0, 25%, 0);
+    }
+
+    .modal.right .modal-dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
+
+    .modal.left .modal-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+        .modal.left .modal-dialog.modal-sm {
+            max-width: 300px;
+        }
+
+    .modal.left .modal-content, .modal.right .modal-content {
+        border: 0;
+    }
+
+    #sidebar-left .modal-content {
+        height: 400px;
+    }
+
+    .readonly {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+</style>
+<div class="pb10 pl10 pr10">
+    <div class="row modal-header header">
+        <div class="inline pull-left" ng-if="model.CardLevel != null">
+            <img src="/images/cardJob/{{model.CardLevel}}.png" style="height: 40px" />
+        </div>
+        <div class="col-md-11 p0 ml10">
+            <div class="category-detail-header" ng-mouseup="editingCardetailHeader(model.CardID)" ng-show="!acticeDetailDrag"></div>
+            <input class="category-title black" id="card_{{model.CardID}}" style="width: 100%; font-size: 20px !important" type="text" data-currentvalue="{{model.CardName}}" value="{{model.CardName}}" ng-blur="updateCardName(model.CardID)" />
+            <div class="col-md-12" ng-if="!ParamNull" style="font-size: 12px">
+                <span class="gray">trong danh sách <a class="gray">{{model.ListCode}}</a></span>
+                <span class="ml10" ng-if="model.DueDate != null">Hạn chót: {{model.DueDate | date:"dd/MM/yyyy 'lúc' h:mma"}}</span>
+            </div>
+        </div>
+        <div class="inline pull-right mr5">
+            <a class="" ng-click="cancel()">
+                <img src="/images/default/close.png" style="width: 25px; height: 25px" />
+            </a>
+        </div>
+    </div>
+    <style>
+        .ui-select-bootstrap .ui-select-toggle {
+            border-bottom-right-radius: 4px !important;
+            border-top-right-radius: 4px !important;
+        }
+    </style>
+    <div class="row" style="padding: 10px 20px 0px 20px">
+        <div class="col-md-8 p0" ng-class="{readonly: ParamNull == true}">
+            <div class="col-md-12 p0">
+                <div class="col-md-4 pl-0">
+                    <label class="control-label mt5">Kiểu công việc</label>
+                    <ui-select tagging ng-model="model.WorkType" on-select="changeWorkType(model.WorkType)" theme="bootstrap">
+                        <ui-select-match placeholder="Chọn kiểu công việc...">{{$select.selected.Value}}</ui-select-match>
+                        <ui-select-choices repeat="x.Code as x in WorkTypes | filter: $select.search">
+                            {{x.Value}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-4 pl-0">
+                    <label class="control-label mt5">Cấp độ thẻ</label>
+                    <ui-select tagging ng-model="model.CardLevel" on-select="changeCardLevel(model.CardLevel)" theme="bootstrap">
+                        <ui-select-match placeholder="Cấp độ thẻ...">{{$select.selected.Value}}</ui-select-match>
+                        <ui-select-choices repeat="x.Code as x in CardLevels | filter: $select.search">
+                            {{x.Value}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+                <div class="col-md-4 pl-0">
+                    <label class="control-label mt5">Trạng thái thẻ</label>
+                    <ui-select tagging ng-model="model.Status" on-select="changeCardStatus(model.Status)" theme="bootstrap">
+                        <ui-select-match placeholder="Trạng thái thẻ...">{{$select.selected.Value}}</ui-select-match>
+                        <ui-select-choices repeat="x.Code as x in CardStatus | filter: $select.search">
+                            {{x.Value}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+            <div class="col-md-12 p0 mt5">
+                <div ng-if="model.Labels != '' && model.Labels != null">
+                    <h3>Nhãn</h3>
+                    <div class="list-color mt5">
+                        <div class="color" ng-repeat="label in model.Labels.split(';')">
+                            <button class="btn" style="background-color: #{{label}}"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p0 mt5">
+                <label>Mô tả</label>
+                <textarea class="form-control" ng-blur="editDescription()" rows="4" ng-model="model.Description" placeholder="Thêm mô tả chi tiết hơn..."></textarea>
+            </div>
+            <div class="col-md-12 p0 mt20" ng-if="attachments.length > 0">
+                <label class="labelbodergroup" style=""><b>Các tập tin đính kèm</b></label>
+                <div class="table-toolbar table_toolbar">
+                    <div class="col-md-12" ng-repeat="attachment in attachments" style="padding-left: 25px;">
+                        <div class="col-md-12 p0">
+                            <div class="col-md-12">
+                                <label class="bold"><a title="{{attachment.FileName}}" target="_blank" href="{{attachment.FileUrl}}">{{attachment.FileName.substring(0, 50)}}<span ng-if="attachment.FileName.length > 50">...</span></a></label>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="gray">{{attachment.CreatedTime | date: "dd/MM/yyyy 'lúc' h:mma"}} - {{attachment.MemberId}} - <a ng-click="deleteAttachment(attachment.FileCode)" class="gray">Xóa</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p0 mt5" ng-repeat="checklist in checklists">
+                <div class="table-toolbar">
+                    <div class="col-md-12 p0 pl10 pr15" ng-init="show.addCheckItem[checklist.ChkListCode] = false; show.editCheckTitle[checklist.ChkListCode] = false" style="font-size: 15px;">
+                        <i class="fa fa-check-square-o inline"></i>
+                        <input ng-if="show.editCheckTitle[checklist.ChkListCode]" checkcode="{{checklist.ChkListCode}}" ng-blur="editCheckTitle($event)" class="form-control bold ml5 inline" style="width: 85%" value="{{checklist.CheckTitle}}" />
+                        <label ng-if="!show.editCheckTitle[checklist.ChkListCode]" ng-click="show.editCheckTitle[checklist.ChkListCode] = true" class="bold ml5">{{checklist.CheckTitle}}</label>
+                        <span class="pull-right" ng-if="!show.editCheckTitle[checklist.ChkListCode]"><a class="gray" ng-click="deleteCheckList(checklist.ChkListCode)">Xóa...</a></span>
+                    </div>
+                    <div class="col-md-12 pl20" ng-init="show.editCheckItem[checkitem.Id] = false" ng-repeat="checkitem in checkList[checklist.ChkListCode]">
+                        <input class="form-control inline" ng-checked="checkitem.Status == 1" ng-click="checkItemClick(checkitem.Id)" style="width: 18px; height: 18px" type="checkbox" />
+                        <input type="text" class="form-control inline edit-check-item" itemid="{{checkitem.Id}}" ng-blur="editCheckItemTitle($event)" ng-if="show.editCheckItem[checkitem.Id]" value="{{checkitem.Title}}" />
+                        <label class="strikethrough inline" ng-if="!show.editCheckItem[checkitem.Id]" ng-click="show.editCheckItem[checkitem.Id] = true">{{checkitem.Title}}</label>
+                        <label ng-if="checkitem.MemberChecked != null && checkitem.MemberChecked != '' && !show.editCheckItem[checkitem.Id]">({{checkitem.MemberChecked}}-{{checkitem.TimeChecked | date: "dd/MM/yyyy"}})</label>
+                        <a ng-if="!show.editCheckItem[checkitem.Id]" ng-click="deleteCheckItem(checkitem.Id)" class="pull-right">Xóa</a>
+
+                    </div>
+                    <div class="col-md-12 pl25 mt20" ng-if="show.addCheckItem[checklist.ChkListCode]">
+                        <textarea class="form-control" placeholder="Thêm mục..." ng-model="checkitem.Title"></textarea>
+                        <div class="row mt5">
+                            <div class="col-md-6">
+                                <button class="btn green-dark bold" ng-click="addCheckItem(checklist.ChkListCode)">Thêm</button>
+                                <button class="btn btn-close" ng-click="show.addCheckItem[checklist.ChkListCode] = false"><span class="fa fa-times"></span></button>
+                            </div>
+                            <!--<div class="col-md-6">
+                                <button class="btn btn-mention">@</button>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-md-12 pl25 mt20" ng-if="!show.addCheckItem[checklist.ChkListCode]">
+                        <a class="gray" ng-click="show.addCheckItem[checklist.ChkListCode] = true">Thêm mục...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 p0 mt5">
+                <!--<label class="labelbodergroup" style=""><b>Bình luận</b></label>-->
+                <div class="table-toolbar p-0">
+                    <div class="col-md-12 p10 mb10">
+                        <!--<div class="input-group">-->
+                        <input class="form-control comment" ng-keydown="($event.keyCode == 13) && addComment()" ng-model="comment.Content" placeholder="Viết bình luận..." />
+                        <!--<span class="input-group-addon b-w" ng-click="addComment()">
+                            Lưu
+                        </span>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="active-detail pl10 pr10" ng-repeat="cmt in comments">
+                        <div class="active-title">
+                            <span class="member-initials">
+                                <span>{{cmt.MemberId[0]}}</span>
+                            </span>
+                        </div>
+                        <div class="active-time" ng-init="show.editComment[cmt.CmtId] = false">
+                            <b>{{cmt.MemberId}}</b>
+                            <span style="color:#8c8c8c">{{cmt.CreatedTime | date: "dd/MM/yyyy 'lúc' h:mma"}}</span>
+                        </div>
+                        <div class="active-body pl35">
+                            <textarea class="form-control" style="height: 40px" cmtid="{{cmt.CmtId}}" ng-blur="updateComment($event)" ng-if="show.editComment[cmt.CmtId]" autofocus>{{cmt.CmtContent}}</textarea>
+                            <p ng-if="!show.editComment[cmt.CmtId]"> {{cmt.CmtContent}}  <a class="pull-right" ng-click="deleteComment(cmt.CmtId)">Xóa</a> <a class="pull-right mr5" ng-click="show.editComment[cmt.CmtId] = true">Chỉnh sửa</a></p>
+                            <p class="line" style="color:#8c8c8c" ng-if="cmt.UpdatedTime != null">Chỉnh sửa: {{cmt.UpdatedTime | date: "dd/MM/yyyy 'lúc' h:mma"}} Bởi: {{cmt.UpdatedBy}}</p>
+                        </div>
+                        <hr style="border-top: 1px solid #d6dadc; margin-top: 0 !important" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="clearfix">
+                <div ng-if="show.SelectCard">
+                    <label class="control-label mt5">Bảng</label>
+                    <ui-select tagging ng-model="model.BoardCode" on-select="boardSelect(model.BoardCode)" theme="bootstrap">
+                        <ui-select-match placeholder="Chọn bảng...">{{$select.selected.BoardName}}</ui-select-match>
+                        <ui-select-choices repeat="x.BoardCode as x in Boards | filter: $select.search">
+                            {{x.BoardName}}
+                        </ui-select-choices>
+                    </ui-select>
+                    <label class="control-label mt5">Danh sách</label>
+                    <ui-select tagging ng-model="model.ListCode" on-select="listSelect(model.ListCode)" theme="bootstrap">
+                        <ui-select-match placeholder="Chọn danh sách...">{{$select.selected.Name}}</ui-select-match>
+                        <ui-select-choices repeat="x.Code as x in Lists | filter: $select.search">
+                            {{x.Name}}
+                        </ui-select-choices>
+                    </ui-select>
+                    <div ng-if="show.Options">
+                        <label>
+                            <input type="radio" ng-model="SelectOptions" value="0" name="Options" /> Chọn thẻ
+                        </label>
+                        <label>
+                            <input type="radio" ng-model="SelectOptions" value="1" name="Options" /> Tạo mới
+                        </label>
+                        <ui-select tagging ng-if="SelectOptions == 0" ng-model="model.CardCode" on-select="cardSelect(model.CardCode)" theme="bootstrap">
+                            <ui-select-match placeholder="Chọn thẻ...">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in Cards | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <input ng-if="SelectOptions == 1" ng-keydown="($event.keyCode == 13) && addCard($event)" class="form-control" placeholder="Tên thẻ..." />
+                    </div>
+
+                </div>
+
+                <div ng-class="{readonly: ParamNull == true}">
+                    <button class="btn" ng-click="addMember()">
+                        <i class="fa fa-user"></i>
+                        Nhóm/Thành viên
+                    </button>
+                    <button class="btn" ng-click="objectRelative()">
+                        <i class="fa fa-user"></i>
+                        Đối tượng liên quan
+                    </button>
+                    <button class="btn" ng-click="addLabel()">
+                        <i class="fa fa-tag"></i>
+                        Nhãn ưu tiên
+                    </button>
+                    <button class="btn" ng-click="addCheckList()">
+                        <i class="fa fa-check"></i>
+                        Điều mục công việc
+                    </button>
+                    <button class="btn" ng-click="addDueDate()">
+                        <i class="fa fa-clock-o"></i>
+                        Ngày hết hạn
+                    </button>
+                    <button class="btn" ng-click="addAttachment()">
+                        <i class="fa fa-file"></i>
+                        Đính kèm
+                    </button>
+                </div>
+            </div>
+            <h3 class="bold mt20" ng-class="{readonly: ParamNull == true}">THAO TÁC</h3>
+            <div ng-class="{readonly: ParamNull == true}">
+                <button class="btn btn-red text-left" style="width: 100%" ng-click="deleteCard(model.CardID)">
+                    <span class="fa fa-remove c-w"></span>
+                    Xóa thẻ này
+                </button>
+                <!--<button class="btn btn-accent text-left mt5" style="width: 100%" data-backdrop="false" data-toggle="modal" data-target="#sidebar-left">
+                    Chọn thẻ khác
+                </button>-->
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-class="{readonly: ParamNull == true}">
+        <div class="col-md-12">
+            <div class="portlet light bordered mt5 portlet-body pt-0" style="overflow-x: visible">
+                <table id="data-table" style="width: 100%" class="display"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="modal fade left" id="sidebar-left" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="width: 20px; height: 20px; color: red;text-indent: unset;" class="close" data-dismiss="modal"><span class="fa fa-times"></span></button>
+                <h4 class="modal-title">Danh sách thẻ</h4>
+            </div>
+            <div class="modal-body pt-0 pr-0 pl-0">
+                <div class="col-md-12 p0">
+                    <div class="col-md-12 mt10">
+                        <input class="form-control" ng-model="search.CardName" placeholder="Tìm thẻ..." />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="control-label mt5">Chọn bảng</label>
+                        <ui-select tagging ng-model="model.CardLevel" on-select="changeCardLevel(model.CardLevel)" theme="bootstrap">
+                            <ui-select-match placeholder="Cấp độ thẻ...">{{$select.selected.Value}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in CardLevels | filter: $select.search">
+                                {{x.Value}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="col-md-12 p0 scrollbar-sm" style="overflow-y:scroll;">
+                        <div class="col-md-12 p0 mt15 boards" ng-repeat="list in model.lists">
+                            <div class="col-md-12">
+                                <b style="color: {{list.HeaderColor}}">{{list.ListName}}</b>
+                            </div>
+                            <div class="col-md-12 p0">
+                                <div ng-repeat="x in cards[list.ListCode] | filter: search">
+                                    <div class="col-md-12 p0 mt5 pl5 pr5">
+                                        <div class="col-xs-12 p0" style="line-height: 30px;">
+                                            <div class="col-xs-12 p0" style="border-radius: 5px;">
+                                                <div class="col-xs-8 col-xs-offset-1 pl-0 pr-0 cursor" style="height: 100%" ng-click="changeCard(x.CardCode)">
+                                                    <b>{{x.CardName}}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->

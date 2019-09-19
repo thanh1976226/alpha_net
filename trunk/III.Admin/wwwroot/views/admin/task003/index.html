@@ -1,0 +1,1180 @@
+﻿<script type="text/javascript">
+
+    // var buttons = document.getElementsByClassName('tablinks');
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    // var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent(id);
+        });
+    }
+    showContent('giaovien');
+
+
+
+    var buttons1 = document.getElementsByClassName('tablinks1');
+    var contents1 = document.getElementsByClassName('tabcontent1');
+    function showContent1(id) {
+        for (var i = 0; i < contents1.length; i++) {
+            contents1[i].style.display = 'none';
+        }
+        var content1 = document.getElementById(id);
+        content1.style.display = 'block';
+    }
+    for (var i = 0; i < buttons1.length; i++) {
+        buttons1[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons1.length; i++) {
+                buttons1[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent1(id);
+        });
+    }
+
+    showContent1('thidaukhoa');
+
+
+
+
+
+    var buttons2 = document.getElementsByClassName('tablinks2');
+    var contents2 = document.getElementsByClassName('tabcontent2');
+    function showContent2(id) {
+        for (var i = 0; i < contents2.length; i++) {
+            contents2[i].style.display = 'none';
+        }
+        var content2 = document.getElementById(id);
+        content2.style.display = 'block';
+    }
+    for (var i = 0; i < buttons2.length; i++) {
+        buttons2[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons2.length; i++) {
+                buttons2[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent2(id);
+        });
+    }
+
+    showContent2('thidaukhoa');
+
+
+
+
+
+    $(document).ready(function () {
+        $("#1").click(function () {
+            $("#1").hide();
+        });
+        $("#1").click(function () {
+            $("#1").show();
+        });
+    });
+
+
+</script>
+<style type="text/css">
+    div.container {
+        width: 100%;
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+    /* định dạng thẻ div chưa các button tab */
+    div.tab {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+
+        /* định dạng các button tab */
+        div.tab button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+
+
+
+
+    div.container1 {
+        width: 100%;
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+    /* định dạng thẻ div chưa các button tab */
+    div.tab1 {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+
+        /* định dạng các button tab */
+        div.tab1 button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab1 button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks1.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent1 {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+
+    /*tab lịch học*/
+
+    div.container2 {
+        width: 100%;
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+    /* định dạng thẻ div chưa các button tab */
+    div.tab2 {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+
+        /* định dạng các button tab */
+        div.tab2 button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab2 button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks2.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent2 {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+
+
+
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title" style="font-weight:bold"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color:aliceblue;padding-top:5px"></i> CHI TIẾT THÔNG TIN LỚP HỌC </h3>
+</div>
+
+
+<div class="modal-body no-space" id="modal-body">
+
+    <div class="portlet-body">
+        <div class="table-toolbar">
+
+            <div class="row" style="    margin:10px">
+                <!--<div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Thông tin tìm kiếm</h3>
+                </div>-->
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Thông tin</h3>
+                </div>
+
+
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                        <div class="row">
+                            <DIV class="portlet-body form">
+                                <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                    <div class="form-body">
+                                        <div class="col-md-12">
+                                            <div class="form-group pull-right" style="border:none;   margin: 10px 11px 0px 0px;">
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; text-align:center;height:34px;background-color:#dbd3d3" ng-click="subdfgmit()"><i class="fa fa-plus"></i> Tệp tin điểm</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;text-align:center;height:34px;background-color:#dbd3d3" ng-click="dfg()"><i class="fa fa-plus"></i> Danh sách học viên</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Lưu</button>
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-6">
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Chọn trình độ</label>
+                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12">
+                                                            <ui-select ng-model="model.idcrouse" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Loại khoá học...">{{$select.selected.course_name}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataCourse | filter:$select.course_name">
+                                                                    {{x.course_name}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Tên khoá học</label>
+                                                <div class="col-md-8" style="height:40px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.name" name="name" placeholder="Tên khóa học" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Mã khoá học</label>
+                                                <div class="col-md-8" style="height:40px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.code" name="code" placeholder="Mã khóa học" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Ngày bắt đầu</label>
+                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker2">
+                                                        <input type="text" class="form-control" ng-model="model.datestart" name="datestart" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                                    $('#datetimepicker2').datetimepicker();
+
+                                                </script>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Ngày kết thúc</label>
+                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker3">
+                                                        <input type="text" class="form-control" ng-model="model.dateend" name="dateend" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                                    $('#datetimepicker3').datetimepicker();
+
+                                                </script>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Địa điểm</label>
+                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12">
+                                                            <ui-select ng-model="model.location_id" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Địa điểm...">{{$select.selected.name}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataLocation | filter:$select.name| filter:$select.search">
+                                                                    {{x.name}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Trạng thái</label>
+                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12">
+                                                            <ui-select ng-model="model.status" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Trạng thái...">{{$select.selected.value}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.code as x in treedataStatus | filter:$select.value| filter:$select.search">
+                                                                    {{x.value}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Lịch học</label>
+                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                    <div class="bs-component">
+                                                        <div ng-dropdown-multiselect="" options="example13data" selected-model="example13model" extra-settings="example13settings"></div>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-bottom:10px;margin-top:10px;height:114px;background-color:white;overflow:scroll">
+                                                <div class="tab2">
+                                                    <button class="tablinks2" name="2" >Thứ 2</button>
+                                                    <button class="tablinks2" name="3" >Thứ 3</button>
+                                                    <button class="tablinks2" name="4">Thứ 4</button>
+                                                    <button class="tablinks2" name="5">Thứ 5</button>
+                                                    <button class="tablinks2" name="6">Thứ 6</button>
+                                                    <button class="tablinks2" name="7">Thứ 7</button>
+                                                    <button class="tablinks2" name="8">Chủ nhật</button>
+                                                </div>
+                                                <div id="2" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart2" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend2" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id3" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div id="3" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart3" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend3" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id3" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div id="4" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart4" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend4" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id4" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div id="5" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart5" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend5" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id5" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div id="6" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart6" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend6" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id6" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="7" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart7" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend7" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id7" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div id="8" class="tabcontent2">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Từ giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolstart8" name="schoolstart" placeholder="Mã trường" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Đến giờ</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.schoolend8" name="schoolend" placeholder="Tên trường" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Phòng học</label>
+                                                                                                <div class="col-md-8">
+                                                                                                    <input type="text" class="form-control" ng-model="model.classroom_id8" name="classroom_id" placeholder="Phòng học" />
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer" id="modal-footer" style="margin-top:-16PX;border:none">
+                                                <div class="tab">
+                                                    <button class="tablinks active" name="giaovien">Giáo viên</button>
+
+                                                </div>
+                                                <div id="giaovien" class="tabcontent">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="padding-bottom: 5px;">
+
+                                                                <div class="col-md-12 pull-right" style="margin-top:0px;height:33px;margin-right:24px">
+                                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:34px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="addGV()"><i class="fa fa-plus"></i></button>
+                                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:34px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> </button>
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions2">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+
+
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Từ ngày</label>
+                                                                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker7">
+                                                                                                        <input type="text" class="form-control" ng-model="model.birthday" name="birthday" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                                                                            <i class="fa fa-calendar"></i>
+                                                                                                        </span>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    $('#datetimepicker7').datetimepicker();
+
+                                                                                                </script>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Đến ngày</label>
+                                                                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker8">
+                                                                                                        <input type="text" class="form-control" ng-model="model.birthday" name="birthday" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                                                                            <i class="fa fa-calendar"></i>
+                                                                                                        </span>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    $('#datetimepicker8').datetimepicker();
+
+                                                                                                </script>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Giáo viên</label>
+                                                                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                                                                    <div class="bs-component">
+                                                                                                        <div class="input-group col-md-12">
+                                                                                                            <ui-select ng-model="model.teacher_id" class="" ui-select-required>
+                                                                                                                <ui-select-match placeholder="Giáo viên...">{{$select.selected.cat_code}}</ui-select-match>
+                                                                                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value| filter:$select.search">
+                                                                                                                    {{x.cat_code}}
+                                                                                                                </ui-select-choices>
+                                                                                                            </ui-select>
+
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                             
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Kỹ năng</label>
+                                                                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                                                                    <div class="bs-component">
+                                                                                                        <div class="input-group col-md-12">
+                                                                                                            <ui-select ng-model="model.skills" class="" ui-select-required>
+                                                                                                                <ui-select-match placeholder="Kỹ năng...">{{$select.selected.name}}</ui-select-match>
+                                                                                                                <ui-select-choices repeat="x.name as x in treedataSkills | filter:$select.name| filter:$select.search">
+                                                                                                                    {{x.name}}
+                                                                                                                </ui-select-choices>
+                                                                                                            </ui-select>
+
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Lịch dạy</label>
+                                                                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                                                                    <div class="bs-component">
+                                                                                                        <div class="input-group col-md-12">
+                                                                                                            <!--<ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                                                                                <ui-select-match placeholder="Lịch học...">{{$select.selected.cat_code}}</ui-select-match>
+                                                                                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                                                                                    {{x.cat_code}}
+                                                                                                                </ui-select-choices>
+                                                                                                            </ui-select>-->
+                                                                                                          
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="margin-bottom:48px;height:50px">
+
+                                                                                                
+                                                                                            </div>
+
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+                                            </div>
+
+                                        </div>
+                                        <div class=" col-md-6">
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-certificate"></i> Số học viên</label>
+                                                <div class="col-md-8" style="height:40px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.numberstudent" name="numberstudent" placeholder="Số học viên" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Học phí</label>
+                                                <div class="col-md-8" style="height:40px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.fee" name="fee" placeholder="Học phí" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Ưu đãi</label>
+                                                <div class="col-md-8" style="height:40px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.sale_off_price" name="sale_off_price" placeholder="Ưu đãi" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Từ ngày</label>
+                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker4">
+                                                        <input type="text" class="form-control" ng-model="model.start_sale_off" name="start_sale_off" placeholder="Ưu đãi từ ngày" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                                    $('#datetimepicker4').datetimepicker();
+
+                                                </script>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Đến ngày</label>
+                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker5">
+                                                        <input type="text" class="form-control" ng-model="model.end_sale_off" name="end_sale_off" placeholder="Ưu đãi đến ngày" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                                    $('#datetimepicker5').datetimepicker();
+
+                                                </script>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Người tạo</label>
+                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12">
+                                                            <ui-select ng-model="model.userid" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Người tạo...">{{$select.selected.cat_code}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                                    {{x.cat_code}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none;margin-bottom: 55px;">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Ghi chú</label>
+                                                <div class="col-md-8" style="height:40px; border:none">
+                                                    <textarea rows="3" type="text" class="form-control" ng-model="model.sale_off_note" name="sale_off_note" placeholder="Ghi chú" />
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-footer" id="modal-footer" style="margin-top:-16PX;border:none">
+                                                <div class="tab1">
+                                                    <button class="tablinks1 active" name="thidaukhoa">Thi đầu khoá</button>
+                                                    <button class="tablinks1 " name="thigiuakhoa">Thi giữa khoá</button>
+                                                    <button class="tablinks1" name="thicuoikhoa">Thi cuối khoá</button>
+                                                    <button class="tablinks1" name="test">Test</button>
+                                                </div>
+                                                <div id="thidaukhoa" class="tabcontent1" style="height: 426px;">
+                                                    <div class="portlet-body">
+                                                        <div class="table-toolbar">
+                                                            <div class="row" style="padding-bottom: 5px;">
+
+                                                                <div class="col-md-12 pull-right" style="margin-top:0px;height:33px;margin-right:24px">
+                                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:34px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i></button>
+                                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:34px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> </button>
+
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="row" style="    margin:1px">
+                                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                                    <div class="table-toolbar" style="background-color:#f8f5f1;">
+                                                                        <div class="row">
+                                                                            <DIV class="portlet-body form">
+                                                                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions2">
+                                                                                    <div class="form-body">
+
+                                                                                        <div class=" col-md-12">
+
+
+
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Ngày bắt đầu</label>
+                                                                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker2">
+                                                                                                        <input type="text" class="form-control" ng-model="model.birthday" name="birthday" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                                                                            <i class="fa fa-calendar"></i>
+                                                                                                        </span>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    $('#datetimepicker2').datetimepicker();
+
+                                                                                                </script>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Ngày kết thúc</label>
+                                                                                                <div class="bs-component col-md-8" style="height: 40px;border:none">
+                                                                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker3">
+                                                                                                        <input type="text" class="form-control" ng-model="model.birthday" name="birthday" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                                                                            <i class="fa fa-calendar"></i>
+                                                                                                        </span>
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                                <script>
+                                                                                                    $('#datetimepicker3').datetimepicker();
+
+                                                                                                </script>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Kỹ năng</label>
+                                                                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                                                                    <div class="bs-component">
+                                                                                                        <div class="input-group col-md-12">
+                                                                                                            <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                                                                                <ui-select-match placeholder="Địa điểm...">{{$select.selected.cat_code}}</ui-select-match>
+                                                                                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                                                                                    {{x.cat_code}}
+                                                                                                                </ui-select-choices>
+                                                                                                            </ui-select>
+
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none">
+                                                                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Lần thi</label>
+                                                                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                                                                    <div class="bs-component">
+                                                                                                        <div class="input-group col-md-12">
+                                                                                                            <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                                                                                <ui-select-match placeholder="Trạng thái...">{{$select.selected.cat_code}}</ui-select-match>
+                                                                                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                                                                                    {{x.cat_code}}
+                                                                                                                </ui-select-choices>
+                                                                                                            </ui-select>
+
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group" style="border:none;margin-bottom:10px">
+                                                                                                <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Người tạo</label>
+                                                                                                <div class="col-md-8 form-col-control" style="height:40px; border:none">
+                                                                                                    <div class="bs-component">
+                                                                                                        <div class="input-group col-md-12">
+                                                                                                            <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                                                                                <ui-select-match placeholder="Trạng thái...">{{$select.selected.cat_code}}</ui-select-match>
+                                                                                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                                                                                    {{x.cat_code}}
+                                                                                                                </ui-select-choices>
+                                                                                                            </ui-select>
+
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!--<table class="table dataTable table-bordered table-hover table-striped"
+                                                                                                   datatable
+                                                                                                   dt-options="dtOptions"
+                                                                                                   dt-columns="dtColumns"
+                                                                                                   dt-instance="dtInstance"
+                                                                                                   id="tblData" style="width:100%"></table>-->
+
+
+                                                                                        </div>
+
+
+
+
+                                                                                    </div>
+                                                                                </form>
+                                                                            </DIV>
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!--<div class=" col-md-12">-->
+                                                                <!--</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            </DIV>
+                        </div>
+                        <div class="modal-header" style="    background-color: #f7f4f4;border:none">
+                            <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Bảng theo dõi lịch sử lớp học</h3>
+                        </div>
+                        <table class="table dataTable table-bordered table-hover table-striped"
+                               datatable
+                               dt-options="dtOptions"
+                               dt-columns="dtColumns"
+                               dt-instance="dtInstance"
+                               id="tblData" style="width:100%"></table>
+
+
+
+                    </div>
+                </div>
+                <!--<div class=" col-md-12">-->
+                <!--</div>-->
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

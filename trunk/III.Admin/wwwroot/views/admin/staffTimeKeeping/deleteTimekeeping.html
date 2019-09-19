@@ -1,0 +1,23 @@
+﻿<div class="modal-header">
+    <div class="modal-title" id="modal-title">{{'STK_TITTLE_CONFIRM' | translate}}</div>
+</div>
+<div class="modal-body pb-0" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="row">
+                    <div>{{'COM_MSG_DELETE_CONFIRM_COM' | translate}}</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button ng-click="submit()" class="btn btn-primary">
+        {{'COM_BTN_CONFIRM' | translate}}
+    </button>
+    <a data-dismiss="modal" class="btn  btn-default " href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+</div>
+

@@ -1,0 +1,55 @@
+﻿<div ng-controller="projectTabNote">
+    <div class="row">
+        <form name="addformprojectnote" method="post" ng-validate="validationOptionsNote">
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <div class="input-group">
+                        <input ng-model="model.Title" class="form-control" type="text" placeholder="{{'PROJECT_CURD_TAB_NOTE_TXT_TITLE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Title=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group mb5">
+                    <div class="input-group">
+                        <ui-select tagging ng-model="model.Tags" theme="bootstrap" on-select="changleSelect('MemberCode')">
+                            <ui-select-match placeholder="{{'PROJECT_CURD_TAB_NOTE_COMBO_TAGS' | translate}}...">{{$select.selected.UserName}}</ui-select-match>
+                            <ui-select-choices repeat="x.Id as x in listUser | filter: $select.search">
+                                {{x.UserName}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Tags=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <button ng-click="search()" class="btn btn-accent">
+                    <i class="fa fa-search"></i>
+                    {{'COM_BTN_SEARCH' | translate}}
+                </button>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <button ng-click="add()" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus"></i>
+                        {{'COM_BTN_ADD' | translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataNote"></table>
+</div>

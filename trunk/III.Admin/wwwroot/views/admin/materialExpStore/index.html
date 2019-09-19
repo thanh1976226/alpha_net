@@ -1,0 +1,93 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">{{'MES_TITLE_EXPSTORE' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'MES_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/EDMSMaterialImpStore">{{'MES_LINK_EXPSTORE' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group pull-right actions">
+                <a class="btn btn-accent btnSearch">
+                    <i class="fa fa-search"></i>
+                   {{'COM_BTN_SEARCH' | translate}}
+                </a>
+                <a ng-click="add()" class="btn btn-green">
+                    <i class="fa fa-plus"></i>
+                   {{'COM_BTN_ADD' | translate}}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="portlet light bordered input-search mb5 hidden">
+        <div class="portlet-body">
+            <img class="pull-right h28 w28 close-input-search" role="button" title="{{'MES_CURD__TITLE_CLOSE_EXPSTORE' | translate}}" src="/images/default/close.png" />
+            <div class="row pt5 mb5">
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'MES_CURD_LBL_EXPSTORE_CODE' | translate}}</label>
+                    <div class='input-group date'>
+                        <input ng-model="model.ExpCode" class="form-control" type="text" placeholder="{{'MES_CURD_TXT_EXPSTORE_CODE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ExpCode=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'MES_CURD_LBL_EXPSTORE_NAME_WAREHOUSE' | translate}}</label>
+                    <div class='input-group date'>
+                        <input ng-model="model.StoreName" class="form-control" type="text" placeholder="{{'MES_CURD_TXT_EXPSTORE_NAME_WAREHOUSE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.StoreName=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'MES_CURD_LBL_EXPSTORE_DATE_START' | translate}}</label>
+                    <div class='input-group date'>
+                        <input type='text' class="form-control input-date" ng-model="model.FromTo" placeholder="{{'MES_CURD_TXT_EXPSTORE_DATE_START' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" id='FromTo' />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.FromTo=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'MES_CURD_LBL_EXPSTORE_DATE_END' | translate}}</label>
+                    <div class='input-group date'>
+                        <input type='text' class="form-control input-date" ng-model="model.DateTo" placeholder="{{'MES_CURD_TXT_EXPSTORE_DATE_END' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" id='DateTo' />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.DateTo=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn-group pull-right pt10">
+                        <a class="btn btn-accent" ng-click="search()">
+                            <span class=""><i class="fa fa-search"></i> {{'COM_BTN_SEARCH' | translate}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>

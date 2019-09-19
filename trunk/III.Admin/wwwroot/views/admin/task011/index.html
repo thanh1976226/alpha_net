@@ -1,0 +1,61 @@
+﻿
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title" style="font-weight:bold"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color: #e9edf0;padding-top:5px"></i> Mạng Xã Hội</h3>
+</div>
+<div class="modal-body no-space" id="modal-body">
+
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="fa fa-facebook-official"></i> Facebook</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.facebook" name="facebook" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="fa fa-tumblr-square"></i> Twitter</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.twitter" name="twitter" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="fa fa-wordpress"></i> Wordpress</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.wordpress" name="wordpress" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="fa fa-skype"></i> Skype</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.sky" name="sky" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="fa fa-google-plus-square"></i> Google</label>
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" ng-model="model.google" name="google" placeholder="" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="fa fa-info-circle"></i> Other</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.other" name="other" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="modal-footer">
+            <div class="form-group">
+                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;height:34px;background-color:#dbd3d3;    margin-right: 15px;" ng-click="edit()"><i class="fa fa-plus"></i> Cập nhật</button>
+            </div>
+        </div>
+
+    </div>
+</div>

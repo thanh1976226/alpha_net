@@ -1,0 +1,35 @@
+﻿@using ESEIM.Utils
+@{
+    ViewData["Title"] = "Lịch phỏng vấn";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout_Admin.cshtml";
+}
+@section plugin_script{
+    @*
+        <script src="~/views/edmsWorkTracking/js/fullcalendar.min.js"></script>*@
+    @*
+        <script src="~/js/fullcalendar.min.js"></script>*@
+    @*<script src="~/js/admin/cardjob/fullcalendar.min.js"></script>*@
+    <script src="~/lib/assets/global/plugins/fullcalendar-3.9.0/fullcalendar.min.js"></script>
+
+
+    @*
+        <script src="~/lib/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>*@
+
+}
+@section plugin_style{
+    @*<link href="~/views/admin/CalendarInterview/css/plugin.css" rel="stylesheet">*@
+    <link href="~/lib/assets/global/plugins/fullcalendar-3.9.0/fullcalendar.min.css" rel="stylesheet">
+
+    @*<link href="~/views/edmsWorkTracking/css/main.css" rel="stylesheet">*@
+    @*<link rel="stylesheet" href="~/views/admin/calendarInterview/dist/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="~/views/admin/calendarInterview/css/custom.css">*@
+    @*<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet">*@
+
+
+}
+
+<div id="contentMain" ng-app="App_ESEIM" ng-controller="Ctrl_ESEIM">
+    <div ng-view></div>
+</div>
+<script src="~/views/admin/calendarInterview/controller.js" type="text/javascript"></script>

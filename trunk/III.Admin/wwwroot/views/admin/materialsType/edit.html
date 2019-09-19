@@ -1,0 +1,80 @@
+﻿<!--style-->
+<style type="text/css">
+    .ui-select-match-item {
+        background: #fff;
+    }
+
+    .ui-select-match-close {
+        background-image: none;
+    }
+
+    .list-user input {
+        border: 0 !important;
+    }
+
+    .form-group {
+        margin-bottom: 5px !important;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-edit icon-edit "></i>
+    <div class="modal-title  custom-title " id="modal-title">{{'MATERIAL_TYPE_TITLE_EDIT' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body pt5">
+                <div class="form-group">
+                    <div class="col-lg-4">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <label class="control-label">{{'MATERIAL_TYPE_CURD_LBL_PARENT_ID' | translate}}</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <ui-select tagging ng-model="model.ParentId" theme="bootstrap">
+                            <ui-select-match placeholder="{{'MATERIAL_TYPE_CURD_TXT_PARENT_ID' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Id as x in Types | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label require">{{'MATERIAL_TYPE_CURD_LBL_CODE' | translate}}</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" ng-model="model.Code" name="Code" placeholder="{{'MATERIAL_TYPE_CURD_TXT_CODE' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label require">{{'MATERIAL_TYPE_CURD_LBL_NAME' | translate}}</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" ng-model="model.Name" name="Name" placeholder="{{'MATERIAL_TYPE_CURD_TXT_NAME' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label">{{'MATERIAL_TYPE_CURD_LBL_DESCRIPTON' | translate}}</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <textarea class="form-control" ng-model="model.Description" placeholder="{{'MATERIAL_TYPE_CURD_TXT_DESCRIPTON' | translate}}..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_EDIT' | translate }}
+    </button>
+</div>

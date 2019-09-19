@@ -1,0 +1,243 @@
+﻿<style>
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">{{'MES_CURD__TITLE_ADD_EXPSTORE' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body" style="padding-top:0px">
+                <div class="row mt-action-5">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label require">{{'MES_CURD_LBL_EXPSTORE_CODE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.ExpCode" name="ExpCode" placeholder="{{'MES_CURD_TXT_EXPSTORE_CODE' | translate}}..." ng-readonly="ExpCode !=''"/>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorSupplierId}">
+                            <div class="col-md-4">
+                                <i class="fa fa-cube"></i>
+                                <label class="control-label require">{{'MES_CURD_LBL_EXPSTORE_SUPPLIER NAME' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <ui-select tagging ng-model="model.SupplierId" theme="bootstrap" on-select="changleSelect('SupplierId')">
+                                    <ui-select-match placeholder="{{'MES_CURD_TXT_EXPSTORE_SUPPLIER NAME' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in SupplierData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorSupplierId" class="label-color validation-message">
+                                   {{'MES_CURD_VALIDATE_EXPSTORE_NAMEPRODUCT' | translate}}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error': errorUserId}">
+                            <div class="col-md-4">
+                                <i class="fas fa-user"></i>
+                                <label class="control-label require">{{'MES_CURD_LBL_EXPSTORE_REPRESENTATIVE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <ui-select tagging ng-model="model.UserId" theme="bootstrap" on-select="changleSelect('UserId')">
+                                    <ui-select-match placeholder="{{'MES_CURD_TXT_EXPSTORE_REPRESENTATIVE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in UserData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorUserId" class="label-color validation-message">
+                                    {{'MES_CURD_VALIDATE_EXPSTORE_REPREDENTATIVE' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-dollar-sign"></i>
+                                <label class="control-label ">{{'MES_CURD_LBL_EXPSTORE_TAX' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.Vat" name="Vat" placeholder="%" num-thousand='true' awnum num-int='21' />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-dollar-sign"></i>
+                                <label class="control-label ">{{'MES_CURD_LBL_EXPSTORE_PAID' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.TotalPayed" name="TotalPayed" placeholder="{{'MES_CURD_TXT_EXPSTORE_PAID' | translate}}..." num-thousand='true' awnum num-int='21' />
+                            </div>
+                        </div><div class="form-group">
+                            <div class="col-md-4">
+                                <i class="far fa-money-bill-alt"></i>
+                                <label class="control-label">{{'MES_CURD_LBL_EXPSTORE_TATAL' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.Total" name="Total" placeholder="{{'MES_CURD_TXT_EXPSTORE_TATAL' | translate}}..." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="far fa-money-bill-alt"></i>
+                                <label class="control-label">{{'MES_CURD_LBL_EXPSTORE_TATAL_PAYMENT' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.TotalPayment" name="TotalPayment" placeholder="{{'MES_CURD_TXT_EXPSTORE_TATAL_PAYMENT' | translate}}..." disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-user"></i>
+                                <label class="control-label ">{{'MES_CURD_LBL_EXPSTORE_NAME_CARRIER' | translate}}n</label>
+                            </div>
+                            <div class="col-md-8">
+                                <ui-select tagging ng-model="model.ShipperId" theme="bootstrap">
+                                    <ui-select-match placeholder="{{'MES_CURD_TXT_EXPSTORE_NAME_CARRIER' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in UserData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorStoreId}">
+                            <div class="col-md-4">
+                                <i class="fa fa-truck"></i>
+                                <label class="control-label require">{{'MES_CURD_LBL_EXPSTORE_NAME_WAREHOUSE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <ui-select tagging ng-model="model.StoreId" theme="bootstrap" on-select="changleSelect('StoreId')">
+                                    <ui-select-match placeholder="{{'MES_CURD_TXT_EXPSTORE_NAME_WAREHOUSE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in StoreData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorStoreId" class="label-color validation-message">
+                                    {{'MES_CURD_VALIDATE_EXPSTORE_WAREHOUSE' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-calendar"></i>
+                                <label class="control-label">{{'MES_CURD_LBL_EXPSTORE_TIME_INSURRANCE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='InsurantTime'>
+                                    <input type='text' class="form-control input-date" autocomplete="off" style="height: 33px;" name="InsurantTime" ng-model="model.InsurantTime" placeholder="{{'MES_CURD_TXT_EXPSTORE_TIME_INSURRANCE' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-calendar"></i>
+                                <label class="control-label require">{{'MES_CURD_LBL_EXPSTORE_DATE_CREATE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='TimeImpCreate'>
+                                    <input type='text' class="form-control input-date" autocomplete="off" style="height: 33px;" name="TimeImpCreate" ng-model="model.TimeImpCreate" placeholder="{{'MES_CURD_TXT_EXPSTORE_DATE_CREATE' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-dollar-sign"></i>
+                                <label class="control-label ">{{'MES_CURD_LBL_EXPSTORE_DEBT' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="checkbox-default pl5 pb10">
+                                    <input id="checkbox5" type="checkbox" ng-model="model.Debt" disabled>
+                                    <label for="checkbox5">
+                                    </label>
+                                </div>
+                                <!-- <input type="text" class="form-control" ng-model="model.Barcode" name="Barcode" placeholder="Mã vạch..." />-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-comment"></i>
+                                <label class="control-label ">{{'MES_CURD_LBL_EXPSTORE_NOTE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <textarea type="text" class="form-control" ng-model="model.Note" rows="6" placeholder="{{'MES_CURD_TXT_EXPSTORE_NOTE' | translate}}..." name="Note"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="pull-right mr15 user-mt">
+                        <a ng-click="submit()" class="btn btn-green " href="javascript:;">
+                            <i class="fa fa-plus"></i>&nbsp;{{'COM_BTN_ADD' | translate}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row " ng-click="chkSubTab()">
+            <div class="col-md-12"  ng-class="{'disabled-element' :ExpCode =='' }">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item active">
+                        <a class="nav-link tablinks" name="description" id="detail-tab" data-toggle="tab" href="#detail" role="tab" aria-controls="detail" aria-selected="true">{{'MES_CURD_TITLE_DETAILS_INPUTS_EXPSTORE' | translate}}</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="detail">
+                        <div class="row">
+                            <form name="addformDetail" method="post" ng-validate="validationOptionsDetail">
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <input ng-model="model.Attribute" name="Attribute" class="form-control" type="text" placeholder="{{'MES_CURD_TXT_EXPSTORE_CODE' | translate}}..." />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <ui-select tagging ng-model="model.UserId" theme="bootstrap" on-select="changleSelect('UserId')">
+                                            <ui-select-match placeholder="--{{'MES_CURD_LBL_EXPSTORE_UNIT' | translate}}--">{{$select.selected.Name}}</ui-select-match>
+                                            <ui-select-choices repeat="x.Id as x in UserData | filter: $select.search">
+                                                {{x.Name}}
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-accent">
+                                            <i class="fa fa-search mr5"></i>
+                                           {{'COM_BTN_SEARCH' | translate}}
+                                        </button>
+                                        <button type="submit" class="btn btn-green">
+                                            <i class="fa fa-plus mr5"></i>
+                                            {{'COM_BTN_ADD' | translate}}
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <table class="table dataTable table-hover table-striped"
+                               datatable
+                               dt-options="dtOptions"
+                               dt-columns="dtColumns"
+                               dt-instance="dtInstance"
+                               id="tblDataDetail"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

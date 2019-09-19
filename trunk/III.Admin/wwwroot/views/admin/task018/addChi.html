@@ -1,0 +1,199 @@
+﻿
+
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title" style="font-weight:bold"><i class="glyphicon glyphicon-plus" style="font-size: 18px;color: #e9edf0;"></i> THANH TOÁN PHIẾU THU CHI HỌC VIÊN</h3>
+</div>
+<div class="modal-body no-space" id="modal-body">
+
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions2">
+            <div class="form-body">
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Địa điểm</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_code" name="cat_code" placeholder="Địa điểm" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Loại phiếu</label>
+                        <div class="col-md-8">
+                            <input disabled type="text" class="form-control" ng-model="model.ticket_type" name="ticket_type" placeholder="Phiếu chi" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Đối tượng</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_description" name="cat_description" placeholder="Đối tượng" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Tên khách hàng</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_code" name="cat_code" placeholder="Mã danh mục" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Lý do</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_title" name="cat_title" placeholder="Lý do" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Mã phiếu</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.ticket_code" name="ticket_code" placeholder="Mã phiếu" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Nội dung chi tiết</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.ticket_title" name="ticket_title" placeholder="Nội dung chi tiết" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Lớp học</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_title" name="cat_title" placeholder="Lớp học" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Tư vấn</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_description" name="cat_description" placeholder="Tư vấn" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Loại tài liệu</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_code" name="cat_code" placeholder="Loại tài liệu" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Tổng tiền phải trả</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.pay" name="pay
+                                   " placeholder="Tổng tiền phải trả" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Đã thanh toán</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_description" name="cat_description" placeholder="Đã thanh toán" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Tiền thanh toán</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_code" name="cat_code" placeholder="Tiền thanh toán" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Giảm trừ</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_title" name="cat_title" placeholder="Giảm trừ" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Còn nợ</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_description" name="cat_description" placeholder="Còn nợ" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Lần thanh toán sau</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_code" name="cat_code" placeholder="M" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Đơn vị tiền tệ</label>
+                        <div class="col-md-8 form-col-control">
+                            <div class="bs-component">
+                                <div class="input-group col-md-12">
+                                    <ui-select ng-model="model.currency" class="" ui-select-required>
+                                        <ui-select-match placeholder="Đơn vị tiền tệ...">{{$select.selected.currency_name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.currencyid as x in treedataCurrency | filter:$select.currency_name| filter:$select.search">
+                                            {{x.currency_name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.currency = null" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Trạng thái</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_description" name="cat_description" placeholder="Trạng thái" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Người nhận tiền</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.person_pay" name="person_pay" placeholder="Người nhận tiền" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Hình thức thanh toán</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.payment_mode" name="payment_mode" placeholder="Hình thức thanh toán" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-calendar"></i> Ngày tạo</label>
+                        <div class="bs-component col-md-8" style="">
+                            <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker4">
+                                <input type="text" class="form-control" ng-model="model.createtime" name="createtime" placeholder="Ngày tạo" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                            </div>
+
+                        </div>
+                        <script>
+                            $('#datetimepicker4').datetimepicker();
+
+                        </script>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Ghi chú</label>
+                        <div class="col-md-8">
+                            <textarea type="text" rows="3" class="form-control" ng-model="model.note" name="note" placeholder="Ghi chú" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Người tạo</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.usercreate" name="usercreate" placeholder="Người tạo" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" style="border-radius: 4px !important; margin-top:15px;" ng-click="submit()"><i class="fa fa-plus"></i> Áp dụng</button>
+        <button type="submit" class="btn btn-primary" style="border-radius: 4px !important;  margin-top:15px;margin-right:20px;" ng-click="cancel()"><i class="fa fa-trash-o"></i> Đóng</button>
+    </div>
+</div>

@@ -1,0 +1,220 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Views\ConsumpCurrent\**" />
+    <Compile Remove="Areas\Admin\Views\ProporCurrent\**" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="Resources\Controllers\**" />
+    <Compile Remove="Resources\ViewModels\**" />
+    <Compile Remove="Services\**" />
+    <Compile Remove="wwwroot\images\appIcon\**" />
+    <Compile Remove="wwwroot\images\avatar\**" />
+    <Compile Remove="wwwroot\views\admin\consumpCurrent\**" />
+    <Compile Remove="wwwroot\views\admin\proporCurrent\**" />
+    <Compile Remove="wwwroot\views\admin\staffPosition\**" />
+    <Compile Remove="wwwroot\views\admin\workCheck\**" />
+    <Content Remove="Areas\Admin\Views\ConsumpCurrent\**" />
+    <Content Remove="Areas\Admin\Views\ProporCurrent\**" />
+    <Content Remove="Models\**" />
+    <Content Remove="Resources\Controllers\**" />
+    <Content Remove="Resources\ViewModels\**" />
+    <Content Remove="Services\**" />
+    <Content Remove="wwwroot\images\appIcon\**" />
+    <Content Remove="wwwroot\images\avatar\**" />
+    <Content Remove="wwwroot\views\admin\consumpCurrent\**" />
+    <Content Remove="wwwroot\views\admin\proporCurrent\**" />
+    <Content Remove="wwwroot\views\admin\staffPosition\**" />
+    <Content Remove="wwwroot\views\admin\workCheck\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\ConsumpCurrent\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\ProporCurrent\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="Resources\Controllers\**" />
+    <EmbeddedResource Remove="Resources\ViewModels\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <EmbeddedResource Remove="wwwroot\images\appIcon\**" />
+    <EmbeddedResource Remove="wwwroot\images\avatar\**" />
+    <EmbeddedResource Remove="wwwroot\views\admin\consumpCurrent\**" />
+    <EmbeddedResource Remove="wwwroot\views\admin\proporCurrent\**" />
+    <EmbeddedResource Remove="wwwroot\views\admin\staffPosition\**" />
+    <EmbeddedResource Remove="wwwroot\views\admin\workCheck\**" />
+    <None Remove="Areas\Admin\Views\ConsumpCurrent\**" />
+    <None Remove="Areas\Admin\Views\ProporCurrent\**" />
+    <None Remove="Models\**" />
+    <None Remove="Resources\Controllers\**" />
+    <None Remove="Resources\ViewModels\**" />
+    <None Remove="Services\**" />
+    <None Remove="wwwroot\images\appIcon\**" />
+    <None Remove="wwwroot\images\avatar\**" />
+    <None Remove="wwwroot\views\admin\consumpCurrent\**" />
+    <None Remove="wwwroot\views\admin\proporCurrent\**" />
+    <None Remove="wwwroot\views\admin\staffPosition\**" />
+    <None Remove="wwwroot\views\admin\workCheck\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Controllers\ConsumpCurrentController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\MarketMonitoringController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\ProporCurrentController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMCompanyController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMCustomerController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMDashBoardController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMHrEmployeeController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMJnanaMonitorController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMLuongCongViecController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMMaintainBookCheckingController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMMaintainCatServiceController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMMaintainChildServiceController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMMaintainMaterialDetailsController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMMarketingController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMMobileApiController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMNotificationController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMNotificationHistoryController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMOrderCustomerManagementController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMOrderSupplierManagementController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMOrganizationController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMProductCategoryController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMRemoocMonitorController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMRomoocFcmController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMSettingOnOffController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMSupplierController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMTaiLieuController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMTreeCalculatorController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMVayxeFileReportController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMVendorController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\RMWaterPipeController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\StaffPositionController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\WorkCheckController.cs" />
+    <Compile Remove="Resources\SharedResource.cs" />
+    <Compile Remove="Resources\Views.book.Hello.fr.Designer.cs" />
+    <Compile Remove="Resources\Views.Shared._Layout.fr.Designer.cs" />
+    <Compile Remove="Utils\AutoMapperProfile.cs" />
+    <Compile Remove="Utils\CardJobService.cs" />
+    <Compile Remove="Utils\EmailSenderExtensions.cs" />
+    <Compile Remove="Utils\GoogleAPIService.cs" />
+    <Compile Remove="Utils\JMessage.cs" />
+    <Compile Remove="Utils\JTableHelper.cs" />
+    <Compile Remove="Utils\JTableModel.cs" />
+    <Compile Remove="Utils\LuceneExtension.cs" />
+    <Compile Remove="Utils\PolyUtil.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_LoginPartial.cshtml" />
+    <Content Remove="wwwroot\css\admin\app.css" />
+    <Content Remove="wwwroot\images\8-2-database-download-png.png" />
+    <Content Remove="wwwroot\images\arr1.png" />
+    <Content Remove="wwwroot\images\Background.png" />
+    <Content Remove="wwwroot\images\banner1.svg" />
+    <Content Remove="wwwroot\images\banner2.svg" />
+    <Content Remove="wwwroot\images\banner3.svg" />
+    <Content Remove="wwwroot\images\banner4.svg" />
+    <Content Remove="wwwroot\images\Checkin.png" />
+    <Content Remove="wwwroot\images\Checkout.png" />
+    <Content Remove="wwwroot\images\Check_mark.png" />
+    <Content Remove="wwwroot\images\Cuahang1.png" />
+    <Content Remove="wwwroot\images\DaiLy1.png" />
+    <Content Remove="wwwroot\images\default_geocode-1x.png" />
+    <Content Remove="wwwroot\images\drawing.png" />
+    <Content Remove="wwwroot\images\Eraser.png" />
+    <Content Remove="wwwroot\images\FileZilla-Server-icon.png" />
+    <Content Remove="wwwroot\images\Google-Drive-Icon.png" />
+    <Content Remove="wwwroot\images\google-maps.png" />
+    <Content Remove="wwwroot\images\googleplay.png" />
+    <Content Remove="wwwroot\images\gradient-blue-orange.png" />
+    <Content Remove="wwwroot\images\gradient-blue.jpg" />
+    <Content Remove="wwwroot\images\gradient-final.jpg" />
+    <Content Remove="wwwroot\images\gradient.jpg" />
+    <Content Remove="wwwroot\images\icon_mylocation.png" />
+    <Content Remove="wwwroot\images\Layers-100.png" />
+    <Content Remove="wwwroot\images\logo-foreigntrade.jpg" />
+    <Content Remove="wwwroot\images\logo-top.png" />
+    <Content Remove="wwwroot\images\logo.png" />
+    <Content Remove="wwwroot\images\logofinal.png" />
+    <Content Remove="wwwroot\images\no_image.png" />
+    <Content Remove="wwwroot\images\NPP1.png" />
+    <Content Remove="wwwroot\images\sprite-dev-16.png" />
+    <Content Remove="wwwroot\images\Swork.png" />
+    <Content Remove="wwwroot\images\taco.png" />
+    <Content Remove="wwwroot\uploads\images\no-image.png" />
+    <Content Remove="wwwroot\uploads\images\no-user.png" />
+    <Content Remove="wwwroot\uploads\images\uploadimg.png" />
+    <Content Remove="wwwroot\views\admin\application\detail.html" />
+    <Content Remove="wwwroot\views\admin\application\sort.html" />
+    <Content Remove="wwwroot\views\admin\marketMonitoring\index - Copy.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\Controllers.AboutController.fr.resx" />
+    <EmbeddedResource Remove="Resources\Controllers.BookController.fr.resx" />
+    <EmbeddedResource Remove="Resources\Controllers.TestController.fr.resx" />
+    <EmbeddedResource Remove="Resources\LocSample.SharedResource.fr.resx" />
+    <EmbeddedResource Remove="Resources\Resources.SharedResource.fr.resx" />
+    <EmbeddedResource Remove="Resources\ResourceVN.vi-vn.resx" />
+    <EmbeddedResource Remove="Resources\SharedResource.fr.resx" />
+    <EmbeddedResource Remove="Resources\StartUp.fr.resx" />
+    <EmbeddedResource Remove="Resources\ViewModels.Account.RegisterViewModel2.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.book.About.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.book.Hello.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.Home.About.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.Info.About.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.Shared._Layout.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.Shared._Layout.vi-vn.resx" />
+    <EmbeddedResource Remove="Resources\Views.Shared._LoginPartial.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.Shared._SelectLanguagePartial.fr.resx" />
+    <EmbeddedResource Remove="Resources\Views.test.About.fr.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Devart.Data.Oracle.EFCore.Design" Version="9.6.659" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.8.1" />
+    <PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+    <PackageReference Include="Lucene.Net" Version="4.8.0-beta00005" />
+    <PackageReference Include="Lucene.Net.Analysis.Common" Version="4.8.0-beta00005" />
+    <PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-beta00005" />
+    <PackageReference Include="MailKit" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.CookiePolicy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.10.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="QRCoder" Version="1.3.5" />
+    <PackageReference Include="Syncfusion.Compression.NETStandard14" Version="15.3140.0.26" />
+    <PackageReference Include="Syncfusion.XlsIO.NETStandard14" Version="15.3140.0.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\III.Domain\III.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\Admin\Views\Account\Login.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Admin\Views\Account\Logout.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="wwwroot\images\logo\googleplay.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\files\" />
+    <Folder Include="wwwroot\uploads\images\" />
+    <Folder Include="wwwroot\uploads\luceneIndex\" />
+    <Folder Include="wwwroot\uploads\repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\vi-VN\Resouces.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

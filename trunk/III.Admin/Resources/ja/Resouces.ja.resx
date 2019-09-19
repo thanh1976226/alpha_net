@@ -1,0 +1,1572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACTIVITY" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADMIN_APP_ADDON" xml:space="preserve">
+    <value>管理アプリアドオン</value>
+    <comment>Quản trị app addon</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_CODE" xml:space="preserve">
+    <value>アプリケーションコード</value>
+    <comment>Mã ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_ICON" xml:space="preserve">
+    <value>アイコン</value>
+    <comment>Biểu tượng</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_INACTIVE" xml:space="preserve">
+    <value>働いていない</value>
+    <comment>Không hoạt động</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_NAME" xml:space="preserve">
+    <value>アプリケーション名</value>
+    <comment>Tên ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_ORDER" xml:space="preserve">
+    <value>ご注文</value>
+    <comment>Thứ tự</comment>
+  </data>
+  <data name="ADM_APP_CURD_LBL_APP_URL" xml:space="preserve">
+    <value>アクセスリンク</value>
+    <comment>Link truy cập</comment>
+  </data>
+  <data name="ADM_APP_CURD_TITLE_ADD_APP" xml:space="preserve">
+    <value>アプリケーションを追加</value>
+    <comment>Thêm ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_TITLE_EDIT_APP" xml:space="preserve">
+    <value>アプリケーションを修正する</value>
+    <comment>Sửa ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_TXT_APP_CODE" xml:space="preserve">
+    <value>アプリケーションコードを入力してください</value>
+    <comment>Nhập mã ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_TXT_APP_NAME" xml:space="preserve">
+    <value>アプリケーション名を入力してください</value>
+    <comment>Nhập tên ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_TXT_APP_URL" xml:space="preserve">
+    <value>アクセスリンクを入力</value>
+    <comment>Nhập link truy cập</comment>
+  </data>
+  <data name="ADM_APP_CURD_VALIDATE_APP_CODE" xml:space="preserve">
+    <value>アプリケーションコードを入力してください</value>
+    <comment>Vui lòng nhập mã ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_VALIDATE_APP_NAME" xml:space="preserve">
+    <value>アプリケーション名を入力してください</value>
+    <comment>Vui lòng nhập tên ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_CURD_VALIDATE_APP_URL" xml:space="preserve">
+    <value>アクセスリンクを入力してください</value>
+    <comment>Vui lòng nhập link truy cập</comment>
+  </data>
+  <data name="ADM_APP_LBL_APP" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_LINK_APP" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_APP_LIST_COL_APP_ACTION" xml:space="preserve">
+    <value>操作</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="ADM_APP_LIST_COL_APP_CODE" xml:space="preserve">
+    <value>アプリケーションコード</value>
+    <comment>Mã ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_LIST_COL_APP_ICON" xml:space="preserve">
+    <value>アイコン</value>
+    <comment>Biểu tượng</comment>
+  </data>
+  <data name="ADM_APP_LIST_COL_APP_NAME" xml:space="preserve">
+    <value>アプリケーション名</value>
+    <comment>Tên ứng dụng</comment>
+  </data>
+  <data name="ADM_APP_LIST_COL_APP_ORDER" xml:space="preserve">
+    <value>ご注文</value>
+    <comment>Thứ tự</comment>
+  </data>
+  <data name="ADM_APP_LIST_COL_APP_URL" xml:space="preserve">
+    <value>アクセスリンク</value>
+    <comment>Link truy cập</comment>
+  </data>
+  <data name="ADM_APP_TITLE_APP" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="ADM_BRANCH_COMBO_ACCOUNT" xml:space="preserve">
+    <value>アカウントを選択</value>
+    <comment>Chọn tài khoản</comment>
+  </data>
+  <data name="ADM_BRANCH_COMBO_DEPARTMENT" xml:space="preserve">
+    <value>部署を選択してください</value>
+    <comment>Chọn phòng ban</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_COMBO_BRANCH_AREA" xml:space="preserve">
+    <value>ドメインを選択</value>
+    <comment>Chọn Miền </comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_LBL_BRANCH_AREA" xml:space="preserve">
+    <value>ドメイン</value>
+    <comment>Miền </comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_LBL_BRANCH_CODE" xml:space="preserve">
+    <value>支店コード</value>
+    <comment>Mã Chi Nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_LBL_BRANCH_NAME" xml:space="preserve">
+    <value>支店名</value>
+    <comment>Tên Chi Nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_MSG_CHOOSE_BRANCH" xml:space="preserve">
+    <value>1支店を選択してください。</value>
+    <comment>Vui lòng chọn 1 chi nhánh!</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_TITLE_ADD_BRANCH" xml:space="preserve">
+    <value>ブランチを追加</value>
+    <comment>Thêm chi nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_TITLE_EDIT_BRANCH" xml:space="preserve">
+    <value>ブランチを編集</value>
+    <comment>Sửa chi nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_TXT_BRANCH_CODE" xml:space="preserve">
+    <value>支店コードを入力</value>
+    <comment>Nhập Mã Chi Nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_TXT_BRANCH_NAME" xml:space="preserve">
+    <value>支店名を入力してください</value>
+    <comment>Nhập Tên Chi Nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_VALIDATE_BRANCH_CODE" xml:space="preserve">
+    <value>支店コードを入力してください</value>
+    <comment>Vui lòng nhập mã Chi Nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_CURD_VALIDATE_BRANCH_NAME" xml:space="preserve">
+    <value>支店名を入力してください</value>
+    <comment>Vui lòng nhập tên Chi Nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_LBL_BRANCH" xml:space="preserve">
+    <value>支店</value>
+    <comment>Chi nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_LINK_BRANCH" xml:space="preserve">
+    <value>支店</value>
+    <comment>Chi nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_ACCOUNT_EXITS" xml:space="preserve">
+    <value>アカウントはすでにリストに存在します。別のアカウントを選択してください。</value>
+    <comment>Tài khoản đã tồn tại trong danh sách. Vui lòng chọn tài khoản khác!</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_BRANCH_EXITS" xml:space="preserve">
+    <value>分岐はすでに存在します。</value>
+    <comment>Chi nhánh đã tồn tại!</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_BRANCH_UPDATE" xml:space="preserve">
+    <value>ブランチを更新</value>
+    <comment>Cập nhập chi nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_CHOOSE_ACCOUNT" xml:space="preserve">
+    <value>アカウントを選択してください。</value>
+    <comment>Vui lòng chọn tài khoản!</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_CHOOSE_BRANCH" xml:space="preserve">
+    <value>これは部署です、支店レベルを選択してください！</value>
+    <comment>Đây là bộ phận, vui lòng chọn cấp độ chi nhánh!</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_CLOSE" xml:space="preserve">
+    <value>ロックする</value>
+    <comment>khóa</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_ERR_BRANCH_UPDATE" xml:space="preserve">
+    <value>誤った分岐状況を更新する</value>
+    <comment>Cập nhập trạng thái chi nhánh sai</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_OPEN" xml:space="preserve">
+    <value>開く</value>
+    <comment>mở</comment>
+  </data>
+  <data name="ADM_BRANCH_MSG_UTIL" xml:space="preserve">
+    <value>もう</value>
+    <comment>đã</comment>
+  </data>
+  <data name="ADM_BRANCH_TITLE_BRANCH" xml:space="preserve">
+    <value>支店</value>
+    <comment>Chi nhánh</comment>
+  </data>
+  <data name="ADM_BRANCH_TXT_BRANCH_NAME" xml:space="preserve">
+    <value>コード/支店名</value>
+    <comment>Mã / Tên chi nhánh </comment>
+  </data>
+  <data name="ADM_BRANCH_USER_EMAIL" xml:space="preserve">
+    <value>メールアドレス</value>
+    <comment>Email</comment>
+  </data>
+  <data name="ADM_BRANCH_USER_FULLNAME" xml:space="preserve">
+    <value>氏名</value>
+    <comment>Họ và tên</comment>
+  </data>
+  <data name="ADM_BRANCH_USER_NAME" xml:space="preserve">
+    <value>アカウント名</value>
+    <comment>Tên tài khoản</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_COMBO_DEPT_ALL" xml:space="preserve">
+    <value>全部</value>
+    <comment>Tất cả</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_COMBO_DEPT_PARENT" xml:space="preserve">
+    <value>親グループを選択</value>
+    <comment>Chọn nhóm cha</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_COMBO_DEPT_STATUS" xml:space="preserve">
+    <value>ステータスを選択</value>
+    <comment>Chọn trạng thái</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_CODE" xml:space="preserve">
+    <value>部門コード</value>
+    <comment>Mã phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_DESCIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_INACTIVE" xml:space="preserve">
+    <value>働いていない</value>
+    <comment>Không hoạt động</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_LEADER" xml:space="preserve">
+    <value>チーフ</value>
+    <comment>Trưởng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_NAME" xml:space="preserve">
+    <value>部署名</value>
+    <comment>Tên phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_PARENT" xml:space="preserve">
+    <value>お父さんグループ</value>
+    <comment>Nhóm cha</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_LBL_DEPT_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_TITLE_ADD_DEPT" xml:space="preserve">
+    <value>もっと部署</value>
+    <comment>Thêm phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_TITLE_EDIT_DEPT" xml:space="preserve">
+    <value>部署を変更する</value>
+    <comment>Sửa phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_TXT_DEPT_CODE" xml:space="preserve">
+    <value>部門コードを入力してください</value>
+    <comment>Nhập mã phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_TXT_DEPT_DESCIPTION" xml:space="preserve">
+    <value>説明を入力</value>
+    <comment>Nhập mô tả</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_CURD_TXT_DEPT_NAME" xml:space="preserve">
+    <value>部署の名前を入力してください</value>
+    <comment>Nhập tên phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LBL_DEPT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LINK_ADM_MAN" xml:space="preserve">
+    <value>システム管理</value>
+    <comment>Quản trị hệ thống</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LINK_DEPT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_COL_DEPT_ACTION" xml:space="preserve">
+    <value>操作</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_COL_DEPT_CODE" xml:space="preserve">
+    <value>部門コード</value>
+    <comment>Mã phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_COL_DEPT_DESCIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_COL_DEPT_NAME" xml:space="preserve">
+    <value>部署名</value>
+    <comment>Tên phòng ban</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_COL_DEPT_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_LBL_DEPT_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_LIST_LBL_DEPT_INACTIVE" xml:space="preserve">
+    <value>働いていない</value>
+    <comment>Không hoạt động</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_MSG_DELETE_SUCCESS" xml:space="preserve">
+    <value>成功した部門を削除する</value>
+    <comment>Xóa phòng ban thành công</comment>
+  </data>
+  <data name="ADM_DEPARTMENT_TITLE_DEPT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_COMBO_FUNC_PARENT" xml:space="preserve">
+    <value>父親グループを選択</value>
+    <comment>Chọn Nhóm cha</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_CODE" xml:space="preserve">
+    <value>機能コード</value>
+    <comment>Mã Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_DESCRIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_ICON" xml:space="preserve">
+    <value>アイコン</value>
+    <comment>Biểu tượng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_INACTIVE" xml:space="preserve">
+    <value>働いていない</value>
+    <comment>Không hoạt động</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_NAME" xml:space="preserve">
+    <value>機能名</value>
+    <comment>Tên Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_LBL_FUNC_PARENT" xml:space="preserve">
+    <value>お父さんグループ</value>
+    <comment>Nhóm cha</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_TITLE_ADD_FUNC" xml:space="preserve">
+    <value>機能追加</value>
+    <comment>Thêm Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_TITLE_EDIT_FUNC" xml:space="preserve">
+    <value>編集機能</value>
+    <comment>Sửa Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_TXT_FUNC_CODE" xml:space="preserve">
+    <value>機能コードを入力</value>
+    <comment>Nhập mã Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_TXT_FUNC_DESCRIPTION" xml:space="preserve">
+    <value>説明を入力</value>
+    <comment>Nhập Mô tả</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_TXT_FUNC_NAME" xml:space="preserve">
+    <value>機能名を入力してください</value>
+    <comment>Nhập tên Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_VALIDATE_FUNC_CODE" xml:space="preserve">
+    <value>機能コードを入力してください</value>
+    <comment>Vui lòng nhập mã Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_VALIDATE_FUNC_DESCRIPTION" xml:space="preserve">
+    <value>説明を入力してください</value>
+    <comment>Vui lòng nhập Mô tả</comment>
+  </data>
+  <data name="ADM_FUNC_CURD_VALIDATE_FUNC_NAME" xml:space="preserve">
+    <value>機能名を入力してください</value>
+    <comment>Vui lòng nhập tên Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_LBL_FUNC" xml:space="preserve">
+    <value>機能</value>
+    <comment>Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_LINK_ADM_MAN" xml:space="preserve">
+    <value>システム管理</value>
+    <comment>Quản trị hệ thống</comment>
+  </data>
+  <data name="ADM_FUNC_LINK_FUNC" xml:space="preserve">
+    <value>機能</value>
+    <comment>Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_FUNC_LIST_COL_FUNC_ACTION" xml:space="preserve">
+    <value>操作</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="ADM_FUNC_LIST_COL_FUNC_CODE" xml:space="preserve">
+    <value>機能コード</value>
+    <comment>Mã Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_LIST_COL_FUNC_DESCRIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_FUNC_LIST_COL_FUNC_ICON" xml:space="preserve">
+    <value>アイコン</value>
+    <comment>Biểu tượng</comment>
+  </data>
+  <data name="ADM_FUNC_LIST_COL_FUNC_NAME" xml:space="preserve">
+    <value>機能名</value>
+    <comment>Tên Chức năng</comment>
+  </data>
+  <data name="ADM_FUNC_LIST_COL_FUNC_PARENT" xml:space="preserve">
+    <value>お父さんグループ</value>
+    <comment>Nhóm cha</comment>
+  </data>
+  <data name="ADM_FUNC_TITLE_FUNC" xml:space="preserve">
+    <value>機能</value>
+    <comment>Chức năng</comment>
+  </data>
+  <data name="ADM_PERMISSION_COMBO_APP" xml:space="preserve">
+    <value>アプリケーションを選択</value>
+    <comment>Chọn Ứng dụng</comment>
+  </data>
+  <data name="ADM_PERMISSION_COMBO_FUNC" xml:space="preserve">
+    <value>機能を選択</value>
+    <comment>Chọn Chức năng</comment>
+  </data>
+  <data name="ADM_PERMISSION_COMBO_ROLE" xml:space="preserve">
+    <value>役割を選択</value>
+    <comment>Chọn Vai trò</comment>
+  </data>
+  <data name="ADM_PERMISSION_GUIDE_LBL_LOCK" xml:space="preserve">
+    <value>ロック：部門別PCを選択</value>
+    <comment>Khóa: Chọn một phòng ban-PC</comment>
+  </data>
+  <data name="ADM_PERMISSION_GUIDE_LBL_UNLOCK" xml:space="preserve">
+    <value>ロックを解除する：部門PCを選択する</value>
+    <comment>Mở khóa: Chọn một phòng ban-PC</comment>
+  </data>
+  <data name="ADM_PERMISSION_LBL_APP" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="ADM_PERMISSION_LBL_DEPT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="ADM_PERMISSION_LBL_FUNC" xml:space="preserve">
+    <value>機能</value>
+    <comment>Chức năng</comment>
+  </data>
+  <data name="ADM_PERMISSION_LBL_PERMISSION" xml:space="preserve">
+    <value>分権化</value>
+    <comment>Phân quyền</comment>
+  </data>
+  <data name="ADM_PERMISSION_LBL_RESOURCE" xml:space="preserve">
+    <value>リソース</value>
+    <comment>Tài nguyên</comment>
+  </data>
+  <data name="ADM_PERMISSION_LBL_ROLE" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="ADM_PERMISSION_LINK_ADM_MAN" xml:space="preserve">
+    <value>システム管理</value>
+    <comment>Quản trị hệ thống</comment>
+  </data>
+  <data name="ADM_PERMISSION_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_PERMISSION_LINK_PERMISSION" xml:space="preserve">
+    <value>分権化</value>
+    <comment>Phân quyền</comment>
+  </data>
+  <data name="ADM_PERMISSION_LIST_COL_RESOURCE_API" xml:space="preserve">
+    <value>Api</value>
+    <comment>Api</comment>
+  </data>
+  <data name="ADM_PERMISSION_LIST_COL_RESOURCE_DESCRIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_PERMISSION_LIST_COL_RESOURCE_NAME" xml:space="preserve">
+    <value>リソース名</value>
+    <comment>Tên Tài nguyên</comment>
+  </data>
+  <data name="ADM_PERMISSION_TITLE_PERMISSION" xml:space="preserve">
+    <value>分権化</value>
+    <comment>Phân quyền</comment>
+  </data>
+  <data name="ADM_PERMISSION_TXT_DEPT" xml:space="preserve">
+    <value>部署に入る</value>
+    <comment>Nhập Phòng ban</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_COMBO_RESOURCE_TYPE" xml:space="preserve">
+    <value>スタイルを選択</value>
+    <comment>Chọn Kiểu</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_API" xml:space="preserve">
+    <value>Api</value>
+    <comment>Api</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_CODE" xml:space="preserve">
+    <value>リソースコード</value>
+    <comment>Mã Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_DESCRIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_FUNC_NAME" xml:space="preserve">
+    <value>機能</value>
+    <comment>Chức năng</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_INACTIVE" xml:space="preserve">
+    <value>働いていない</value>
+    <comment>Không hoạt động</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_NAME" xml:space="preserve">
+    <value>リソース名</value>
+    <comment>Tên Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_SCOPE" xml:space="preserve">
+    <value>範囲</value>
+    <comment>Phạm vi</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_TYPE" xml:space="preserve">
+    <value>スタイル</value>
+    <comment>Kiểu</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_LBL_RESOURCE_URL" xml:space="preserve">
+    <value>パス</value>
+    <comment>Đường dẫn</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_RADIO_RESOURCE_PRIVATE" xml:space="preserve">
+    <value>非公開</value>
+    <comment>Riêng tư</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_RADIO_RESOURCE_PUBLISH" xml:space="preserve">
+    <value>一般公開</value>
+    <comment>Công khai</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TITLE_ADD_RESOURCE" xml:space="preserve">
+    <value>リソースを追加する</value>
+    <comment>Thêm Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TITLE_EDIT_RESOURCE" xml:space="preserve">
+    <value>リソースを編集する</value>
+    <comment>Sửa Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TXT_RESOURCE_API" xml:space="preserve">
+    <value>Apiを入力</value>
+    <comment>Nhập Api</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TXT_RESOURCE_CODE" xml:space="preserve">
+    <value>リソースコードを入力してください</value>
+    <comment>Nhập mã Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TXT_RESOURCE_DESCRIPTION" xml:space="preserve">
+    <value>説明を入力</value>
+    <comment>Nhập Mô tả</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TXT_RESOURCE_FUNC_NAME" xml:space="preserve">
+    <value>機能を選択</value>
+    <comment>Chọn chức năng</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TXT_RESOURCE_NAME" xml:space="preserve">
+    <value>リソース名を入力してください</value>
+    <comment>Nhập tên Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_TXT_RESOURCE_URL" xml:space="preserve">
+    <value>パスを入力</value>
+    <comment>Nhập đường dẫn</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_VALIDATE_RESOURCE_CODE" xml:space="preserve">
+    <value>リソースコードを入力してください</value>
+    <comment>Vui lòng nhập mã Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_VALIDATE_RESOURCE_DESCRIPTION" xml:space="preserve">
+    <value>説明を入力してください</value>
+    <comment>Vui lòng nhập Mô tả</comment>
+  </data>
+  <data name="ADM_RESOURCE_CURD_VALIDATE_RESOURCE_NAME" xml:space="preserve">
+    <value>リソース名を入力してください</value>
+    <comment>Vui lòng nhập tên Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_LBL_RESOURCE" xml:space="preserve">
+    <value>リソース</value>
+    <comment>Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_LINK_ADM_MAN" xml:space="preserve">
+    <value>システム管理</value>
+    <comment>Quản trị hệ thống</comment>
+  </data>
+  <data name="ADM_RESOURCE_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_RESOURCE_LINK_RESOURCE" xml:space="preserve">
+    <value>リソース</value>
+    <comment>Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_ACTION" xml:space="preserve">
+    <value>操作</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_API" xml:space="preserve">
+    <value>Api</value>
+    <comment>Api</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_CODE" xml:space="preserve">
+    <value>リソースコード</value>
+    <comment>Mã Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_DESCRIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_NAME" xml:space="preserve">
+    <value>リソース名</value>
+    <comment>Tên Tài nguyên</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_TYPE" xml:space="preserve">
+    <value>スタイル</value>
+    <comment>Kiểu</comment>
+  </data>
+  <data name="ADM_RESOURCE_LIST_COL_RESOURCE_URL" xml:space="preserve">
+    <value>パス</value>
+    <comment>Đường dẫn</comment>
+  </data>
+  <data name="ADM_RESOURCE_TITLE_RESOURCE" xml:space="preserve">
+    <value>リソース</value>
+    <comment>Tài nguyên</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_COMBO_ROLE_STATUS" xml:space="preserve">
+    <value>ステータスを選択</value>
+    <comment>Chọn trạng thái</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_LBL_ROLE_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_LBL_ROLE_CODE" xml:space="preserve">
+    <value>役割コード</value>
+    <comment>Mã vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_LBL_ROLE_DESCIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_LBL_ROLE_INACTIVE" xml:space="preserve">
+    <value>働いていない</value>
+    <comment>Không hoạt động</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_LBL_ROLE_NAME" xml:space="preserve">
+    <value>ロール名</value>
+    <comment>Tên vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_LBL_ROLE_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_TITLE_ADD_ROLE" xml:space="preserve">
+    <value>役割を追加</value>
+    <comment>Thêm vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_TITLE_EDIT_ROLE" xml:space="preserve">
+    <value>役割を編集する</value>
+    <comment>Sửa vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_TXT_ROLE_CODE" xml:space="preserve">
+    <value>ロールコードを入力してください</value>
+    <comment>Nhập mã vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_TXT_ROLE_DESCIPTION" xml:space="preserve">
+    <value>説明を入力</value>
+    <comment>Nhập mô tả</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_TXT_ROLE_NAME" xml:space="preserve">
+    <value>役割名を入力してください</value>
+    <comment>Nhập tên vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_VALIDATE_ROLE_CODE" xml:space="preserve">
+    <value>ロールコードを入力してください</value>
+    <comment>Vui lòng nhập mã vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_CURD_VALIDATE_ROLE_NAME" xml:space="preserve">
+    <value>役割名を入力してください</value>
+    <comment>Vui lòng nhập tên vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_LBL_ROLE" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_ROLE_LINK_ROLE" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_LIST_COL_ROLE_ACTION" xml:space="preserve">
+    <value>操作</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="ADM_ROLE_LIST_COL_ROLE_CODE" xml:space="preserve">
+    <value>役割コード</value>
+    <comment>Mã vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_LIST_COL_ROLE_DESCIPTION" xml:space="preserve">
+    <value>説明</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="ADM_ROLE_LIST_COL_ROLE_NAME" xml:space="preserve">
+    <value>ロール名</value>
+    <comment>Tên vai trò</comment>
+  </data>
+  <data name="ADM_ROLE_LIST_COL_ROLE_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_ROLE_TITLE_ROLE" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="ADM_USER_CURD_CHECKBOX_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_USER_CURD_CHECKBOX_INACTIVE" xml:space="preserve">
+    <value>アクティブではありません</value>
+    <comment>Không koạt động</comment>
+  </data>
+  <data name="ADM_USER_CURD_COMBO_APPLICATION" xml:space="preserve">
+    <value>アプリケーションを選択</value>
+    <comment>Chọn ứng dụng</comment>
+  </data>
+  <data name="ADM_USER_CURD_COMBO_BRANCH" xml:space="preserve">
+    <value>支店を選択</value>
+    <comment>Chọn chi nhánh</comment>
+  </data>
+  <data name="ADM_USER_CURD_COMBO_DEPARTMENT" xml:space="preserve">
+    <value>部署を選択してください</value>
+    <comment>Chọn phòng ban</comment>
+  </data>
+  <data name="ADM_USER_CURD_COMBO_ROLE" xml:space="preserve">
+    <value>役割を選択</value>
+    <comment>Chọn vai trò</comment>
+  </data>
+  <data name="ADM_USER_CURD_COMBO_STATUS" xml:space="preserve">
+    <value>ステータスを選択</value>
+    <comment>Chọn trạng thái</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_ACCOUNT_NAME" xml:space="preserve">
+    <value>アカウント名</value>
+    <comment>Tên tài khoản</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_ACCOUNT_TYPE" xml:space="preserve">
+    <value>アカウントの種類</value>
+    <comment>Loại tài khoản</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_ACTIVE" xml:space="preserve">
+    <value>操作</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_APPLICATION" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_AVATAR" xml:space="preserve">
+    <value>プロフィール写真</value>
+    <comment>Ảnh đại diện</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_BRANCH" xml:space="preserve">
+    <value>支店</value>
+    <comment>Chi nhánh</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_DEPARTMENT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_EMAIL" xml:space="preserve">
+    <value>メールアドレス</value>
+    <comment>Email</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_EMPLOYEES_CODE" xml:space="preserve">
+    <value>従業員コード</value>
+    <comment>Mã nhân viên</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_INACTIVE" xml:space="preserve">
+    <value>アクティブではありません</value>
+    <comment>Không koạt động</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_NAME" xml:space="preserve">
+    <value>氏名</value>
+    <comment>Họ và tên</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_NOTE" xml:space="preserve">
+    <value>ノート</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_PASSWORD" xml:space="preserve">
+    <value>パスワード</value>
+    <comment>Mật khẩu</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_PHONE" xml:space="preserve">
+    <value>電話番号</value>
+    <comment>Số điện thoại</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_REASON" xml:space="preserve">
+    <value>理由</value>
+    <comment>Lý do</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_ROLE" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="ADM_USER_CURD_LBL_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="ADM_USER_CURD_MSG_ERR_APPLICATION" xml:space="preserve">
+    <value>申請書は空白にできません</value>
+    <comment>Ứng dụng không được để trống</comment>
+  </data>
+  <data name="ADM_USER_CURD_MSG_ERR_BRANCH" xml:space="preserve">
+    <value>ブランチは空にできません</value>
+    <comment>Chi nhánh không được để trống</comment>
+  </data>
+  <data name="ADM_USER_CURD_MSG_ERR_DEPARTMENT" xml:space="preserve">
+    <value>部門を空白のままにすることはできません</value>
+    <comment>Phòng ban không được để trống</comment>
+  </data>
+  <data name="ADM_USER_CURD_MSG_ERR_PHONE" xml:space="preserve">
+    <value>電話番号の形式が間違っています。</value>
+    <comment>Số điện thoại sai định dạng!</comment>
+  </data>
+  <data name="ADM_USER_CURD_MSG_ERR_ROLE" xml:space="preserve">
+    <value>役割は空白にしないでください</value>
+    <comment>Vai trò không được để trống</comment>
+  </data>
+  <data name="ADM_USER_CURD_RADIO_MANAGER" xml:space="preserve">
+    <value>管理</value>
+    <comment>Quản trị</comment>
+  </data>
+  <data name="ADM_USER_CURD_RADIO_NORMAL" xml:space="preserve">
+    <value>通常</value>
+    <comment>Thông thường</comment>
+  </data>
+  <data name="ADM_USER_CURD_TITLE_ADD_USER" xml:space="preserve">
+    <value>ユーザーを追加する</value>
+    <comment>Thêm người dùng</comment>
+  </data>
+  <data name="ADM_USER_CURD_TITLE_EDIT_USER" xml:space="preserve">
+    <value>ユーザーを編集</value>
+    <comment>Sửa người dùng</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_ACCOUNT_NAME" xml:space="preserve">
+    <value>アカウント名を入力</value>
+    <comment>Nhập tên tài khoản</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_ACCOUNT_TYPE" xml:space="preserve">
+    <value>アカウントの種類を入力</value>
+    <comment>Nhập loại tài khoản</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_EMAIL" xml:space="preserve">
+    <value>メールアドレスを入力</value>
+    <comment>Nhập email</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_EMPLOYEES_CODE" xml:space="preserve">
+    <value>従業員コードを入力してください</value>
+    <comment>Nhập mã nhân viên</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_NAME" xml:space="preserve">
+    <value>姓名を入力してください</value>
+    <comment>Nhập họ và tên</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_PASSWORD" xml:space="preserve">
+    <value>パスワードを入力してください</value>
+    <comment>Nhập mật khẩu</comment>
+  </data>
+  <data name="ADM_USER_CURD_TXT_PHONE" xml:space="preserve">
+    <value>電話番号を入力してください</value>
+    <comment>Nhập số điện thoại</comment>
+  </data>
+  <data name="ADM_USER_LBL_USER" xml:space="preserve">
+    <value>ユーザー</value>
+    <comment>Người dùng</comment>
+  </data>
+  <data name="ADM_USER_LINK_HOME" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="ADM_USER_LINK_USER" xml:space="preserve">
+    <value>ユーザー</value>
+    <comment>Người dùng</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_ACCOUNT_NAME" xml:space="preserve">
+    <value>アカウント名</value>
+    <comment>Tên tài khoản</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_ACCOUNT_TYPE" xml:space="preserve">
+    <value>アカウントの種類</value>
+    <comment>Loại tài khoản</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_ACTION" xml:space="preserve">
+    <value>アクション</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_ADDRESS" xml:space="preserve">
+    <value>住所</value>
+    <comment>Địa chỉ</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_APPLICATION" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_AVATAR" xml:space="preserve">
+    <value>プロフィール写真</value>
+    <comment>Ảnh đại diện</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_BRANCH" xml:space="preserve">
+    <value>支店</value>
+    <comment>Chi nhánh</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_DEPARTMENT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_EMAIL" xml:space="preserve">
+    <value>メールアドレス</value>
+    <comment>Email</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_NAME" xml:space="preserve">
+    <value>氏名</value>
+    <comment>Họ tên</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_ROLE" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="ADM_USER_LIST_COL_STATUS" xml:space="preserve">
+    <value>状況</value>
+    <comment>Trạng thái </comment>
+  </data>
+  <data name="ADM_USER_TITLE_USER" xml:space="preserve">
+    <value>ユーザー</value>
+    <comment>Người dùng</comment>
+  </data>
+  <data name="APP" xml:space="preserve">
+    <value>アプリアプリ</value>
+    <comment>Ứng dụng app</comment>
+  </data>
+  <data name="APPLICATION" xml:space="preserve">
+    <value>申し込み</value>
+    <comment>Ứng dụng</comment>
+  </data>
+  <data name="APPLICATION_ADDON" xml:space="preserve">
+    <value>アドオンアプリケーション</value>
+    <comment>Ứng dụng addon</comment>
+  </data>
+  <data name="ASSET" xml:space="preserve">
+    <value>物件</value>
+    <comment>Tài sản</comment>
+  </data>
+  <data name="ASSET_MANAGEMENT" xml:space="preserve">
+    <value>資産管理</value>
+    <comment>Quản trị tài sản</comment>
+  </data>
+  <data name="BRANCH" xml:space="preserve">
+    <value>支店</value>
+    <comment>Chi nhánh</comment>
+  </data>
+  <data name="CALENDAR_Active" xml:space="preserve">
+    <value>作業スケジュール</value>
+    <comment>Lịch làm việc</comment>
+  </data>
+  <data name="CANDIDATE" xml:space="preserve">
+    <value>候補者</value>
+    <comment>Ứng viên</comment>
+  </data>
+  <data name="CANDIDATE_MANAGEMENT" xml:space="preserve">
+    <value>候補者を管理する</value>
+    <comment>Quản lý ứng viên</comment>
+  </data>
+  <data name="CARE_PROVIDER" xml:space="preserve">
+    <value>ケア提供者</value>
+    <comment>Chăm sóc nhà cung cấp</comment>
+  </data>
+  <data name="CATEGORY" xml:space="preserve">
+    <value>カテゴリー</value>
+    <comment>Danh mục</comment>
+  </data>
+  <data name="COM_BTN_ADD" xml:space="preserve">
+    <value>新規追加</value>
+    <comment>Thêm mới</comment>
+  </data>
+  <data name="COM_BTN_CANCEL" xml:space="preserve">
+    <value>キャンセル</value>
+    <comment>Hủy bỏ</comment>
+  </data>
+  <data name="COM_BTN_DELETE" xml:space="preserve">
+    <value>削除する</value>
+    <comment>Xóa</comment>
+  </data>
+  <data name="COM_BTN_EDIT" xml:space="preserve">
+    <value>更新する</value>
+    <comment>Cập nhật</comment>
+  </data>
+  <data name="COM_BTN_REFRESH" xml:space="preserve">
+    <value>更新する</value>
+    <comment>Làm mới</comment>
+  </data>
+  <data name="COM_BTN_SAVE" xml:space="preserve">
+    <value>保存する</value>
+    <comment>Lưu lại</comment>
+  </data>
+  <data name="COM_BTN_SEARCH" xml:space="preserve">
+    <value>検索する</value>
+    <comment>Tìm kiếm</comment>
+  </data>
+  <data name="COM_CONFIRM" xml:space="preserve">
+    <value>確認する</value>
+    <comment>Xác nhận</comment>
+  </data>
+  <data name="COM_CONFIRM_CANCEL" xml:space="preserve">
+    <value>キャンセル</value>
+    <comment>Hủy</comment>
+  </data>
+  <data name="COM_CONFIRM_OK" xml:space="preserve">
+    <value>もちろん</value>
+    <comment>Chắc chắn</comment>
+  </data>
+  <data name="COM_DEL_SUCCESS_LIST_ITEM_BUT_HAS_CHILD_OR_REF" xml:space="preserve">
+    <value>他の場所で使用されている{0} {0}の削除に成功したか、{0}の子が選択されていません。</value>
+    <comment>Xóa thành công các {0} các {0} được sử dụng ở nơi khác hoặc {0} có {0} con không được chọn.</comment>
+  </data>
+  <data name="COM_ERR_CODE_CHANGE" xml:space="preserve">
+    <value>コード{0}は変更できません。</value>
+    <comment>Mã {0} không được phép thay đổi.</comment>
+  </data>
+  <data name="COM_ERR_EXCEED_CHARACTERS" xml:space="preserve">
+    <value>{0}は{1}文字を超えて入力できません。</value>
+    <comment>{0} không được nhập quá {1} ký tự.</comment>
+  </data>
+  <data name="COM_ERR_LIST_OBJ_HAS_CHILD_OR_REF" xml:space="preserve">
+    <value>他で使用されている{0}を削除できないか、選択されていない{0}個の子があります。最初にすべての{0}を削除する必要があります。</value>
+    <comment>Không thể xóa các {0} được sử dụng ở nơi khác hoặc có {0} con không được chọn. Bạn phải xóa hết {0} con trước.</comment>
+  </data>
+  <data name="COM_ERR_OBJ_REF" xml:space="preserve">
+    <value>他で使用されている{0}は削除できません</value>
+    <comment>Không thể xóa {0} đang được sử dụng ở nơi khác</comment>
+  </data>
+  <data name="COM_ERR_REQUIRED" xml:space="preserve">
+    <value>{0}は空白のままにできません</value>
+    <comment>{0} không được để trống</comment>
+  </data>
+  <data name="COM_MSG_ADD_FAILED" xml:space="preserve">
+    <value>{0}の追加に失敗しました</value>
+    <comment>Thêm {0}  thất bại</comment>
+  </data>
+  <data name="COM_MSG_ADD_SUCCESS" xml:space="preserve">
+    <value>{0}を追加しました</value>
+    <comment>Thêm {0} thành công</comment>
+  </data>
+  <data name="COM_MSG_APP_GUIDE" xml:space="preserve">
+    <value>説明：右クリックして機能管理を選択します</value>
+    <comment>Hướng dẫn: Nhấn chuột phải để lựa chọn Quản lý chức năng</comment>
+  </data>
+  <data name="COM_MSG_BRANCH_GUIDE" xml:space="preserve">
+    <value>説明：右クリックして[ブランチの追加/編集/削除]を選択します</value>
+    <comment>Hướng dẫn: Nhấn chuột phải để lựa chọn Thêm / Sửa / Xóa chi nhánh</comment>
+  </data>
+  <data name="COM_MSG_DEACTIVE_COUNT_SUCCESS" xml:space="preserve">
+    <value>{1} / {2} {0}にステータスを正常に機能しないように設定させます。</value>
+    <comment>Có {1}/{2} {0} đặt trạng thái không hoạt động thành công!</comment>
+  </data>
+  <data name="COM_MSG_DEACTIVE_FAILED" xml:space="preserve">
+    <value>{0}の非アクティブ状態の設定に失敗しました。</value>
+    <comment>Ðặt trạng thái không hoạt động cho các {0} thất bại!</comment>
+  </data>
+  <data name="COM_MSG_DEACTIVE_SUCCESS" xml:space="preserve">
+    <value>{0}が成功した場合は、非アクティブ状況を設定してください。</value>
+    <comment>Đặt trạng thái không hoạt động cho các {0} thành công!</comment>
+  </data>
+  <data name="COM_MSG_DELETE_CHILD" xml:space="preserve">
+    <value>最初に{0}を削除する必要があります。</value>
+    <comment>Bạn phải xóa {0} con trước!</comment>
+  </data>
+  <data name="COM_MSG_DELETE_CONFIRM" xml:space="preserve">
+    <value>選択した{0}アイテムを削除してよろしいですか？</value>
+    <comment>Bạn có chắc chắn muốn xóa mục {0} đã chọn?</comment>
+  </data>
+  <data name="COM_MSG_DELETE_FAIL" xml:space="preserve">
+    <value>{0}の削除に失敗しました。</value>
+    <comment>Xóa {0} thất bại!</comment>
+  </data>
+  <data name="COM_MSG_DELETE_LIST_FAIL" xml:space="preserve">
+    <value>削除{0}に失敗しました。</value>
+    <comment>Xóa các {0} thất bại!</comment>
+  </data>
+  <data name="COM_MSG_DELETE_LIST_SUCCESS" xml:space="preserve">
+    <value>{0}を正常に削除してください。</value>
+    <comment>Xóa các {0} thành công!</comment>
+  </data>
+  <data name="COM_MSG_EXITS" xml:space="preserve">
+    <value> {0}は既に存在します</value>
+    <comment> {0} đã tồn tại</comment>
+  </data>
+  <data name="COM_MSG_FUNC_GUIDE" xml:space="preserve">
+    <value>説明：右クリックしてリソース管理を選択します</value>
+    <comment>Hướng dẫn: Nhấn chuột phải để lựa chọn Quản lý tài nguyên</comment>
+  </data>
+  <data name="COM_MSG_NOT_EXITS" xml:space="preserve">
+    <value>{0}はシステムに存在しません。</value>
+    <comment>{0} không tồn tại trong hệ thống !</comment>
+  </data>
+  <data name="COM_MSG_NOT_FOUND" xml:space="preserve">
+    <value>見つかりません</value>
+    <comment>Không tìm thấy</comment>
+  </data>
+  <data name="COM_MSG_RESOURCE_GUIDE" xml:space="preserve">
+    <value>説明：右クリックして機能管理を選択します</value>
+    <comment>Hướng dẫn: Nhấn chuột phải để lựa chọn Quản lý chức năng</comment>
+  </data>
+  <data name="COM_MSG_UPDATE_FAILED" xml:space="preserve">
+    <value>{0}の更新に失敗しました</value>
+    <comment>Cập nhật {0} thất bại</comment>
+  </data>
+  <data name="COM_MSG_UPDATE_SUCCESS" xml:space="preserve">
+    <value>{0}を正常に更新しました</value>
+    <comment>Cập nhật {0} thành công</comment>
+  </data>
+  <data name="COM_MSG_UPDATE_USER_DEPT_FAIL" xml:space="preserve">
+    <value>ユーザー/センターの更新に失敗しました</value>
+    <comment>Cập nhật người dùng của bộ phận / trung tâm không thành công</comment>
+  </data>
+  <data name="COM_MSG_UPDATE_USER_DEPT_SUCCESS" xml:space="preserve">
+    <value>部門/センターのユーザーを正常に更新する</value>
+    <comment>Cập nhật người dùng của bộ phận / trung tâm  thành công</comment>
+  </data>
+  <data name="CONTACT_ADMIN" xml:space="preserve">
+    <value>連絡先管理</value>
+    <comment>Quản trị liên hệ</comment>
+  </data>
+  <data name="CONTRACT" xml:space="preserve">
+    <value>契約</value>
+    <comment>Hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_MANAGER" xml:space="preserve">
+    <value>契約管理</value>
+    <comment>Quản trị hợp đồng</comment>
+  </data>
+  <data name="CUSTOMER" xml:space="preserve">
+    <value>お客様</value>
+    <comment>Khách hàng</comment>
+  </data>
+  <data name="CUSTOMER_CARE" xml:space="preserve">
+    <value>カスタマーケア</value>
+    <comment>Chăm sóc khách hàng</comment>
+  </data>
+  <data name="CUSTOMER_LIST" xml:space="preserve">
+    <value>顧客リスト</value>
+    <comment>Danh sách khách hàng</comment>
+  </data>
+  <data name="CUSTOMER_REQUIREMENTS" xml:space="preserve">
+    <value>顧客の要求</value>
+    <comment>Yêu cầu khách hàng</comment>
+  </data>
+  <data name="DASHBOARD" xml:space="preserve">
+    <value>データ表</value>
+    <comment>Bảng số liệu</comment>
+  </data>
+  <data name="DATA_MANAGEMENT" xml:space="preserve">
+    <value>データ管理</value>
+    <comment>Quản trị dữ liệu</comment>
+  </data>
+  <data name="DELIVERY_BILL" xml:space="preserve">
+    <value>納品書</value>
+    <comment>Phiếu xuất kho</comment>
+  </data>
+  <data name="DEPARTMENT" xml:space="preserve">
+    <value>学科</value>
+    <comment>Phòng ban</comment>
+  </data>
+  <data name="DIGITIZATION_DISPATCH" xml:space="preserve">
+    <value>デジタル化と発送</value>
+    <comment>Số hóa và công văn</comment>
+  </data>
+  <data name="EMERGENCY" xml:space="preserve">
+    <value>緊急（SOS）</value>
+    <comment>Khẩn cấp (SOS)</comment>
+  </data>
+  <data name="EMPLOYEES" xml:space="preserve">
+    <value>スタッフ</value>
+    <comment>Nhân viên</comment>
+  </data>
+  <data name="FUNCTION" xml:space="preserve">
+    <value>機能</value>
+    <comment>Chức năng</comment>
+  </data>
+  <data name="HOLIDAY" xml:space="preserve">
+    <value>祝日</value>
+    <comment>Ngày nghỉ</comment>
+  </data>
+  <data name="HUMAN_RESOURCE_MANAGEMENT" xml:space="preserve">
+    <value>人事管理</value>
+    <comment>Quản trị nhân sự</comment>
+  </data>
+  <data name="IMPORT_FAST" xml:space="preserve">
+    <value>高速インポート</value>
+    <comment>Nhập hàng nhanh</comment>
+  </data>
+  <data name="IMPORT_GOODS_BATCHES" xml:space="preserve">
+    <value>商品をまとめて輸入する</value>
+    <comment>Nhập hàng theo lô</comment>
+  </data>
+  <data name="INCOME_EXPENDITURE_PATTERNS" xml:space="preserve">
+    <value>支払い伝票</value>
+    <comment>Phiếu thu chi</comment>
+  </data>
+  <data name="INTERNAL_NEWS" xml:space="preserve">
+    <value>社内ニュース</value>
+    <comment>Tin nội bộ</comment>
+  </data>
+  <data name="INTERVIEW_SCHEDULE" xml:space="preserve">
+    <value>インタビュースケジュール</value>
+    <comment>Lịch phỏng vấn</comment>
+  </data>
+  <data name="INVENTORY" xml:space="preserve">
+    <value>在庫</value>
+    <comment>Tồn kho</comment>
+  </data>
+  <data name="JOB_STATUS" xml:space="preserve">
+    <value>仕事の状況</value>
+    <comment>Tình trạng công việc</comment>
+  </data>
+  <data name="KEY_MANAGEMENT" xml:space="preserve">
+    <value>キーワード管理</value>
+    <comment>Quản lý từ khóa</comment>
+  </data>
+  <data name="LATE_LEAVE" xml:space="preserve">
+    <value>遅い新聞/残してください</value>
+    <comment>Báo muộn/Xin nghỉ</comment>
+  </data>
+  <data name="LIST_OF_SUPPLIERS" xml:space="preserve">
+    <value>消耗品リスト</value>
+    <comment>Danh mục vật tư</comment>
+  </data>
+  <data name="LOGOUT" xml:space="preserve">
+    <value>終了する</value>
+    <comment>Thoát</comment>
+  </data>
+  <data name="MAP" xml:space="preserve">
+    <value>地図</value>
+    <comment>Bản đồ</comment>
+  </data>
+  <data name="MAP_OBJECT" xml:space="preserve">
+    <value>地図オブジェクト</value>
+    <comment>Đối tượng bản đồ</comment>
+  </data>
+  <data name="MARKET_MANAGEMENT" xml:space="preserve">
+    <value>市場管理</value>
+    <comment>Quản lý thị trường</comment>
+  </data>
+  <data name="MATERIALS_GROUP" xml:space="preserve">
+    <value>材料グループ</value>
+    <comment>Nhóm vật tư</comment>
+  </data>
+  <data name="MATERIALS_TYPE" xml:space="preserve">
+    <value>材料の種類</value>
+    <comment>Loại vật tư</comment>
+  </data>
+  <data name="NEWS" xml:space="preserve">
+    <value>ニュース</value>
+    <comment>Tin tức</comment>
+  </data>
+  <data name="NOTIFICATION" xml:space="preserve">
+    <value>お知らせ</value>
+    <comment>Thông báo</comment>
+  </data>
+  <data name="ONLINE_STAFF_MAP" xml:space="preserve">
+    <value>N / Vオンライン</value>
+    <comment>N/V trực tuyến</comment>
+  </data>
+  <data name="OPERATE_Active" xml:space="preserve">
+    <value>仕事をする</value>
+    <comment>Điều hành công việc</comment>
+  </data>
+  <data name="OTHER" xml:space="preserve">
+    <value>その他の</value>
+    <comment>Khác</comment>
+  </data>
+  <data name="PARTNER" xml:space="preserve">
+    <value>使用するパートナー</value>
+    <comment>Đối tác sử dụng</comment>
+  </data>
+  <data name="PERMISSION" xml:space="preserve">
+    <value>分権化</value>
+    <comment>Phân quyền</comment>
+  </data>
+  <data name="PERMISSION_EMPLOYEES" xml:space="preserve">
+    <value>従業員の割り当て</value>
+    <comment>Phân quyền nhân viên</comment>
+  </data>
+  <data name="PERSONNEL" xml:space="preserve">
+    <value>人事</value>
+    <comment>Nhân sự</comment>
+  </data>
+  <data name="PRODUCTION_INVENTORY" xml:space="preserve">
+    <value>生産/在庫</value>
+    <comment>Sản lượng/Tồn kho</comment>
+  </data>
+  <data name="PRODUCTS_AND_SERVICES" xml:space="preserve">
+    <value>製品とサービス</value>
+    <comment>Sản phẩm và dịch vụ</comment>
+  </data>
+  <data name="PRODUCTS_MANAGEMENT" xml:space="preserve">
+    <value>製品管理</value>
+    <comment>Quản trị sản phẩm</comment>
+  </data>
+  <data name="PROJECT" xml:space="preserve">
+    <value>プロジェクト</value>
+    <comment>Dự án</comment>
+  </data>
+  <data name="PROJECT_MANAGEMENT" xml:space="preserve">
+    <value>プロジェクト管理</value>
+    <comment>Quản trị dự án</comment>
+  </data>
+  <data name="PROPORTION" xml:space="preserve">
+    <value>密度</value>
+    <comment>Tỷ trọng</comment>
+  </data>
+  <data name="REGISTER_CALENDAR_Active" xml:space="preserve">
+    <value>カレンダーに申し込む</value>
+    <comment>Đăng ký lịch làm việc</comment>
+  </data>
+  <data name="REGISTRATION_SCHEDULE" xml:space="preserve">
+    <value>登録スケジュール</value>
+    <comment>Lịch đăng ký</comment>
+  </data>
+  <data name="REPORT" xml:space="preserve">
+    <value>報告する</value>
+    <comment>Báo cáo</comment>
+  </data>
+  <data name="RESOURCE" xml:space="preserve">
+    <value>リソース</value>
+    <comment>Tài nguyên</comment>
+  </data>
+  <data name="ROLES" xml:space="preserve">
+    <value>役割</value>
+    <comment>Vai trò</comment>
+  </data>
+  <data name="SERVICES_MANAGEMENT" xml:space="preserve">
+    <value>サービス管理</value>
+    <comment>Quản trị dịch vụ</comment>
+  </data>
+  <data name="SETTING" xml:space="preserve">
+    <value>インストール済み</value>
+    <comment>Cài đặt</comment>
+  </data>
+  <data name="SET_PROPERTIES" xml:space="preserve">
+    <value>プロパティを設定する</value>
+    <comment>Cài đặt thuộc tính</comment>
+  </data>
+  <data name="STAFF_CHECKIN_CHECKOUT" xml:space="preserve">
+    <value>N / Vチェックイン/チェックアウト</value>
+    <comment>N/V CheckIn/CheckOut</comment>
+  </data>
+  <data name="STATISTIC_REPORT" xml:space="preserve">
+    <value>統計レポート</value>
+    <comment>Báo cáo thông kê</comment>
+  </data>
+  <data name="SUPPLIER" xml:space="preserve">
+    <value>サプライヤー</value>
+    <comment>Nhà cung cấp</comment>
+  </data>
+  <data name="SUPPLIER_LIST" xml:space="preserve">
+    <value>サプライヤリスト</value>
+    <comment>Danh sách nhà cung cấp</comment>
+  </data>
+  <data name="SYSTEM_MANAGEMENT" xml:space="preserve">
+    <value>システム管理</value>
+    <comment>Quản trị hệ thống</comment>
+  </data>
+  <data name="TIMEKEEPING" xml:space="preserve">
+    <value>計時</value>
+    <comment>Chấm công</comment>
+  </data>
+  <data name="USER" xml:space="preserve">
+    <value>ユーザー</value>
+    <comment>Người dùng</comment>
+  </data>
+  <data name="VIDEO_CALL" xml:space="preserve">
+    <value>電話する</value>
+    <comment>Cuộc gọi</comment>
+  </data>
+  <data name="WAREHOUSE_AND_SALES" xml:space="preserve">
+    <value>倉庫と販売</value>
+    <comment>Kho và bán hàng</comment>
+  </data>
+  <data name="WAREHOUSE_LIST" xml:space="preserve">
+    <value>倉庫リスト</value>
+    <comment>Danh mục kho</comment>
+  </data>
+</root>

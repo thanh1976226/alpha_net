@@ -1,0 +1,30 @@
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.xml
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.deps.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.csprojAssemblyReference.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.csproj.CoreCompileInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.AssemblyInfoInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.AssemblyInfo.cs
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.xml
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.deps.json
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.csprojAssemblyReference.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.csproj.CoreCompileInputs.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.AssemblyInfoInputs.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.AssemblyInfo.cs
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.xml
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.deps.json
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\bin\Debug\netstandard1.4\IdentityModel.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.csprojAssemblyReference.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.csproj.CoreCompileInputs.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.AssemblyInfoInputs.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.AssemblyInfo.cs
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityModel\obj\Debug\netstandard1.4\IdentityModel.pdb

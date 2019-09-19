@@ -1,0 +1,68 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-lg-4 ">
+            <h1 class="bold mb-0">{{'CM_TITLE_CM' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'CM_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/CandidatesManagement">{{'CM_LINK_CM' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-8 text-center">
+            <div class="btn-group pull-right actions">
+                <button ng-click="add()" type="submit" class="btn btn-green">
+                    <i class="fa fa-plus"></i>
+                    {{'COM_BTN_ADD' | translate}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row pt10 mb15">
+        <div class="col-md-3">
+            <label>{{'CM_CURD_LBL_CM_FROM_DATE' | translate}}</label>
+            <div class="input-group">
+                <input type="text" autocomplete="off" class="form-control" placeholder="{{'CM_CURD_TXT_CM_FROM_DATE' | translate}}..." ng-model="model.FromDate" id="FromTo">
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.FromDate='';" class="btn btn-default no-shadow start-date">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label>{{'CM_CURD_LBL_CM_TO_DATE' | translate}}</label>
+            <div class='input-group '>
+                <input type='text' autocomplete="off" class="form-control " ng-model="model.ToDate" placeholder="{{'CM_CURD_TXT_CM_FROM_DATE' | translate}}..." id='DateTo' />
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.ToDate='';" class="btn btn-default no-shadow end-date">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3 pt25">
+            <button ng-click="search()" class="btn btn-accent">
+                <i class="fa fa-search"></i>
+                {{'COM_BTN_SEARCH' | translate}}
+            </button>
+        </div>
+        <div class="col-lg-3 pt30">
+            <span class="bold pt5 ml5 mr5 pull-right">
+                <button type="button" class="btn btn-circle btn-icon-only btn-round-red"><i class="fas fa-bell"></i></button>
+                {{'CM_CURD_LBL_CM_NEW_CANDIATE' | translate}} ({{countCandidatesToday}})
+            </span>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>
+

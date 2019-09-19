@@ -1,0 +1,55 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert white"></i>
+    <div class="modal-title  custom-title white" id="modal-title">{{'MS_TITTLE_DETAILS' | translate}} </div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <div class="col-md-12 " style="padding:0">
+            <table class="table">
+                <tbody>
+                    <tr style="height:40px">
+                        <td style="font-weight:bold;font-size: 17px; line-height:40px">{{'MS_LBL_CODE_CUSTOMER' | translate}}: </td>
+                        <td colspan="3" style="font-weight:bold;font-size: 17px;color:red; line-height:40px">  </td>
+                    </tr>
+                    <tr style="height:40px">
+                        <td style="font-weight:bold;font-size: 17px; line-height:40px">{{'MS_LBL_NAME_CUSTOMER' | translate}}: </td>
+                        <td colspan="3" style="font-weight:bold;font-size: 17px;color:red; line-height:40px"> </td>
+                    </tr>
+                    <tr style="height:40px">
+                        <td style="font-weight:bold; line-height:40px">
+                            <img src="{{model.icon}}" />
+                        </td>
+                        <td colspan="3">
+                            <table class="table" style="margin-top:20px;  width:200px" border="0">
+                                <tbody>
+                                    <tr style="height:30px">
+                                        <td style="font-weight:bold; line-height:30px" class="no-border">{{'MS_LBL_REGION' | translate}}: </td>
+                                        <td style="color:green;  line-height:30px" colspan="3" class="no-border">  </td>
+                                    </tr>
+                                    <tr style="height:30px">
+                                        <td style="font-weight:bold; line-height:30px" class="no-border">{{'MS_LBL_GROUP' | translate}}: </td>
+                                        <td style="color:green;  line-height:30px" colspan="3" class="no-border"> </td>
+                                    </tr>
+                                    <tr style="height:30px">
+                                        <td style="font-weight:bold; line-height:30px" class="no-border">{{'MS_LBL_ROLE' | translate}}: </td>
+                                        <td style="color:green;  line-height:30px" colspan="3" class="no-border"></td>
+                                    </tr>
+                                    <tr style="height:30px">
+                                        <td style="font-weight:bold; line-height:30px" class="no-border">{{'MS_LBL_TYPE' | translate}}: </td>
+                                        <td style="color:green;  line-height:30px" colspan="3" class="no-border"> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+</div>

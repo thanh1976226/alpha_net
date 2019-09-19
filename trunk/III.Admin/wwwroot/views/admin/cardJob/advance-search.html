@@ -1,0 +1,126 @@
+﻿<style>
+    @media (max-width: 1450px) and (min-width: 1200px) {
+        .col-lg-4 {
+            width: 38.66667% !important;
+        }
+    }
+
+    @media (max-width: 1450px) and (min-width: 1200px) {
+        .col-lg-8 {
+            width: 60.96667% !important;
+        }
+    }
+
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+
+    span.fa {
+        margin-right: 5px;
+    }
+</style>
+<div class="modal-header no-color">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-search icon-insert"></i>
+    <div class="modal-title custom-title white" id="modal-title">Advance Search</div>
+</div>
+<div class="modal-body">
+    <form name="searchForm" ng-validate="searchValidate">
+        <div class="row">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-code"></span>Card Title</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" name="CardTitle" ng-model="search.CardTitle" placeholder="Card Title..." />
+            </div>
+        </div>
+        <div class="row mt5">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-user"></span>Member</label>
+            </div>
+            <div class="col-md-8">
+                <ui-select tagging ng-model="search.Member" theme="bootstrap">
+                    <ui-select-match placeholder="Member...">{{$select.selected.UserName}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x.UserName as x in listUser | filter: $select.search">
+                        {{x.UserName}}
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row mt5">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-calendar"></span>From Date</label>
+            </div>
+            <div class="col-md-8">
+                <div class="input-group date" id="DateFrom">
+                    <input class="form-control" ng-model="search.Fromdate" placeholder="From Date..." />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt5">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-calendar"></span>To Date</label>
+            </div>
+            <div class="col-md-8">
+                <div class="input-group date" id="DateTo">
+                    <input class="form-control" ng-model="search.Todate" placeholder="To Date..." />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt5">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-list"></span>Card Status</label>
+            </div>
+            <div class="col-md-8">
+                <ui-select tagging ng-model="search.Status" theme="bootstrap">
+                    <ui-select-match placeholder="Status...">{{$select.selected.Value}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x.Code as x in cardStatus | filter: $select.search">
+                        {{x.Value}}
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row mt5">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-plane"></span>Dependency</label>
+            </div>
+            <div class="col-md-8">
+                <ui-select tagging ng-model="search.ObjDependency" on-select="objDependencyChange(search.ObjDependency)" theme="bootstrap">
+                    <ui-select-match placeholder="Object Dependency...">{{$select.selected.Value}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x.Code as x in objDependency | filter: $select.search">
+                        {{x.Value}}
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row mt5">
+            <div class="col-md-4 pt5">
+                <label class="label-control"><span class="fa fa-plane"></span>Object Code</label>
+            </div>
+            <div class="col-md-8">
+                <ui-select tagging ng-model="search.ObjCode" theme="bootstrap">
+                    <ui-select-match placeholder="Object Dependency...">{{$select.selected.Value}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x.Code as x in listObjCode | filter: $select.search">
+                        {{x.Value}}
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12">
+        <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+        <button class="btn btn-red" ng-click="submit()">Search</button>
+    </div>
+</div>
+
+<script>
+    $('.modal-dialog').draggable();
+</script>

@@ -1,0 +1,121 @@
+﻿<style>
+    .slide {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">Thông tin nhận diện Người hoặc Vật</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="detailform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-barcode" aria-hidden="true"></i>
+                                <label class="control-label">Mã thiết bị</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.FaceId" name="FaceId" placeholder="Mã..." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                <label class="control-label">Vị trí GPS</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.LocationGps" name="Location" placeholder="Vị trí..." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                <label class="control-label">Địa chỉ</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.LocationGps" name="Location" placeholder="Vị trí..." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-user-plus" aria-hidden="true"></i>
+                                <label class="control-label">Đối tượng</label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-checkbox-list pt10 pl10">
+                                    <label ng-if="!model.CheckPeople">{{People}}</label>
+                                    <img ng-if="model.CheckPeople" src="/uploads/files/iconNguoi.png" />
+                                    <label class="mt-checkbox mt-checkbox-outline mb10 hidden">
+                                        <input type="checkbox" name="CheckPeople" ng-model="model.CheckPeople" ng-click="CheckPeople(model.RqId)" ng-checked="IsEnabledRequest" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-user-plus" aria-hidden="true"></i>
+                                <label class="control-label">Tên người hoặc vật</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="col-md-7" style="padding-left:0px;">
+                                    <input type="text" class="form-control" ng-model="model.ObjName" name="ObjName" placeholder="Tên người / vật..." disabled />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-tablet-alt" aria-hidden="true"></i>
+                                <label class="control-label">Thiết bị</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.DeviceId" name="ObjName" placeholder="Thiết bị..." disabled />
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-image"></i>
+                                <label class="control-label">Hình ảnh</label>
+                            </div>
+                            <div class="col-md-8" style="padding-right: 0px;padding-left: 0px;">
+                                <div class="slideshow-container">
+                                    <div class="form-group ">
+                                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                            <!-- Indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            </ol>
+
+                                            <!-- Wrapper for slides -->
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <img src="{{model.ImgPath}}" class="h-150 w-100" />
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

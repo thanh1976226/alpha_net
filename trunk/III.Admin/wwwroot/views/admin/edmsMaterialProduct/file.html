@@ -1,0 +1,50 @@
+﻿<div ng-controller="file">
+    <div class="row">
+        <form name="addformfile" method="post" ng-validate="validationOptionsFile">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Tên tệp tin</label>
+                    <div class="input-group">
+                        <input ng-model="model.Name" class="form-control" type="text" placeholder="Tên tệp tin..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Name='';" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Định dạng</label>
+                    <div class="input-group">
+                        <input ng-model="model.Fomart" class="form-control" type="text" placeholder="Định dạng..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Fomart='';" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" style="padding-top:23px">
+                <div class="form-group">
+                    <div class="btn-group pull-left actions">
+                        <a ng-click="reload()" class="btn btn-accent br4">
+                            <span class=""><i class="fa fa-search"></i> Tìm kiếm</span>
+                        </a>
+                        <a ng-click="add()" class="btn btn-green ml5 br4">
+                            <span class=""><i class="fa fa-plus"></i> Thêm mới</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataFile"></table>
+</div>

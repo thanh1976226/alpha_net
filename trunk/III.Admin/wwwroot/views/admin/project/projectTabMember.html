@@ -1,0 +1,49 @@
+﻿<div id="contact-main" ng-controller="projectTabMember">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="mt-action-5">
+                <div class="col-lg-3  form-group mr5 ">
+                    <label class="control-label">{{'PROJECT_CURD_TAB_MEMBER_LBL_FULLNAME' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.fullname" class="form-control" type="text" placeholder="{{'PROJECT_CURD_TAB_MEMBER_TXT_FULLNAME' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.fullname=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3  form-group mr5 ">
+                    <label class="control-label">{{'PROJECT_CURD_TAB_MEMBER_LBL_POSITION' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.Position" class="form-control" type="text" placeholder="{{'PROJECT_CURD_TAB_MEMBER_TXT_POSITION' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Position=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 pl-0 pt25">
+                    <button ng-click="search()" class="btn btn-accent">
+                        <i class="fa fa-search"></i>
+                        {{'COM_BTN_SEARCH' | translate}}
+                    </button>
+                </div>
+                <div class="col-md-2 pl-0 pt25">
+                    <button ng-click="add()" type="submit" class="btn br4 btn-green">
+                        <i class="fa fa-plus mr5"></i>
+                        {{'COM_BTN_ADD' | translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataMember"></table>
+</div>
+

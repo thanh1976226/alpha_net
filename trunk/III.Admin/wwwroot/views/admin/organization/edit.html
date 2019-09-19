@@ -1,0 +1,63 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-edit icon-edit "></i>
+    <div class="modal-title custom-title " id="modal-title"> {{'ADM_BRANCH_CURD_TITLE_EDIT_BRANCH' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="editform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_BRANCH_CURD_LBL_BRANCH_CODE' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.OrgCode" name="Code" placeholder="{{'ADM_BRANCH_CURD_TXT_BRANCH_CODE' | translate}}..." readonly/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_BRANCH_CURD_LBL_BRANCH_NAME' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.OrgName" name="Title" placeholder="{{'ADM_BRANCH_CURD_TXT_BRANCH_NAME' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': errorDivision}">
+                    <div class="col-md-4">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_BRANCH_CURD_LBL_BRANCH_AREA' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="input-group col-md-12">
+                            <ui-select ng-model="model.Division" class="" style="width: 100%;" ng-required="true" ui-select-required on-select="changleSelect('Division')">
+                                <ui-select-match placeholder="{{'ADM_BRANCH_CURD_COMBO_BRANCH_AREA' | translate}}...">{{$select.selected.Code}} {{$select.selected.Title}}</ui-select-match>
+                                <ui-select-choices repeat="x.Code as x in treeData | filter:$select.search">
+                                    {{x.Code}} {{x.Title}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.Division = ''" class="btn btn-default no-shadow" style="    border-bottom-left-radius: 0px !important;border-top-left-radius: 0px !important;">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <span ng-show="errorDivision" class="label-color validation-message">
+                            Miền không được để trống
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red " href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr25" href="javascript:;">
+        {{'COM_BTN_EDIT' | translate}}
+    </button>
+</div>

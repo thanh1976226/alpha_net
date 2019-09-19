@@ -1,0 +1,60 @@
+﻿<div ng-controller="contractTabNote">
+    <div class="row">
+        <!--  <form name="addformcontractnote" method="post" ng-validate="validationOptionsNote">-->
+        <div class="col-md-2">
+            <div class="form-group mb5">
+                <div class="input-group">
+                    <input class="form-control" ng-model="model.Title" name="Title" type="text" placeholder="{{'CONTRACT_CURD_TAB_NOTE_CURD_TXT_TITLE' | translate}}..." />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.Title=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-md-2">
+            <div class="form-group mb5">
+                <div class="input-group">
+                    <input class="form-control" name="Tags" ng-model="model.Tags" type="text" placeholder="Tags..." />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.ItemCode=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>-->
+        <div class="col-md-2">
+            <div class="form-group mb5">
+                <div class="input-group">
+                    <input class="form-control" name="Note" ng-model="model.Note" placeholder="{{'CONTRACT_CURD_TAB_NOTE_CURD_TXT_NOTE' | translate}}..."></>
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.Note=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group mb5">
+                <button ng-click="reload()" type="submit" class="btn btn-accent">
+                    <i class="fa fa-search"></i>
+                    {{'COM_BTN_SEARCH' | translate}}
+                </button>
+                <button ng-click="add()" type="submit" class="btn btn-green ml25">
+                    <i class="fa fa-plus"></i>
+                    {{'COM_BTN_ADD' | translate}}
+                </button>
+            </div>
+        </div>
+        <!-- </form>-->
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataContractNote"></table>
+</div>

@@ -1,0 +1,55 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">{{'FCC_TITLE_FCC' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'FCC_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="#/AssetActivity">{{'FCC_LINK_FCC' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6 ">
+
+        </div>
+    </div>
+    <div class="portlet light bordered input-search mt5 p10">
+        <div class="row">
+            <div class="col-lg-4" style="padding-top:10px">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="{{'FCC_CURD_TXT_SEARCH_FCC_CODE' | translate}}..." ng-model="model.CurrencyCode" name="CurrencyCode" ng-keydown="($event.keyCode == 13) && reload()" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.CurrencyCode=''" class="btn btn-default no-shadow" style="border-bottom-left-radius: 0px;border-top-left-radius: 0px;height: 34px">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="btn-group actions d-flex">
+                <div class="text-center pr10" style="width:50px">
+                    <a ng-click="search()" class=" btn btn-icon-only btn-circle btn-outline purple-custom">
+                        <span><i class="fa fa-search"></i></span>
+                    </a>
+                    <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_SEARCH' | translate}}</p>
+                </div>
+                <div class="text-center pr10">
+                    <a ng-click="add()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                        <span><i class="fa fa-plus"></i></span>
+                    </a>
+                    <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblData"></table>

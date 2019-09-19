@@ -1,0 +1,39 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title  custom-title " id="modal-title"> Thêm nhà cung cấp</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode"></i>
+                        <label class="control-label require">Nhà cung cấp</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" name="Code" ng-model="model.ext_code" placeholder="Mã..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-code"></i>
+                        <label class="control-label require">Trình độ</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" name="Value" ng-model="model.ext_value" placeholder="Giá trị..." />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        Hủy bỏ
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr25">
+        Thêm mới
+    </button>
+</div>

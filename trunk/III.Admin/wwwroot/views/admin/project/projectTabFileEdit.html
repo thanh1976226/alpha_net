@@ -1,0 +1,126 @@
+﻿<style>
+    .ui-select-search {
+        border: none !important;
+    }
+
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+
+    .ui-select-match-item {
+        background: #fff;
+    }
+
+    .ui-select-match-close {
+        background-image: none;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-tags pt10" style="color: #5cb85c; font-size: 25px"></i>
+    <div class="modal-title custom-title " id="modal-title">{{'PROJECT_CURD_TAB_FILE_TITLE_EDIT_FILE' | translate}} </div><span class="black bold">{{model.ContractCode}}</span>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addfileform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptionsFile">
+            <div class="form-body" style="padding-top:0px">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="glyphicon glyphicon-tag"></i>
+                        <label class="control-label require">{{'PROJECT_CURD_TAB_FILE_CURD_LBL_FILECODE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" name="FileCode" ng-model="model.FileCode" placeholder="{{'PROJECT_CURD_TAB_FILE_CURD_TXT_FILECODE' | translate}}..." />
+                    </div>
+
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': errortest}">
+                    <div class="col-md-4">
+                        <i class="fa fa-pencil"></i>
+                        <label class="control-label require">{{'PROJECT_CURD_TAB_FILE_CURD_LBL_FILENAME' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="input-group input-file">
+                            <i class="fa fa-upload"></i>
+                            <input class="form-control border-top-left-4radius border-bottom-left-4radius inputFile pl30" style="height:33px" placeholder='{{'PROJECT_CURD_TAB_FILE_CURD_TXT_FILENAME' | translate}}...' readonly></>
+                            <span class="input-group-btn">
+                                <span class="btn btn-default btn-choose" onclick="$(this).parent().find('input[type=file]').click();">Brown</span>
+                                <input class="form-control" id="File" custom-on-change="loadFile" onchange="$('.inputFile').val($(this).val().split('\\').pop());" style="display: none;" type="file">
+                            </span>
+                        </div>
+                        <span ng-show="errortest" class="label-color validation-message">
+                            {{'PROJECT_CURD_TAB_FILE_CURD_VALIDATE_FILENAME' | translate}}!
+                        </span>
+                    </div>
+
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': errorCategory}">
+                    <div class="col-md-4">
+                        <i class="fa fa-user"></i>
+                        <label class="control-label require">{{'PROJECT_CURD_TAB_FILE_CURD_LBL_REPOSCODE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <ui-select tagging ng-model="model.Category" theme="bootstrap" on-select="changleSelect('Category')">
+                                <ui-select-match placeholder="{{'PROJECT_CURD_TAB_FILE_CURD_COMBO_REPOSCODE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                <ui-select-choices repeat="x in Categories | filter: $select.search">
+                                    {{x.Name}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.Category=''" class="btn btn-default no-shadow" style="">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <span ng-show="errorCategory" class="label-color validation-message">
+                            {{'PROJECT_CURD_TAB_FILE_CURD_VALIDATE_REPOSCODE' | translate}}!
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="glyphicon glyphicon-tag"></i>
+                        <label class="control-label">{{'PROJECT_CURD_TAB_FILE_CURD_LBL_TAGS' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <ui-select tagging ng-model="model.MemberCode" theme="bootstrap" on-select="changleSelect('MemberCode')">
+                                <ui-select-match placeholder="{{'PROJECT_CURD_TAB_FILE_CURD_COMBO_TAGS' | translate}}...">{{$select.selected.UserName}}</ui-select-match>
+                                <ui-select-choices repeat="x.Id as x in listUser | filter: $select.search">
+                                    {{x.UserName}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.MemberCode=''" class="btn btn-default no-shadow" style="">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="glyphicon glyphicon-tag"></i>
+                        <label class="control-label">{{'PROJECT_CURD_TAB_FILE_CURD_LBL_NOTE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" rows="3" class="form-control" name="Description" ng-model="model.Description" placeholder="{{'PROJECT_CURD_TAB_FILE_CURD_TXT_NOTE' | translate}}..." />
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red " href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_EDIT' | translate}}
+    </button>
+</div>
+
+
+

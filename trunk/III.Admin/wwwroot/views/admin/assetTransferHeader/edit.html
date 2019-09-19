@@ -1,0 +1,388 @@
+﻿<style>
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+
+    .h-60 {
+        height: 60px;
+    }
+
+    .pl0 {
+        padding-left: 10px;
+    }
+
+    .p25 {
+        padding-left: 25px;
+    }
+
+    .pt5 {
+        padding-top: 5px;
+    }
+
+    .pr15 {
+        padding-right: 10px;
+    }
+
+    .pr15 {
+        padding-right: 15px;
+    }
+
+    .pr20 {
+        padding-right: 20px;
+    }
+
+    .pr5 {
+        padding-right: 5px;
+    }
+
+    .mt5 {
+        margin-top: 5px;
+    }
+
+    .mt15 {
+        margin-top: 15px;
+    }
+
+    .ml15 {
+        margin-left: 15px;
+    }
+
+    .mt23 {
+        margin-right: 60px;
+    }
+
+    .mt25 {
+        margin-top: 25px;
+    }
+
+    .w-100-percent {
+        width: 100%;
+    }
+
+    .w-30-percent {
+        width: 30%;
+    }
+
+    .bgWhite {
+        background: #FFF;
+    }
+
+    .labelbodergroup {
+        margin-left: 24px;
+        margin-top: -12px;
+        position: absolute;
+        background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+        border: 1px solid #e9dada;
+        border-radius: 4px;
+        font-size: 11px;
+        padding: 3px 10px !important;
+    }
+
+    .table_body {
+        background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+        border-radius: 4px !important;
+        border: 1px solid #e9dada;
+        padding-top: 15px;
+        box-shadow: 0px 5px 10px 2px rgba(127, 143, 166,0.2) !important;
+        padding-bottom: 15px;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert  "></i>
+    <span class="modal-title custom-title " id="modal-title"> Thêm phiếu điều chuyển tài sản</span>
+</div>
+<div class="modal-body userFormAreaHeader" id="modal-body">
+    <div class="portlet-body form">
+        <form name="editform" class="form-horizontal " method="post" ng-validate="validationOptions">
+            <div class="form-body pt-0 pl-0 pr-0">
+                <div class="row ">
+                    <div class="col-lg-9 col-md-8">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                                        <label class="control-label require">Mã phiếu</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="Ticketcode" class="form-control" data-ng-model="model.Ticketcode" placeholder="Mã phiếu..." ng-readonly="true" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-comment"></i>
+                                        <label class="control-label require">Tiêu đề phiếu</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" ng-model="model.Ticket" name="Ticket" placeholder="Nhập tiêu đề phiếu..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="col-md-12 ">
+                                        <i class="fa fa-flag" aria-hidden="true"></i>
+                                        <label class="control-label">&nbsp;Trạng thái</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <ui-select ng-model="model.Status" theme="bootstrap">
+                                                <ui-select-match placeholder="Trạng thái...">{{$select.selected.Name}}</ui-select-match>
+                                                <ui-select-choices repeat="x.Code as x in ListStatus | filter: $select.search">
+                                                    {{x.Name}}
+                                                </ui-select-choices>
+                                            </ui-select>
+                                            <span class="input-group-btn">
+                                                <button type="button" ng-click="model.Status=''" class="btn btn-default no-shadow">
+                                                    <span><img src="https://img.icons8.com/material/18/000000/log.png"></span>
+                                                </button>
+
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group" ng-class=" {'has-error': errorDepartTransf}">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-user"></i>
+                                        <label class="control-label require">Đơn vị chuyển</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <ui-select tagging ng-model="model.DepartTransf" theme="bootstrap" on-select="changleSelect('DepartTransf')">
+                                                <ui-select-match placeholder="Đơn vị chuyển...">{{$select.selected.Name}}</ui-select-match>
+                                                <ui-select-choices repeat=" x.Code as x in ListDonvichuyen | filter: $select.search">
+                                                    {{x.Name}}
+                                                </ui-select-choices>
+                                            </ui-select>
+                                            <span class="input-group-btn">
+                                                <button type="button" ng-click="model.DepartTransf=''" class="btn btn-default no-shadow" style="">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </span>
+
+                                        </div>
+                                        <span ng-show="errorDepartTransf" class="label-color validation-message">
+                                            Đơn vị chuyển không được bỏ trống
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" ng-class="{ 'has-error': errorUserTransf}">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-user"></i>
+                                        <label class="control-label require">Người chuyển</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <ui-select tagging ng-model="model.UserTransf" theme="bootstrap" on-select="changleSelect('UserTransfer')">
+                                                <ui-select-match placeholder="Người chuyển...">{{$select.selected.Name}}</ui-select-match>
+                                                <ui-select-choices repeat=" x.Code as x in ListNguoichuyen | filter: $select.search">
+                                                    {{x.Name}}
+                                                </ui-select-choices>
+                                            </ui-select>
+                                            <span class="input-group-btn">
+                                                <button type="button" ng-click="model.UserTransf=''" class="btn btn-default no-shadow" style="">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <span ng-show="errorUserTransf" class="label-color validation-message">
+                                            Không được để trống
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <label class="control-label require ">Thời gian chuyển</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class='input-group date' id='starttime'>
+                                            <input type='text' class="form-control input-date" name="StartTime" ng-model="model.StartTime" placeholder="Thời gian chuyển..." />
+                                            <span class="input-group-addon">
+                                                <span class="fa fa-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <label class="control-label require">Địa điểm chuyển</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" ng-model="model.LocationTransf" name="addresstransf" placeholder="Địa điểm chuyển..." />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group" ng-class="{ 'has-error': errorDepartReceived}">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-user"></i>
+                                        <label class="control-label require">Đơn vị nhận</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <ui-select tagging ng-model="model.DepartReceived" theme="bootstrap" on-select="changleSelect('DepartReceived')">
+                                                <ui-select-match placeholder="Đơn vị nhận...">{{$select.selected.Name}}</ui-select-match>
+                                                <ui-select-choices repeat=" x.Code as x in ListDonvinhan | filter: $select.search">
+                                                    {{x.Name}}
+                                                </ui-select-choices>
+                                            </ui-select>
+                                            <span class="input-group-btn">
+                                                <button type="button" ng-click="model.DepartReceived=''" class="btn btn-default no-shadow" style="">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <span ng-show="errorDepartReceived" class="label-color validation-message">
+                                            Không được để trống
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" ng-class="{ 'has-error': errorUserReceived}">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-user"></i>
+                                        <label class="control-label require">Người nhận</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <ui-select tagging ng-model="model.UserReceived" theme="bootstrap" on-select="changleSelect('UserReceived')">
+                                                <ui-select-match placeholder="Người nhận...">{{$select.selected.Name}}</ui-select-match>
+                                                <ui-select-choices repeat=" x.Code as x in ListNguoinhan | filter: $select.search">
+                                                    {{x.Name}}
+                                                </ui-select-choices>
+                                            </ui-select>
+                                            <span class="input-group-btn">
+                                                <button type="button" ng-click="model.UserReceived=''" class="btn btn-default no-shadow" style="">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <span ng-show="errorUserReceived" class="label-color validation-message">
+                                            Không được để trống
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <label class="control-label require ">Thời gian Nhận</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class='input-group date' id='receivedtime'>
+                                            <input type='text' class="form-control input-date" name="ReceivedTime" ng-model="model.ReceivedTime" placeholder="Thời gian nhận..." />
+                                            <span class="input-group-addon">
+                                                <span class="fa fa-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <label class="control-label require">Địa điểm nhận</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" ng-model="model.ReceivedLocation" name="addressreceived" placeholder="Địa điểm nhận..." />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                                <label class="control-label ">Ghi chú</label>
+                                <textarea name="Note" rows="3" class="form-control" ng-model="model.Note" type="text" placeholder="Ghi chú..."></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="col-md-12 mt25 pr-0 pl-2">
+                            <div class="col-md-6">
+                                <div class="border-qrcode text-center pull-left">
+                                    <qrcode size="80" data="{{model.Ticketcode}}"></qrcode>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pt10 pr15">
+                                <div class="text-center " ng-click="print(QR_Code_Req)">
+                                    <a class="btn btn-icon-only btn-circle btn-outline blue-custom">
+                                        <span><i class="fa fa-print"></i></span>
+                                    </a>
+                                    <p class="text-underline fs9 mb5 pt3">In ấn</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pr-0 pl-0" style="margin-top: 4%">
+                            <label class="">Danh sách tệp tải lên</label>
+                            <div class="col-md-12 boder-box h-100-srcoll">
+                                <button type="button" class="tags-custom" ng-repeat="x in model.ListFileReceipt">
+                                    <i class="fa fa-times pull-right ic-remove" aria-hidden="true" ng-click="removeFileReq($index,x.FileID)"></i><span></span><a title="{{x.FileName}}" ng-click="download(x.FileCode)" {{x.FileName}}</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pr5" style="margin-top: 6%">
+                            <div class="btn-group actions d-flex pull-right">
+                                <div class="text-center pr20">
+                                    <a class="btn btn-icon-only btn-circle btn-outline green-custom" ng-click="addFileReq()">
+                                        <span><i class="fa fa-upload"></i></span>
+                                    </a>
+                                    <p class="text-underline fs9 mb5 pt3">Tải tệp</p>
+                                </div>
+                                <div class="text-center pr20">
+                                    <a data-dismiss="modal" ng-click="deleteList()" class="btn btn-icon-only btn-circle btn-outline red-custom">
+                                        <span><i class="glyphicon glyphicon-remove"></i></span>
+                                    </a>
+                                    <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_DELETE' | translate}}</p>
+                                </div>
+                                <div class="btn-group pull-right actions d-flex">
+                                    <div class="text-center pr10">
+                                        <a ng-click="submit()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                                            <span><i class="fa fa-save"></i></span>
+                                        </a>
+                                        <p class="text-underline fs9 mb5 pt3"> {{'COM_BTN_SAVE' | translate}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt5">    
+                    <div class="col-md-12 pl-0 pr-0">
+                        <div class="tabbable">
+                            <uib-tabset active="active">
+
+                                <div ng-include="'../views/admin/assetTransferHeader/Addtable.html'"></div>
+
+                            </uib-tabset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

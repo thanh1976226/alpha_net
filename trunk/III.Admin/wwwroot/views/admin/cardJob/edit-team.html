@@ -1,0 +1,77 @@
+﻿<style>
+    .modal .modal-dialog {
+        width: 300px;
+        height: 60%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .modal-header {
+        border-bottom: 0px !important;
+        border-radius: 5px;
+    }
+
+    .p0 {
+        padding: 0px !important;
+    }
+
+    .close-icon {
+        color: #000000;
+        margin-right: 4px;
+    }
+
+    .control-label {
+        color: #bdc3c7;
+    }
+
+    .ui-select-match-close {
+        background-image: none;
+    }
+
+    .board-title {
+        border: 0 !important;
+    }
+
+        .board-title:focus {
+            background: #ecf0f1;
+        }
+
+        .board-title[placeholder] {
+            font-weight: bold;
+        }
+</style>
+<div class="modal-header no-color">
+    <div class="col-md-12 p0">
+        <div class="col-md-11 p0">
+            <input class="board-title form-control" ng-model="model.TeamName" placeholder="Tên nhóm" autofocus />
+        </div>
+        <div class="col-md-1 p0 text-right">
+            <i class="fa fa-times close-icon cursor" title="Close" ng-click="cancel()"></i>
+        </div>
+    </div>
+</div>
+<div class="modal-body">
+    <div class="col-md-12 p0">
+        <ui-select id="LeaderSelect" tagging ng-model="model.Leader" on-select="leaderSelect(model.Leader)" theme="bootstrap">
+            <ui-select-match placeholder="Leader...">{{$select.selected.UserName}}</ui-select-match>
+            <ui-select-choices style="height: auto" repeat="x.UserName as x in listLeader | filter: $select.search">
+                {{x.UserName}}
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    <div class="col-md-12 mt5 p0">
+        <ui-select ng-model="model.Member" multiple theme="bootstrap" class="" style="width: 100%;">
+            <ui-select-match placeholder="Members...">{{$item}}</ui-select-match>
+            <ui-select-choices repeat="x in listUser | filter:$select.search">
+                {{x}}
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12 p0 mt10 text-right">
+        <button class="btn green" ng-click="submit()">Cập nhật</button>
+    </div>
+</div>

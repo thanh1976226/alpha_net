@@ -1,0 +1,139 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">Kế hoạch thu / chi</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'COM_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="#/FundPlanAccEntry">Kế hoạch thu / chi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt10 mb15">
+        <div class="col-md-12 portlet light bordered input-search ml-2">
+            <div class="form group">
+                <div class="col-md-2">
+                    <label class="fw600 text-underline">{{'PPAE_CURD_LBL_FROMDATE' | translate}}</label>
+                    <div class="input-group">
+                        <div class='input-group date' id='Fromtime'>
+                            <input ng-model="model.FromTime" autocomplete="off" class="form-control" type="text" placeholder="{{'PPAE_CURD_TXT_FROMDATE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" id='FromTime' />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.FromTime=''" class="btn btn-default no-shadow start-date">
+                                    <span class="fa fa-calendar"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form group">
+                <div class="col-md-2">
+                    <label class="fw600 text-underline">{{'PPAE_CURD_LBL_TODATE' | translate}}</label>
+                    <div class="input-group">
+                        <div class='input-group date' id='Totime'>
+                            <input ng-model="model.ToTime" autocomplete="off" class="form-control" type="text" placeholder="{{'PPAE_CURD_LBL_TODATE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" id='ToTime' />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ToTime=''" class="btn btn-default no-shadow start-date">
+                                    <span class="fa fa-calendar"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form group">
+                <div class="col-md-2">
+                    <label class="fw600 text-underline">{{'PPAE_CURD_LBL_TYPE' | translate}}</label>
+                    <div class='input-group'>
+                        <ui-select tagging ng-model="model.AetType" theme="bootstrap">
+                            <ui-select-match placeholder="{{'PPAE_CURD_TXT_TYPE' | translate}}">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in listAetType | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.AetType='';" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    <label class="fw600 text-underline">Trạng thái</label>
+                    <div class="input-group">
+                        <ui-select ng-model="model.Status" theme="bootstrap">
+                            <ui-select-match placeholder="Trạng thái...">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in listStatus | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Status='';" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2">
+                    <label class="fw600 text-underline">Người trả</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="model.Payer" name="title" placeholder="Người trả..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Payer=''" class="btn btn-default no-shadow" style="">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form group">
+                <div class="btn-group actions d-flex col-md-2">
+                    <div class="text-center pr10" style="padding-top: 15px;">
+                        <a ng-click="search()" class=" btn btn-icon-only btn-circle btn-outline purple-custom">
+                            <span><i class="fa fa-search"></i></span>
+                        </a>
+                        <p class="text-underline fs9 mb5 pt3">Tìm kiếm</p>
+                    </div>
+                    <div class="text-center pr10" style="padding-top: 15px;">
+                        <a ng-click="export()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                            <span><i class="fa fa-file-excel-o"></i></span>
+                        </a>
+                        <p class="text-underline fs9 mb5 pt3">Xuất excel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData">
+    <tfoot>
+        <!--<tr>
+                <th colspan="1" class=""></th>
+                <th colspan="4" class="text-danger">Tổng cộng</th>
+                <th colspan="1" class=""><span class="text-success">{{totalConsumpMonthly | number : fractionSize}}</span></th>
+        <tfoot>-->
+        <tr>
+            <th colspan="1" class=""></th>
+            <th colspan="2" class="pl10">{{'CONTRACT_CURD_TAB_PAYMENT_LIST_COL_TOTAL' | translate}}</th>
+            <th colspan="2" class="pl10"><span> {{'PPAE_LIST_COL_TOTAL_EXPENSE' | translate}} :  </span><span class="text-success">{{totalReceipts | number : fractionSize}} </span></th>
+            <th colspan="3" class="pl10">{{'PPAE_LIST_COL_TOTAL_RECEIPT' | translate}} : <span class="text-danger">{{totalPaymentSlip | number : fractionSize}}</span></th>
+        </tr>
+    </tfoot>
+</table>
+
+
+

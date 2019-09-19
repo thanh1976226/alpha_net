@@ -1,0 +1,153 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-4 ">
+            <h1 class="bold mb-0">{{'CONTRACT_LBL_CONTRACT' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'CONTRACT_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="#/customer">{{'CONTRACT_LINK_CONTRACT' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div class="btn-group pull-right actions">
+                <a class="btn btn-accent btnSearch">
+                    <span class=""><i class="fa fa-search"></i>{{'COM_BTN_SEARCH' | translate}}</span>
+                </a>
+                <a ng-click="add()" class="btn btn-green">
+                    <span class=""><i class="fa fa-plus"></i>{{'COM_BTN_ADD' | translate}}</span>
+                </a>
+                <a ng-click="addCardJob()" class="btn btn-red">
+                    <span class="mr5"><img src="/images/cardJob/WHITE.png" style="height: 17px;width: 13px;" />{{'CONTRACT_CURD_BTN_ADD_CARD_JOB' | translate}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="portlet light bordered input-search hidden mb5">
+        <div class="portlet-body">
+            <img class="pull-right h28 w28 close-input-search" role="button" title="Đóng" src="/images/default/close.png" />
+            <div class="row pt5 pb0">
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_LBL_SEARCH_FROM_DATE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.FromDate" class="form-control" type="text" placeholder="{{'CONTRACT_TXT_SEARCH_FROM_DATE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" id='datefrom' />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.FromDate=''" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_LBL_SEARCH_TO_DATE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.ToDate" class="form-control" type="text" placeholder="{{'CONTRACT_TXT_SEARCH_TO_DATE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" id='dateto' />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ToDate=''" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_CURD_LBL_CONTRACT_CODE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.ContractCode" class="form-control" type="text" placeholder="{{'CONTRACT_CURD_TXT_CONTRACT_CODE' | translate}}.." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ContractCode=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_CURD_LBL_STATUS' | translate}}</label>
+                    <div class="input-group">
+                        <ui-select ng-model="model.Status" theme="bootstrap">
+                            <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_STATUS' | translate}}">{{$select.selected}}</ui-select-match>
+                            <ui-select-choices repeat="val in ContractStatus | filter: $select.search">
+                                {{val}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Status=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_LBL_SEARCH_BUDGET_F' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.BudgetF" class="form-control" type="text" placeholder="{{'CONTRACT_TXT_SEARCH_BUDGET_F' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.BudgetF=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_LBL_SEARCH_BUDGET_T' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.BudgetT" class="form-control" type="text" placeholder="{{'CONTRACT_TXT_SEARCH_BUDGET_T' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.BudgetT=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_CURD_LBL_SIGNER' | translate}}</label>
+                    <div class="input-group">
+                        <ui-select ng-model="model.Signer" style="width:100%">
+                            <ui-select-match placeholder="{{'CONTRACT_CURD_TXT_SIGNER' | translate}}">{{$select.selected}}</ui-select-match>
+                            <ui-select-choices repeat="val in Signers | filter: $select.search">
+                                {{val}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Signer=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CONTRACT_CURD_LBL_CURRENCY' | translate}}</label>
+                    <div class="input-group">
+                        <ui-select ng-model="model.Currency" theme="bootstrap">
+                            <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_CURRENCY' | translate}}">{{$select.selected}}</ui-select-match>
+                            <ui-select-choices repeat="val in ContractUnit | filter: $select.search">
+                                {{val}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Currency=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn-group pull-right pt10">
+                        <a class="btn btn-accent" ng-click="search()">
+                            <span class=""><i class="fa fa-search"></i>{{'COM_BTN_SEARCH' | translate}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblDataContract"></table>

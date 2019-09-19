@@ -1,0 +1,96 @@
+﻿<style>
+    .listboard-toggle:hover {
+        background-color: #ccc !important;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 55px;
+        transition: 0.2s;
+    }
+
+    .team-option {
+        position: absolute;
+        margin-top: -19px;
+        margin-left: 150px;
+    }
+</style>
+<div class="row">
+    <div class="sidenav" style="background-color: #ecf0f1" id="mySidenav">
+        <div class="col-md-12 p0">
+            <div class="col-md-12 p0" id="ListBoard">
+                <div class="col-md-12 mt10" id="SearchBoard">
+                    <input class="form-control" ng-model="SearchKey.BoardName" placeholder="Tìm bảng theo tên..." />
+                </div>
+                <div class="col-md-12 p0 scrollbar-sm" id="list-board" style="overflow-y:scroll;">
+                    <div class="col-md-12 p0 mt15 boards" ng-repeat="team in Teams">
+                        <div class="col-md-12">
+                            <i class="fa fa-mortar-board"></i>
+                            <b title="{{team.TeamName}}">{{ team.TeamName.length > 15 ? team.TeamName.substr(0, 15) + "..." : team.TeamName }}</b>
+                            <div class="team-option">
+                                <i class="fa fa-edit cursor" title="Chỉnh sửa team này" ng-click="editTeam(team.TeamCode)"></i>
+                                <i class="fa fa-times cursor" title="Xóa team này" ng-click="deleteTeam(team.TeamCode)"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12 p0" ng-model="Boards">
+                            <div ng-repeat="x in Boards | filter: SearchKey">
+                                <div class="col-md-12 p0 mt5 pl5 pr5" style="color: #ffffff" ng-init="$scope.zIndex = -1" ng-if="team.TeamCode == x.TeamCode">
+                                    <div class="col-xs-12 p0"
+                                         ng-mouseenter="$scope.zIndex = 10"
+                                         ng-mouseleave="$scope.zIndex = -1"
+                                         style="line-height: 30px;">
+
+                                        <div class="col-xs-12 p0" style="border-radius: 5px; background-color: {{x.Background}}">
+                                            <div class="col-xs-8 col-xs-offset-1 pl-0 pr-0 cursor" style="height: 100%" ng-click="detail(x.BoardCode)">
+                                                <b title="{{x.BoardName}}">{{ x.BoardName.length > 15 ? x.BoardName.substr(0, 15) + "..." : x.BoardName }}</b>
+                                            </div>
+                                            <div class="col-xs-1 text-right pl-0 pr-0" style="z-index: {{$scope.zIndex}}">
+                                                <i class="fa fa-edit cursor" title="Chỉnh sửa bảng này" ng-click="editBoard(x.BoardCode)"></i>
+                                            </div>
+                                            <div class="col-xs-1 text-right pl-0 pr-0" style="z-index: {{$scope.zIndex}}">
+                                                <i class="fa fa-times cursor" style="color: #fff" title="Xóa bảng này" ng-click="deleteBoard(x.BoardID)"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt10" id="navLeftFooter">
+                    <div class="col-md-12">
+                        <a ng-click="addTeam()"><i class="fa fa-plus mr5"></i>Thêm nhóm mới</a>
+                    </div>
+                    <div class="col-md-12 mt5">
+                        <a ng-click="addBoard()"><i class="fa fa-plus mr5"></i>Thêm bảng mới</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" style="" id="BoardDetail" ng-include="'../views/admin/cardJob/board-detail.html'">
+
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var $header = $('#navbar-menu');
+        var $searchBoard = $('#SearchBoard');
+        var $footer = $('#navLeftFooter');
+        var $content = $('#list-board');
+        var $window = $(window).on('resize', function () {
+            var height = $(this).height() - ($header.height() + $searchBoard.height() + $footer.height() + 40);
+            $('#list-board').css("height", height);
+        }).trigger('resize');
+    })
+
+    $('.modal-dialog').draggable();
+</script>

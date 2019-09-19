@@ -1,0 +1,16 @@
+﻿
+<div ng-controller="more">
+    <div class="row pull-right">
+        <div class="col-md-12 form-group mb5">
+            <button ng-click="add()" type="submit" class="btn btn-green">
+                <i class="fa fa-plus "></i>&nbsp;{{'COM_BTN_ADD' | translate}}
+            </button>
+        </div>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblData"></table>
+</div>

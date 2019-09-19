@@ -1,0 +1,200 @@
+﻿<div class="container-fluid p0 board-detail">
+    <div ng-if="ViewMode == 0" class="col-md-12 search-bar">
+        <div class="col-md-2 pl-0">
+            <input class="form-control" ng-model="searchObj.CardTitle" placeholder="Từ khóa..." />
+        </div>
+        <div class="col-md-2 pl-0">
+            <div class="input-group">
+                <ui-select tagging ng-model="searchObj.Member" theme="bootstrap">
+                    <ui-select-match placeholder="Người được giao...">{{$select.selected.UserName}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x.UserName as x in listUser | filter: $select.search">
+                        {{x.UserName}}
+                    </ui-select-choices>
+                </ui-select>
+                <span class="input-group-addon" ng-click="searchObj.Member = ''">
+                    <span class="fa fa-times"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-2 pl-0">
+            <div class="input-group date" id="FromDate">
+                <input class="form-control" ng-model="searchObj.Fromdate" placeholder="Từ ngày..." />
+                <span class="input-group-addon">
+                    <span class="fa fa-calendar"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-2 pl-0">
+            <div class="input-group date" id="ToDate">
+                <input class="form-control" ng-model="searchObj.Todate" placeholder="Đến ngày..." />
+                <span class="input-group-addon">
+                    <span class="fa fa-calendar"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-4 p0" ng-init="searchObj.ButtonStatus = true">
+            <div class="col-md-7 p0">
+                <button class="btn btn-red" ng-if="searchObj.ButtonStatus == true" ng-click="search()">Tìm</button>
+                <button class="btn btn-red" ng-if="searchObj.ButtonStatus != true" ng-click="resetSearch()"><span class="fa fa-sync"></span></button>
+                <button class="btn btn-accent " ng-click="advanceSearch()">Tìm kiếm nâng cao</button>
+            </div>
+            <div class="col-md-5 p0 pt10">
+                <input type="checkbox" style="transform: scale(2)" ng-model="setting.DefaultCard" />
+                <a class="black pl5" ng-click="defaultCardSetting()">Cài đặt mặt định</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 p0 mt5">
+        <div class="col-md-6">
+            <a class="black" style="font-size: 18px; font-weight:bold">{{modelDetail.BoardName}}</a>
+            <span class="divider"></span>
+            <a class="black" style="padding: 0px 5px 0px 5px">{{modelDetail.TeamCode}}</a>
+            <span class="divider"></span>
+            <a class="black" style="padding: 0px 5px 0px 5px">
+                <i class="fa fa-lock" ng-if="modelDetail.Visibility == 'PRIVATE'"></i>
+                <i class="fa fa-key" ng-if="modelDetail.Visibility == 'PUBLIC'"></i>
+                {{modelDetail.Visibility}}
+            </a>
+            <!--<ui-select ng-if="ViewMode == 1" class="inline" style="width: 100px" tagging ng-model="searchObj.Member" theme="bootstrap">
+                <ui-select-match placeholder="Người được giao...">{{$select.selected.UserName}}</ui-select-match>
+                <ui-select-choices style="height: auto" repeat="x.UserName as x in listUser | filter: $select.search">
+                    {{x.UserName}}
+                </ui-select-choices>
+            </ui-select>-->
+        </div>
+        <div class="col-md-6 text-right p0">
+            <a ng-if="ViewMode == 0" ng-click="gridCard(1)" class="black">
+                <i class="fa fa-tasks"></i>
+                Danh sách
+            </a>
+            <a ng-if="ViewMode == 1" ng-click="gridCard(0)" class="black">
+                <i class="fa fa-tasks"></i>
+                Truyền thống
+            </a>
+            <a ng-click="calendar()" class="black">
+                <i class="fa fa-calendar"></i>
+                Lịch
+            </a>
+        </div>
+    </div>
+    <div ng-if="ViewMode == 0" class="testimonial-group col-md-12">
+        <div class="row mt5" id="BoardDetailMain">
+            <!--xuất các list-->
+            <ul ui-sortable="sortableOptions" ng-model="modelDetail.lists">
+                <li class="card col-md-2 p0 list" ng-repeat="list in modelDetail.lists">
+                    <div class="col-md-12 p5 task-board" style="background:{{list.Background}}">
+                        <div class="col-md-11 p0 card-header">
+                            <div class="col-xs-1 p0">
+                                <i class="fas fa-sun" style="color: {{list.HeaderColor}};"></i>
+                            </div>
+                            <div class="col-xs-11 pl5">
+                                <div class="list-header-target" ng-mouseup="editingListTitle(list.ListID)" ng-show="!acticeDrag"></div>
+                                <input id="listName_{{list.ListID}}" data-currentvalue="{{list.ListName}}" class="category-title" value="{{list.ListName}}" ng-blur="updateListName(list.ListID)" />
+                            </div>
+                        </div>
+                        <div class="col-md-1 text-right p0">
+                            <div class="col-md-12 p0">
+                                <div class="col-md-1 pull-right dropdown">
+                                    <a class="white"  data-toggle="dropdown">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-toggle">
+                                        <li class="dropdown-header text-center" style="padding-top: 10px; font-size: 14px">
+                                            <label class="gray">Cập nhật trạng Thái</label>
+                                        </li>
+                                        <li ng-class="{true: 'active'}[list.Status == 1]"><a class="bold" ng-click="changeListStatus(list.ListID, 1)">Khởi tạo</a></li>
+                                        <li ng-class="{true: 'active'}[list.Status == 2]"><a class="bold" ng-click="changeListStatus(list.ListID, 2)">Hoạt động</a></li>
+                                        <li ng-class="{true: 'active'}[list.Status == 0]"><a class="bold" ng-click="changeListStatus(list.ListID, 0)">Chậm trễ</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header text-center" style="padding-top: 10px; font-size: 14px">
+                                            <label class="gray">Sắp xếp danh sách theo</label>
+                                        </li>
+                                        <li><a class="bold" ng-click="sortListByStatus(0)">Trạng thái chậm trễ</a></li>
+                                        <li><a class="bold" ng-click="sortListByStatus(1)">Trạng thái hoạt động</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown dropdown-submenu">
+                                            <a class="dropdown-toggle bold" data-toggle="dropdown">Di chuyển tới</a>
+                                            <ul class="dropdown-menu scrollable-menu">
+                                                <li ng-repeat="board in modelDetail.boards">
+                                                    <a class="bold" ng-click="changeBoard(list.ListID, board.BoardCode)">{{board.BoardCode}} - {{board.BoardName}}</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="bold" ng-click="changleHeaderBackgroundList(list.ListID)">Màu sắc</a></li>
+                                        <li class="divider"></li>
+                                        <li><a class="bold" ng-click="deleteList(list.ListID)">Xóa danh sách này</a></li>
+                                    </ul>
+                                </div>
+                                <!--<a class="" style="color: #000000" data-toggle="dropdown" ng-click="permissionTag(list.ListCode)">
+                                    <i class="fa fa-cogs"></i>
+                                </a>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Xuât các thẻ ra list-->
+                    <!--ng-if="list.ListCode == card.ListCode"-->
+                    <div class="col-md-12 pl10 pr-0">
+                        <ul class="tag-content pr10 list-body" ui-sortable="sortableCard" title="{{list.ListCode}}" id="{{list.ListCode}}" ng-model="cards[list.ListCode]">
+                            <li class="col-md-12 p0 task-card" data-toggle="tooltip" data-placement="right" title="{{card.CardCode}}" id="{{card.CardCode}}" style="min-height: 0px !important" ng-repeat="card in cards[list.ListCode]">
+                                <div class="tag-item col-md-12" ng-mouseleave="$scope.zIndex = -1" ng-mouseenter="$scope.zIndex = 10" ng-init="$scope.zIndex = -1" style="margin-top: 8px;padding: 0px;">
+                                    <div class="tag-item edit p0 cursor" style="z-index: {{$scope.zIndex}}" ng-click="cardDetail(card.CardCode)">
+                                        <a style="border: 0px;" class="p0"><i class="fa fa-edit"></i></a>
+                                    </div>
+                                    <label class="tag-item contents col-md-12" ng-class="{'border red': card.DueDate < currentDate}" style="white-space: pre-wrap">{{card.CardName}}</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div ng-if="showAddCard == list.ListCode">
+                            <div class="col-md-12 p0 mt10 pr10">
+                                <!--<input class="form-control code" ng-model="addcard.CardCode" placeholder="Mã thẻ..." autofocus />-->
+                                <textarea class="form-control" ng-model="addcard.CardName" placeholder="Nhập tiêu đề cho thẻ này..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Thêm thẻ-->
+                    <div id="" class="col-md-12 p10 mt5 new-tag">
+                        <a class="new-tag" ng-click="openAddCard(list.ListCode)" ng-if="showAddCard != list.ListCode">
+                            <i class="fa fa-plus"></i>
+                            Thêm thẻ khác
+                        </a>
+                        <div class="list-footer" ng-if="showAddCard == list.ListCode">
+                            <button class="col-md-7 btn bold" ng-click="addCard(list.ListCode)">Thêm thẻ</button>
+                            <a class="col-md-2 gray mt10" ng-click="closeAddCard()"><i class="fa fa-close fa-2x"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <!--Thêm list-->
+                <li class="col-md-2 text-center" style="display: inline-block; float: none; vertical-align:top">
+                    <div class="card list col-md-12 p3" ng-if="showAddList">
+                        <div class="col-md-12 p0">
+                            <!--<input class="form-control code" ng-model="addlist.ListCode" type="text" placeholder="Nhập mã danh sách..." />-->
+                            <input class="form-control" ng-model="addlist.ListName" type="text" placeholder="Nhập tiêu đề danh sách..." />
+                        </div>
+                        <div class="col-md-12 p0 text-left" style="margin-top: 3px">
+                            <button class="btn green bold" ng-click="addList()">
+                                Thêm danh sách
+                            </button>
+                            <button class="btn btn-icon-only" ng-click="openAddList()">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <a class="new-category" ng-click="openAddList()" ng-if="!showAddList" style="width: 200px; padding: 10px">
+                        <i class="fa fa-plus"></i>
+                        Thêm danh sách khác
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>    
+</div>
+<div ng-if="ViewMode == 1" class="container-fluid p0 board-detail" ng-controller="grid-card" ng-include="'../views/admin/cardJob/grid-card.html'">
+
+</div>
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

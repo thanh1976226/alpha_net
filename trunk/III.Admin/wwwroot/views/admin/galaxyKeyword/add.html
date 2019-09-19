@@ -1,0 +1,24 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fas fa-key icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title"> {{'GKW_TITLE_ADD' | translate}}</div>
+</div>
+<div class="modal-body pt-0 pb-0" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body pt0 pb-0">
+                <div class="form-group">
+                    <textarea type="text" class="form-control" rows="6" ng-model="model.Keyword" name="Keyword" autofocus placeholder="{{'GKW_CURD_TXT_KEYWORK' | translate}}..." />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr10" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>
+</div>

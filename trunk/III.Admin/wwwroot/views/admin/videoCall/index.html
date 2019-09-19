@@ -1,0 +1,143 @@
+﻿<div class="table-toolbar">
+    <div class="row pt5">
+        <div class="sidebar-left">
+            <div class="block-chat">
+                <p class="student_list">
+                    <img src="../../../lib/chat/image/icon_Student_List.png" alt="Lisst">
+                </p>
+                <p class="video_list">
+                    <img src="../../../lib/chat/image/icon_Video_List.png" alt="Video chat">
+                </p>
+                <p id="catturacam">
+                    <img src="../../../lib/chat/image/icon_Tutor_Video.png" alt="Studentst">
+                </p>
+            </div>
+            <div class="stl-border">
+                <p class="pop-chat">
+                    <img src="../../../lib/chat/image/icon_Chat.png" alt="Chat">
+                </p>
+            </div>
+            <div class="block-video">
+                <p>
+                    <img src="../../../lib/chat/image/icon_VIDEO.png" alt="Video">
+                </p>
+                <p class="switch" id="toggleVideoMute">
+                    <img src="../../../lib/chat/image/icon_Toggle_ALL_OFF.png" alt="Video">
+                </p>
+            </div>
+            <div class="block-voice">
+                <p>
+                    <img src="../../../lib/chat/image/icon_VOICE.png" alt="Voice">
+                </p>
+                <p class="switch active" id="toggleAudioMute">
+                    <img src="../../../lib/chat/image/icon_Toggle_ALL_ON.png" alt="Voice">
+                </p>
+            </div>
+        </div>
+        <div class="menu-tray">
+            <div class="header-menu style-scrollbar">
+                <div id="videoChat" style="display: none;">
+                    <img id="closeVideo" class="hidden" src="../../../lib/chat/image/icon_CLOSE.png" alt="Close">
+                    <div id="loading"></div>
+                    <div id="video" style="width: 100%; height: 100%"></div>
+                </div>
+                <div class="attend-list ">
+                    <p class="tit-head">{{"VC_CURD_LBL_LIST" | translate}} <span>(6)<span></p>
+                    <ul>
+                        <li class="item-list btn-student" data-name="Peter Chung" data-id="1"><img src="../../../lib/chat/image/Emoji_Understand.png" alt="Attendee List">Trần Tuấn Anh</li>
+                        <li class="item-list btn-student" data-name="Mike Jr.Jackson" data-id="2"><img src="../../../lib/chat/image/Emoji_Understand.png" alt="Attendee List">Nguyễn Ngọc Hoàng</li>
+                        <li class="item-list btn-student" data-name="Steve Rogers" data-id="3"><img src="../../../lib/chat/image/Emoji_Confused.png" alt="Attendee List">Nguyễn Đình Hiệp</li>
+                        <li class="item-list btn-student" data-name="Nijanam Cloudian" data-id="4"><img src="../../../lib/chat/image/Emoji_Too_Fast.png" alt="Attendee List">Đỗ Văn Quỳnh</li>
+                        <li class="item-list btn-student" data-name="Linda Oakland" data-id="5"><img src="../../../lib/chat/image/Emoji_Understand.png" alt="Attendee List">Nguyễn Thị Thảo</li>
+                    </ul>
+                </div>
+                <div class="attend-video-list ">
+                    <p class="tit-head">{{"VC_CURD_LBL_LIST" | translate}} <span>(6)<span></p>
+                    <ul>
+                        <li class="item-list">
+                            <div class="avatar-attend">
+                                <img src="../../../lib/chat/image/Video_Not_Loggedin.png" alt="Attendee List">
+                            </div>
+                            <p class="text-overfl">Trần Tuấn Anh</p>
+                        </li>
+                        <li class="item-list">
+                            <div class="avatar-attend">
+                                <img src="../../../lib/chat/image/guy.png" alt="Attendee List">
+                            </div>
+                            <p class="text-overfl">Nguyễn Ngọc Hoàng</p>
+                        </li>
+                        <li class="item-list">
+                            <div class="avatar-attend">
+                                <img src="../../../lib/chat/image/girl.png" alt="Attendee List">
+                                <img class="positon-stt" src="../../../lib/chat/image/Emoji_Understand.png" alt="Attendee List">
+                            </div>
+                            <p class="text-overfl">Nguyễn Đình Hiệp</p>
+                        </li>
+                        <li class="item-list">
+                            <div class="avatar-attend">
+                                <img src="../../../lib/chat/image/guy_1.png" alt="Attendee List">
+                                <img class="positon-stt" src="../../../lib/chat/image/Emoji_Understand.png" alt="Attendee List">
+                            </div>
+                            <p class="text-overfl">Nguyễn Thị Quỳnh</p>
+                        </li>
+                        <li class="item-list">
+                            <div class="avatar-attend">
+                                <img src="../../../lib/chat/image/girl1.png" alt="Attendee List">
+                                <img class="positon-stt" src="../../../lib/chat/image/Emoji_Too_Fast.png" alt="Emoji_Too_Fast">
+                            </div>
+                            <p class="text-overfl">Đỗ Văn Quỳnh</p>
+                        </li>
+                        <li class="item-list">
+                            <div class="avatar-attend">
+                                <img src="../../../lib/chat/image/boy.png" alt="Attendee List">
+                                <img class="positon-stt" src="../../../lib/chat/image/Emoji_Understand.png" alt="Attendee List">
+                            </div>
+                            <p class="text-overfl">Nguyễn Thị Thảo</p>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- <div class="handle"><hr /><img src="../../../lib/chat/image/icon_Handle.png" alt="icon_Handle"></div>-->
+            <div id="chat" class="message-list">
+                <div class="">
+                    <span class="message-title">{{"VC_CURD_LBL_MSG" | translate}}</span>
+                </div>
+                <ul id="testichat" class="inbox-message style-scrollbar"></ul>
+            </div>
+            <div class="box-chat" style="">
+                <div class="status-selector-bar" style="display: none;">
+                    <ul>
+                        <li class="ic-understand"><img src="../../../lib/chat/image/Emoji_Understand.png" alt="Emoji_Understand"><p>All Good</p></li>
+                        <li class="ic-confused"><img src="../../../lib/chat/image/Emoji_Confused.png" alt="Emoji_Confused"><p>Confused</p></li>
+                        <li class="ic-fast">
+                            <img src="../../../lib/chat/image/Emoji_Too_Fast.png" alt="Emoji_Too_Fast">
+                            <p>Too Fast!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="status-message">
+                    <ul id="tab-chat">
+                        <li class="item-stt-message all-message active" data-id="0" data-room="public"><p>{{"VC_CURD_LBL_ALL" | translate}}</p></li>
+                        <li class="status-selector">
+                            <img src="../../../lib/chat/image/Emoji_Understand.png" alt="Emoji_Understand">
+                        </li>
+                    </ul>
+                </div>
+                <div class="message-send">
+                    <div class="float-left message-input">
+                        <textarea id="scrivi" placeholder="{{"VC_CURD_TXT_MSG" | translate}}..." autofocus rows="2" name="message-input"></textarea>
+                    </div>
+                    <div class="button-send float-left">
+                        <div id="btn-send" role="button" title="Gửu">
+                            <!--<img src="../../../lib/chat/image/chat_button.png" alt="Chat Button">-->
+                            <i class="far fa-paper-plane"></i>
+                            <!--<i class="fas fa-paper-plane"></i>-->
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

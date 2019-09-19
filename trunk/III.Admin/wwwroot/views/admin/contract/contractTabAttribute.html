@@ -1,0 +1,72 @@
+﻿<div ng-controller="contractTabAttribute">
+    <div class="table-toolbar">
+        <div class="row">
+            <!-- <form name="addform" method="post" ng-validate="validationOptionsAttr">-->
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <div class="input-group">
+                        <input class="form-control" name="AttrCode" ng-model="model.AttrCode" placeholder="{{'CONTRACT_CURD_TAB_ATTRIBUTE_CURD_TXT_ATTR_CODE' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.AttrCode=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <div class="input-group">
+                        <input class="form-control" name="AttrValue" ng-model="model.AttrValue" placeholder="{{'CONTRACT_CURD_TAB_ATTRIBUTE_CURD_TXT_ATTR_VALUE' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.AttrValue=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group mb5">
+                    <button ng-click="reload()" type="submit" class="btn btn-accent">
+                        <i class="fa fa-search"></i>
+                        {{'COM_BTN_SEARCH' | translate}}
+                    </button>
+                    <button ng-click="add()" type="submit" class="btn btn-green ml25">
+                        <i class="fa fa-plus"></i>
+                        {{'COM_BTN_ADD' | translate}}
+                    </button>
+                </div>
+            </div>
+            <!--<div class="col-md-2">
+                <div class="form-group mb5">
+                    <ui-select tagging ng-model="model.AttrGroup" theme="bootstrap">
+                        <ui-select-match placeholder="Nhóm...">{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="x in Group | filter: $select.search">
+                            {{x}}
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>-->
+            <!--<div class="col-md-2">
+                <div class="form-group mb5">
+                    <button ng-click="submit()" id="btnAddAttr" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus"></i>
+                        Thêm mới
+                    </button>
+                    <button ng-click="save()" id="btnEditAttr" type="submit" class="btn btn-info hidden">
+                        <i class="fa fa-edit"></i>
+                        Sửa
+                    </button>
+                </div>
+            </div>-->
+            <!--</form>-->
+        </div>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataAttribute"></table>
+</div>

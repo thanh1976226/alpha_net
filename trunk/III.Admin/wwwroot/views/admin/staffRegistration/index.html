@@ -1,0 +1,100 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1 class="bold mb-0">{{'STRE_LBL_REGISTER_WORK_CALENDAR' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="/">{{'STRE_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/OrderRequestRaw">{{'STRE_LINK_REGISTER_WORK_CALENDAR' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row" style="margin: auto">
+                <div class="col-md-12" style="width: 100% !important;border: 1px solid #ddd;">
+                    <div class="col-md-12 mt15">
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <ui-select ng-model="model.MemberId" theme="bootstrap" on-select="reloadCalender();reloadTable()">
+                                    <ui-select-match placeholder="{{'STRE_COMBO_SEARCH_MEMBER_ID' | translate}}...">{{$select.selected.fullname}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in listEmployeeData | filter: $select.search">
+                                        {{x.fullname}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.MemberId=''" class="btn btn-default no-shadow">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <input placeholder="{{'STRE_TXT_SEARCH_FROM_DATE' | translate}}" ng-model="model.FromDate" type='text' autocomplete="off" class="form-control" id="datefrom" />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.FromDate='';" class="btn btn-default no-shadow end-date">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <input placeholder="{{'STRE_TXT_SEARCH_TO_DATE' | translate}}" ng-model="model.ToDate" type='text' autocomplete="off" class="form-control" id="dateto" />
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="model.ToDate='';" class="btn btn-default no-shadow ">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-green mr15 pull-right" ng-click="submit()">
+                                <span><i class="fas fa-plus"></i>{{'COM_BTN_SIGN_UP' | translate}}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt15 pb5">
+                        <div class="col-md-6">
+                            <div class="col-md-12 br4" style="border:1px solid #c2cad8">
+                                <label class="control-label pl50 mr20"><input type="checkbox" id="fulltime" class="checkmark work-type" />{{'STRE_LBL_SEARCH_FULLTIME' | translate}}</label>
+                                <label class="control-label mr20"><input type="checkbox" id="morning" class="checkmark work-type" />{{'STRE_LBL_SEARCH_PARTTIME_MORNING' | translate}}</label>
+                                <label class="control-label mr20"><input type="checkbox" id="afternoon" class="checkmark work-type" />{{'STRE_LBL_SEARCH_PARTTIME_AFTERNOON' | translate}}</label>
+                                <label class="control-label"><input type="checkbox" id="evening" class="checkmark work-type" />{{'STRE_LBL_SEARCH_PARTTIME_EVENING' | translate}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12 br4" style="border:1px solid #c2cad8">
+                                <label class="control-label pl15 mr15"><input ng-model="model.Saturday" type="checkbox" class="checkmark" />{{'STRE_LBL_SEARCH_SATURDAY' | translate}}</label>
+                                <label class="control-label"><input ng-model="model .Sunday" type="checkbox" class="checkmark" />{{'STRE_LBL_SEARCH_SUNDAY' | translate}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <uib-tabset class="mt15">
+                <uib-tab index="0" active="active" heading="{{'STRE_TAB_WORK_CALENDAR' | translate}}" id="tab-calendar">
+                    <div class="calendar-wrap">
+                        <div id="calendar"></div>
+                    </div>
+                </uib-tab>
+                <uib-tab index="1" heading="{{'STRE_TAB_LIST' | translate}}">
+                    <div class="portlet-body">
+                        <table class="table dataTable table-hover table-striped"
+                               datatable
+                               dt-options="dtOptions"
+                               dt-columns="dtColumns"
+                               dt-instance="dt.dtInstance"
+                               id="tblData"></table>
+                    </div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>

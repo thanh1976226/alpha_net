@@ -1,0 +1,49 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="bold mb-0"> {{'FW_TITLE_WARRING' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'COM_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <div href="" class="bold">{{'FW_LINK_WARRING' | translate}}</div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group pull-right actions">
+                <!--<a class="btn btn-export">
+                    <span class=""><i class="glyphicon glyphicon-export"></i> Xuất excel</span>
+                </a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div class="table-toolbar">
+        <div class="row">
+            <div class="col-md-12">
+                <h6 class="bold pb10"> {{'FW_TITLE_FUND_RECEPT' | translate}} <span class="text-danger bold">({{countExpense}})</span></h6>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'../views/admin/fundWarning/fundEntryExpense.html'"></div>
+</div>
+<div class="col-md-6">
+    <div class="table-toolbar">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6 class="bold pb10"> {{'FW_TITLE_FUND_EXPENSE' | translate}} <span class="text-danger bold">({{countReceipt}})</span></h6>
+                </div>
+            </div>
+     </div>
+     <div ng-include="'../views/admin/fundWarning/fundEntryReceipt.html'"></div>
+</div>
+    
+
+

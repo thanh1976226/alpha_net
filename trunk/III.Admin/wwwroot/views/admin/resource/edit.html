@@ -1,0 +1,135 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-edit icon-edit "></i>
+    <div class="modal-title custom-title " id="modal-title"> {{'ADM_RESOURCE_CURD_TITLE_EDIT_RESOURCE' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="editform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_CODE' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.ResourceCode" name="ResourceCode" placeholder="{{'ADM_RESOURCE_CURD_TXT_RESOURCE_CODE' | translate}}..." readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_NAME' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Title" name="Title" placeholder="{{'ADM_RESOURCE_CURD_TXT_RESOURCE_NAME' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group" hidden>
+                    <label class="control-label col-md-4">{{"CHOOSE_SUPERIOR" | translate }}</label>
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <ui-select ng-model="model.ParentCode" class="" style="width: 100%;">
+                                <ui-select-match placeholder="{{'CHOOSE_SUPERIOR' | translate }}...">{{$select.selected.Title}}</ui-select-match>
+                                <ui-select-choices repeat="x.Id as x in treeData | filter:$select.search">
+                                    {{x.Title}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ParentCode = undefined" class="btn btn-default no-shadow">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" hidden>
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">{{"ORDER" | translate }}(*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Ord" name="Ord" placeholder="Nhập mô tả..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_API' | translate}}(*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Api" name="Api" placeholder="{{'ADM_RESOURCE_CURD_TXT_RESOURCE_API' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fas fa-folder-open" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_URL' | translate}}(*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Path" name="Path" placeholder="{{'ADM_RESOURCE_CURD_TXT_RESOURCE_URL' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_DESCRIPTION' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Description" name="Description" placeholder="{{'ADM_RESOURCE_CURD_TXT_RESOURCE_DESCRIPTION' | translate}}..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-mail-reply" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_TYPE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-control" ng-model="model.Style" name="Style">
+                            <option value="">--- {{'ADM_RESOURCE_CURD_COMBO_RESOURCE_TYPE' | translate}} ---</option>
+                            <option value="VIEW">VIEW</option>
+                            <option value="ACCESS">ACCESS</option>
+                            <option value="ACTION">ACTION</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                        <label class="control-label ">{{'ADM_RESOURCE_CURD_LBL_RESOURCE_SCOPE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="model.Scope" ng-value="false" ng-checked="true" value="false"> {{'ADM_RESOURCE_CURD_RADIO_RESOURCE_PUBLISH' | translate}}
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="model.Scope" ng-value="true" value="true"> {{'ADM_RESOURCE_CURD_RADIO_RESOURCE_PRIVATE' | translate}}
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        <label class="control-label ">{{"ADM_RESOURCE_CURD_LBL_RESOURCE_STATUS" | translate}}</label>
+                    </div>
+                    <div class="col-md-8" ng-init="model.Status = true">
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="model.Status" ng-value="true" ng-checked="true" value="true"> {{"ADM_RESOURCE_CURD_LBL_RESOURCE_ACTIVE" | translate}}
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="model.Status" ng-value="false" value="false"> {{"ADM_RESOURCE_CURD_LBL_RESOURCE_INACTIVE" | translate}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer" style="background-color:transparent">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_EDIT' | translate}}
+    </button>
+</div>

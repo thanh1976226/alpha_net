@@ -1,0 +1,110 @@
+﻿<div class="table-toolbar" ng-show="IsTranslate">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">Ý kiến bạn đọc</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">Trang chủ</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="#/AssetActivity">Ý kiến bạn đọc</a>
+                </li>
+            </ul>
+        </div>
+        <!--<div class="col-md-6 text-center">
+            <div class="btn-group pull-right actions">
+                <a class="btn btn-accent btnSearch">
+                    <i class="fa fa-search"></i> {{'COM_BTN_SEARCH' | translate}}
+                </a>
+                <a ng-click="add()" class="btn btn-green">
+                    <i class="fa fa-plus"></i> {{'COM_BTN_ADD' | translate}}
+                </a>
+            </div>
+        </div>-->
+    </div>
+    <div class="portlet light bordered input-search mb5 ">
+        <div class="portlet-body">
+            <div class="row pt5 mb5">
+                <!--<div class="col-md-3">
+        <label class="fw600 text-underline">{{'AA_CURD_LBL_SEARCH_ACTCODE' | translate}}</label>
+        <div class='input-group '>
+            <input ng-model="model.ActCode" class="form-control" type="text" placeholder="{{'AA_CURD_TXT_SEARCH_ACTCODE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+            <span class="input-group-btn">
+                <button type="button" ng-click="model.ActCode='';" class="btn btn-default no-shadow end-date">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </span>
+        </div>
+    </div>-->
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">Tiêu đề</label>
+                    <div class='input-group '>
+                        <input ng-model="model.ActTitle" class="form-control" type="text" placeholder="Nhập tiêu đề..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ActTitle='';" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <!--<div class="col-md-3">
+                    <label class="fw600 text-underline">Trạng thái</label>
+                    <div class='input-group'>
+                        <input ng-model="model.ActNote" class="form-control" type="text" placeholder="---Chọn trạng thái---" ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ActNote='';" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>-->
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">Trạng thái</label>
+                    <div class='input-group'>
+                        <ui-select tagging ng-model="model.ActType" theme="bootstrap">
+                            <ui-select-match placeholder="---Chọn trạng thái---">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in ActivityType | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ActType='';" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <!--<div class="btn-group pull-right pt10">
+            <a class="btn btn-accent" ng-click="search()">
+                <span class=""><i class="fa fa-search"></i> {{'COM_BTN_SEARCH' | translate}}</span>
+            </a>
+        </div>-->
+                    <div class="btn-group  pt10 actions d-flex">
+                        <div class="text-center" style="margin-top:8px;margin-left:40px;">
+                            <a class="btn btn-icon-only btn-circle btn-outline purple-custom" ng-click="search()">
+                                <span><i class="fa fa-search"></i></span>
+                            </a>
+                            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_SEARCH' | translate}}</p>
+                        </div>
+                        <!--<div class="pl20 text-center">
+                            <a class="btn btn-icon-only btn-circle btn-outline green-custom" ng-click="add()" style="right:5px">
+                                <span><i class="fa fa-plus"></i></span>
+                            </a>
+                            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>

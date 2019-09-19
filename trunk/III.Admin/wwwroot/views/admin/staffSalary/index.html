@@ -1,0 +1,68 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="bold mb-0">Bảng chấm công</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">Trang chủ</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/EDMSStaffSalary">Bảng chấm công</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt10 mb15">
+        <div class="col-md-3">
+            <label>Từ ngày</label>
+            <div class="input-group">
+                <input type="text" autocomplete="off" class="form-control" placeholder="Từ ngày..." ng-model="model.FromDate" id="FromTo">
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.FromDate='';" class="btn btn-default no-shadow start-date">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label>Đến ngày</label>
+            <div class='input-group '>
+                <input type='text' autocomplete="off" class="form-control " ng-model="model.ToDate" placeholder="Đến ngày..." id='DateTo' />
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.ToDate='';" class="btn btn-default no-shadow end-date">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3 pt25">
+            <button ng-click="search()" class="btn btn-accent">
+                <i class="fa fa-search"></i>
+                Tìm kiếm
+            </button>
+        </div>
+    </div>
+</div>
+<div class="portlet-body">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="portlet light bordered mb-0">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-user"></i>
+                        <span class="caption-subject bold">Nguyễn Thị Thảo</span>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <label>Số lần đến muộn: 3</label><br />
+                    <label>Số thời gian đến muộn: 120p</label><br />
+                    <label>Số lần nghỉ: 3</label><br />
+                    <label>Số thời gian nghỉ: 20</label><br />
+                    <label>Số thời lượng làm việc: 120p</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,132 @@
+﻿<style>
+    .form-group input[type="checkbox"] {
+        display: none;
+    }
+
+        .form-group input[type="checkbox"] + .btn-group > label span {
+            width: 20px;
+        }
+
+            .form-group input[type="checkbox"] + .btn-group > label span:first-child {
+                display: none;
+            }
+
+            .form-group input[type="checkbox"] + .btn-group > label span:last-child {
+                display: inline-block;
+            }
+
+        .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
+            display: inline-block;
+        }
+
+        .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
+            display: none;
+        }
+        .form-group .btn-group{
+            width: 100%;
+        }
+        .form-group{
+            margin-bottom: 5px !important;
+        }
+    .btn.label{
+        display: inline;
+        width: 87%;
+        position: absolute;
+    }
+    .btn.btn-default {
+        display: inline;
+    }
+</style>
+<div class="modal-header no-color">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-barcode" style="padding-top: 10px;color:black"></i>
+    <span class="modal-title black" id="modal-title">Chỉnh sửa nhãn</span>
+</div>
+<div class="modal-body pt-0" id="modal-body">
+    <form method="post" ng-validate="validationOptions">
+        <div class="[ col-xs-12 ]">
+            <!--<div class="[ form-group ]">
+                <input type="checkbox" class="label-checkbox" name="fancy-checkbox-default" value="9b59b6" id="fancy-checkbox-default" autocomplete="off" />
+                <div class="[ btn-group ]">
+                    <label for="fancy-checkbox-default" style="background-color: #9b59b6" class="[ btn ]">
+                        <span class="[ glyphicon glyphicon-ok ]"></span>
+                        <span> </span>
+                    </label>
+                    <label for="fancy-checkbox-default" style="background-color: #9b59b6" class="[ btn label ]">
+                        Default
+                    </label>
+                </div>
+            </div>-->
+            <div class="[ form-group ]">
+                <input type="checkbox" class="label-checkbox" name="fancy-checkbox-primary" value="337ab7" id="fancy-checkbox-primary" autocomplete="off" />
+                <div class="[ btn-group ]">
+                    <label for="fancy-checkbox-primary" class="[ btn btn-primary ]">
+                        <span class="[ glyphicon glyphicon-ok ]"></span>
+                        <span> </span>
+                    </label>
+                    <label for="fancy-checkbox-primary" class="[ btn btn-primary label ]">
+                        Ưu tiên 1
+                    </label>
+                </div>
+            </div>
+            <div class="[ form-group ]">
+                <input type="checkbox" class="label-checkbox" name="fancy-checkbox-success" value="36c6d3" id="fancy-checkbox-success" autocomplete="off" />
+                <div class="[ btn-group ]">
+                    <label for="fancy-checkbox-success" class="[ btn btn-success ]">
+                        <span class="[ glyphicon glyphicon-ok ]"></span>
+                        <span> </span>
+                    </label>
+                    <label for="fancy-checkbox-success" class="[ btn btn-success label ]">
+                        Ưu tiên 2
+                    </label>
+                </div>
+            </div>
+            <div class="[ form-group ]">
+                <input type="checkbox" class="label-checkbox" name="fancy-checkbox-info" value="659be0" id="fancy-checkbox-info" autocomplete="off" />
+                <div class="[ btn-group ]">
+                    <label for="fancy-checkbox-info" class="[ btn btn-info ]">
+                        <span class="[ glyphicon glyphicon-ok ]"></span>
+                        <span> </span>
+                    </label>
+                    <label for="fancy-checkbox-info" class="[ btn btn-info label ]">
+                        Ưu tiên 3
+                    </label>
+                </div>
+            </div>
+            <div class="[ form-group ]">
+                <input type="checkbox" class="label-checkbox" name="fancy-checkbox-warning" value="F1C40F" id="fancy-checkbox-warning" autocomplete="off" />
+                <div class="[ btn-group ]">
+                    <label for="fancy-checkbox-warning" class="[ btn btn-warning ]">
+                        <span class="[ glyphicon glyphicon-ok ]"></span>
+                        <span> </span>
+                    </label>
+                    <label for="fancy-checkbox-warning" class="[ btn btn-warning label ]">
+                        Ưu tiên 4
+                    </label>
+                </div>
+            </div>
+            <div class="[ form-group ]">
+                <input type="checkbox" class="label-checkbox" name="fancy-checkbox-danger" value="ed6b75" id="fancy-checkbox-danger" autocomplete="off" />
+                <div class="[ btn-group ]">
+                    <label for="fancy-checkbox-danger" class="[ btn btn-danger ]">
+                        <span class="[ glyphicon glyphicon-ok ]"></span>
+                        <span> </span>
+                    </label>
+                    <label for="fancy-checkbox-danger" class="[ btn btn-danger label ]">
+                        Ưu tiên 5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt5 pr20">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-default" ng-click="cancel()">
+                    Hủy
+                </button>
+                <button class="btn btn-red" ng-click="submit()">
+                    Lưu
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

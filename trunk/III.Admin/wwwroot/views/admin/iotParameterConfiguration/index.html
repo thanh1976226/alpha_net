@@ -1,0 +1,75 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">Cấu hình tham số</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'FCC_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="#/IOTParameterConfiguration">Cấu hình tham số</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt10 mb15">
+            <div class="col-md-3">
+                <label class="control-label">&nbsp;Thiết bị</label>
+                <div class='input-group '>
+                    <input ng-model="model.DeviceCode" class="form-control" type="text" placeholder="Nhập thiết bị..." ng-keydown="($event.keyCode == 13) && reload()" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.DeviceCode='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="control-label">&nbsp;Giá trị cận trên</label>
+                <div class='input-group '>
+                    <input ng-model="model.CloseOn" class="form-control" type="text" placeholder="Giá trị cận trên..." ng-keydown="($event.keyCode == 13) && reload()" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.CloseOn='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="control-label">&nbsp;Giá trị cận dưới</label>
+                <div class='input-group '>
+                    <input ng-model="model.CloseBelow" class="form-control" type="text" placeholder="Giá trị cận dưới..." ng-keydown="($event.keyCode == 13) && reload()" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.CloseBelow='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group actions d-flex" style="padding-top:15px;">
+                    <div class="text-center pr10">
+                        <a ng-click="search()" class=" btn btn-icon-only btn-circle btn-outline purple-custom">
+                            <span><i class="fa fa-search"></i></span>
+                        </a>
+                        <p class="text-underline fs9 mb5 pt3">Tìm kiếm</p>
+                    </div>
+                    <div class="text-center pr10">
+                        <a ng-click="add()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                            <span><i class="fa fa-plus"></i></span>
+                        </a>
+                        <p class="text-underline fs9 mb5 pt3">Thêm mới</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>

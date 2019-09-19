@@ -1,0 +1,91 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-lg-4">
+            <h1 class="bold mb-0">{{'CS_LBL_CS' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="/">{{'COM_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/Contact">{{'CS_LINK_CS' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 ">
+            <div class="btn-group pull-right actions">
+                <a class="btn btn-accent btnSearch">
+                    <span class=""><i class="fa fa-search"></i> {{'COM_BTN_SEARCH' | translate}}</span>
+                </a>
+                <a ng-click="add()" class="btn br4 btn-green">
+                    <span class=""><i class="fa fa-plus"></i> {{'COM_BTN_ADD' | translate}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="portlet light bordered input-search mb5 hidden">
+        <div class="portlet-body">
+            <img class="pull-right h28 w28 close-input-search" role="button" title="Đóng" src="/images/default/close.png" />
+            <div class="row pt5 mb5">
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CS_CURD_LBL_SEARCH_FROMDATE' | translate}}</label>
+                    <div class="input-group">
+                        <input type="text" autocomplete="off" class="form-control" placeholder="{{'CS_CURD_TXT_SEARCH_FROMDATE' | translate}}..." ng-model="model.DateFrom" id="DateFrom">
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.DateFrom='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CS_CURD_LBL_SEARCH_TODATE' | translate}}</label>
+                    <div class='input-group '>
+                        <input type='text' autocomplete="off" class="form-control " ng-model="model.DateTo" placeholder="{{'CS_CURD_TXT_SEARCH_TODATE' | translate}}..." id='DateTo' />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.DateTo='';" class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CS_CURD_LBL_SEARCH_PHONE' | translate}}</label>
+                    <div class='input-group '>
+                        <input type='text' autocomplete="off" class="form-control " ng-model="model.Phone" placeholder="{{'CS_CURD_TXT_SEARCH_PHONE' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Phone='';" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CS_CURD_LBL_SEARCH_MAIL' | translate}}</label>
+                    <div class='input-group '>
+                        <input type='text' autocomplete="off" class="form-control " ng-model="model.Email" placeholder="{{'CS_CURD_LBL_SEARCH_MAIL' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Email='';" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn-group pull-right pt10">
+                        <a class="btn btn-accent" ng-click="search()">
+                            <i class="fa fa-search"></i> {{'COM_BTN_SEARCH' | translate}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>

@@ -1,0 +1,123 @@
+﻿<style type="text/css">
+    .ui-select-match-close {
+        background-image: none;
+    }
+</style>
+<div class="modal-header">
+    <img class="icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <span class="modal-title" id="modal-title">{{'AA_CURD_TITLE_ADD_AA' | translate}}</span>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body" style="padding: 10px;">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label ">{{'AA_CURD_LBL_AA_ASSETCODE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <ui-select tagging ng-model="model.AssetCode" theme="bootstrap">
+                                <ui-select-match placeholder="{{'AA_CURD_COMBO_AA_ASSETCODE' | translate}}...">{{$select.selected.Code}} - {{$select.selected.Name}}</ui-select-match>
+                                <ui-select-choices repeat="x.Code as x in listAsset | filter: $select.search">
+                                    {{x.Code}} - {{x.Name}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.AssetCode='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label require">{{'AA_CURD_LBL_AA_ACTCODE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input type="text" class="form-control" ng-model="model.ActCode" name="ActCode" placeholder="{{'AA_CURD_TXT_AA_ACTCODE' | translate}}..." />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ActCode='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label require">{{'AA_CURD_LBL_AA_ACTTITLE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input type="text" class="form-control" ng-model="model.ActTitle" name="ActTitle" placeholder="{{'AA_CURD_TXT_AA_ACTTITLE' | translate}}..." />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ActTitle='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label ">{{'AA_CURD_LBL_AA_ACTTYPE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <ui-select tagging ng-model="model.ActType" theme="bootstrap">
+                                <ui-select-match placeholder="{{'AA_CURD_COMBO_AA_ACTTYPE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                <ui-select-choices repeat="x.Code as x in ActivityType | filter: $select.search">
+                                    {{x.Name}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ActType='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <label class="control-label ">{{'AA_CURD_LBL_AA_ACTMEMBER' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <ui-select class="list-user" ng-model="model1.listMember" multiple theme="bootstrap" style="width: 100%;">
+                            <ui-select-match placeholder="{{'AA_CURD_COMBO_AA_ACTMEMBER' | translate}}...">{{$item.GivenName}}</ui-select-match>
+                            <ui-select-choices repeat="x.Id as x in listUser | filter:$select.search">
+                                {{x.GivenName}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">{{'AA_CURD_LBL_AA_ACTNOTE' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" ng-model="model.ActNote" rows="4" name="Mô tả" placeholder="{{'AA_CURD_TXT_AA_ACTNOTE' | translate}}..." />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>
+</div>

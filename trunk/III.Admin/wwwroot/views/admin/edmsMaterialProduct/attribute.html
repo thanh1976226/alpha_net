@@ -1,0 +1,38 @@
+﻿<div ng-controller="attribute">
+    <div class="row">
+        <form name="addformAttribute" method="post" ng-validate="validationOptionsAttribute">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Thuộc tính (*)</label>
+                    <input ng-model="model.Attribute" name="Attribute" class="form-control" type="text" placeholder="Thuộc tính..." />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Giá trị (*)</label>
+                    <input ng-model="model.AttributeValue" name="AttributeValue" class="form-control" type="text" placeholder="Giá trị..." />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label class="control-label">Ghi chú</label>
+                    <input ng-model="model.Note" name="Note" class="form-control" type="text" placeholder="Ghi chú..." />
+                </div>
+            </div>
+            <div class="col-lg-3" style="padding-top:23px">
+                <div class="form-group">
+                    <button ng-click="add()" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus mr5"></i>
+                        Thêm mới
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataAttribute"></table>
+</div>

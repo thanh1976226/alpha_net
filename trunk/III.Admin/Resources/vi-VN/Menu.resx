@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MENU-VICEM_MM_REPORT_CONSUMP_CURRENT" xml:space="preserve">
+    <value>Sản lượng/Tồn kho</value>
+  </data>
+  <data name="MENU_ASSET" xml:space="preserve">
+    <value>Tài sản</value>
+  </data>
+  <data name="MENU_ASSET_ACTIVITY" xml:space="preserve">
+    <value>Hoạt động</value>
+  </data>
+  <data name="MENU_ASSET_MANAGEMENT" xml:space="preserve">
+    <value>Sổ tài sản</value>
+  </data>
+  <data name="MENU_CONTACT_ADMIN" xml:space="preserve">
+    <value>Quản trị liên hệ</value>
+  </data>
+  <data name="MENU_CONTRACT_ORDER" xml:space="preserve">
+    <value>Hợp đồng/Đơn hàng</value>
+  </data>
+  <data name="MENU_CONTRACT_MANAGER" xml:space="preserve">
+    <value>Quản trị hợp đồng</value>
+  </data>
+  <data name="MENU_CUSTOMER" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="MENU_CUSTOMER_CARE" xml:space="preserve">
+    <value>Chăm sóc khách hàng</value>
+  </data>
+  <data name="MENU_CUSTOMER_LIST" xml:space="preserve">
+    <value>D/S khách hàng</value>
+  </data>
+  <data name="MENU_CUSTOMER_MAP" xml:space="preserve">
+    <value>Bản đồ</value>
+  </data>
+  <data name="MENU_CUSTOMER_REQUIREMENTS" xml:space="preserve">
+    <value>Yêu cầu khách hàng</value>
+  </data>
+  <data name="MENU_DASHBOARD" xml:space="preserve">
+    <value>Bảng số liệu</value>
+  </data>
+  <data name="MENU_HOLIDAY" xml:space="preserve">
+    <value>Ngày nghỉ</value>
+  </data>
+  <data name="MENU_HUMAN_RESOURCE_MANAGEMENT" xml:space="preserve">
+    <value>Quản trị nhân sự</value>
+  </data>
+  <data name="MENU_LOGOUT" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="MENU_OFFICE_MANAGEMENT" xml:space="preserve">
+    <value>Quản trị công văn</value>
+  </data>
+  <data name="MENU_OM_AUTHORING" xml:space="preserve">
+    <value>Ủy quyền</value>
+  </data>
+  <data name="MENU_OM_DIRECTORY_MANAGEMENT" xml:space="preserve">
+    <value>Quản trị danh mục</value>
+  </data>
+  <data name="MENU_OM_DM_DISPATCHES_DOCUMENT" xml:space="preserve">
+    <value>Số văn bản</value>
+  </data>
+  <data name="MENU_OM_DM_DISPATCHES_DOCUMENT_CONFIDENTIALITY" xml:space="preserve">
+    <value>Độ mật</value>
+  </data>
+  <data name="MENU_OM_DM_DISPATCHES_DOCUMENT_TYPE" xml:space="preserve">
+    <value>Loại văn bản</value>
+  </data>
+  <data name="MENU_OM_TEXT_GOING" xml:space="preserve">
+    <value>Văn bản đi</value>
+  </data>
+  <data name="MENU_OM_TEXT_TO" xml:space="preserve">
+    <value>Văn bản đến</value>
+  </data>
+  <data name="MENU_OM_TG_DOCUMENT_WAITING_HANDLING" xml:space="preserve">
+    <value>Văn bản chờ xử lý</value>
+  </data>
+  <data name="MENU_OM_TG_INTO_TEXT_NUMBER" xml:space="preserve">
+    <value>Vào số văn bản</value>
+  </data>
+  <data name="MENU_OM_TT_DOCUMENT_WAITING_HANDLING" xml:space="preserve">
+    <value>Văn bản chờ xử lý</value>
+  </data>
+  <data name="MENU_OM_TT_INTO_TEXT_NUMBER" xml:space="preserve">
+    <value>Vào số văn bản</value>
+  </data>
+  <data name="MENU_OPERATE_WORK" xml:space="preserve">
+    <value>Điều hành công việc</value>
+  </data>
+  <data name="MENU_OTHER" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="MENU_OW_CANDIDATE" xml:space="preserve">
+    <value>Quản lí tuyển dụng</value>
+  </data>
+  <data name="MENU_OW_CANDIDATE_CALENDAR_CANDIDATE" xml:space="preserve">
+    <value>Lịch làm việc</value>
+  </data>
+  <data name="MENU_OW_CANDIDATE_CALENDAR_INTERVIEW" xml:space="preserve">
+    <value>Lịch phỏng vấn</value>
+  </data>
+  <data name="MENU_OW_CANDIDATE_CANDIDATES_MANAGEMENT" xml:space="preserve">
+    <value>Quản lý ứng viên</value>
+  </data>
+  <data name="MENU_OW_SET_COMPANY_MENU" xml:space="preserve">
+    <value>Cài đặt danh mục</value>
+    <comment>Cài đặt danh mục</comment>
+  </data>
+  <data name="MENU_OW_CARD_JOB" xml:space="preserve">
+    <value>Điều hành công việc</value>
+  </data>
+  <data name="MENU_OW_EMPLOYEES" xml:space="preserve">
+    <value>Kiểm soát nhân sự</value>
+  </data>
+  <data name="MENU_OW_EMPLOYEES_STAFF_CALENDAR" xml:space="preserve">
+    <value>Lịch làm việc</value>
+  </data>
+  <data name="MENU_OW_EMPLOYEES_STAFF_LATE" xml:space="preserve">
+    <value>Báo muộn/Xin nghỉ</value>
+  </data>
+  <data name="MENU_OW_EMPLOYEES_STAFF_REGISTRATION" xml:space="preserve">
+    <value>Giám sát công</value>
+  </data>
+  <data name="MENU_OW_EMPLOYEES_STAFF_TIME_KEEPING" xml:space="preserve">
+    <value>Chấm công</value>
+  </data>
+  <data name="MENU_PAS_PRODUCT_MANAGEMENT" xml:space="preserve">
+    <value>Quản trị sản phẩm</value>
+  </data>
+  <data name="MENU_PAS_SERVICES_MANAGEMENT" xml:space="preserve">
+    <value>Quản trị dịch vụ</value>
+  </data>
+  <data name="MENU_PERSONNEL" xml:space="preserve">
+    <value>Nhân sự</value>
+  </data>
+  <data name="MENU_PRODUCTS_AND_SERVICES" xml:space="preserve">
+    <value>Sản phẩm và dịch vụ</value>
+  </data>
+  <data name="MENU_PROJECT" xml:space="preserve">
+    <value>Dự án</value>
+  </data>
+  <data name="MENU_PROJECT_MANAGEMENT" xml:space="preserve">
+    <value>Dự án/Đấu thầu</value>
+  </data>
+  <data name="MENU_PROJECT_PROGRESS" xml:space="preserve">
+    <value>Theo dõi tiến độ</value>
+  </data>
+  <data name="MENU_RAS_INVENTORY" xml:space="preserve">
+    <value>Tồn kho</value>
+  </data>
+  <data name="MENU_REMOOC" xml:space="preserve">
+    <value>Romooc</value>
+  </data>
+  <data name="MENU_REMOOC_ACTIVE_ORDER" xml:space="preserve">
+    <value>Lệnh điều động</value>
+  </data>
+  <data name="MENU_REMOOC_CAR_MANAGEMENT" xml:space="preserve">
+    <value>Quản lý bãi xe</value>
+  </data>
+  <data name="MENU_REMOOC_DRIVING_MANAGEMENT" xml:space="preserve">
+    <value>Quản lý lái xe</value>
+  </data>
+  <data name="MENU_REMOOC_INTERNAL_NEWS" xml:space="preserve">
+    <value>Tin nội bộ</value>
+  </data>
+  <data name="MENU_REMOOC_INTERNAL_NEWS_LIST" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="MENU_REMOOC_INTERNAL_NEWS_NEWS" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="MENU_REMOOC_MAP" xml:space="preserve">
+    <value>Đối tượng bản đồ</value>
+  </data>
+  <data name="MENU_REMOOC_RAM_LIST" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="MENU_REMOOC_RAM_MAINTENANCE_NUMBER" xml:space="preserve">
+    <value>Số bảo dưỡng</value>
+  </data>
+  <data name="MENU_REMOOC_RAM_PRICE_LIST" xml:space="preserve">
+    <value>Bảng giá</value>
+  </data>
+  <data name="MENU_REMOOC_REPAIR_AND_MAINTENANCE" xml:space="preserve">
+    <value>Sửa chữa bảo dưỡng</value>
+  </data>
+  <data name="MENU_REMOOC_ROMOOC_MANAGEMENT" xml:space="preserve">
+    <value>Quản lý romooc</value>
+  </data>
+  <data name="MENU_REMOOC_SETTTING" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="MENU_REMOOC_SETTTING_GOOGLE_TOOKEN" xml:space="preserve">
+    <value>Google tooken</value>
+  </data>
+  <data name="MENU_REMOOC_SOS" xml:space="preserve">
+    <value>Khẩn cấp(SOS)</value>
+  </data>
+  <data name="MENU_REMOOC_TRACK_MANAGEMENT" xml:space="preserve">
+    <value>Quản lý đầu kéo</value>
+  </data>
+  <data name="MENU_REMOOC_TRIP_LIST" xml:space="preserve">
+    <value>Danh sách chuyến đi</value>
+  </data>
+  <data name="MENU_REPORT_AND_STATISTICS" xml:space="preserve">
+    <value>Báo cáo thống kê</value>
+  </data>
+  <data name="MENU_SETTING_ADMIN_MANAGEMENT" xml:space="preserve">
+    <value>Quản trị người dùng</value>
+  </data>
+  <data name="MENU_SETTING_APPLICATION" xml:space="preserve">
+    <value>Ứng dụng app</value>
+  </data>
+  <data name="MENU_SETTING_APPLICATION_ADDON" xml:space="preserve">
+    <value>Ứng dụng addon</value>
+  </data>
+  <data name="MENU_SETTING_APPLICATION_ADDON_APP_SERVER" xml:space="preserve">
+    <value>Quản trị app addon</value>
+  </data>
+  <data name="MENU_SETTING_APPLICATION_VENDOR" xml:space="preserve">
+    <value>Đối tác sử dụng</value>
+  </data>
+  <data name="MENU_SETTING_ICON_MANAGER" xml:space="preserve">
+    <value>Quản lý biểu tượng</value>
+  </data>
+  <data name="MENU_SETTING_NOTIFICATION" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="MENU_SETTING_ROTATION" xml:space="preserve">
+    <value>Giải trí</value>
+  </data>
+  <data name="MENU_SETTING_SM_APPLICATION" xml:space="preserve">
+    <value>Ứng dụng</value>
+  </data>
+  <data name="MENU_SETTING_SM_FUNCITION" xml:space="preserve">
+    <value>Chức năng</value>
+  </data>
+  <data name="MENU_SETTING_SM_GALAXY_KEYWORD" xml:space="preserve">
+    <value>Quản lý từ khóa</value>
+  </data>
+  <data name="MENU_SETTING_SM_GROUP_USER" xml:space="preserve">
+    <value>Phòng ban</value>
+  </data>
+  <data name="MENU_SETTING_SM_ORGANIZATION" xml:space="preserve">
+    <value>Chi nhánh</value>
+  </data>
+  <data name="MENU_SETTING_SM_PERMISSION" xml:space="preserve">
+    <value>Phân quyền</value>
+  </data>
+  <data name="MENU_SETTING_SM_PERMISSION_USER" xml:space="preserve">
+    <value>Phân quyền nhân viên</value>
+  </data>
+  <data name="MENU_SETTING_SM_RESOURCE" xml:space="preserve">
+    <value>Tài nguyên</value>
+  </data>
+  <data name="MENU_SETTING_SM_ROLE" xml:space="preserve">
+    <value>Vai trò</value>
+  </data>
+  <data name="MENU_SETTING_SM_USER" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="MENU_SETTING_SYSTEM" xml:space="preserve">
+    <value>Cài đặt hệ thống</value>
+  </data>
+  <data name="MENU_SETTING_VIDEO_CALL" xml:space="preserve">
+    <value>Cuộc gọi</value>
+  </data>
+  <data name="MENU_SET_PROPERTIES" xml:space="preserve">
+    <value>Cài đặt thuộc tính</value>
+  </data>
+  <data name="MENU_SUPPLIER" xml:space="preserve">
+    <value>Nhà cung cấp</value>
+  </data>
+  <data name="MENU_SUPPLIER_CARE" xml:space="preserve">
+    <value>Chăm sóc nhà cung cấp</value>
+  </data>
+  <data name="MENU_SUPPLIER_CONTACT" xml:space="preserve">
+    <value>Quản trị liên hệ</value>
+  </data>
+  <data name="MENU_SUPPLIER_LIST" xml:space="preserve">
+    <value>D/S nhà cung cấp</value>
+  </data>
+  <data name="MENU_SUPPLIER_MAP" xml:space="preserve">
+    <value>Bản đồ</value>
+  </data>
+  <data name="MENU_VICEM" xml:space="preserve">
+    <value>Vicem</value>
+  </data>
+  <data name="MENU_VICEM_DAS_LIST" xml:space="preserve">
+    <value>Danh sách NPP/Đại lý/Cửa hàng</value>
+  </data>
+  <data name="MENU_VICEM_DAS_MAP" xml:space="preserve">
+    <value>Bản đồ NPP/Đại lý/Cửa hàng</value>
+  </data>
+  <data name="MENU_VICEM_DISTRIBUTOR_AGENCY_STORE" xml:space="preserve">
+    <value>NPP/Đại lý/Cửa hàng</value>
+  </data>
+  <data name="MENU_VICEM_INTERNAL_NEWS" xml:space="preserve">
+    <value>Tin nội bộ</value>
+  </data>
+  <data name="MENU_VICEM_INTERNAL_NEWS_LIST" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="MENU_VICEM_INTERNAL_NEWS_NEWS" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="MENU_VICEM_MARKET_MANAGEMENT" xml:space="preserve">
+    <value>Quản lý thị trường</value>
+  </data>
+  <data name="MENU_VICEM_MM_MARKET_MONITORING" xml:space="preserve">
+    <value>Tình trạng công việc</value>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT" xml:space="preserve">
+    <value>Báo cáo</value>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT_PROPOR_CURRENT" xml:space="preserve">
+    <value>Tỷ trọng</value>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT_TOTAL_CAN_IMP" xml:space="preserve">
+    <value>Trữ lượng trống</value>
+    <comment>Trữ lượng trống</comment>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT_CONSUMP_CURRENT" xml:space="preserve">
+    <value>Sản lượng tiêu thụ</value>
+    <comment>Sản lượng tiêu thụ</comment>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT_INSTOCK" xml:space="preserve">
+    <value>Tồn kho/Giá Nhập/Giá Bán</value>
+    <comment>Tồn kho/Giá Nhập/Giá Bán</comment>
+  </data>
+  <data name="MENU_VICEM_MM_STAFF_POSITION" xml:space="preserve">
+    <value>N/V trực tuyến</value>
+  </data>
+  <data name="MENU_VICEM_MM_WORK_CHECK" xml:space="preserve">
+    <value>N/V CheckIn/CheckOut</value>
+  </data>
+  <data name="MENU_VICEM_MM_IMPORT_WORK_PLAN" xml:space="preserve">
+    <value>Tải lô kế hoạch tuần</value>
+    <comment>Tải lô kế hoạch tuần</comment>
+  </data>
+  <data name="MENU_VICEM_MM_WORK_PLAN" xml:space="preserve">
+    <value>Danh mục kế hoạch công việc</value>
+  </data>
+  <data name="MENU_VICEM_MM_APPROVE_WORK_PLAN" xml:space="preserve">
+    <value>Duyệt kế hoạch công việc</value>
+    <comment>Duyệt kế hoạch công việc</comment>
+  </data>
+  <data name="MENU_VICEM_PRODUCT" xml:space="preserve">
+    <value>Sản phẩm</value>
+  </data>
+  <data name="MENU_VICEM_SOS" xml:space="preserve">
+    <value>Khẩn cấp(SOS)</value>
+  </data>
+  <data name="MENU_WAD_DIAGRAM" xml:space="preserve">
+    <value>Sơ đồ</value>
+  </data>
+  <data name="MENU_WAD_DISPATCHES_WEEK_WORKING_SCHEDULE" xml:space="preserve">
+    <value>Lịch công tác tuần</value>
+  </data>
+  <data name="MENU_WAD_MANAGEMENT" xml:space="preserve">
+    <value>DM sàn, dãy, kệ</value>
+  </data>
+  <data name="MENU_WAD_MAP" xml:space="preserve">
+    <value>Bản đồ kho</value>
+  </data>
+  <data name="MENU_WAD_PROFILEBOX" xml:space="preserve">
+    <value>Thùng HSCT</value>
+  </data>
+  <data name="MENU_WAD_PROFILE_VOUCHERS" xml:space="preserve">
+    <value>Kho hồ sơ &amp; CT</value>
+  </data>
+  <data name="MENU_WAD_QRCODE" xml:space="preserve">
+    <value>Quản lý QRCode</value>
+  </data>
+  <data name="MENU_WAD_REPORT" xml:space="preserve">
+    <value>Biểu đồ thống kê</value>
+  </data>
+  <data name="MENU_WAD_REPOSITORY" xml:space="preserve">
+    <value>Kho dữ liệu số</value>
+  </data>
+  <data name="MENU_WAD_SEND_REQUEST_PROFILE" xml:space="preserve">
+    <value>Y/C nhập kho</value>
+  </data>
+  <data name="MENU_WAD_SOS" xml:space="preserve">
+    <value>Cảnh báo</value>
+  </data>
+  <data name="MENU_WAD_TERMITES" xml:space="preserve">
+    <value>Xử lý mối mọt</value>
+  </data>
+  <data name="MENU_WAD_REMOVE" xml:space="preserve">
+    <value>Hủy hồ sơ</value>
+    <comment>Hủy hồ sơ</comment>
+  </data>
+  <data name="MENU_WAD_WAREHOUSE_BILL" xml:space="preserve">
+    <value>Phiếu xuất kho</value>
+  </data>
+  <data name="MENU_WAD_WAREHOUSE_RECEIPT" xml:space="preserve">
+    <value>Phiếu nhập kho</value>
+  </data>
+  <data name="MENU_WAREHOUSE_AND_DIGITIZATION" xml:space="preserve">
+    <value>Kho dữ liệu &amp; Số hóa</value>
+  </data>
+  <data name="MENU_WAREHOUSE_AND_SALES" xml:space="preserve">
+    <value>Kho và bán hàng</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_EXP_STORE" xml:space="preserve">
+    <value>Phiếu xuất kho</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_IMP_STORE" xml:space="preserve">
+    <value>Phiếu nhập kho</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_MAP" xml:space="preserve">
+    <value>Bản đồ</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_PAYMENT_TICKET" xml:space="preserve">
+    <value>Phiếu thu chi</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_PRODUCT" xml:space="preserve">
+    <value>Danh mục vật tư</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_PRODUCT_GROUP" xml:space="preserve">
+    <value>Nhóm vật tư</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_SBATCH" xml:space="preserve">
+    <value>Nhập hàng theo lô</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_STORE" xml:space="preserve">
+    <value>Danh mục kho</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_TYPE" xml:space="preserve">
+    <value>Loại vật tư</value>
+  </data>
+  <data name="MENU_MONITOR" xml:space="preserve">
+    <value>Monitor</value>
+  </data>
+  <data name="MENU_FUND" xml:space="preserve">
+    <value>Quản lý quỹ</value>
+  </data>
+  <data name="MENU_FUND_ACC_ENTRY" xml:space="preserve">
+    <value>Phiếu thu / chi</value>
+  </data>
+  <data name="MENU_FUND_CAT_REPT_EXPS" xml:space="preserve">
+    <value>Danh mục quỹ</value>
+  </data>
+  <data name="MENU_FUND_CURRENCY" xml:space="preserve">
+    <value>Loại tiền</value>
+  </data>
+  <data name="MENU_FUND_EXCHAG_RATE" xml:space="preserve">
+    <value>Tỷ giá</value>
+  </data>
+  <data name="MENU_FUND_PARAM_FOR_WARNING" xml:space="preserve">
+    <value>Thiết lập cảnh báo</value>
+  </data>
+  <data name="MENU_FUND_PLAN_ACC_ENTRY" xml:space="preserve">
+    <value>Kế hoạch thu / chi</value>
+  </data>
+  <data name="MENU_FUND_REPORT" xml:space="preserve">
+    <value>Báo cáo thu / chi</value>
+  </data>
+  <data name="MENU_FUND_WARNING" xml:space="preserve">
+    <value>Cảnh báo quỹ</value>
+  </data>
+  <data name="MENU_PROJECT_PROJECT_MN" xml:space="preserve">
+    <value>Quản trị dự án</value>
+  </data>
+  <data name="MENU_SUPPLIER_JOB_CARD" xml:space="preserve">
+    <value>Thẻ việc</value>
+  </data>
+  <data name="MENU_CUSTUMMER_REMEMBER" xml:space="preserve">
+    <value>Sự kiện</value>
+  </data>
+  <data name="MENU_LIST_OF_REMINDERS" xml:space="preserve">
+    <value>Danh mục nhắc nhở</value>
+  </data>
+  <data name="MENU_EDMS_MOVE_BOX" xml:space="preserve">
+    <value>Xếp lại thùng</value>
+  </data>
+  <data name="MENU_EDMS_SEND_RECEOPT_PROFILE" xml:space="preserve">
+    <value>Y/C xuất kho</value>
+  </data>
+  <data name="MENU_EDMS_WARE_HOUSE_MANAGER" xml:space="preserve">
+    <value>Tầng, dãy, kệ</value>
+  </data>
+  <data name="MENU_LIST_OF_CUSTOMER_REMINDER" xml:space="preserve">
+    <value>Sự kiện</value>
+  </data>
+  <data name="MENU_LIST_OF_REMINDERS_ATTR" xml:space="preserve">
+    <value>Danh mục nhắc nhở</value>
+  </data>
+  <data name="MENU_MANAGER_POSITION" xml:space="preserve">
+    <value>Quản lý vị trí</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_PRODUCT_CATALOGUE" xml:space="preserve">
+    <value>Catalogue-Danh mục sp</value>
+  </data>
+  <data name="MENU_PRODUCT_SELL_PRICE" xml:space="preserve">
+    <value>Quản trị giá bán</value>
+  </data>
+  <data name="MENU_WAS_PRODUCT_WARE_HOUSE_MANAGER" xml:space="preserve">
+    <value>Tầng, dãy, kệ</value>
+  </data>
+  <data name="MENU_PROJECT_MANAGE_TEAM" xml:space="preserve">
+    <value>Quản lý team</value>
+  </data>
+  <data name="MENU_PAS_SERVICES_CATEGORY" xml:space="preserve">
+    <value>Danh mục dịch vụ</value>
+    <comment>Danh mục dịch vụ</comment>
+  </data>
+  <data name="MENU_PAS_SERVICES_CATEGORY_GROUP" xml:space="preserve">
+    <value>Nhóm dịch vụ</value>
+    <comment>Nhóm dịch vụ</comment>
+  </data>
+  <data name="MENU_PAS_SERVICES_CATEGORY_PRICE" xml:space="preserve">
+    <value>Bảng giá dịch vụ</value>
+    <comment>Bảng giá dịch vụ</comment>
+  </data>
+  <data name="MENU_PAS_SERVICES_CATEGORY_TYPE" xml:space="preserve">
+    <value>Loai dịch vụ</value>
+    <comment>Loai dịch vụ</comment>
+  </data>
+  <data name="MENU_VICEM_MM_CHART" xml:space="preserve">
+    <value>Biểu đồ</value>
+  </data>
+  <data name="MENU_VICEM_MM_IMPORT_DATA" xml:space="preserve">
+    <value>Sản lượng cuối tháng</value>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT_DATA_LAST_MONTH" xml:space="preserve">
+    <value>B/C DL nhập cuối tháng</value>
+  </data>
+  <data name="MENU_CONTRACT_ORDER_ARCHIVES" xml:space="preserve">
+    <value>Kho tài liệu</value>
+  </data>
+  <data name="MENU_CONTRACT_ORDER_PROGRAM_TRACKING" xml:space="preserve">
+    <value>Theo dõi tiến độ</value>
+  </data>
+  <data name="MENU_CONTRACT_ORDER_SUPPLIER" xml:space="preserve">
+    <value>Đặt hàng(Nhà cung cấp)</value>
+  </data>
+  <data name="MENU_CUSTOMER_ARCHIVES" xml:space="preserve">
+    <value>Kho tài liệu</value>
+  </data>
+  <data name="MENU_CUSTOMER_CARD_JOB" xml:space="preserve">
+    <value>Thẻ việc</value>
+  </data>
+  <data name="MENU_CUSTOMER_CATEGORY_REMIND" xml:space="preserve">
+    <value>Danh mục nhắc nhở</value>
+  </data>
+  <data name="MENU_CUSTOMER_EVENT" xml:space="preserve">
+    <value>Sự kiện</value>
+  </data>
+  <data name="MENU_CUSTOMER_LOCATION_MANAGE" xml:space="preserve">
+    <value>Quản lý vị trí</value>
+  </data>
+  <data name="MENU_CUSTOMER_PROGRAM_TRACKING" xml:space="preserve">
+    <value>Theo dõi tiến độ</value>
+  </data>
+  <data name="MENU_CUSTOMER_UPLOAD_CUSTOMER" xml:space="preserve">
+    <value>Tải lên khách hàng</value>
+  </data>
+  <data name="MENU_PROJECT_ARCHIVES" xml:space="preserve">
+    <value>Kho tài liệu</value>
+  </data>
+  <data name="MENU_SUPPLIER_ARCHIVES" xml:space="preserve">
+    <value>Kho tài liệu</value>
+  </data>
+  <data name="MENU_SUPPLIER_PROGRAM_TRACKING" xml:space="preserve">
+    <value>Theo dõi tiến độ</value>
+  </data>
+  <data name="MENU_VICEM_MM_LAST_COMSUMP" xml:space="preserve">
+    <value>Dữ liệu nhập</value>
+  </data>
+  <data name="MENU_VICEM_MM_MANAGER_POSITION" xml:space="preserve">
+    <value>Quản lý vị trí</value>
+  </data>
+  <data name="MENU_VICEM_MM_MARKET_OPERATION" xml:space="preserve">
+    <value>Hoạt động thị trường</value>
+  </data>
+  <data name="MENU_VICEM_MM_REPORT_DATA" xml:space="preserve">
+    <value>B/C DL nhập cuối tháng</value>
+  </data>
+  <data name="MENU_VICEM_MM_TRANSPORTER" xml:space="preserve">
+    <value>Quản lý xe</value>
+  </data>
+  <data name="MENU_VICEM_MM_VC_CHART" xml:space="preserve">
+    <value>Biểu đồ</value>
+  </data>
+  <data name="MENU_WAD_FLOOR_STYLE_SHELF" xml:space="preserve">
+    <value>Tầng, dãy, kệ</value>
+  </data>
+  <data name="MENU_WAD_REARRANGE_BOX" xml:space="preserve">
+    <value>Xếp lại thùng</value>
+  </data>
+  <data name="MENU_WAD_REQUEST_EXPORT" xml:space="preserve">
+    <value>Y/C xuất kho</value>
+  </data>
+  <data name="MENU_WAS_INVENTORY" xml:space="preserve">
+    <value>Tồn kho</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_INFO_PRODUCT" xml:space="preserve">
+    <value>Truy xuất sản phẩm</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_PURCHASE_COST" xml:space="preserve">
+    <value>Chi phí mua hàng</value>
+  </data>
+  <data name="MENU_WAS_PRICE_PRODUCT_RESOURCES" xml:space="preserve">
+    <value>Giá bán SP, nguyên liệu</value>
+  </data>
+  <data name="MENU_WAS_PRINT_QR_CODE_PRODUCT" xml:space="preserve">
+    <value>In QrCode sản phẩm</value>
+  </data>
+  <data name="MENU_WAS_PRINT_QR_CODE_PRODUCT_2" xml:space="preserve">
+    <value>In QrCode sản phẩm 2</value>
+  </data>
+  <data name="MENU_WAS_REARRANGE_PRODUCT" xml:space="preserve">
+    <value>Xếp lại sản phẩm</value>
+  </data>
+  <data name="MENU_WAS_REQUEST_IMPORT" xml:space="preserve">
+    <value>Y/C nhập khẩu</value>
+  </data>
+  <data name="MENU_WAS_REVENUE_SELL" xml:space="preserve">
+    <value>Doanh thu bán hàng</value>
+  </data>
+  <data name="MENU_CONTRACT_ORDER_MANAGER" xml:space="preserve">
+    <value>Hợp đồng/ đơn hàng</value>
+  </data>
+  <data name="MENU_VICEM_MM_MARKET_OPERATION﻿" xml:space="preserve">
+    <value>Hoạt động thị trường</value>
+  </data>
+  <data name="MENU_WAS_MATERIAL_INFO_PRODUCT﻿" xml:space="preserve">
+    <value>Truy xuất thông tin sản phẩm</value>
+  </data>
+</root>

@@ -1,0 +1,95 @@
+﻿<form>
+    <h4 class="form-section fw600 text-center">
+        <span class="pull-left">
+            <i class="fas fa-user-plus"></i> Đăng ký lịch làm việc
+        </span>
+        <span class="pull-right" style="margin: -4px;padding: 5px 10px 0px 0px;">
+            <a ng-click="openMap()" title="Bản đồ" class="btn btn-circle btn-icon-only btn-round-red">
+                <i class="fas fa-map-marker-alt fs15"></i>
+            </a>
+        </span>
+        <b style="font-size:x-large">Đăng ký lịch làm việc</b>
+    </h4>
+</form>
+<div class="row" style="margin: auto">
+    <div class="col-md-12" style="width: 100% !important;border: 1px solid #ddd;">
+        <div class="col-md-12 mt15">
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input placeholder="Từ ngày" ng-model="modelCalendar.FromDate" type='text' autocomplete="off" class="form-control" id="datefrom" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="modelCalendar.FromDate='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input placeholder="Đến ngày" ng-model="modelCalendar.ToDate" type='text' autocomplete="off" class="form-control" id="dateto" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="modelCalendar.ToDate='';" class="btn btn-default no-shadow ">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="modelCalendar.AppointmentTime" placeholder="Thời gian hẹn phỏng vấn" id="appointmentTime">
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="modelCalendar.AppointmentTime='';" class="btn btn-default no-shadow ">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-blue mr15 pull-right" ng-click="submit()">
+                    <span><i class="fas fa-plus"></i>  Đăng ký</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-12 mt15 pb5">
+            <div class="col-md-6">
+                <div class="col-md-12 br4" style="border:1px solid #c2cad8">
+                    <label class="control-label pl50 mr20"><input type="checkbox" id="fulltime" class="checkmark work-type" />Fulltime</label>
+                    <label class="control-label mr20"><input type="checkbox" id="morning" class="checkmark work-type" />Sáng</label>
+                    <label class="control-label mr20"><input type="checkbox" id="afternoon" class="checkmark work-type" />Chiều</label>
+                    <label class="control-label"><input type="checkbox" id="evening" class="checkmark work-type" />Tối</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12 br4" style="border:1px solid #c2cad8">
+                    <label class="control-label pl15 mr15"><input ng-model="modelCalendar.Saturday" type="checkbox" class="checkmark" />Thứ bảy</label>
+                    <label class="control-label"><input ng-model="modelCalendar.Sunday" type="checkbox" class="checkmark" />Chủ nhật</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .nav-tabs > li.active > a {
+        background-color: #55A8FD !important;
+        color: white !important;
+        -webkit-box-shadow: 0 5px 10px 0 rgba(85,168,253,0.45) !important;
+        box-shadow: 0 5px 10px 0 rgba(85,168,253,0.45) !important;
+    }
+</style>
+<uib-tabset class="mt15">
+    <uib-tab index="0" active="active" heading="Lịch làm việc" id="tab-calendar">
+        <div class="calendar-wrap">
+            <div id="calendar"></div>
+        </div>
+    </uib-tab>
+    <uib-tab index="1" heading="Danh sách">
+        <div class="portlet-body">
+            <table class="table dataTable table-hover table-striped"
+                   datatable
+                   dt-options="dtOptions"
+                   dt-columns="dtColumns"
+                   dt-instance="dt.dtInstance"
+                   id="tblData"></table>
+        </div>
+    </uib-tab>
+</uib-tabset>

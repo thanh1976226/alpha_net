@@ -1,0 +1,87 @@
+﻿<style type="text/css">
+    .input-file .fa-upload {
+        position: absolute;
+        z-index: 10;
+        padding: 10px;
+    }
+
+    .input-file input {
+        border-top-left-radius: 4px !important;
+        border-bottom-left-radius: 4px !important;
+    }
+
+    .input-group-btn .btn-choose {
+        border-radius: 5px !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        box-shadow: none !important;
+    }
+</style>
+<div ng-controller="contractTabFile">
+    <div class="row">
+        <form name="searchform" method="post" ng-validate="validationOptions">
+            <div class="col-md-4">
+                <div class="form-group mb5">
+                    <div class="input-group input-file">
+                        <i class="fa fa-upload"></i>
+                        <input class="form-control inputFile pl30" style="height:33px" placeholder="{{'CONTRACT_CURD_TAB_FILE_TXT_CHOOSE_FILE' | translate}}..."></>
+                        <span class="input-group-btn">
+                            <span class="btn btn-default btn-choose" style="height:33px" onclick="$(this).parent().find('input[type=file]').click();">{{'CONTRACT_CURD_TAB_FILE_BTN_BROWSE' | translate}}</span>
+                            <input class="form-control" id="FileInput" onchange="$('.inputFile').val($(this).val().split('\\').pop());" style="display:none" type="file">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group " ng-class="{ 'has-error': errorCategory}">
+
+                    <div class="input-group">
+                        <ui-select tagging ng-model="model.Category" theme="bootstrap" on-select="changleSelect('Category')">
+                            <ui-select-match placeholder="{{'CONTRACT_CURD_TAB_FILE_TXT_CATEGORY' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x in Categories | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Category=''" class="btn btn-default no-shadow" style="">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <span ng-show="errorCategory" class="label-color validation-message">
+                        {{'CONTRACT_CURD_TAB_FILE_VALIDATE_CATEGORY' | translate}}
+                    </span>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <input type="text" class="form-control" ng-model="model.Tags" placeholder="{{'CONTRACT_CURD_TAB_FILE_TXT_TAGS' | translate}}..." />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <input type="text" class="form-control" ng-model="model.Description" placeholder="{{'CONTRACT_CURD_TAB_FILE_TXT_DESCRIPTION' | translate}}..." />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <button ng-click="add()" id="btnAddFile" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus"></i>
+                        {{'COM_BTN_ADD' | translate}}
+                    </button>
+                    <button ng-click="save()" id="btnEditFile" type="submit" class="btn btn-info hidden">
+                        <i class="fa fa-edit"></i>
+                        {{'COM_BTN_EDIT' | translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataFile"></table>
+</div>

@@ -1,0 +1,48 @@
+﻿<div ng-controller="contractTabDetail">
+    <div class="row">
+       <!-- <form name="addform" method="post" ng-validate="validationOptionsDetail">-->
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <div class="input-group">
+                        <input type="text" name="ItemCode" class="form-control" ng-model="model.ItemCode" placeholder="{{'CONTRACT_CURD_TAB_DETAIL_CURD_TXT_ITEM_CODE' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ItemCode=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mb5">
+                    <div class="input-group">
+                        <input type="text" name="ItemName" class="form-control" ng-model="model.ItemName" placeholder="{{'CONTRACT_CURD_TAB_DETAIL_CURD_TXT_ITEM_NAME' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ItemName=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group mb5">
+                    <button ng-click="reload()" type="submit" class="btn btn-accent">
+                        <i class="fa fa-search"></i>
+                        {{'COM_BTN_SEARCH' | translate}}
+                    </button>
+                    <button ng-click="add()" type="submit" class="btn btn-green ml25">
+                        <i class="fa fa-plus"></i>
+                        {{'COM_BTN_ADD' | translate}}
+                    </button>
+                </div>
+            </div>
+       <!-- </form>-->
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataDetail"></table>
+</div>

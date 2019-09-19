@@ -1,0 +1,132 @@
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)3\Project_Net_Alpha (2)3\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (2)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (3.9)\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (4.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+E:\Project .NEt\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\Administrator\Desktop\Project_Net_Alpha (8.9)\Project_Net_Alpha (8.9)\Project_Net_Alpha (2)\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\Administrator\Desktop\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.deps.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\bin\Debug\netcoreapp2.2\III.Domain.pdb
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.dll
+C:\Users\Administrator\Desktop\Project_Net_Alpha\Project_Net_Alpha\trunk\III.Domain\obj\Debug\netcoreapp2.2\III.Domain.pdb

@@ -1,0 +1,156 @@
+﻿<script>
+    function readURL(input) {
+      //  $(this).parent().parent().parent().find('.form-control').html($(this).val());
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log('link: ' + e.target.result);
+                $('#Image')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function readURL1(input) {
+        //  $(this).parent().parent().parent().find('.form-control').html($(this).val());
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log('link: ' + e.target.result);
+                $('#Image1')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<!--<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title" style="font-weight:bold"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color: #e9edf0;padding-top:5px"></i> QUẢN LÝ DANH MỤC XẾP HẠNG</h3>
+</div>-->
+<div class="modal-body no-space" id="modal-body">
+
+    <div class="portlet-body">
+        <div class="table-toolbar">
+
+            <div class="row" style="    margin:10px">
+                <!--<div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Thông tin tìm kiếm</h3>
+                </div>-->
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Thông tin phòng học</h3>
+                </div>
+
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                        <div class="row">
+                            <DIV class="portlet-body form">
+                                <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                    <div class="form-body">
+
+                                        <div class=" col-md-6">
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-list"></i> Số phòng</label>
+                                                <div class="col-md-8" style="border:none">
+                                                    <input type="text" class="form-control" ng-model="model.number_room" name="number_room" placeholder="Số phòng" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-list"></i> Địa điểm</label>
+                                                <div class="col-md-8" style="border:none">
+                                                    <input type="text" class="form-control" ng-model="model.address" name="address" placeholder="Địa điểm" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-home"></i> Ghi chú</label>
+                                                <div class="col-md-8" style=" border:none">
+                                                    <textarea rows="4" type="text" class="form-control" ng-model="model.note" name="note" placeholder="Ghi chú" />
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class=" col-md-6">
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-pencil"></i> Thiết bị</label>
+                                                <div class="col-md-8" style="border:none">
+                                                    <input type="text" class="form-control" ng-model="model.facilities" name="facilities" placeholder="Thiêt bị" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-pencil"></i> Số chỗ</label>
+                                                <div class="col-md-8" style="border:none">
+                                                    <input type="text" class="form-control" ng-model="model.seat" name="seat" placeholder="Số chỗ" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-show="show">
+                                                <div class="col-md-4 form-col-label text-left" style="border-left:none">
+                                                    <i class="sprite-image-16x16"></i>
+                                                    <label class="control-label" for="Status"> Hình ảnh</label>
+                                                </div>
+                                                <div class="col-md-8 form-col-control " style="border:none">
+                                                    <div class="fileupload-new thumbnail mb5">
+                                                        <img id="Image" src="../../images/no_photo_icon.png" data-src="holder.js/150x150" alt="holder" ng-src='{{model.image}}' style="height:43px; width:150px" />
+                                                    </div>
+                                                    <input type="file" id="file" class="filestyle" accept=".png, .jpg, .jpeg, .gif, .bmp" files-input ng-model="model.image" name="image" onchange="readURL(this);">
+                                                    <script>
+                                                        $(":file").filestyle({ buttonName: "btn btn-primary" });
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" ng-show="hide">
+                                                <div class="col-md-4 form-col-label text-left" style="border-left:none">
+                                                    <i class="sprite-image-16x16"></i>
+                                                    <label class="control-label" for="Status"> Ảnh</label>
+                                                </div>
+                                                <div class="col-md-8 form-col-control">
+                                                    <div class="fileupload-new thumbnail mb5">
+                                                        <img id="Image1" src="{{model.image}}" alt="holder" ng-src='{{model.image}}' style="height:43px; width:150px" />
+                                                    </div>
+                                                    <input type="file" id="file1" class="filestyle" accept=".png, .jpg, .jpeg, .gif, .bmp" files-input ng-model="model.image" name="image" onchange="readURL1(this);">
+                                                    <script>
+                                                        $(":file").filestyle({ buttonName: "btn btn-primary" });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <div class="form-group pull-right" style="border:none;    margin: 11px;">
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()" ng-show="enableadd"><i class="fa fa-plus"></i> Thêm mới</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="edit()" ng-show="enableedit"><i class="fa fa-plus"></i> Sửa đổi</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="delete()" ng-show="enableedit"><i class="fa fa-plus"></i> Xoá bỏ</button>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            </DIV>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <!--<div class=" col-md-12">-->
+                <table class="table dataTable table-bordered table-hover table-striped"
+                       datatable
+                       dt-options="dtOptions"
+                       dt-columns="dtColumns"
+                       dt-instance="dtInstance"
+                       id="tblData" style="width:100%"></table>
+
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>

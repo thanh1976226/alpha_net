@@ -1,0 +1,153 @@
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.xml
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Authentication.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Cors.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.ObjectPool.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Options.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Primitives.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.WebEncoders.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.IdentityModel.Logging.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.IdentityModel.Tokens.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Net.Http.Headers.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Newtonsoft.Json.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Buffers.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ComponentModel.Primitives.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ComponentModel.TypeConverter.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Text.Encodings.Web.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ValueTuple.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.pdb
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.xml
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csprojAssemblyReference.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csproj.CoreCompileInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.AssemblyInfoInputs.cache
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.AssemblyInfo.cs
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csproj.CopyComplete
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer4.dll
+C:\Users\outso\Downloads\projec.NET\Project_Net_Alpha (3.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer4.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.xml
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Authentication.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Authentication.Cookies.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Cors.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.DataProtection.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Extensions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Features.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.WebUtilities.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Caching.Memory.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.Binder.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.ObjectPool.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Options.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Primitives.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.WebEncoders.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.IdentityModel.Logging.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.IdentityModel.Tokens.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Net.Http.Headers.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Newtonsoft.Json.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Buffers.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ComponentModel.Primitives.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ComponentModel.TypeConverter.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.IdentityModel.Tokens.Jwt.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Runtime.CompilerServices.Unsafe.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Text.Encodings.Web.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ValueTuple.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.pdb
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.xml
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csprojAssemblyReference.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csproj.CoreCompileInputs.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.AssemblyInfoInputs.cache
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.AssemblyInfo.cs
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csproj.CopyComplete
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer4.dll
+E:\Project .NEt\Project_Net_Alpha (5.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer4.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.xml
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityServer4.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Authentication.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Authentication.Cookies.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Cors.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.ObjectPool.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Options.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.Primitives.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Extensions.WebEncoders.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.IdentityModel.Logging.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.IdentityModel.Tokens.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Microsoft.Net.Http.Headers.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\Newtonsoft.Json.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Buffers.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ComponentModel.Primitives.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ComponentModel.TypeConverter.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.Text.Encodings.Web.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\System.ValueTuple.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.pdb
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\bin\Debug\net452\IdentityModel.xml
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csprojAssemblyReference.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csproj.CoreCompileInputs.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.AssemblyInfoInputs.cache
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.AssemblyInfo.cs
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer.csproj.CopyComplete
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer4.dll
+C:\Users\outso\Desktop\Project_Net_Alpha (6.9)\Project_Net_Alpha (6.9)\Project_Net_Alpha (4.9)\Project_Net_Alpha (2)\trunk\IdentityServer\obj\Debug\net452\IdentityServer4.pdb

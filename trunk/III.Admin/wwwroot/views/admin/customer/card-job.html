@@ -1,0 +1,51 @@
+﻿<div ng-controller="card-job">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="mt-action-5">
+                <div class="col-lg-3  form-group mr5 ">
+                    <label class="control-label">{{'CUS_CURD_TAB_CARD_JOB_LBL_CARDCODE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.CardCode" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_CARD_JOB_TXT_CARDCODE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CardCode=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3  form-group mr5 ">
+                    <label class="control-label">{{'CUS_CURD_TAB_CARD_JOB_LBL_CARDNAME' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.CardName" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_CARD_JOB_TXT_CARDNAME' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CardName=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-6 pl-0  pt25">
+                            <a ng-click="search()" class="btn btn-accent">
+                                <i class="fa fa-search"></i>
+                                {{'COM_BTN_SEARCH' | translate}}
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+    <div style="background-color: #fff; border-radius: 5px;">
+        <table class="table dataTable table-hover table-striped"
+               datatable
+               dt-options="dtOptions"
+               dt-columns="dtColumns"
+               dt-instance="dtInstance"
+               id="tblData"></table>
+    </div>
+</div>

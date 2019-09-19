@@ -1,0 +1,106 @@
+﻿<div class="table-toolbar" ng-show="IsTranslate">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">Quản lý tiện ích</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'COM_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="ManagementSlide">Quản lý tiện ích</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="portlet light bordered input-search mb5 ">
+        <div class="portlet-body">
+            <div class="row pt5 mb5">
+                <div class="col-md-3">
+                    <!--<label class="fw600 text-underline">Tiêu đề</label>-->
+                    <div class='input-group '>
+                        <input ng-model="model.ActCode" class="form-control" type="text" placeholder="Nhập tên..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <span class="btn btn-default no-shadow end-date">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <!--<label class="fw600 text-underline">{{'AA_CURD_LBL_SEARCH_ACTTITLE' | translate}}</label>-->
+                    <div class='input-group '>
+                        <select class="form-control" id="Type" name="Type">
+                            <option value="">--- Loại ---</option>
+                            <option value="TextField">Text Field</option>
+                            <option value="Textarea">Textarea</option>
+                            <option value="Select">Drop-down selection</option>
+                            <option value="MultipleSelect">Multi-select list</option>
+                            <option value="Radio">Radio buttons</option>
+                            <option value="Checkbox">Checkbox buttons</option>
+                            <option value="Label">Label</option>
+                            <option value="Link">Link</option>
+                            <option value="Date">Date</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!--<label class="fw600 text-underline">{{'AA_CURD_LBL_SEARCH_ACTTITLE' | translate}}</label>-->
+                    <div class='input-group '>
+                        <select class="form-control select2-single" data-val="true" data-val-number="The field Group must be a number." id="Group" name="Group">
+                            <option value="">--- Nh&#243;m ---</option>
+                            <option value="1">Thủ tục h&#224;nh ch&#237;nh</option>
+                            <option value="2">Văn bản quản l&#253;, chỉ đạo, hướng dẫn</option>
+                            <option value="3">Quản l&#253; Slide</option>
+                            <option value="4">Quản l&#253; Banner</option>
+                            <option value="5">Quản l&#253; Link li&#234;n kết</option>
+                            <option value="6">Quản l&#253; Untilities</option>
+                            <option value="7">Quản l&#253; Video</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <!--<label class="fw600 text-underline">{{'AA_CURD_LBL_SEARCH_ACTTITLE' | translate}}</label>-->
+                    <div class='input-group '>
+                        <select id="Published" name="Published" class="form-control">
+                            <option value="">--- State ---</option>
+                            <option value="true">Hiển thị</option>
+                            <option value="false">Ẩn</option>
+                        </select>
+                    </div>
+                </div>
+                <style>
+                    .pl20.text-center {
+                        float: left;
+                    }
+                </style>
+                <div class="col-md-2">
+                    <!--<label class="fw600 text-underline">{{'AA_CURD_LBL_SEARCH_ACTTITLE' | translate}}</label>-->
+                    <div class="pl20 text-center">
+                        <a class="btn btn-icon-only btn-circle btn-outline purple-custom" ng-click="search()">
+                            <span><i class="fa fa-search"></i></span>
+                        </a>
+                        <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_SEARCH' | translate}}</p>
+                    </div>
+                    <div class="pl20 text-center">
+                        <a class="btn btn-icon-only btn-circle btn-outline green-custom" ng-click="add()" style="right:5px">
+                            <span><i class="fa fa-plus"></i></span>
+                        </a>
+                        <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn-group pull-right pt10 actions d-flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>

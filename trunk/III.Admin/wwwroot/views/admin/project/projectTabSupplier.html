@@ -1,0 +1,60 @@
+﻿<div id="contact-main" ng-controller="projectTabSupplier">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="mt-action-5">
+                <div class="col-md-2  form-group mr5 ">
+                    <label class="control-label">Mã nhà cung cấp</label>
+                    <div class="input-group">
+                        <input ng-model="model.ContactName" class="form-control" type="text" placeholder="Mã nhà cung cấp..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Code=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 form-group mr5">
+                    <label class="control-label">Từ ngày</label>
+                    <div class='input-group date' id='datefrom'>
+                        <input type='text' class="form-control input-date" ng-model="model.FromDate" placeholder="Từ ngày..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.FromDate=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 form-group mr5">
+                    <label class="control-label">Đến ngày</label>
+                    <div class='input-group date' id='dateto'>
+                        <input type='text' class="form-control input-date" ng-model="model.ToDate" placeholder="Đến ngày..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ToDate=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 pl-0 pt23">
+                    <button ng-click="search()" class="btn btn-accent">
+                        <i class="fa fa-search"></i>
+                        Tìm kiếm
+                    </button>
+                </div>
+                <div class="col-md-2 pl-0 pt23">
+                    <button ng-click="add()" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus mr5"></i>
+                        Thêm mới
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataSupplier"></table>
+</div>
+

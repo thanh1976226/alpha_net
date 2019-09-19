@@ -1,0 +1,31 @@
+﻿<style>
+    .ui-select-match-close {
+        background-image: none;
+    }
+</style>
+<div class="modal-header no-color">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-check" style="padding-top: 10px;color:black"></i>
+    <span class="modal-title black" id="modal-title">Thêm việc cần làm</span>
+</div>
+<div class="modal-body pt-0" id="modal-body">
+    <form name="checklist" method="post" ng-validate="validationOptions">
+        <div class="row mt5">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input class="form-control" name="title" ng-model="model.Title" placeholder="Việc cần làm..." />
+                </div>
+            </div>
+        </div>
+        <div class="row mt10">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-default" ng-click="cancel()">
+                    Hủy
+                </button>
+                <button class="btn btn-red" ng-click="submit()">
+                    Thêm
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,54 @@
+﻿<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+<div class="modal-header no-color">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-users" style="padding-top: 10px;color:black"></i>
+    <span class="modal-title black" id="modal-title">Đối tượng liên quan</span>
+</div>
+<div class="modal-body p0 mt5" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="col-md-12">                
+                <div class="col-md-12 p0">
+                    <div class="col-md-3 pl-0">
+                        <ui-select tagging ng-model="setting.ObjDependency" on-select="objDependencyChange(setting.ObjDependency)" theme="bootstrap">
+                            <ui-select-match placeholder="Loại...">{{$select.selected.Value}}</ui-select-match>
+                            <ui-select-choices style="height: auto" repeat="x.Code as x in objDependency | filter: $select.search">
+                                {{x.Value}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="col-md-3 pl-0">
+                        <ui-select tagging ng-model="setting.ObjCode" on-select="objCodeChange(setting.ObjCode)" theme="bootstrap">
+                            <ui-select-match placeholder="Đối tượng...">{{$select.selected.Value}}</ui-select-match>
+                            <ui-select-choices style="height: auto" repeat="x.Code as x in listObjCode | filter: $select.search">
+                                {{x.Value}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="col-md-3 pl-0">
+                        <ui-select tagging ng-model="setting.Relative" theme="bootstrap">
+                            <ui-select-match placeholder="Quan hệ...">{{$select.selected.Value}}</ui-select-match>
+                            <ui-select-choices style="height: auto" repeat="x.Code as x in relative | filter: $select.search">
+                                {{x.Value}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-blue" ng-click="addDependency()">Thêm</button>
+                    </div>
+                </div>
+                <div class="col-md-12 portlet light bordered mt5">
+                    <div class="portlet-body">
+                        <table id="obj-data-table" style="width: 100%" class="display"></table>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+        <a class="pull-left" ng-click="useDefaultSetting()">Sử dụng cài đặt mặt định</a>
+        <button ng-click="submit()" class="btn red mr15 no-boxshadow" href="javascript:;" style="font-weight:bold;">
+            Lưu
+        </button>
+</div>

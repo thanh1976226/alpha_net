@@ -1,0 +1,146 @@
+﻿
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color: #e9edf0;padding-top:5px"></i> THÊM MỚI QUỐC GIA</h3>
+</div>
+<div class="panel-body">
+    <div class="row">
+        <div class="col-md-6" style="overflow: scroll; height:300px;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="background-color:grey;"></th>
+                        <th class="col-md-10" style="background-color:grey; color:white;">Giá trị</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <div class="Text-left">
+                            <td>Pháp</td>
+                        </div>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Anh</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Úc</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Singapo</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Nhật</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Afghanistan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Ai C</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+
+            <!--<div class="row" style="margin-top: 75px;">
+                <div class="col-md-3 pt5"><i class="fa fa-barcode"></i> Mã</div>
+                <div class="col-md-3">
+                    <input style="width: 300px;" placeholder="EDU-COUNTRY-001" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px">
+                <div class="col-md-3 pt5"><i class="fa fa-building-o"></i> Giá trị</div>
+                <div class="col-md-3">
+                    <input style="width: 300px;" placeholder="Pháp" class="form-control">
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px; ">
+                <div class="col-md-3 pt5"><i class="fa fa-group"></i> Nhóm cha</div>
+                <div class="col-md-3">
+                    <select class="form-control" style=" width: 300px;"></select>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-3 pt5"><i class="fa fa-sort-alpha-asc"></i> Thứ tự</div>
+                <div class="col-md-3">
+                    <input style="width: 300px;" class="form-control">
+                </div>
+            </div>
+            <button type="button" class="btn btn-lg" style="color:white; margin-top:10px; background-color:steelblue;  width: 110px; height: 50px;"><i class="fa fa-save" style="color: blue; text-align: left;"></i>&nbsp; &nbsp;&nbsp; Lưu </button>
+            <button type="button" class="btn btn-lg" style="color:white; margin-top:10px; background-color:steelblue;  width: 110px; height: 50px;"><i class="fa fa-times-circle" style="color: red; font-weight: bold; "></i>&nbsp; &nbsp;&nbsp; Xóa</button>
+            <button type="button" class="btn btn-lg" style="color:white; margin-top:10px; background-color:steelblue;  width: 150px; height: 50px;"><i class="fa fa-refresh" style="color: green; font-weight: bold;"></i>&nbsp; &nbsp;&nbsp; Làm mới</button>-->
+
+            <div class="modal-body no-space" id="modal-body">
+
+                <div class="portlet-body form">
+                    <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                        <div class="form-body">
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Mã </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" ng-model="model.article_code" name="article_code" placeholder="Mã tin tức" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-tint"></i> Giá trị</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" ng-model="model.article_title" name="article_title" placeholder="Tiêu đề" />
+                                </div>
+                            </div>
+                            <div class="form-group" style="border:none">
+                                <label class="control-label col-md-3 text-left"> <i class="glyphicon glyphicon-leaf"></i> Nhóm cha</label>
+                                <div class="col-md-8 form-col-control" style=" border:none;   ">
+                                    <div class="bs-component">
+                                        <div class="input-group col-md-12" style="border:none">
+                                            <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                                <ui-select-match placeholder="Nhóm cha...">{{$select.selected.cat_code}}</ui-select-match>
+                                                <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                    {{x.cat_code}}
+                                                </ui-select-choices>
+                                            </ui-select>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-tint"></i> Thứ tự</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" ng-model="model.article_title" name="article_title" placeholder="Tiêu đề" />
+                                </div>
+                            </div>
+
+                            <div class="form-group pull-right" style="margin-top:10px;margin-right:11px">
+                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="editQTLV()"><i class="fa fa-times"></i> Xoá bỏ</button>
+                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px;    margin-right: 44px;" ng-click="submitQTLV()"><i class="fa fa-refresh"></i> Làm mới</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+

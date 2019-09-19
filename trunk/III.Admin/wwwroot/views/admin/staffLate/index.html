@@ -1,0 +1,55 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6 ">
+            <h1 class="bold mb-0">{{'STL_LBL_STAFF_LATE' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'STL_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/Notification">{{'STL_LINK_LATE_LEAVE' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 ">
+            <div class="btn-group pull-right actions">
+                <a ng-click="add()" class="btn btn-green">
+                    <i class="fa fa-plus "></i>
+                    {{'STL_BTN_LATE_LEAVE' | translate}}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt5">
+        <div class="col-md-3">
+            <label class="fw600 text-underline">{{'STL_LBL_SEARCH_FULL_NAME' | translate}}</label>
+            <div class="input-group">
+                <input ng-model="model.Name" class="form-control" type="text" placeholder="{{'STL_TXT_SEARCH_FULL_NAME' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.Name='';" class="btn btn-default no-shadow end-date">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3" style="padding-top:23px">
+            <button class="btn btn-accent" ng-click="reload()">
+                <i class="fa fa-search"></i>
+                {{'COM_BTN_SEARCH' | translate}}
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <span class="text-danger">{{'STL_LBL_DEFAULT' | translate}}</span>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblData"></table>

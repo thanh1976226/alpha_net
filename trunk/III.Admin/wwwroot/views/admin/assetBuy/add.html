@@ -1,0 +1,628 @@
+﻿<style>
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+
+    .boxGreen {
+        width: 20px;
+        height: 20px;
+        background: #2ecc71;
+        margin-right: 5px;
+    }
+
+    .boxRed {
+        width: 20px;
+        height: 20px;
+        background: #e74c3c;
+        margin-right: 5px;
+    }
+
+    .boxYellow {
+        width: 20px;
+        height: 20px;
+        background: #f1c40f;
+    }
+
+    .h-60 {
+        height: 60px;
+    }
+
+    .pl0 {
+        padding-left: 0px;
+    }
+
+    .pt5 {
+        padding-top: 5px;
+    }
+
+    .pr15 {
+        padding-right: 15px;
+    }
+
+    .mt15 {
+        margin-top: 15px;
+    }
+
+    .mt23 {
+        margin-top: 23px;
+    }
+
+    .w-100-percent {
+        width: 100%;
+    }
+
+    .w-30-percent {
+        width: 30%;
+    }
+
+    .bgWhite {
+        background: #fff;
+    }
+
+    .labelbodergroup {
+        margin-left: 24px;
+        margin-top: -12px;
+        position: absolute;
+        background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+        border: 1px solid #e9dada;
+        border-radius: 4px;
+        font-size: 11px;
+        padding: 3px 10px !important;
+    }
+
+    .table_body {
+        background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+        border-radius: 4px !important;
+        border: 1px solid #e9dada;
+        padding-top: 15px;
+        box-shadow: 0px 5px 10px 2px rgba(127, 143, 166,0.2) !important;
+        padding-bottom: 15px;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title"> Thêm phiếu quản lý mua sắm gia tăng tài sản</div>
+</div>
+<div class="modal-body userFormAreaHeader" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal " method="post" ng-validate="validationOptions">
+            <div class="form-body pt-0">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-barcode" aria-hidden="true"></i>
+                                <label class="control-label require">Mã phiếu mua sắm</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.Code" name="fullname" placeholder="Nhập mã phiếu mua sắm..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="boxGreen col-md-4"></div>
+                                <div class="boxRed col-md-4"></div>
+                                <div class="boxYellow col-md-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 pl0 pt5">
+                            <div class="border-qrcode text-center pull-left">
+                                <div class="text-center">
+                                    <div class="img-thumbnail">
+                                        <img src="../../../images/default/qrCode.png" class="h-60" />
+                                        <label class="file-header bold w-100-percent">QR code</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                                
+                                <label class="control-label require">Tiêu đề </label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.title" name="title" placeholder="Nhập tiêu đề thanh lý..." />
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-barcode" aria-hidden="true"></i>
+                                <label class="control-label require">Tổng tiền</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.totalmoney" name="totalmoney" placeholder="Tổng tiền..." />
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group input-file">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-default btn-choose" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
+                                        <input class="form-control" id="FileInput" onchange="$('.inputFile').val($(this).val().split('\\').pop());" style="display:none" type="file" accept="image/*">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group" ng-class="{ 'has-error': errorGender}">
+                            <div class="col-md-12">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                <label class="control-label require">Trạng Thái</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.branch" theme="bootstrap" on-select="changleSelect('branch')">
+                                        <ui-select-match placeholder="Trạng thái...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat=" x.gender as x in checkGender | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.branch=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorGender" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_SEX' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <label class="control-label require ">Ngày thanh lý</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class='input-group date' id='date-liquidation'>
+                                    <input type='text' class="form-control input-date" name="liquidation" ng-model="model.liquidation" placeholder="Ngày thanh lý..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-comment"></i>
+                                <label class="control-label">Ghi chú</label>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea rows="4" class="form-control" ng-model="model.Description" placeholder="Nhập ghi chú..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group" ng-class="{ 'has-error': errorGender}">
+                            <div class="col-md-12">
+                                <i class="fas fa-user"></i>
+                                <label class="control-label require">Đơn vị mua</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.branch" theme="bootstrap" on-select="changleSelect('branch')">
+                                        <ui-select-match placeholder="Đơn vị mua...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat=" x.gender as x in checkGender | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.branch=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorGender" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_SEX' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <label class="control-label require ">Ngày thanh lý</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class='input-group date' id='date-liquidation'>
+                                    <input type='text' class="form-control input-date" name="liquidation" ng-model="model.liquidation" placeholder="Ngày thanh lý..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-comment"></i>
+                                <label class="control-label">Ghi chú</label>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea rows="4" class="form-control" ng-model="model.Description" placeholder="Nhập ghi chú..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <label class="control-label require ">Ngày mua</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class='input-group date' id='date-liquidation'>
+                                    <input type='text' class="form-control input-date" name="liquidation" ng-model="model.liquidation" placeholder="Ngày mua..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group hidden" ng-class="{ 'has-error': errorGender}">
+                            <div class="col-md-12">
+                                <i class="fa fa-key"></i>
+                                <label class="control-label require">Đơn vị sửa chữa</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.branch" theme="bootstrap" on-select="changleSelect('branch')">
+                                        <ui-select-match placeholder="Đơn vị sửa chữa...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat=" x.gender as x in checkGender | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.branch=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorGender" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_SEX' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group" ng-class="{ 'has-error': errorGender}">
+                            <div class="col-md-12">
+                                <i class="fas fa-user"></i>
+                                <label class="control-label require">Nhà cung cấp</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.branch" theme="bootstrap" on-select="changleSelect('branch')">
+                                        <ui-select-match placeholder="Nhà cung cấp...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat=" x.gender as x in checkGender | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.branch=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorGender" class="label-color validation-message">
+                                    {{'HR_HR_MAN_CURD_VALIDATE_HR_MAN_SEX' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <label class="control-label require">Địa điểm</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.total" name="total" placeholder="Địa điểm..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <label class="control-label require">Địa điểm mua</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.Code" name="fullname" placeholder="Địa điểm mua..." />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fas fa-sort-amount-up"></i>
+                                <label class="control-label require">Số lượng tài sản</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.Code" name="fullname" placeholder="Số lượng tài sản..." />
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <label class="control-label require ">Ngày sửa</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class='input-group date' id='date-liquidation'>
+                                    <input type='text' class="form-control input-date" name="liquidation" ng-model="model.liquidation" placeholder="Ngày thanh lý..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12 ">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                <label class="control-label">&nbsp;Tình trạng</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select ng-model="model.status" theme="bootstrap">
+                                        <ui-select-match placeholder="Tình trạng...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListLoaiVanBan | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.status=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fas fa-dollar-sign"></i>
+                                
+                                <label class="control-label require">Tổng giá trị</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.Code" name="fullname" placeholder="Tổng giá trị..." />
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12 ">
+                                <i class="far fa-comment-alt"></i>
+                                <label class="control-label">&nbsp;Trạng thái</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select ng-model="model.status" theme="bootstrap">
+                                        <ui-select-match placeholder="Trạng thái...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListLoaiVanBan | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.status=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <i class="fas fa-dollar-sign"></i>                                
+                                <label class="control-label require">Thanh toán</label>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" ng-model="model.Code" name="fullname" placeholder="Thanh toán..." />
+                            </div>
+                        </div>
+                        <div class="form-group hidden">
+                            <div class="col-md-12 ">
+                                <i class="fas fa-sort-numeric-up"></i>
+                                <label class="control-label">&nbsp;Trạng thái</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <ui-select ng-model="model.status" theme="bootstrap">
+                                        <ui-select-match placeholder="Trạng thái...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListLoaiVanBan | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.status=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                        <label class="control-label ">Ghi chú</label>
+                        <textarea name="Note" rows="11" class="form-control" ng-model="model.Note" type="text" placeholder="Ghi chú..."></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-bordered mt23 bgWhite" id="tblRequest">
+                            <thead>
+                                <tr style="background:#3498db;color:#fff">
+                                    <th class="col-md-1 text-center">Chọn file</th>
+                                    <th class="col-md-1 text-center">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center w-30-percent"><a>File1</a></td>
+                                    <td class="text-center">
+                                        <i role="button" class="fa fa-minus-circle" ng-click="removeItem($index)" title="Xóa" style="color:red !important;font-size: 25px;padding-top:5px"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><a>File2</a></td>
+                                    <td class="text-center">
+                                        <i role="button" class="fa fa-minus-circle" ng-click="removeItem($index)" title="Xóa" style="color:red !important;font-size: 25px;padding-top:5px"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><a>File3</a></td>
+                                    <td class="text-center">
+                                        <i role="button" class="fa fa-minus-circle" ng-click="removeItem($index)" title="Xóa" style="color:red !important;font-size: 25px;padding-top:5px"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group pull-right pr15 text-center">
+                            <a data-dismiss="modal" ng-click="add()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                                <span><i class="fa fa-upload"></i></span>
+                            </a>
+                            <p class="text-underline fs9 mb5 pt3">{{'COM_ADD_FILE' | translate}}</p>
+                                <!--<a ng-click="add()" class="btn btn-green">
+                                    <span class=""><i class="fa fa-upload"></i> Tải file</span>
+                                </a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pt15" id="box">
+                        <label class="labelbodergroup"><b>Chọn tài sản</b></label>
+                        <div class="table-toolbar table_body">
+                            <div class="col-md-12">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                                        <label>Mã tài sản</label>
+                                        <div class='input-group'>
+                                            <input class="form-control" placeholder='Mã tài sản ...' />
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default no-shadow">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 pl20 ">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <i class="fa fa-flag" aria-hidden="true"></i>
+                                            <label class="control-label">&nbsp; Tình trạng </label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-group">
+                                                <ui-select ng-model="model.status" theme="bootstrap">
+                                                    <ui-select-match placeholder="Tình trạng ...">{{$select.selected.Name}}</ui-select-match>
+                                                    <ui-select-choices repeat="x.Code as x in ListLoaiVanBan | filter: $select.search">
+                                                        {{x.Name}}
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                                <span class="input-group-btn">
+                                                    <button type="button" ng-click="model.status=''" class="btn btn-default no-shadow">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class=" form-group">
+
+                                        <div class="col-md-12">
+                                            <i class="fa fa-info" aria-hidden="true"></i>
+                                            <label class="control-label ">Ghi chú</label>
+                                            <input type="text" class="form-control" ng-model="model.Note" name="Note" placeholder="Ghi chú..." />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group">
+                                        <div class="form-group pl20 pt10 text-center" >
+                                            <a data-dismiss="modal" ng-click="add()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                                                <span><i class="fa fa-plus"></i></span>
+                                            </a>
+                                            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="fs15 pl10"><a>Tìm kiếm</a></label>
+                                    <label class="fs15 pl10"><a>Chi tiết</a></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt15">
+                    <div class="btn-group pull-right actions d-flex mr25">
+                        <div class="pr10 text-center">
+                            <a data-dismiss="modal" ng-click="deleteList()" class="btn btn-icon-only btn-circle btn-outline red-custom">
+                                <span><i class="fa fa-trash"></i></span>
+                            </a>
+                            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_DELETE' | translate}}</p>
+                        </div>
+                        <div class="text-center">
+                            <a ng-click="add()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                                <span><i class="fa fa-plus"></i></span>
+                            </a>
+                            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+                        </div>
+                    </div>
+                    <table class="table table-bordered mt23 bgWhite" id="tblRequest">
+                        <thead>
+                            <tr style="background:#3498db;color:#fff">
+                                <th class="col-md-1 text-center">STT</th>
+                                <th class="col-md-1 text-center">Mã tài sản</th>
+                                <th class="col-md-1 text-center">Tên tài sản</th>
+                                <th class="col-md-1 text-center">Tình trạng</th>
+                                <th class="col-md-3 text-center">Ghi chú</th>
+                                <th class="col-md-1 text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"><a>1</a></td>
+                                <td class="text-center"><a>TS_001</a></td>
+                                <td class="text-center"><a>Chứng từ</a></td>
+                                <td class="text-center"><a>Đã hủy</a></td>
+                                <td class="text-center"><a>Chứng từ 001 ...</a></td>
+                                <td class="text-center"><a><input type="checkbox" /></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer hidden">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        Hủy bỏ
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr25" href="javascript:;">
+        Thêm mới
+    </button>
+</div>
+

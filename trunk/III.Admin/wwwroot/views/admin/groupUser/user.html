@@ -1,0 +1,211 @@
+﻿<div class="modal-header">
+    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">×</button>-->
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="fa fa-users"></i>  {{'MANAGE_MEMBER' | translate}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <style>
+            .table-box-shadow {
+                box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.18);
+            }
+
+            .table-height-scroll {
+                display: block;
+                height: 350px;
+                overflow: auto
+            }
+
+            @media only screen and (max-width : 992px) {
+                .btn-group-vertical.margin-top-40 {
+                    margin-top: 0 !important;
+                    margin-bottom: 15px;
+                    display: inline-block;
+                }
+
+                    .btn-group-vertical.margin-top-40 > .btn {
+                        display: inline-block;
+                        width: auto;
+                    }
+            }
+
+            @media only screen and (min-width : 992px) {
+                .res-margin-center {
+                    margin-top: 120px !important;
+                }
+
+                .res-position {
+                    position: absolute;
+                    left: -20px;
+                    top: 115px;
+                }
+
+                .block-col-left {
+                    padding-right: 45px;
+                }
+
+                .block-col-right {
+                    position: relative;
+                    padding-left: 45px;
+                }
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-6 block-col-left">
+                <div class="form-group">
+                    <div class="input-group col-md-8">
+                        <input type="text" class="form-control" placeholder="{{'MEMBER_OUT_GROUP' | translate}}..." ng-model="model.UserNameOutGroup" ng-change="searchUserOutGroup()">
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.UserNameOutGroup='';searchUserOutGroup()" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                        <!--<span class="input-group-btn">
+                            <button class="btn blue" type="button"><i class="fa fa-search"></i> {{'BTN_SEARCH_NOT_FULL' | translate}}</button>
+                        </span>-->
+                    </div>
+                </div>
+                <div class="table-responsive table-box-shadow table-height-scroll">
+
+                    <!--using datatable: but can't custom select box-->
+                    <!--<table class="table dataTable table-bordered table-hover table-striped"
+                           datatable
+                           dt-options="dtOptions1"
+                           dt-columns="dtColumns1"
+                           dt-instance="dtInstance1"
+                           id="tblData1"></table>-->
+
+
+                    <table class="table table-bordered table-striped table-hover no-margin">
+                        <thead>
+                            <tr>
+                                <!--<th style="width:20px"><label class="mt-checkbox"><input type="checkbox" ng-model="selectAllUser" ng-change="addOrRemoveUser(userOutGroups, 2, selectAllUser)" ng-init="selectAllUser=false;" /><span></span></label></th>-->
+                                <th style="width:20px"><label class="mt-checkbox"><input type="checkbox" ng-model="selectAllUserOutGroup" ng-change="addOrRemoveUserOutGroup(null, selectAllUserOutGroup)" /><span></span></label></th>
+                                <th>{{'USER_USERNAME' | translate}}</th>
+                                <th>{{'USER_FULLNAME' | translate}}</th>
+                                <th>{{'EMAIL' | translate}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="user in userOutGroups">
+                                <!--<td><label class="mt-checkbox"><input type="checkbox" ng-change="addOrRemoveUser(user, 1, isChecked)" ng-checked="selectAllUser" ng-model="isChecked" ng-init="isChecked=false;" /><span></span></label></td>-->
+                                <td><label class="mt-checkbox"><input type="checkbox" ng-model="selectUserOutGroups[$index]" ng-change="addOrRemoveUserOutGroup(user, selectUserOutGroups[$index])" /><span></span></label></td>
+                                <td>{{ user.UserName }}</td>
+                                <td>{{ user.FullName }}</td>
+                                <td>{{ user.Email }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-6 block-col-right">
+                <div class="text-center res-position">
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn blue" title="{{'ADD_ALL' | translate}}" ng-click="addAllUser()"><span class="fa fa-forward"></span></button>
+                        <button type="button" class="btn blue margin-top-10" title="{{'ADD_SELECT' | translate}}" ng-click="addUserSelected()"><span class="fa fa-chevron-right"></span></button>
+                        <button type="button" class="btn blue margin-top-10" title="{{'REFRESH' | translate}}" ng-click="refreshUser()"><span class="fa fa-refresh"></span></button>
+                        <button type="button" class="btn blue margin-top-10" title="{{'CANCEL_SELECT' | translate}}" ng-click="removeUserSelected()"><span class="fa fa-chevron-left"></span></button>
+                        <button type="button" class="btn blue margin-top-10" title="{{'CANCEL_ALL' | translate}}" ng-click="removeAllUser()"><span class="fa fa-backward"></span></button>
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-title">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <!--<ui-select ng-model="model.Id" class="" style="width: 100%;" ng-change="changeGroupUser()">
+                                        <ui-select-match placeholder="{{'SELECT_GROUP_USERS' | translate}}...">
+                                            <span ng-bind="$select.selected.Title"></span>
+                                            {{$select.selected.Title}}
+                                        </ui-select-match>
+                                        <ui-select-choices repeat="x.Id as x in groupUserData | filter:$select.search">
+                                            <span ng-bind="x.Title"></span>
+                                            {{x.Title}}
+                                        </ui-select-choices>
+                                    </ui-select>-->
+
+
+                                    <select ng-model="model.GroupUserCode" class="form-control" style="width: 100%; border-radius: 0" ng-change="changeGroupUser()">
+                                        <option>--- {{'SELECT_GROUP_USERS' | translate}} ---</option>
+                                        <option ng-repeat="x in groupUserData" value="{{ x.Id }}" ng-selected="{{ x.Id == model.GroupUserCode }}">{{ x.Title }}</option>
+                                    </select>
+
+
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="clear()" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group col-md-12">
+                                    <input type="text" class="form-control" placeholder="{{'MEMBER_IN_GROUP' | translate}}..." ng-model="model.UserNameInGroup" ng-change="searchUserInGroup()">
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.UserNameInGroup='';searchUserInGroup()" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                    <!--<span class="input-group-btn">
+                                        <button class="btn blue" type="button"><i class="fa fa-search"></i> {{'BTN_SEARCH_NOT_FULL' | translate}}</button>
+                                    </span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="table-responsive table-box-shadow table-height-scroll">
+                            <!--using datatable: but can't custom select box-->
+                            <!--<table class="table dataTable table-bordered table-hover table-striped"
+                                       datatable
+                                       dt-options="dtOptions"
+                                       dt-columns="dtColumns"
+                                       dt-instance="dtInstance"
+                                       id="tblData"></table>-->
+
+
+                            <table class="table table-bordered table-striped table-hover no-margin">
+                                <thead>
+                                    <tr>
+                                        <!--<th><label class="mt-checkbox"><input type="checkbox" ng-model="selectAllUserInGroup" ng-change="addOrRemoveUserInGroup(userInGroups, 2, selectAllUserInGroup)" ng-init="selectAllUserInGroup=false;" /><span></span></label></th>-->
+                                        <th style="width:20px"><label class="mt-checkbox"><input type="checkbox" ng-model="selectAllUserInGroup" ng-change="addOrRemoveUserInGroup(null, selectAllUserInGroup)" /><span></span></label></th>
+                                        <th>{{'USER_USERNAME' | translate}}</th>
+                                        <th>{{'USER_FULLNAME' | translate}}</th>
+                                        <th>{{'EMAIL' | translate}}</th>
+                                        <th>{{'ROLE' | translate}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="user1 in userInGroups">
+                                        <!--<td><label class="mt-checkbox"><input type="checkbox" ng-change="addOrRemoveUserInGroup(user1, 1, isChecked1)" ng-checked="selectAllUserInGroup" ng-model="isChecked1" ng-init="isChecked1=false;" /><span></span></label></td>-->
+                                        <td><label class="mt-checkbox"><input type="checkbox" ng-model="selectUserInGroups[$index]" ng-change="addOrRemoveUserInGroup(user1, selectUserInGroups[$index])" /><span></span></label></td>
+                                        <td>{{ user1.UserName }}</td>
+                                        <td>{{ user1.FullName }}</td>
+                                        <td>{{ user1.Email }}</td>
+                                        <td>
+                                            <select ng-model="user1.RoleId" ng-change="changeUserRoleInGroup(user1)">
+                                                <option>--- {{'ROLE' | translate}} ---</option>
+                                                <option ng-repeat="role in listRoles" value="{{ role.Id }}" ng-selected="{{ role.Id == user1.RoleId }}">{{ role.Title | limitTo: 40 }}{{role.Title.length > 40 ? '...' : ''}}</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<select multiple data-ng-options="option as option for option in options" data-ng-model="selectedOptions" data-multi-select="options" data-ms-options="msOptions"></select>-->
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn   btn-default m-btn-cancel" href="javascript:;" ng-click="cancel()">
+        {{'CANCEL' | translate}}
+    </a>
+
+    <a ng-click="submit()" class="btn  btn-primary  btn-default" href="javascript:;">
+        <i class="fa fa-floppy-o"></i> {{'SAVE' | translate}}
+    </a>
+</div>

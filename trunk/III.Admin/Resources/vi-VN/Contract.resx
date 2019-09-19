@@ -1,0 +1,1692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CONTRACT_CURD_COMBO_CONTRACT_TYPE" xml:space="preserve">
+    <value>Loại hợp đồng</value>
+    <comment>Loại hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_COMBO_CURRENCY" xml:space="preserve">
+    <value>Tiền tệ</value>
+    <comment>Tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_COMBO_CUSTOMER_CODE" xml:space="preserve">
+    <value>Khách hàng</value>
+    <comment>Khách hàng</comment>
+  </data>
+  <data name="CONTRACT_CURD_COMBO_MAIN_SERVICE" xml:space="preserve">
+    <value>Dịch vụ chính</value>
+    <comment>Dịch vụ chính</comment>
+  </data>
+  <data name="CONTRACT_CURD_COMBO_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_BUDGET" xml:space="preserve">
+    <value>Ngân sách</value>
+    <comment>Ngân sách</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CONTRACT_CODE" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+    <comment>Mã hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CONTRACT_DATE" xml:space="preserve">
+    <value>Ngày ký kết</value>
+    <comment>Ngày ký kết</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CONTRACT_NAME" xml:space="preserve">
+    <value>Tên hợp đồng</value>
+    <comment>Tên hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CONTRACT_NO" xml:space="preserve">
+    <value>Số hợp đồng</value>
+    <comment>Số hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CONTRACT_PEOPLE" xml:space="preserve">
+    <value>Người được ủy quyền</value>
+    <comment>Người được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CONTRACT_TYPE" xml:space="preserve">
+    <value>Loại hợp đồng</value>
+    <comment>Loại hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CURRENCY" xml:space="preserve">
+    <value>Tiền tệ</value>
+    <comment>Tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_CUSTOMER_CODE" xml:space="preserve">
+    <value>Khách hàng</value>
+    <comment>Khách hàng</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_DESCRIPTION" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_DURATION" xml:space="preserve">
+    <value>Thời hạn (số ngày)</value>
+    <comment>Thời hạn (số ngày)</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_END_DAY" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+    <comment>Ngày kết thúc</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_FROM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+    <comment>Từ ngày</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_LOCATION_HARD_COPY" xml:space="preserve">
+    <value>Bản sao</value>
+    <comment>Bản sao</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_MAIN_SERVICE" xml:space="preserve">
+    <value>Dịch vụ chính</value>
+    <comment>Dịch vụ chính</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_NOTE1" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_REAL_BUDGET" xml:space="preserve">
+    <value>Giá sau giảm</value>
+    <comment>Giá sau giảm</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_SIGNER" xml:space="preserve">
+    <value>Người ký kết</value>
+    <comment>Người ký kết</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_START_DAY" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+    <comment>Ngày bắt đầu</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_TAGS" xml:space="preserve">
+    <value>Từ khóa</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+    <comment>Tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_USER" xml:space="preserve">
+    <value>Người dùng</value>
+    <comment>Người dùng</comment>
+  </data>
+  <data name="CONTRACT_CURD_LBL_VERSION" xml:space="preserve">
+    <value>Phiên bản</value>
+    <comment>Phiên bản</comment>
+  </data>
+  <data name="CONTRACT_CURD_MSG_CREATE_CONTRACR" xml:space="preserve">
+    <value>Vui lòng tạo trước hợp đồng</value>
+    <comment>Vui lòng tạo trước hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_MSG_GET_DATA_FAILED" xml:space="preserve">
+    <value>Có lỗi khi lấy dữ liệu!</value>
+    <comment>Có lỗi khi lấy dữ liệu!</comment>
+  </data>
+  <data name="CONTRACT_CURD_NOTE_LIST_COL_CONTRACT_CODE" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+    <comment>Mã hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_NOTE_LIST_COL_CREATED_BY" xml:space="preserve">
+    <value>Người tạo</value>
+    <comment>Người tạo</comment>
+  </data>
+  <data name="CONTRACT_CURD_NOTE_LIST_COL_CREATED_TIME" xml:space="preserve">
+    <value>Thời gian tạo</value>
+    <comment>Thời gian tạo</comment>
+  </data>
+  <data name="CONTRACT_CURD_NOTE_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_NOTE_LIST_COL_TAGS" xml:space="preserve">
+    <value>Người được ủy quyền</value>
+    <comment>Người được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_LIST_COL_ACTION" xml:space="preserve">
+    <value>Tác vụ</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_LIST_COL_ASSIGNER" xml:space="preserve">
+    <value>Người được ủy quyền</value>
+    <comment>Người được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_LIST_COL_ASSIGNER_TIME" xml:space="preserve">
+    <value>Thời gian quyền</value>
+    <comment>Thời gian quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_LIST_COL_CONFIRM_TIME" xml:space="preserve">
+    <value>Thời gian nhận</value>
+    <comment>Thời gian nhận</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_LIST_COL_VALUE_SET" xml:space="preserve">
+    <value>Nhiệm vụ</value>
+    <comment>Nhiệm vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_PEOPLE_TAG_VALIDATE_PEOPLE" xml:space="preserve">
+    <value>Vui lòng chọn nhân viên được ủy quyền</value>
+    <comment>Vui lòng chọn nhân viên được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE" xml:space="preserve">
+    <value>Mở rộng</value>
+    <comment>Mở rộng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_COMBO_ATTR_GROUP" xml:space="preserve">
+    <value>Nhóm</value>
+    <comment>Nhóm</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_LBL_ATTR_CODE" xml:space="preserve">
+    <value>Mã thuộc tính</value>
+    <comment>Mã thuộc tính</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_LBL_ATTR_GROUP" xml:space="preserve">
+    <value>Nhóm</value>
+    <comment>Nhóm</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_LBL_ATTR_VALUE" xml:space="preserve">
+    <value>Giá trị</value>
+    <comment>Giá trị</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_TITLE_ADD_ATTR" xml:space="preserve">
+    <value>Thêm mở rộng</value>
+    <comment>Thêm mở rộng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_TITLE_EDIT_ATTR" xml:space="preserve">
+    <value>Sửa mở rộng</value>
+    <comment>Sửa mở rộng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_TXT_ATTR_CODE" xml:space="preserve">
+    <value>Mã thuộc tính</value>
+    <comment>Mã thuộc tính</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_CURD_TXT_ATTR_VALUE" xml:space="preserve">
+    <value>Giá trị</value>
+    <comment>Giá trị</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_LIST_COL_ACTION" xml:space="preserve">
+    <value>Tác vụ</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_LIST_COL_ATTR_GROUP" xml:space="preserve">
+    <value>Nhóm </value>
+    <comment>Nhóm </comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_LIST_COL_CODE" xml:space="preserve">
+    <value>Mã thuộc tính</value>
+    <comment>Mã thuộc tính</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_ATTRIBUTE_LIST_COL_VALUE" xml:space="preserve">
+    <value>Giá trị</value>
+    <comment>Giá trị</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB" xml:space="preserve">
+    <value>Hoạt động</value>
+    <comment>Hoạt động</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB_LIST_COL_ACTION" xml:space="preserve">
+    <value>Tác vụ</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB_LIST_COL_CARD_CODE" xml:space="preserve">
+    <value>Mã thẻ</value>
+    <comment>Mã thẻ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB_LIST_COL_CARD_NAME" xml:space="preserve">
+    <value>Tên thẻ</value>
+    <comment>Tên thẻ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB_LIST_COL_CONTRACT" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+    <comment>Mã hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB_MSG_CARD" xml:space="preserve">
+    <value>Chọn thẻ</value>
+    <comment>Chọn thẻ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_CARD_JOB_MSG_RELATIVE" xml:space="preserve">
+    <value>Chọn mối quan hệ</value>
+    <comment>Chọn mối quan hệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL" xml:space="preserve">
+    <value>Chi tiết</value>
+    <comment>Chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_LBL_COST" xml:space="preserve">
+    <value>Đơn giá</value>
+    <comment>Đơn giá</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_LBL_ITEM_CODE" xml:space="preserve">
+    <value>Mã chi tiết</value>
+    <comment>Mã chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_LBL_ITEM_NAME" xml:space="preserve">
+    <value>Tên chi tiết</value>
+    <comment>Tên chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_LBL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_LBL_QUATITY" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_LBL_QUATITY1" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_TITLE_ADD_DETAIL" xml:space="preserve">
+    <value>Thêm chi tiết hợp đồng</value>
+    <comment>Thêm chi tiết hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_TITLE_EDIT_DETAIL" xml:space="preserve">
+    <value>Sửa chi tiết hợp đồng</value>
+    <comment>Sửa chi tiết hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_TXT_COST" xml:space="preserve">
+    <value>Đơn giá</value>
+    <comment>Đơn giá</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_TXT_ITEM_CODE" xml:space="preserve">
+    <value>Mã chi tiết</value>
+    <comment>Mã chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_TXT_ITEM_NAME" xml:space="preserve">
+    <value>Tên chi tiết</value>
+    <comment>Tên chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_CURD_TXT_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_ACTION" xml:space="preserve">
+    <value>Thao tác</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_COST" xml:space="preserve">
+    <value>Chi phí</value>
+    <comment>Chi phí</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_ITEM_CODE" xml:space="preserve">
+    <value>Mã chi tiết</value>
+    <comment>Mã chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_ITEM_NAME" xml:space="preserve">
+    <value>Tên chi tiết</value>
+    <comment>Tên chi tiết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_QUANTITY" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_DETAIL_LIST_COL_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE" xml:space="preserve">
+    <value>File</value>
+    <comment>File</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE1" xml:space="preserve">
+    <value>Tệp tin</value>
+    <comment>Tệp tin</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_BTN_BROWSE" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Browse</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_COL_ACTION" xml:space="preserve">
+    <value>Tác vụ</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_LIST_COL_CATEGORY_NAME" xml:space="preserve">
+    <value>Kho dữ liệu</value>
+    <comment>Kho dữ liệu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_LIST_COL_CREATED_TIME" xml:space="preserve">
+    <value>Ngày tạo</value>
+    <comment>Ngày tạo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_LIST_COL_DESCRIPTION" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_LIST_COL_NAME" xml:space="preserve">
+    <value>Tên tệp tin</value>
+    <comment>Tên tệp tin</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_MSG_ADD_FILE" xml:space="preserve">
+    <value>Thêm mới tệp tin</value>
+    <comment>Thêm mới tệp tin</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_MSG_EDIT_FILE" xml:space="preserve">
+    <value>Bạn có chắc chăn muốn thay đổi</value>
+    <comment>Bạn có chắc chăn muốn thay đổi</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_TXT_CATEGORY" xml:space="preserve">
+    <value>Kho dữ liệu</value>
+    <comment>Kho dữ liệu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_TXT_CHOOSE_FILE" xml:space="preserve">
+    <value>Chọn File</value>
+    <comment>Chọn File</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_TXT_DESCRIPTION" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_TXT_TAGS" xml:space="preserve">
+    <value>Tags</value>
+    <comment>Tags</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_FILE_VALIDATE_CATEGORY" xml:space="preserve">
+    <value>Bắt buộc</value>
+    <comment>Bắt buộc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LIST_OF_PRODUCT" xml:space="preserve">
+    <value>Sản phẩm</value>
+    <comment>Sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LIST_OF_SERVICES" xml:space="preserve">
+    <value>Dịch vụ</value>
+    <comment>Dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_BIND_TO" xml:space="preserve">
+    <value>Ràng buộc</value>
+    <comment>Ràng buộc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_CURRENCY" xml:space="preserve">
+    <value>Tiền tệ</value>
+    <comment>Tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_EXTEND" xml:space="preserve">
+    <value>Mở rộng</value>
+    <comment>Mở rộng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_PRICE" xml:space="preserve">
+    <value>Giá</value>
+    <comment>Giá</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_QUANTITY" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_SERVICE" xml:space="preserve">
+    <value>Dịch vụ</value>
+    <comment>Dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_SERVICE_DETAILS" xml:space="preserve">
+    <value>Chi tiết dịch vụ</value>
+    <comment>Chi tiết dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_TAX" xml:space="preserve">
+    <value>Thuế</value>
+    <comment>Thuế</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_LBL_VALUE_BINDING" xml:space="preserve">
+    <value>Giá trị ràng buộc</value>
+    <comment>Giá trị ràng buộc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_BIND_TO" xml:space="preserve">
+    <value>Ràng buộc</value>
+    <comment>Ràng buộc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_CURRENCY" xml:space="preserve">
+    <value>Tiền tệ</value>
+    <comment>Tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_PRICE" xml:space="preserve">
+    <value>Giá</value>
+    <comment>Giá</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_QUANTITY" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_SERVICE" xml:space="preserve">
+    <value>Chọn dịch vụ</value>
+    <comment>Chọn dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_TAX" xml:space="preserve">
+    <value>%</value>
+    <comment>%</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_LOS_TXT_VALUE_BINDING" xml:space="preserve">
+    <value>Giá trị ràng buộc</value>
+    <comment>Giá trị ràng buộc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER" xml:space="preserve">
+    <value>Thành viên</value>
+    <comment>Thành viên</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_COMBO_TASK" xml:space="preserve">
+    <value>Chọn nhiệm vụ</value>
+    <comment>Chọn nhiệm vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_LBL_CONTRACT_PEOPLE" xml:space="preserve">
+    <value>Người được ủy quyền</value>
+    <comment>Người được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_LBL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_LIST_COL_ASSIGNEE" xml:space="preserve">
+    <value>Người ủy quyền</value>
+    <comment>Người ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_LIST_COL_ASSIGNER" xml:space="preserve">
+    <value>Người được ủy quyền</value>
+    <comment>Người được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_LIST_COL_TASK" xml:space="preserve">
+    <value>Nhiệm vụ</value>
+    <comment>Nhiệm vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_LIST_COL_TIME" xml:space="preserve">
+    <value>Thời gian</value>
+    <comment>Thời gian</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_MSG_DEFAULT" xml:space="preserve">
+    <value>Chưa cài đặt mặc định</value>
+    <comment>Chưa cài đặt mặc định</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_TXT_CONTRACT_PEOPLE" xml:space="preserve">
+    <value>Chọn nhân viên</value>
+    <comment>Chọn nhân viên</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_MEMBER_TXT_NOTE" xml:space="preserve">
+    <value>Nhập mô tả</value>
+    <comment>Nhập mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_LBL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_LBL_TAG" xml:space="preserve">
+    <value>Tag</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_LBL_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+    <comment>Tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_TITLE_ADD_NOTE" xml:space="preserve">
+    <value>Thêm ghi chú</value>
+    <comment>Thêm ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_TITLE_EDIT_NOTE" xml:space="preserve">
+    <value>Chỉnh sửa ghi chú</value>
+    <comment>Chỉnh sửa ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_TXT_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_TXT_TAG" xml:space="preserve">
+    <value>Tag</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_CURD_TXT_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+    <comment>Tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_LIST_COL_ACTION" xml:space="preserve">
+    <value>Thao tác</value>
+    <comment>Thao tác</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_LIST_COL_CREATED_TIME" xml:space="preserve">
+    <value>Thời gian tạo</value>
+    <comment>Thời gian tạo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_LIST_COL_STT" xml:space="preserve">
+    <value>Địa chỉ</value>
+    <comment>Địa chỉ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_LIST_COL_TAGS" xml:space="preserve">
+    <value>Tags</value>
+    <comment>Tags</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTE_LIST_COL_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+    <comment>Tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION" xml:space="preserve">
+    <value>Thông báo</value>
+    <comment>Thông báo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_ACTION" xml:space="preserve">
+    <value>Tác vụ</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_CONFIRM_TIME" xml:space="preserve">
+    <value>Thời gian phê duyệt</value>
+    <comment>Thời gian phê duyệt</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_CONTENT" xml:space="preserve">
+    <value>Nội dung</value>
+    <comment>Nội dung</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_IS_WARNING" xml:space="preserve">
+    <value>Cảnh báo</value>
+    <comment>Cảnh báo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_NOTIFY_CODE" xml:space="preserve">
+    <value>Mã thông báo</value>
+    <comment>Mã thông báo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_RECEIVER_CONFIRM" xml:space="preserve">
+    <value>Phê duyệt</value>
+    <comment>Phê duyệt</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_NOTIFICATION_LIST_COL_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+    <comment>Tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_OTHER" xml:space="preserve">
+    <value>Hợp đồng liên quan</value>
+    <comment>Hợp đồng liên quan</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_OTHER_LIST_COL_CONTRACT_CODE" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+    <comment>Mã hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_OTHER_LIST_COL_CREATED_BY" xml:space="preserve">
+    <value>Người tạo</value>
+    <comment>Người tạo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_OTHER_LIST_COL_CREATED_TIME" xml:space="preserve">
+    <value>Thời gian tạo</value>
+    <comment>Thời gian tạo</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_OTHER_LIST_COL_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_OTHER_LIST_COL_TITLE" xml:space="preserve">
+    <value>Tiều đề</value>
+    <comment>Tiều đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT" xml:space="preserve">
+    <value>Tài chính</value>
+    <comment>Tài chính</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_CHECK" xml:space="preserve">
+    <value>Tổng tiền đã chi</value>
+    <comment>Tổng tiền đã chi</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_CURRENCY" xml:space="preserve">
+    <value>Loại tiền tệ</value>
+    <comment>Loại tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_MONEY_TOTAL" xml:space="preserve">
+    <value>Tổng thanh toán</value>
+    <comment>Tổng thanh toán</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAYER_ID" xml:space="preserve">
+    <value>Người thu</value>
+    <comment>Người thu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAYMENT_COMPLETED" xml:space="preserve">
+    <value>Đã thanh toán hết</value>
+    <comment>Đã thanh toán hết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_CODE" xml:space="preserve">
+    <value>Mã phiếu</value>
+    <comment>Mã phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_NEXT_MONEY" xml:space="preserve">
+    <value>Số tiền thanh toán sau</value>
+    <comment>Số tiền thanh toán sau</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_NEXT_MONEY1" xml:space="preserve">
+    <value>Số tiền thanh toán sau</value>
+    <comment>Số tiền thanh toán sau</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_NEXT_TIME" xml:space="preserve">
+    <value>Lần thanh toán sau</value>
+    <comment>Lần thanh toán sau</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_OBJ_ID" xml:space="preserve">
+    <value>Tên đối tượng</value>
+    <comment>Tên đối tượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_OBJ_TYPE" xml:space="preserve">
+    <value>Loại đối tượng</value>
+    <comment>Loại đối tượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_OF_WAY" xml:space="preserve">
+    <value>Loại thanh toán</value>
+    <comment>Loại thanh toán</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_TITLE" xml:space="preserve">
+    <value>Tên phiếu</value>
+    <comment>Tên phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_PAY_TYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+    <comment>Loại phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_RECEIPER_ID" xml:space="preserve">
+    <value>Người thanh toán</value>
+    <comment>Người thanh toán</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_LBL_TOTAL" xml:space="preserve">
+    <value>Số tiền còn lại</value>
+    <comment>Số tiền còn lại</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TITLE_ADD_PAYMENT" xml:space="preserve">
+    <value>Thêm mới phiếu thu - chi</value>
+    <comment>Thêm mới phiếu thu - chi</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_CURRENCY" xml:space="preserve">
+    <value>Loại tiền tệ</value>
+    <comment>Loại tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_MONEY_TOTAL" xml:space="preserve">
+    <value>Tổng tiền</value>
+    <comment>Tổng tiền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAYER_ID" xml:space="preserve">
+    <value>Người thu</value>
+    <comment>Người thu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_CODE" xml:space="preserve">
+    <value>Mã phiếu</value>
+    <comment>Mã phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_NEXT_TIME" xml:space="preserve">
+    <value>Lần thanh toán sau</value>
+    <comment>Lần thanh toán sau</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_OBJ_ID" xml:space="preserve">
+    <value>Chọn tên đối tượng</value>
+    <comment>Chọn tên đối tượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_OBJ_TYPE" xml:space="preserve">
+    <value>Chọn đối tượng</value>
+    <comment>Chọn đối tượng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_OF_WAY" xml:space="preserve">
+    <value>Loại thanh toán</value>
+    <comment>Loại thanh toán</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_TITLE" xml:space="preserve">
+    <value>Tên phiếu</value>
+    <comment>Tên phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_PAY_TYPE" xml:space="preserve">
+    <value>Chọn loại phiếu</value>
+    <comment>Chọn loại phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_TXT_RECEIPER_ID" xml:space="preserve">
+    <value>Chọn người thanh toán</value>
+    <comment>Chọn người thanh toán</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_CURRENCY" xml:space="preserve">
+    <value>Loại tiền tệ không được để trống</value>
+    <comment>Loại tiền tệ không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYER_ID" xml:space="preserve">
+    <value>Người thu không được để trống</value>
+    <comment>Người thu không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAY_OBJ_ID" xml:space="preserve">
+    <value>Tên đối tượng không được để trống</value>
+    <comment>Tên đối tượng không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAY_OBJ_TYPE" xml:space="preserve">
+    <value>Loại đối tượng không được để trống</value>
+    <comment>Loại đối tượng không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAY_OF_WAY" xml:space="preserve">
+    <value>Loại thanh toán không được để trống</value>
+    <comment>Loại thanh toán không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAY_TYPE" xml:space="preserve">
+    <value>Loại phiếu không được để trống</value>
+    <comment>Loại phiếu không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_CURD_VALIDATE_RECEIPER_ID" xml:space="preserve">
+    <value>Người thanh toán không được để trống</value>
+    <comment>Người thanh toán không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_CREATED_TIME" xml:space="preserve">
+    <value>Ngày thu</value>
+    <comment>Ngày thu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_MONEY_TOTAL" xml:space="preserve">
+    <value>Tổng tiền</value>
+    <comment>Tổng tiền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_PAY_CODE" xml:space="preserve">
+    <value>Mã phiếu</value>
+    <comment>Mã phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_PAY_TITLE" xml:space="preserve">
+    <value>Tên phiếu</value>
+    <comment>Tên phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_PAY_TYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+    <comment>Loại phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_TOTAL" xml:space="preserve">
+    <value>Tổng tiền</value>
+    <comment>Tổng tiền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_TOTAL_PAYMENT_SLIP" xml:space="preserve">
+    <value>Số tiền chi</value>
+    <comment>Số tiền chi</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_LIST_COL_TOTAL_RECEIPTS" xml:space="preserve">
+    <value>Số tiền thu</value>
+    <comment>Số tiền thu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_MSG_ADD_PAYMENT" xml:space="preserve">
+    <value>Bạn có muốn thêm phiếu thu chi này</value>
+    <comment>Bạn có muốn thêm phiếu thu chi này</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_MSG_MONEY_TOTAL" xml:space="preserve">
+    <value>Số tiền thanh toán không được lớn hơn số tiền còn lại</value>
+    <comment>Số tiền thanh toán không được lớn hơn số tiền còn lại</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_TXT_SEARCH_DATE_TO" xml:space="preserve">
+    <value>Đến ngày</value>
+    <comment>Đến ngày</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_TXT_SEARCH_FROM_TO" xml:space="preserve">
+    <value>Từ ngày</value>
+    <comment>Từ ngày</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_TXT_SEARCH_PAYMENT_NAME" xml:space="preserve">
+    <value>Tên phiếu</value>
+    <comment>Tên phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_PAYMENT_TXT_SEARCH_PAYMENT_TYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+    <comment>Loại phiếu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TAB_WORK_ACTIVITIES" xml:space="preserve">
+    <value>Hoạt động công việc</value>
+    <comment>Hoạt động công việc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_ADD_CARD_JOB" xml:space="preserve">
+    <value>Thêm thẻ mới</value>
+    <comment>Thêm thẻ mới</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_ADD_CONTRACT" xml:space="preserve">
+    <value>Thêm mới hợp đồng</value>
+    <comment>Thêm mới hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_ADD_CONTRACT1" xml:space="preserve">
+    <value>Thêm mới hợp đồng</value>
+    <comment>Thêm mới hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_EDIT_CONTRACT" xml:space="preserve">
+    <value>Cập nhật hợp đồng</value>
+    <comment>Cập nhật hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_EDIT_CONTRACT1" xml:space="preserve">
+    <value>Cập nhật hợp đồng</value>
+    <comment>Cập nhật hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_EDIT_CONTRACT2" xml:space="preserve">
+    <value>Sửa hợp đồng/Đơn hàng</value>
+    <comment>Sửa hợp đồng/Đơn hàng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_NOTE" xml:space="preserve">
+    <value>Ghi chú cho hợp đồng</value>
+    <comment>Ghi chú cho hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_NOTE1" xml:space="preserve">
+    <value>Ghi chú cho hợp đồng</value>
+    <comment>Ghi chú cho hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_TAGS" xml:space="preserve">
+    <value>Tags</value>
+    <comment>Tags</comment>
+  </data>
+  <data name="CONTRACT_CURD_TITLE_TAGS1" xml:space="preserve">
+    <value>Tags</value>
+    <comment>Tags</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_BOARD" xml:space="preserve">
+    <value>Chọn bảng</value>
+    <comment>Chọn bảng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_BUDGET" xml:space="preserve">
+    <value>Ngân sách</value>
+    <comment>Ngân sách</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_CARD_NAME" xml:space="preserve">
+    <value>Tên thẻ</value>
+    <comment>Tên thẻ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_CONTRACT_CODE" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+    <comment>Mã hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_CONTRACT_DATE" xml:space="preserve">
+    <value>Ngày ký kết</value>
+    <comment>Ngày ký kết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_CONTRACT_NAME" xml:space="preserve">
+    <value>Tên hợp đồng</value>
+    <comment>Tên hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_CONTRACT_NO" xml:space="preserve">
+    <value>Số hợp đồng</value>
+    <comment>Số hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_CONTRACT_PEOPLE" xml:space="preserve">
+    <value>Người được ủy quyền</value>
+    <comment>Người được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_DESCRIPTION" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_DURATION" xml:space="preserve">
+    <value>Thời hạn</value>
+    <comment>Thời hạn</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_END_DAY" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+    <comment>Ngày kết thúc</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_FROM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+    <comment>Từ ngày</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_LIST" xml:space="preserve">
+    <value>Chọn danh sách</value>
+    <comment>Chọn danh sách</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_LOCATION_HARD_COPY" xml:space="preserve">
+    <value>Bản sao</value>
+    <comment>Bản sao</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_NOTE" xml:space="preserve">
+    <value>Nhập mô tả</value>
+    <comment>Nhập mô tả</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_NOTE1" xml:space="preserve">
+    <value>Nhập ghi chú</value>
+    <comment>Nhập ghi chú</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_REAL_BUDGET" xml:space="preserve">
+    <value>Giá thực tế</value>
+    <comment>Giá thực tế</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_RELATIVE" xml:space="preserve">
+    <value>Chọn quan hệ</value>
+    <comment>Chọn quan hệ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_SIGNER" xml:space="preserve">
+    <value>Người ký kết</value>
+    <comment>Người ký kết</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_START_DAY" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+    <comment>Ngày bắt đầu</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_STATUS" xml:space="preserve">
+    <value>Trạng thái đơn đặt hàng</value>
+    <comment>Trạng thái đơn đặt hàng</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_TAGS" xml:space="preserve">
+    <value>Từ khóa</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_TASK" xml:space="preserve">
+    <value>Nhiệm vụ</value>
+    <comment>Nhiệm vụ</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_TEAM" xml:space="preserve">
+    <value>Chọn team</value>
+    <comment>Chọn team</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_TITLE" xml:space="preserve">
+    <value>Nhập tiêu đề</value>
+    <comment>Nhập tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_CURD_TXT_VERSION" xml:space="preserve">
+    <value>Phiên bản</value>
+    <comment>Phiên bản</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_BIND_TO_NO_BLANK" xml:space="preserve">
+    <value>Ràng buộc không được trống</value>
+    <comment>Ràng buộc không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_CONTRACT_TYPE" xml:space="preserve">
+    <value>Loại hợp đồng trống</value>
+    <comment>Loại hợp đồng trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_CURRENCY" xml:space="preserve">
+    <value>Loại tiền tệ trống</value>
+    <comment>Loại tiền tệ trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_CURRENCY_NO_BLANK" xml:space="preserve">
+    <value>Tiền tệ không được trống</value>
+    <comment>Tiền tệ không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_CUSTOMER_CODE" xml:space="preserve">
+    <value>Khách hàng không được để trống</value>
+    <comment>Khách hàng không được để trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_MAIN_SERVICE" xml:space="preserve">
+    <value>Dịch vụ chính trống</value>
+    <comment>Dịch vụ chính trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_PRICE_NO_BLANK" xml:space="preserve">
+    <value>Giá không được trống</value>
+    <comment>Giá không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_QUANTITY_NO_BLANK" xml:space="preserve">
+    <value>Số lượng không được trống</value>
+    <comment>Số lượng không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_SERVICE_NO_BLANK" xml:space="preserve">
+    <value>Dịch vụ không được trống</value>
+    <comment>Dịch vụ không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_STATUS" xml:space="preserve">
+    <value>Trạng thái trống</value>
+    <comment>Trạng thái trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_TAX_NO_BLANK" xml:space="preserve">
+    <value>Thuế không được trống</value>
+    <comment>Thuế không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_UNIT_NO_BLANK" xml:space="preserve">
+    <value>Đơn vị không được trống</value>
+    <comment>Đơn vị không được trống</comment>
+  </data>
+  <data name="CONTRACT_CURD_VALIDATE_VALUE_NO_BLANK" xml:space="preserve">
+    <value>Giá trị ràng buộc không được trống</value>
+    <comment>Giá trị ràng buộc không được trống</comment>
+  </data>
+  <data name="CONTRACT_LBL_CONTRACT" xml:space="preserve">
+    <value>Hợp đồng/Đơn hàng</value>
+    <comment>Hợp đồng/Đơn hàng</comment>
+  </data>
+  <data name="CONTRACT_LBL_FROM_DATE" xml:space="preserve">
+    <value>Tạo từ ngày</value>
+    <comment>Tạo từ ngày</comment>
+  </data>
+  <data name="CONTRACT_LBL_SEARCH_BUDGET_F" xml:space="preserve">
+    <value>Kinh phí từ</value>
+    <comment>Kinh phí từ</comment>
+  </data>
+  <data name="CONTRACT_LBL_SEARCH_BUDGET_T" xml:space="preserve">
+    <value>Kinh phí đến</value>
+    <comment>Kinh phí đến</comment>
+  </data>
+  <data name="CONTRACT_LBL_SEARCH_TO_DATE" xml:space="preserve">
+    <value>Đến ngày</value>
+    <comment>Đến ngày</comment>
+  </data>
+  <data name="CONTRACT_LINK_CONTRACT" xml:space="preserve">
+    <value>Hợp đồng/Đơn hàng</value>
+    <comment>Hợp đồng/Đơn hàng</comment>
+  </data>
+  <data name="CONTRACT_LINK_HOME" xml:space="preserve">
+    <value>Trang chủ</value>
+    <comment>Trang chủ</comment>
+  </data>
+  <data name="CONTRACT_LINK_SEE_LOG_COMMENT" xml:space="preserve">
+    <value>Xem log ý kiến</value>
+    <comment>Xem log ý kiến</comment>
+  </data>
+  <data name="CONTRACT_LINK_TRACK_LOG" xml:space="preserve">
+    <value>Theo dõi log</value>
+    <comment>Theo dõi log</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_ACTION" xml:space="preserve">
+    <value>Tác vụ</value>
+    <comment>Tác vụ</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_BUDGET" xml:space="preserve">
+    <value>Ngân sách</value>
+    <comment>Ngân sách</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_CODE" xml:space="preserve">
+    <value>Mã hợp đồng</value>
+    <comment>Mã hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_CURENCY" xml:space="preserve">
+    <value>Tiền tệ</value>
+    <comment>Tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_DURATION" xml:space="preserve">
+    <value>Thời hạn</value>
+    <comment>Thời hạn</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_NAME" xml:space="preserve">
+    <value>Tên hợp đồng</value>
+    <comment>Tên hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="CONTRACT_LIST_COL_TAGS" xml:space="preserve">
+    <value>Tag</value>
+    <comment>Tag</comment>
+  </data>
+  <data name="CONTRACT_MSG_ADD_LOG_SUCCESS" xml:space="preserve">
+    <value>Thêm log thành công</value>
+    <comment>Thêm log thành công</comment>
+  </data>
+  <data name="CONTRACT_MSG_ADD_NOT_SUCCESS" xml:space="preserve">
+    <value>Thêm không thành công</value>
+    <comment>Thêm không thành công</comment>
+  </data>
+  <data name="CONTRACT_MSG_ADD_PRODUCT_SUCCESS" xml:space="preserve">
+    <value>Thêm thành công sản phẩm</value>
+    <comment>Thêm thành công sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_MSG_ADD_SUCCESS" xml:space="preserve">
+    <value>Thêm thành công</value>
+    <comment>Thêm thành công</comment>
+  </data>
+  <data name="CONTRACT_MSG_ALREADY_EXIST_SERVICE_IN_CONTRACT" xml:space="preserve">
+    <value>Dịch vụ không tồn tại trong hợp đồng</value>
+    <comment>Dịch vụ không tồn tại trong hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_MSG_ALREADY_SERVICE_IN_CONTRACT" xml:space="preserve">
+    <value>Đã có dịch vụ này trong hợp đồng, không thể cập nhật</value>
+    <comment>Đã có dịch vụ này trong hợp đồng, không thể cập nhật</comment>
+  </data>
+  <data name="CONTRACT_MSG_CONTENT_ALREADY_EXIST" xml:space="preserve">
+    <value>Nội dung đã tồn tại vui lòng nhập nội dung khác</value>
+    <comment>Nội dung đã tồn tại vui lòng nhập nội dung khác</comment>
+  </data>
+  <data name="CONTRACT_MSG_DELETE_CONFIRM" xml:space="preserve">
+    <value>Bạn có chắc chắn xóa người ủy quyền</value>
+    <comment>Bạn có chắc chắn xóa người ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_MSG_DELETE_SUCCESS" xml:space="preserve">
+    <value>Xóa thành công sản phẩm</value>
+    <comment>Xóa thành công sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_MSG_EDIT_CONFIRM" xml:space="preserve">
+    <value>Bạn có chắc muốn thay đổi {0}</value>
+    <comment>Bạn có chắc muốn thay đổi {0}</comment>
+  </data>
+  <data name="CONTRACT_MSG_ERROR_CONTRACT_FRFRESH" xml:space="preserve">
+    <value>Có lỗi khi lấy mã hợp đồng, vui lòng thử lại sau</value>
+    <comment>Có lỗi khi lấy mã hợp đồng, vui lòng thử lại sau</comment>
+  </data>
+  <data name="CONTRACT_MSG_EXTEND_REFRESH" xml:space="preserve">
+    <value>Có lỗi khi lấy tệp tin!</value>
+    <comment>Có lỗi khi lấy tệp tin!</comment>
+  </data>
+  <data name="CONTRACT_MSG_EXTEND_REFRESH1" xml:space="preserve">
+    <value>Không tồn tại thuộc tính mở rộng này, vui lòng làm mới trang</value>
+    <comment>Không tồn tại thuộc tính mở rộng này, vui lòng làm mới trang</comment>
+  </data>
+  <data name="CONTRACT_MSG_FILE_FORMAT_NOT_ALLOWED" xml:space="preserve">
+    <value>Định dạng tệp không cho phép!</value>
+    <comment>Định dạng tệp không cho phép!</comment>
+  </data>
+  <data name="CONTRACT_MSG_FORMAT_NOT_ALLOWED" xml:space="preserve">
+    <value>Tệp tin không tồn tại</value>
+    <comment>Tệp tin không tồn tại</comment>
+  </data>
+  <data name="CONTRACT_MSG_NOT_ADD_SERVICE_BEFORE_THAT" xml:space="preserve">
+    <value>Không thể thêm dịch vụ đã thêm vào trước đó</value>
+    <comment>Không thể thêm dịch vụ đã thêm vào trước đó</comment>
+  </data>
+  <data name="CONTRACT_MSG_NOT_DELETE_CONTRACT" xml:space="preserve">
+    <value>Không xóa được hợp đồng đã tạo phiếu xuất kho.</value>
+    <comment>Không xóa được hợp đồng đã tạo phiếu xuất kho.</comment>
+  </data>
+  <data name="CONTRACT_MSG_NOT_FIND_CONTRACT" xml:space="preserve">
+    <value>Không tìm thấy hợp đồng, bạn vui lòng làm mới trang.</value>
+    <comment>Không tìm thấy hợp đồng, bạn vui lòng làm mới trang.</comment>
+  </data>
+  <data name="CONTRACT_MSG_REFRESH" xml:space="preserve">
+    <value>Sản phẩm đã bị xóa hoặc không tồn tại trong hợp đồng, vui lòng làm mới trang</value>
+    <comment>Sản phẩm đã bị xóa hoặc không tồn tại trong hợp đồng, vui lòng làm mới trang</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_PRODUCT_ADD_ERROR" xml:space="preserve">
+    <value>Có lỗi khi thêm sản phẩm</value>
+    <comment>Có lỗi khi thêm sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_PRODUCT_IN_CONTRACT_REFRESH" xml:space="preserve">
+    <value>Không tồn tại sản phẩm này trong hợp đồng, vui lòng làm mới trang</value>
+    <comment>Không tồn tại sản phẩm này trong hợp đồng, vui lòng làm mới trang</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_PRODUCT_NOT_ADD" xml:space="preserve">
+    <value>Không thể thêm sản phẩm đã thêm vào trước đó</value>
+    <comment>Không thể thêm sản phẩm đã thêm vào trước đó</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_PRODUCT_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Cập nhật thành công sản phẩm</value>
+    <comment>Cập nhật thành công sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_SERVICE_ADD_ERROR" xml:space="preserve">
+    <value>Có lỗi khi thêm dịch vụ</value>
+    <comment>Có lỗi khi thêm dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_SERVICE_ADD_SUCCESS" xml:space="preserve">
+    <value>Thêm thành công dịch vụ</value>
+    <comment>Thêm thành công dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_SERVICE_DELETE_SUCCESS" xml:space="preserve">
+    <value>Xóa thành công dịch vụ</value>
+    <comment>Xóa thành công dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_SERVICE_NOT_EXIST_REFRESH" xml:space="preserve">
+    <value>Dịch vụ không tồn tại, vui lòng làm mới trang</value>
+    <comment>Dịch vụ không tồn tại, vui lòng làm mới trang</comment>
+  </data>
+  <data name="CONTRACT_MSG_TAB_SERVICE_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Cập nhật thành công dịch vụ</value>
+    <comment>Cập nhật thành công dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_MSG_UPDATE_NOT_SUCCESS" xml:space="preserve">
+    <value>Cập nhật không thành công</value>
+    <comment>Cập nhật không thành công</comment>
+  </data>
+  <data name="CONTRACT_MSG_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Cập nhật thành công</value>
+    <comment>Cập nhật thành công</comment>
+  </data>
+  <data name="CONTRACT_MSG_WAREHOUSE_NOT_EXIST" xml:space="preserve">
+    <value>Kho dữ liệu không tồn tại</value>
+    <comment>Kho dữ liệu không tồn tại</comment>
+  </data>
+  <data name="CONTRACT_TAB_EXT_LIST_COL_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_TAB_EXT_TXT_GROUP" xml:space="preserve">
+    <value>Nhóm</value>
+    <comment>Nhóm</comment>
+  </data>
+  <data name="CONTRACT_TAB_EXT_TXT_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_LBL_CURD_FILE" xml:space="preserve">
+    <value>Kho lưu trữ</value>
+    <comment>Kho lưu trữ</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_LBL_FILE_NAME" xml:space="preserve">
+    <value>Tên tệp</value>
+    <comment>Tên tệp</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_LBL_NUMBER_DOCUMENT" xml:space="preserve">
+    <value>Số văn bản</value>
+    <comment>Số văn bản</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_LBL_TAG" xml:space="preserve">
+    <value>Từ khóa</value>
+    <comment>Từ khóa</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_LBL_WHS_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_TXT_FILE_NAME" xml:space="preserve">
+    <value>Tên tệp</value>
+    <comment>Tên tệp</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_TXT_NUMBER_DOCUMENT" xml:space="preserve">
+    <value>Số văn bản</value>
+    <comment>Số văn bản</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_TXT_TAG" xml:space="preserve">
+    <value>Từ khóa</value>
+    <comment>Từ khóa</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_CURD_TXT_WHS_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+    <comment>Mô tả</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_LIST_COL_FILE_TYPE" xml:space="preserve">
+    <value>Loại tệp</value>
+    <comment>Loại tệp</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_LIST_COL_SEE_ONLINE" xml:space="preserve">
+    <value>Xem trực tuyến</value>
+    <comment>Xem trực tuyến</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_SEARCH_LBL_FROM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+    <comment>Từ ngày</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_SEARCH_LBL_TO_DATE" xml:space="preserve">
+    <value>Đến ngày</value>
+    <comment>Đến ngày</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_SEARCH_TXT_FROM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+    <comment>Từ ngày</comment>
+  </data>
+  <data name="CONTRACT_TAB_FILE_SEARCH_TXT_TO_DATE" xml:space="preserve">
+    <value>Đến ngày</value>
+    <comment>Đến ngày</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_AMOUNT" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_COMMISSION" xml:space="preserve">
+    <value>Hoa hồng</value>
+    <comment>Hoa hồng</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_CUSTOM_FEE" xml:space="preserve">
+    <value>Chiết khấu</value>
+    <comment>Chiết khấu</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_DISCOUNT" xml:space="preserve">
+    <value>Giảm giá</value>
+    <comment>Giảm giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_PRICE" xml:space="preserve">
+    <value>Giá</value>
+    <comment>Giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_PRICE_OPTION" xml:space="preserve">
+    <value>Loại giá</value>
+    <comment>Loại giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_PRODUCT" xml:space="preserve">
+    <value>Sản phẩm</value>
+    <comment>Sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_TAX" xml:space="preserve">
+    <value>Thuế</value>
+    <comment>Thuế</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_LBL_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_AMOUNT" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_COMMISSION" xml:space="preserve">
+    <value>Hoa hồng</value>
+    <comment>Hoa hồng</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_CUSTOM_FEE" xml:space="preserve">
+    <value>Chiết khấu</value>
+    <comment>Chiết khấu</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_DISCOUNT" xml:space="preserve">
+    <value>Giảm giá(%)</value>
+    <comment>Giảm giá(%)</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_PRICE" xml:space="preserve">
+    <value>Giá</value>
+    <comment>Giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_PRICE_OPTION" xml:space="preserve">
+    <value>Loại giá</value>
+    <comment>Loại giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_PRODUCT" xml:space="preserve">
+    <value>Sản phẩm</value>
+    <comment>Sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_TAX" xml:space="preserve">
+    <value>Thuế(%)</value>
+    <comment>Thuế(%)</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_CURD_TXT_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_AFTER_TAX" xml:space="preserve">
+    <value>Sau thuế</value>
+    <comment>Sau thuế</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+    <comment>Ghi chú</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_PRODUCT_CODE" xml:space="preserve">
+    <value>Sản phẩm</value>
+    <comment>Sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_QUANTITY" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_S_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_TAX" xml:space="preserve">
+    <value>Thuế(%)</value>
+    <comment>Thuế(%)</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_TOTAL_PRICE" xml:space="preserve">
+    <value>Tổng tiền</value>
+    <comment>Tổng tiền</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_LIST_COL_UNIT_PRICE" xml:space="preserve">
+    <value>Giá</value>
+    <comment>Giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_TITLE_ADD" xml:space="preserve">
+    <value>Thêm sản phẩm</value>
+    <comment>Thêm sản phẩm</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_VALIDATE_AMOUNT" xml:space="preserve">
+    <value>Số lượng không được để trống</value>
+    <comment>Số lượng không được để trống</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_VALIDATE_PRICE" xml:space="preserve">
+    <value>Giá không được để trống</value>
+    <comment>Giá không được để trống</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_VALIDATE_PRODUCT" xml:space="preserve">
+    <value>Sản phẩm không được để trống</value>
+    <comment>Sản phẩm không được để trống</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_VALIDATE_TAX" xml:space="preserve">
+    <value>Thuế không được để trống</value>
+    <comment>Thuế không được để trống</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOP_VALIDATE_UNIT" xml:space="preserve">
+    <value>Đơn vị không được để trống</value>
+    <comment>Đơn vị không được để trống</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_AFTER_TAX" xml:space="preserve">
+    <value>Sau thuế</value>
+    <comment>Sau thuế</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_COST" xml:space="preserve">
+    <value>Giá</value>
+    <comment>Giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_CURRENCY" xml:space="preserve">
+    <value>Tiền tệ</value>
+    <comment>Tiền tệ</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_QUANTITY" xml:space="preserve">
+    <value>Số lượng</value>
+    <comment>Số lượng</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_SERVICE_CODE" xml:space="preserve">
+    <value>Mã dịch vụ</value>
+    <comment>Mã dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_SERVICE_NAME" xml:space="preserve">
+    <value>Tên dịch vụ</value>
+    <comment>Tên dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_TAX" xml:space="preserve">
+    <value>Thuế(%)</value>
+    <comment>Thuế(%)</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_TOTAL" xml:space="preserve">
+    <value>Tổng giá</value>
+    <comment>Tổng giá</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_LIST_COL_UNIT" xml:space="preserve">
+    <value>Đơn vị</value>
+    <comment>Đơn vị</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_TITLE_ADD" xml:space="preserve">
+    <value>Thêm mới dịch vụ</value>
+    <comment>Thêm mới dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_TAB_LOS_TITLE_EDIT" xml:space="preserve">
+    <value>Sửa dịch vụ</value>
+    <comment>Sửa dịch vụ</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_BEGIN_TIME" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+    <comment>Ngày bắt đầu</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_BOARD_NAME" xml:space="preserve">
+    <value>Tên bảng</value>
+    <comment>Tên bảng</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_CARD_CODE" xml:space="preserve">
+    <value>Mã Việc</value>
+    <comment>Mã Việc</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_CARD_NAME" xml:space="preserve">
+    <value>Tiêu đề</value>
+    <comment>Tiêu đề</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_COMPLETED" xml:space="preserve">
+    <value>Tiến độ</value>
+    <comment>Tiến độ</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_COST" xml:space="preserve">
+    <value>Kinh phí</value>
+    <comment>Kinh phí</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_END_TIME" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+    <comment>Ngày kết thúc</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_LIST_NAME" xml:space="preserve">
+    <value>Tên danh sách</value>
+    <comment>Tên danh sách</comment>
+  </data>
+  <data name="CONTRACT_TAB_WA_LIST_COL_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+    <comment>Trạng thái</comment>
+  </data>
+  <data name="CONTRACT_TITLE_INSTRUCTIONS" xml:space="preserve">
+    <value>Hướng dẫn: Nhấn đúp chuột vào bản ghi để chỉnh sửa hợp đồng</value>
+    <comment>Hướng dẫn: Nhấn đúp chuột vào bản ghi để chỉnh sửa hợp đồng</comment>
+  </data>
+  <data name="CONTRACT_TXT_FROM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+    <comment>Từ ngày</comment>
+  </data>
+  <data name="CONTRACT_TXT_SEARCH_BUDGET_F" xml:space="preserve">
+    <value>Kinh phí từ</value>
+    <comment>Kinh phí từ</comment>
+  </data>
+  <data name="CONTRACT_TXT_SEARCH_BUDGET_T" xml:space="preserve">
+    <value>Kinh phí đến</value>
+    <comment>Kinh phí đến</comment>
+  </data>
+  <data name="CONTRACT_TXT_SEARCH_TO_DATE" xml:space="preserve">
+    <value>Đến ngày</value>
+    <comment>Đến ngày</comment>
+  </data>
+  <data name="CONTRACT_VALIDATE_ADD_CONTRACT_CONFIRM" xml:space="preserve">
+    <value>Bạn có muốn thêm hợp đồng này</value>
+    <comment>Bạn có muốn thêm hợp đồng này</comment>
+  </data>
+  <data name="CONTRACT_VALIDATE_CONTRACT_PEOPLE" xml:space="preserve">
+    <value>Vui lòng chọn nhân viên được ủy quyền</value>
+    <comment>Vui lòng chọn nhân viên được ủy quyền</comment>
+  </data>
+  <data name="CONTRACT_VALIDATE_MUST_BE_NUMBER" xml:space="preserve">
+    <value>{0} phải là số</value>
+    <comment>{0} phải là số</comment>
+  </data>
+  <data name="CONTRACT_VALIDATE_START_DAY_NO_BLANK" xml:space="preserve">
+    <value>Ngày bắt đầu không được để trống</value>
+    <comment>Ngày bắt đầu không được để trống</comment>
+  </data>
+</root>

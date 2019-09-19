@@ -1,0 +1,140 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-4">
+            <h1 class="bold mb-0">{{'CUS_LBL_CUS' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="/">{{'CUS_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="EDMSCustomer#">{{'CUS_LINK_CUS' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 text-right">
+            <a class="btn btn-accent btnSearch">
+                <i class="fa fa-search"></i>{{'COM_BTN_SEARCH' | translate}}
+            </a>
+            <a ng-click="add()" class="btn br4 btn-green">
+                <span class=""><i class="fa fa-plus"></i> {{'COM_BTN_ADD' | translate}}</span>
+            </a>
+            <!--<a ng-click="importExcel()" class="btn btn-export br4">
+                <span><i class="glyphicon glyphicon-import"></i> Import Excel</span>
+            </a>
+            <a ng-click="exportExcel()" class="btn btn-export br4">
+                <span><i class="glyphicon glyphicon-export"></i> Export to Excel</span>
+            </a>-->
+            <a ng-click="addCardJob()" class="btn btn-card">
+                <span class="mr5"><img src="/images/cardJob/WHITE.png" style="height: 17px;width: 13px;" />{{'COM_BTN_CARD_JOB' | translate}}</span>
+            </a>
+        </div>
+    </div>
+    <div class="portlet light bordered input-search mb5 hidden">
+        <div class="portlet-body">
+            <img class="pull-right h28 w28 close-input-search" role="button" title="Đóng" src="/images/default/close.png" />
+            <div class="row pt5 mb5">
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_CUSCODE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.CustomerCode" class="form-control" type="text" placeholder="{{'CUS_CURD_TXT_SEARCH_CUSCODE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CustomerCode='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_CUSNAME' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.CustomerName" class="form-control" type="text" placeholder="{{'CUS_CURD_TXT_SEARCH_CUSNAME' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CustomerName='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_CUSMOBIEPHONE' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.CustomerPhone" class="form-control" type="text" placeholder="{{'CUS_CURD_TXT_SEARCH_CUSMOBIEPHONE' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CustomerPhone='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_CUSEMAIL' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.CustomerEmail" class="form-control" type="text" placeholder="{{'CUS_CURD_TXT_SEARCH_CUSEMAIL' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CustomerEmail='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_CUSGROUP' | translate}}</label>
+                    <div class="input-group">
+                        <ui-select tagging ng-model="model.CustomerGroup" theme="bootstrap">
+                            <ui-select-match placeholder="{{'CUS_CURD_COMBO_SEARCH_CUSGROUP' | translate}}">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in CustomerGroup | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CustomerGroup='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_STATUS' | translate}}</label>
+                    <div class="input-group">
+                        <ui-select tagging ng-model="model.CustomerActivityStatus" theme="bootstrap">
+                            <ui-select-match placeholder="{{'CUS_CURD_COMBO_SEARCH_STATUS' | translate}}">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Code as x in StatusData | filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.CustomerActivityStatus='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="fw600 text-underline">{{'CUS_CURD_LBL_SEARCH_ADDRESS' | translate}}</label>
+                    <div class="input-group">
+                        <input ng-model="model.Address" id="Address" class="form-control" type="text" placeholder="{{'CUS_CURD_TXT_SEARCH_ADDRESS' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.Address='';" class="btn btn-default no-shadow start-date">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-3 pt25">
+                    <button ng-click="search()" class="btn btn-accent">
+                        <i class="fa fa-search"></i>
+                        {{'COM_BTN_SEARCH' | translate}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table dataTable table-hover table-striped"
+       datatable
+       dt-options="dtOptions"
+       dt-columns="dtColumns"
+       dt-instance="dtInstance"
+       id="tblDataIndex"></table>

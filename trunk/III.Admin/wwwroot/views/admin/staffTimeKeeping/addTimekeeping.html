@@ -1,0 +1,164 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">{{'STK_CURD_TITTLE_STAFF_TIME_KEEPING' | translate}}</div>
+</div>
+<div class="modal-body pt-0 pb-0" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body pt0 pb-0">
+                <div class="form-group">
+                    <div class="col-md-3 text-center">
+                        <img src="../../../images/default/check_mark.png" class="hidden" id="checkIn" role="button" ng-click="hideCheckIn()" style="height: 70px; padding-left: 18px;padding-top: 13px;position: absolute;"/>
+                        <img src="../../../images/default/checkin.png" class="height-100 br-n" role="button" ng-click="showCheckIn()" />
+                    </div>
+                    <div class="col-md-6">
+                        <span class="col-md-12 pt20 text-success">{{'STK_CURD_LBL_LOCATION' | translate}} : 21.123123 105.122434</span>
+                        <span class="col-md-12 text-success">{{'STK_CURD_LBL_IP' | translate}} : 192.168.1.1</span>
+                        <span class="col-md-12 text-success">{{'STK_CURD_LBL_TIME' | translate}} : 08:00:00</span>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <img src="../../../images/default/check_mark.png" id="checkOut" class="hidden" role="button" ng-click="hideCheckOut()" style="height: 70px; padding-left: 18px;padding-top: 13px;position: absolute;" />
+                        <img src="../../../images/default/checkout.png" class="height-100 br-n" role="button" ng-click="showCheckOut()" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10" style="padding-left:100px">
+                        <div class="input-group">
+                            <ui-select ng-model="model.UserId" theme="bootstrap" ng-class="{ 'has-error': errorUserId}" on-select="changleSelect('UserId')">
+                                <ui-select-match placeholder="{{'STK_CURD_TXT_USER_ID' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                <ui-select-choices repeat="x.Id as x in listEmployeeData | filter: $select.search">
+                                    {{x.GivenName}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.UserId='';" class="btn btn-default no-shadow">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <span ng-show="errorUserId" class="label-color validation-message">
+                            {{'STK_VALIDATE_EMPLOYEES' | translate}}
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="thumbnail mb-0" style="border: 0; box-shadow: none">
+                        <input id="File" accept=".png,.jpg,.jpeg,.gif,.tif" type="file" style="display:none" />
+                        <img id="imageId" ng-click="uploadImage()" class="img-circle " style="height: 100px; width: 100px;cursor: pointer" src="/images/default/uploadimg.png" alt="Hình ảnh" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                        <label class="control-label ">{{'STK_CURD_LBL_NOTE' | translate}}</label>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" rows="6" name="Content" ng-model="model.Note" placeholder="{{'STK_CURD_TXT_NOTE' | translate}}..."></textarea>
+                    </div>
+                </div>
+                <!--<div class="form-group">
+        <div class="col-md-12">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <label class="control-label require">Nhân viên</label>
+        </div>
+        <div class="col-md-10">
+            <div class="input-group">
+                <ui-select ng-model="model.UserId" theme="bootstrap" ng-class="{ 'has-error': errorUserId}" on-select="changleSelect('UserId')">
+                    <ui-select-match placeholder="Nhân viên...">{{$select.selected.GivenName}}</ui-select-match>
+                    <ui-select-choices repeat="x.Id as x in listEmployeeData | filter: $select.search">
+                        {{x.GivenName}}
+                    </ui-select-choices>
+                </ui-select>
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.UserId='';" class="btn btn-default no-shadow">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+            <span ng-show="errorUserId" class="label-color validation-message">
+                Nhân viên không được để trống
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            <label class="control-label require">Điểm danh/Báo nghỉ</label>
+        </div>
+        <div class="col-md-10">
+            <div class="input-group">
+                <ui-select tagging ng-model="model.Action" theme="bootstrap" on-select="changleSelect('Action')">
+                    <ui-select-match placeholder="Điểm danh/Báo nghỉ..." >{{$select.selected.Name}}</ui-select-match>
+                    <ui-select-choices repeat="x.Code as x in statusData | filter: $select.search">
+                        {{x.Name}}
+                    </ui-select-choices>
+                </ui-select>
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.Action='';" class="btn btn-default no-shadow">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+            <span ng-show="errorAction" class="label-color validation-message">
+                Điểm danh/Báo nghỉ không được để trống
+            </span>
+        </div>
+    </div>
+    <div  ng-class="model.Action=='NOTWORK' ? 'col-md-6':'col-md-12'">
+        <div class="form-group">
+            <div class="col-md-12 row">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <label class="control-label require">{{model.Action=='NOTWORK' ? 'Từ ngày':'Thời gian'}}</label>
+            </div>
+            <div class="col-md-12 row">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" ng-model="model.ActionTime" name="ActionTime" placeholder="{{model.Action=='NOTWORK' ? 'Từ ngày':'Thời gian'}}" id="ActionTime" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default no-shadow start-date" ng-click="model.ActionTime='';" >
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" ng-hide="model.Action!='NOTWORK'">
+        <div class="form-group">
+            <div class="col-md-12 row">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <label class="control-label">{{model.Action=='NOTWORK' ? 'Đến ngày':'Thời gian'}}</label>
+            </div>
+            <div class="col-md-12 row">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" ng-model="model.ActionTo" name="ActionTo" placeholder="{{model.Action=='NOTWORK' ? 'Đến ngày':'Thời gian'}}" id="ActionTo" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default no-shadow end-date"  ng-click="model.ActionTo='';">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+            <label class="control-label ">Nội dung</label>
+        </div>
+        <div class="col-md-12">
+            <textarea class="form-control" rows="6" name="Content" ng-model="model.Note" placeholder="Nhập nội dung chi tiết..."></textarea>
+        </div>
+    </div>-->
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red " href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr25" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>
+</div>

@@ -1,0 +1,88 @@
+﻿<div style="margin: 20px;">
+    <div>
+        <div class="table-toolbar">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h1>Task1</h1>
+                    <ul class="breadcrumbTitle" style="margin-left: -5px; margin-top: -5px;">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="#">Task1</a>
+                            <span>&gt;</span>
+                        </li>
+                        <li>
+                            <a href="#/customer">Danh sách ...</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="btn-group pull-right actions" style="margin: 2px;">
+                        <button ng-click="add()" type="submit" class="btn btn-custom red">
+                            <i class="fa fa-plus mr5"></i>
+                            Thêm
+                        </button>
+                        <!--<button ng-click="importExcel()" type="submit" class="btn btn-custom green-dark">
+                            <i class="fa fa-upload mr5"></i>
+                            Import Excel
+                        </button>
+                        <button ng-click="exportExcel()" type="submit" class="btn btn-custom green-dark">
+                            <i class="fa fa-download mr5"></i>
+                            Export to Excel
+                        </button>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px 15px; margin-top: 10px">
+                <div class="pannel-menu theme-primary">
+                    <form name="searchform" method="post" ng-validate="validationOptions">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2 mb10 form-group">
+                                <label class="control-label">Tên nhà cung cấp</label>
+                                <input ng-model="model.suppliername" class="form-control" type="text" placeholder="Tên khách hàng..." />
+                            </div>
+                            <div class="col-md-2 col-sm-2 mb10 form-group">
+                                <label class="control-label">Thư điện tử</label>
+                                <input ng-model="model.supplieremail" class="form-control" type="text" placeholder="Thư điện tử..." />
+                            </div>
+                            <div ng-controller="index as model" class="col-md-3 col-sm-3 mb10 form-group">
+                                <label class="control-label">Nhóm nhà cung cấp</label>
+                                <ui-select tagging ng-model="model.suppliergroup" theme="bootstrap">
+                                    <ui-select-match placeholder="Chọn nhóm nhà cung cấp...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x in SupplierGroup | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                            <div ng-controller="index as model" class="col-md-3 col-sm-3 mb10 form-group">
+                                <label class="control-label">Trạng thái</label>
+                                <ui-select tagging ng-model="model.status" theme="bootstrap">
+                                    <ui-select-match placeholder="Chọn trạng thái...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x in StatusData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                            <div class="col-md-2 col-sm-2 mb10 form-group" style="padding-top: 23px">
+                                <button ng-click="search()" class="btn blue" style="border: 0px">
+                                    <i class="fa fa-search"></i>
+                                    Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #fff; padding:5px 15px; border-radius: 5px;">
+            <table class="table dataTable table-hover table-striped"
+                   datatable
+                   dt-options="dtOptions"
+                   dt-columns="dtColumns"
+                   dt-instance="dtInstance"
+                   id="tblData"></table>
+        </div>
+    </div>
+</div>
+
+
+

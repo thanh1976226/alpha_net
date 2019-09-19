@@ -1,0 +1,64 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="bold mb-0">{{'DWWS_TAB_MANAGER_TITLE_WEEK_WORKING_SCHEDULE' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'DWWS_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/Authoring">{{'DWWS_ TAB_MANAGER_LINK_WEEK_WORKING_SCHEDULE' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <div class="btn-group pull-right actions">
+                <a ng-click="cancel()" class="btn btn-default br4">
+                    <span class=""><i class="fa fa-arrow-left"></i>&nbsp;{{'COM_BTN_BACK' | translate}}</span>
+                </a>
+                <a ng-click="add()" class="btn btn-red br4 ">
+                    <span class=""><i class="fa fa-plus"></i>&nbsp;{{'COM_BTN_ADD' | translate}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt10 mb15">
+        <div class="col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="{{'DWWS_TAB_MANAGER_CURD_TXT_FROM_DAY' | translate}}..." ng-model="model.FromDate" name="FromDate" ng-keydown="($event.keyCode == 13) && reload()" autocomplete="off" id="FromDate" />
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.FromDate=''" class="btn btn-default start-date no-shadow">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="{{'DWWS_TAB_MANAGER_CURD_TXT_TO_DAY' | translate}}..." ng-model="model.ToDate" name="ToDate" ng-keydown="($event.keyCode == 13) && reload()" autocomplete="off" id="ToDate" />
+                <span class="input-group-btn">
+                    <button type="button" ng-click="model.ToDate=''" class="btn btn-default end-date no-shadow">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <button class="btn btn-accent br4" ng-click="reload()">
+                <i class="fa fa-search"></i>&nbsp;{{'COM_BTN_SEARCH' | translate}}
+            </button>
+        </div>
+    </div>
+</div>
+<div class="portlet light bordered">
+    <div class="portlet-body">
+        <table class="table dataTable table-hover table-striped"
+               datatable
+               dt-options="dtOptions"
+               dt-columns="dtColumns"
+               dt-instance="dtInstance"
+               id="tblData"></table>
+    </div>
+</div>

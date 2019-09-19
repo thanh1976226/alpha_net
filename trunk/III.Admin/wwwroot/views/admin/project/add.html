@@ -1,0 +1,211 @@
+﻿<style>
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">{{'PROJECT_CURD_TITLE_ADD_PROJECT' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body pt-0">
+                <div class="row mt-action-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_CODE_PROJECT' | translate}}</label> 
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'PROJECT_CURD_TXT_PROJECT_CODE_PROJECT' | translate}}..." ng-readonly="ProjectCode !=''"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_NAME_PROJECT' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectTitle" ng-model="model.ProjectTitle" type="text" placeholder="{{'PROJECT_CURD_TXT_PROJECT_NAME_PROJECT' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorCurrency}">
+                            <div class="col-md-4">
+                                <i class="fas fa-info-circle"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_CURRENCY' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.Currency" theme="bootstrap" on-select="changleSelect('Currency')">
+                                        <ui-select-match placeholder="{{'PROJECT_CURD_COMBO_PROJECT_CURRENCY' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in projectUnit | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.Currency='';" class="btn btn-default no-shadow start-date">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorCurrency" class="label-color validation-message">
+                                    {{'PROJECT_CURD_VALIDATE_CURRENCY' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="far fa-money-bill-alt"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_BUDGET' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="Budget" ng-model="model.Budget" type="text" placeholder="{{'PROJECT_CURD_TXT_PROJECT_BUDGET' | translate}}..." num-thousand='true' awnum num-int='21' />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-language"></i>
+                                <label class="control-label">{{'PROJECT_CURD_LBL_PROJECT_PROJECT_LANGUAGE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.PrjSkillKeyword" theme="bootstrap">
+                                        <ui-select-match placeholder="{{'PROJECT_CURD_COMBO_PROJECT_PROJECT_LANGUAGE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in projectLanguage | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.PrjSkillKeyword='';" class="btn btn-default no-shadow start-date">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-calendar"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_STARTTIME' | translate}} </label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class='input-group date' >
+                                    <input type='text' id='FromTo' class="form-control input-date" name="FromTo" ng-model="model.StartTime" placeholder="{{'PROJECT_CURD_TXT_PROJECT_STARTTIME' | translate}}..." autocomplete="off" />
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.StartTime='';" class="btn btn-default no-shadow start-date">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-calendar"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_ENDTIME' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class='input-group date' >
+                                    <input type='text' id='DateTo' class="form-control input-date" name="DateTo" ng-model="model.EndTime" placeholder="{{'PROJECT_CURD_TXT_PROJECT_ENDTIME' | translate}}..." autocomplete="off"/>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.EndTime='';" class="btn btn-default no-shadow start-date">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-cogs"></i>
+                                <label class="control-label">{{'PROJECT_CURD_LBL_PROJECT_MODE' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="Email" ng-model="model.PrjMode" type="text" placeholder="{{'PROJECT_CURD_TXT_PROJECT_MODE' | translate}}" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-cogs"></i>
+                                <label class="control-label">{{'PROJECT_CURD_LBL_PROJECT_PRIORITY' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="Email" ng-model="model.SetPriority" type="text" placeholder="{{'PROJECT_CURD_TXT_PROJECT_PRIORITY' | translate}}" num-thousand='true' awnum num-int='21'/>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorPrjStatus}">
+                            <div class="col-md-4">
+                                <i class="fa fa-flag"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_LBL_PROJECT_STATUS' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.PrjStatus" theme="bootstrap" on-select="changleSelect('PrjStatus')">
+                                        <ui-select-match placeholder="{{'PROJECT_CURD_COMBO_PROJECT_STATUS' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in projectStatus | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.PrjStatus='';" class="btn btn-default no-shadow start-date">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorPrjStatus" class="label-color validation-message">
+                                    {{'PROJECT_CURD_VALIDATE_STATUS' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="pull-right mr15 user-mt">
+                        <a ng-click="submit()" class="btn btn-green " href="javascript:;">
+                            <i class="fa fa-plus"></i>&nbsp;{{'COM_BTN_ADD' | translate}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row" ng-click="chkProject()">
+            <div class="col-md-12" ng-class="{'disabled-element' : ProjectCode =='' }">
+                <uib-tabset active="active">
+                    <!--<uib-tab index="0" heading="Nhà cung cấp">
+            <div ng-include="'../views/project/projectTabSupplier.html'"></div>
+        </uib-tab>-->
+                    <uib-tab index="1" heading="{{'PROJECT_CURD_TAB_CUSTOMER' | translate}}">
+                        <div ng-include="'../views/admin/project/projectTabCustomer.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="2" heading="{{'PROJECT_CURD_TAB_MEMBER' | translate}}">
+                        <div ng-include="'../views/admin/project/projectTabMember.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="3" heading="{{'PROJECT_CURD_TAB_FILE' | translate}}">
+                        <div ng-include="'../views/admin/project/projectTabFile.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="4" heading="{{'PROJECT_CURD_TAB_NOTE' | translate}}">
+                        <div ng-include="'../views/admin/project/projectTabNote.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="5" heading="{{'PROJECT_CURD_TAB_PAYMENT' | translate}}">
+                        <div ng-include="'../views/admin/project/projectTabPayment.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="6" heading="{{'PROJECT_CURD_TAB_CARD_JOB' | translate}}">
+                        <div ng-include="'../views/admin/project/card-job.html'"></div>
+                    </uib-tab>
+                    <uib style="float: right;">
+                        <a ng-click="addCardJob()" class="btn btn-card">
+                            <span class="mr5"><img src="/images/cardJob/WHITE.png" style="height: 17px;width: 13px;" />{{'COM_BTN_CARD_JOB' | translate}}</span>
+                        </a>
+                    </uib>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,76 @@
+﻿<style>
+    .ui-select-match-close {
+        background-image: none;
+    }
+
+    .border {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+        .border .btn {
+            margin: 5px 5px 5px 0;
+            background: #fff;
+            border-radius: 2px !important;
+            padding: 2px 0px 2px 5px !important;
+            min-width: 88px;
+            font-size: 13px !important;
+        }
+
+            .border .btn:hover {
+                background-image: -webkit-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%);
+                border: none;
+            }
+</style>
+<div class="modal-header no-color">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-users" style="padding-top: 10px;color:black"></i>
+    <span class="modal-title black" id="modal-title">Thêm nhóm/thành viên</span>
+</div>
+<div class="modal-body pt-0" id="modal-body">
+    <div class="row mt10">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <ui-select tagging ng-model="setting.Team" on-select="teamSelect(setting.Team)" theme="bootstrap">
+                    <ui-select-match placeholder="Team...">{{$select.selected.TeamName}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x in listTeam | filter: $select.search">
+                        {{x.TeamName}}
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="col-md-6">
+                <ui-select tagging ng-model="setting.Member" on-select="memberSelect(setting.Member)" theme="bootstrap">
+                    <ui-select-match placeholder="Member...">{{$select.selected.UserName}}</ui-select-match>
+                    <ui-select-choices style="height: auto" repeat="x in listUser | filter: $select.search">
+                        {{x.UserName}}
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="col-md-12 mt5">
+            <div class="col-md-12">
+                <div class="col-md-12 border" style="min-height: 150px">
+                    <button type="button" class="btn" style="background-color: #4faf3e; color: #fff" ng-repeat="x in cardMember.listTeam">
+                        <i class="fa fa-times right" style="color: #fff" aria-hidden="true" ng-click="removeTeam(x.TeamCode)"></i>{{x.TeamName}}
+                    </button>
+                    <button type="button" class="btn" ng-repeat="x in cardMember.listMember">
+                        <i class="fa fa-times right" aria-hidden="true" ng-click="removeMember(x.UserName)"></i>{{x.UserName}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt10">
+        <div class="col-md-6">
+            <a ng-click="useDefaultSetting()">Sử dụng cài đặt mặt định</a>
+        </div>
+        <div class="col-md-6 text-right">
+            <button class="btn btn-default" ng-click="cancel()">
+                Hủy
+            </button>
+            <button class="btn btn-red" ng-click="submit()">
+                Lưu
+            </button>
+        </div>
+    </div>
+</div>

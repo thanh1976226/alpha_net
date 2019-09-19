@@ -1,0 +1,301 @@
+﻿<link rel="stylesheet" type="text/css" href="http://117.6.131.222:4011/assets/admin-tools/admin-forms/css/admin-forms.min.css">
+<!--<link rel="stylesheet" type="text/css" href="http://117.6.131.222:4011/assets/skin/default_skin/css/theme.min.css">-->
+
+<style type="text/css">
+    .ui-select-match-close {
+        background-image: none;
+    }
+
+    .fileupload .uneditable-input {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+        cursor: text;
+    }
+
+    .fileupload .thumbnail {
+        cursor: pointer;
+        overflow: hidden;
+        vertical-align: middle;
+        text-align: center;
+        padding: 5px;
+        outline: #d9d9d9 dashed 2px;
+        border: 0;
+        background: 0 0;
+    }
+
+        .fileupload .thumbnail > img {
+            display: inline-block;
+            vertical-align: middle;
+            max-height: 100%;
+        }
+
+    .fileupload .btn {
+        vertical-align: middle;
+    }
+
+    .fileupload-exists .fileupload-new, .fileupload-new .fileupload-exists {
+        display: none !important;
+    }
+
+    .fileupload-inline .fileupload-controls {
+        display: inline;
+    }
+
+    .fileupload-new .input-group .btn-file {
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .thumbnail-borderless .thumbnail {
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .fileupload-new.thumbnail-borderless .thumbnail {
+        border: 1px solid #ddd;
+    }
+
+    .control-group.warning .fileupload .uneditable-input {
+        color: #a47e3c;
+        border-color: #a47e3c;
+    }
+
+    .control-group.warning .fileupload .fileupload-preview {
+        color: #a47e3c;
+    }
+
+    .control-group.warning .fileupload .thumbnail {
+        border-color: #a47e3c;
+    }
+
+    .control-group.error .fileupload .uneditable-input {
+        color: #b94a48;
+        border-color: #b94a48;
+    }
+
+    .control-group.error .fileupload .fileupload-preview {
+        color: #b94a48;
+    }
+
+    .control-group.error .fileupload .thumbnail {
+        border-color: #b94a48;
+    }
+
+    .control-group.success .fileupload .uneditable-input {
+        color: #468847;
+        border-color: #468847;
+    }
+
+    .control-group.success .fileupload .fileupload-preview {
+        color: #468847;
+    }
+
+    .control-group.success .fileupload .thumbnail {
+        border-color: #468847;
+    }
+    .btn-system {
+        color: #fff;
+        background-color: #37bc9b;
+    }
+    .btn {
+        vertical-align: middle;
+    }
+    .btn-file {
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+    .btn-block {
+        display: block;
+        width: 100%;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <span class="modal-title" id="modal-title">Thêm Video</span>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body" style="padding: 10px;">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label require">Tiêu đề</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input type="text" class="form-control" ng-model="model.ActCode" name="ActCode" placeholder="Nhập tiêu đề..." />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ActCode='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">Mô tả</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" ng-model="model.ActNote" rows="4" name="Mô tả" placeholder="Nhập mô tả..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label ">Chuyên mục</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <ui-select tagging ng-model="model.AssetCode" theme="bootstrap">
+                                <ui-select-match placeholder="---Danh mục---">{{$select.selected.Code}} - {{$select.selected.Name}}</ui-select-match>
+                                <ui-select-choices repeat="x.Code as x in listAsset | filter: $select.search">
+                                    {{x.Code}} - {{x.Name}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.AssetCode='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group admin-form">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label require">Upload</label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="field prepend-icon append-button file">
+                            <span class="button btn-primary">Choose Video</span>
+                            <input class="gui-file" data-val="true" data-val-required="Video không được để trống" id="FileVideo" name="FileVideo" onchange="document.getElementById(&#39;video&#39;).value = this.value;" type="file" value="" />
+
+                            <input type="text" class="gui-input" id="video" placeholder="Please Select A Video">
+                            <label class="field-icon">
+                                <i class="fa fa-upload"></i>
+                            </label>
+
+                        </label>
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label">Ordering</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input type="text" class="form-control" ng-model="model.ActCode" name="ActCode" placeholder="Sắp xếp..." />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.ActCode='';" class="btn btn-default no-shadow end-date">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <label class="control-label">Ngày đăng</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group date' id='DeadLine'>
+                            <input type='text' class="form-control input-date" name="DeadLine" ng-model="model.DeadLine" placeholder="Ngày đăng bài..." ng-disabled="IsPermission" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <label class="control-label">Published</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="bs-component">
+                            <div class="radio-custom mb5 radio-inline">
+                                <input id="PublishedYes" name="Published" type="radio" value="True" />
+                                <label for="PublishedYes">Yes</label>
+                            </div>
+                            <div class="radio-custom mb5 radio-inline">
+                                <input id="PublishedNo" name="Published" type="radio" value="False" />
+                                <label for="PublishedNo">No</label>
+                            </div>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="fileupload fileupload-new mh15" data-provides="fileupload">
+                        <div class="fileupload-new thumbnail">
+                            <img data-src="holder.js/590x328" alt="holder">
+                        </div>
+                        <div class="fileupload-preview fileupload-exists thumbnail"></div>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="FileImage" data-valmsg-replace="true"></span>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <span class="btn btn-system btn-file btn-block">
+                                    <span class="fileupload-new">Chọn ảnh</span>
+                                  </span>
+                                <a href="#" class="btn btn-system btn-block fileupload-exists" data-dismiss="fileupload">Xóa</a>
+                            </div>
+                            <div class="col-xs-3">
+                                <input id="ImageServer" name="ImageServer" type="hidden" value="" />
+                                <a href="javascript:void(0);"
+                                   data-href="#modal-panel-frame"
+                                   class="btn btn-system btn-block"
+                                   data-event="popup-modal"
+                                   data-iframe-href="/assets/vendor/filemanager/dialog.php?type=1&amp;field_id=ImageServer"
+                                   data-iframe-title="Responsive Filemanager"
+                                   data-iframe-height="500">
+                                    Browse server...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <!--<a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>-->
+    <div class="btn-group actions d-flex pull-right">
+        <div class="text-center pl20">
+            <a class="btn btn-icon-only btn-circle btn-outline green-custom" ng-click="submit()" href="javascript:;">
+                <span><i class="fa fa-plus"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+        </div>
+        <div class="text-center pl20">
+            <a class="btn btn-icon-only btn-circle btn-outline red-custom" ng-click="cancel()">
+                <span><i class="fa fa-close"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_CANCEL' | translate}}</p>
+        </div>
+    </div>
+</div>

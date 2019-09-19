@@ -1,0 +1,71 @@
+﻿<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color:aliceblue;padding-top:5px"></i> THÊM MỚI CẤP HỌC</h3>
+</div>
+<div class="row nt" style="margin-top:30px;">
+    <div class="col-md-6 " style="overflow: scroll; height:350px; ">
+        <table class="table dataTable table-bordered table-hover table-striped"
+               datatable
+               dt-options="dtOptions"
+               dt-columns="dtColumns"
+               dt-instance="dtInstance"
+               id="tblData"></table>
+    </div>
+    <div class="col-md-6">
+
+        <div class="modal-body no-space" id="modal-body">
+
+            <div class="portlet-body form">
+                <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                    <div class="form-body">
+
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Mã </label>
+                            <div class="col-md-8" style="border:none">
+                                <input type="text" class="form-control" ng-model="model.article_code" name="article_code" placeholder="Mã tin tức" />
+                            </div>
+                        </div>
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-tint"></i> Giá trị</label>
+                            <div class="col-md-8" style="border:none">
+                                <input type="text" class="form-control" ng-model="model.article_title" name="article_title" placeholder="Tiêu đề" />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-3 text-left"> <i class="glyphicon glyphicon-leaf"></i> Nhóm cha</label>
+                            <div class="col-md-8 form-col-control" style=" border:none;   ">
+                                <div class="bs-component">
+                                    <div class="input-group col-md-12" style=" border:none">
+                                        <ui-select ng-model="model.cat_code" class="" ui-select-required>
+                                            <ui-select-match placeholder="Nhóm cha...">{{$select.selected.cat_code}}</ui-select-match>
+                                            <ui-select-choices repeat="x.cat_code as x in treeDatacategory | filter:$select.value">
+                                                {{x.cat_code}}
+                                            </ui-select-choices>
+                                        </ui-select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-tint"></i> Thứ tự</label>
+                            <div class="col-md-8" style="border:none">
+                                <input type="text" class="form-control" ng-model="model.article_title" name="article_title" placeholder="Tiêu đề" />
+                            </div>
+                        </div>
+
+                        <div class="form-group pull-right" style="margin-top:10px;margin-right:55px;border:none">
+                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="editQTLV()"><i class="fa fa-times"></i> Xoá bỏ</button>
+                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px; " ng-click="submitQTLV()"><i class="fa fa-refresh"></i> Làm mới</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

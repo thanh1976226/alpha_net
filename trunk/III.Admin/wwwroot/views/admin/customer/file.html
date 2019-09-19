@@ -1,0 +1,50 @@
+﻿<div ng-controller="file">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_FILE_LBL_TITLE' | translate}}</label>
+                <input ng-model="model.Title" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_FILE_TXT_TITLE' | translate}}..." />
+            </div>
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_FILE_LBL_TYPE' | translate}}</label>
+                <input ng-model="model.Type" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_FILE_TXT_TYPE' | translate}}..." />
+            </div>
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_FILE_LBL_CREATETIME' | translate}}</label>
+                <div class='input-group date input-icon' id='datefrom'>
+                    <input type='text' ng-model="model.CreatedTime" class="form-control" placeholder="{{'CUS_CURD_TAB_FILE_TXT_CREATETIME' | translate}}..."  />
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_FILE_LBL_UPDATETIME' | translate}}</label>
+                <div class='input-group date input-icon' id='dateto'>
+                    <input type='text' ng-model="model.UpdatedTime" class="form-control" placeholder="{{'CUS_CURD_TAB_FILE_TXT_UPDATETIME' | translate}}"  />
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-2  pt25 pl-0 mb5">
+                <button ng-click="search()" class="btn btn-accent">
+                    <i class="fa fa-search"></i>
+                    {{'COM_BTN_SEARCH' | translate}}
+                </button>
+            </div>
+            <div class="col-lg-2 pt25 pl-0 mb5">
+                <button ng-click="add()" type="submit" class="btn btn-green">
+                    <i class="fa fa-plus"></i>
+                    {{'COM_BTN_ADD' | translate}}
+                </button>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblData"></table>
+</div>

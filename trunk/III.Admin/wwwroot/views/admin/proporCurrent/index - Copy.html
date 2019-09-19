@@ -1,0 +1,83 @@
+﻿<div class="portlet-body" style="    padding: 10px;">
+    <div class="table-toolbar" style="padding-bottom: 15px;">
+        <div class="col-md-12">
+            <div class="btn-group pull-right actions">
+                <a ng-click="export()" class="btn btn-info br4">
+                    <span class=""><i class="glyphicon glyphicon-export"></i> Xuất excel</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-12" style="padding:0">
+            <div class="col-md-2" style="padding-left:0">
+                <label class="labelSearch"> NPP/Đại lý/Cửa hàng</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="NPP/Đại lý/Cửa hàng..." ng-model="model.CustomerName" />
+                </div>
+            </div>
+            <!--<div class="col-md-2" style="padding-left:0">
+                <label class="labelSearch"> Khu vực</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Khu vực..." ng-model="model.Area" />
+                </div>
+            </div>-->
+
+            <div class="col-md-2" style="padding-left:0">
+                <label class="labelSearch"> Khu vực</label>
+                <div class="input-group">
+                    <select ng-model="model.Area" tabindex="-1" aria-hidden="true" ng-change="reload()"
+                            class="form-control select2-multiple select2-hidden-accessible">
+                        <option value="">Tất cả khu vực</option>
+                        <option ng-repeat="x in ListArea" value="{{x.Code}}">{{x.Name}}</option>
+                    </select>
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.Area=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-2" style="padding-left:0">
+                <label class="labelSearch"> Nhân viên nhập liệu</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Nhân viên nhập liệu..." ng-model="model.Staff" />
+                </div>
+            </div>
+            <!--<div class="col-md-2" style="padding-left:0">
+                <label class="labelSearch"> Thời gian nhập liệu từ</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Thời gian nhập liệu từ..." ng-model="model.FromDate" id="FromDate" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.FromDate='';" class="btn btn-default no-shadow start-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2" style="padding-left:0">
+                <label class="labelSearch"> Thời gian nhập liệu đến</label>
+                <div class="input-group">
+                    <input type="text" placeholder="Thời gian nhập liệu đến..." ng-model="model.ToDate" class="form-control" id="ToDate" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.ToDate='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>-->
+            <div class="col-md-2">
+                <button class="btn btn-primary" style="margin-top: 26px; border-radius:5px !important;" ng-click="reload()"><i class="fa fa-search"></i> Tìm kiếm </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-12" style="padding:10px; background:white">
+        <table class="table dataTable table-hover table-striped"
+               datatable
+               dt-options="dtOptions"
+               dt-columns="dtColumns"
+               dt-instance="dtInstance"
+               id="tbldata"></table>
+    </div>
+</div>
+

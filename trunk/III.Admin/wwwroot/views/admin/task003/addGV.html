@@ -1,0 +1,105 @@
+﻿<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title" style="    font-weight: bold;"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color:aliceblue;padding-top:5px"></i> LỊCH DẠY GIÁO VIÊN</h3>
+</div>
+<div class="row nt" style="">
+    <div class="col-md-6" style="margin-left:10px">
+        <table  class="table dataTable table-bordered table-hover table-striped"
+               datatable
+               dt-options="dtOptions"
+               dt-columns="dtColumns"
+               dt-instance="dtInstance"
+               id="tblData" style="width:100%;"></table>
+    </div>
+
+    <div class="col-md-5" style="    margin-top: 10px;background-color: #f8f5f1; border: 1px solid #e9dada; padding-bottom:10px;    margin-bottom: 10px;">
+       
+         
+
+        <div class="modal-body no-space" id="modal-body">
+
+            <div class="portlet-body form">
+               
+                <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                    <div class="form-bordered">
+                        <div  class="form-group"  >
+                            <h3 style="color:black; font-weight: bold;margin-top:5px;margin-bottom:5px">Thông tin lịch dạy</h3>
+                          
+                        </div>
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Từ ngày</label>
+                            <div class="bs-component col-md-8" style="border:none">
+                                <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker2">
+                                    <input type="text" class="form-control" ng-model="model.starttime" name="starttime" placeholder="thời gian bắt đầu" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                    <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <script>
+                                   $('#datetimepicker2').datetimepicker();
+
+                            </script>
+                        </div>
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Tới ngày</label>
+                            <div class="bs-component col-md-8" style="border:none">
+                                <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker3">
+                                    <input type="text" class="form-control" ng-model="model.endtime" name="endtime" placeholder="thời gian bắt đầu" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                    <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <script>
+                                $('#datetimepicker3').datetimepicker();
+
+                            </script>
+                        </div>
+
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-4 text-left" style=""><i class="glyphicon glyphicon-certificate"></i> Giáo viên </label>
+                            <div class="col-md-8" style="border:none;">
+                                <input type="text" class="form-control" ng-model="model.teacher_id" name="teacher_id" placeholder="Giáo viên" />
+                            </div>
+                        </div>
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Kỹ năng</label>
+                            <div class="col-md-8 form-col-control" style=" border:none">
+                                <div class="bs-component">
+                                    <div class="input-group col-md-12">
+                                        <ui-select ng-model="model.skills" class="" ui-select-required>
+                                            <ui-select-match placeholder="Kỹ năng...">{{$select.selected.name}}</ui-select-match>
+                                            <ui-select-choices repeat="x.name as x in treedataSkills | filter:$select.name| filter:$select.search">
+                                                {{x.name}}
+                                            </ui-select-choices>
+                                        </ui-select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="border:none">
+                            <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Ngày dạy</label>
+                            <div class="col-md-8" style="border:none">
+                                <input type="text" class="form-control" ng-model="model.name" name="name" placeholder="Ngày dạy" />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group pull-right" style="margin-top:10px;border:none; margin-right:65px;">
+                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="submit()" ng-show="enableadd"><i class="fa fa-floppy-o"></i> Thêm mới</button>
+                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="edit()" ng-show="enableedit"><i class="fa fa-floppy-o"></i> Lưu</button>
+                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:30px" ng-click="delete()" ng-show="enableedit"><i class="fa fa-times"></i> Xoá bỏ</button>
+
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

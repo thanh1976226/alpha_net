@@ -1,0 +1,157 @@
+﻿        <!-- Modal -->
+        <div class="modal-header">
+            <div class="modal_header">
+                <span class="modal-title modal_title" id="modal-title">
+                    <i class="fas fa-user-circle" style="font-size:25px; background:white; border-radius:100%; color:red;"> </i> 
+                    <label style="    display: inline; position: absolute; margin-top: -5px; margin-left: 10px; padding:0px;">Quản lý Trình độ</label>
+                    <button type="button" class="close" data-dismiss="modal"> <img src="http://s-work.vn/images/AppIcon/close.png " class="icon-remove"></button>
+                </span>
+            </div>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="row" style="">
+
+                <div class="modal-body p0" id="modal-body">
+                    <label class="labelbodergroup" style=""><b>Nội dung</b></label>
+                    <div class="table-toolbar table_toolbar">
+                        <div class="row mrt-10_mrl-4">
+                            <DIV class="portlet-body form">
+                                <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                    <div class="form-body">
+
+                                        <div class=" col-md-6 pl0">
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0"> <i class="fas fa-barcode mrr10"></i>Mã trình độ</div>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control b-r-4" ng-model="model.course_code" name="course_code" placeholder="Mã trình độ" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0"><i class="fas fa-user mrr10"></i>Trình độ</div>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control b-r-4" ng-model="model.course_name" name="course_name" placeholder="Tên trình độ" />
+                                                </div>
+                                            </div>
+                                            <!--<div class="form-group">
+                                                <label class="control-label col-md-3 text-left"><i class="glyphicon glyphicon-certificate"></i> Kiểu trình độ</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" ng-model="model.code" name="code" placeholder="Mã khu vực" />
+                                                </div>
+                                            </div>-->
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0"><i class="fas fa-tag mrr10"></i>Trình độ</div>
+                                                <div class="col-md-8 form-col-control">
+
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12">
+                                                            <select class="form-control nobrl" id="sel1">
+                                                                <option>Trình độ</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                            </select>
+                                                            <span class="input-group-btn">
+                                                                <a class="btn btn-icon-only btn-default brl h34" ng-click="add()" title="Thêm mới"><i class="fa fa-plus"></i></a>
+                                                            </span>
+
+                                                            <!--
+                                                            <ui-select ng-model="model.coursetype" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Kiểu trình độ...">{{$select.selected.value}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataCoursetype | filter:$select.value| filter:$select.search">
+                                                                    {{x.value}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+                                                            -->
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0" style=""><i class="far fa-calendar-alt mrr10" style=""></i>Số buổi học</div>
+                                                <div class="col-md-8">
+                                                    <input type="number" class="form-control b-r-4" ng-model="model.totalday" name="totalday" placeholder="Số buổi học" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0" style=""><i class="fas fa-sort-numeric-down mrr10" style=""></i>Cấp học</div>
+                                                <div class="col-md-8 form-col-control">
+
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12">
+                                                            <select class="form-control b-r-4" id="sel1">
+                                                                <option>Cấp học</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                            </select>
+                                                            <!--
+                                                            <ui-select ng-model="model.level" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Cấp học...">{{$select.selected.value}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataLevel | filter:$select.value| filter:$select.search">
+                                                                    {{x.value}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+                                                            -->
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class=" col-md-6">
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0" style=""> <i class="fas fa-tag mrr10" style=""></i>Học phí</div>
+                                                <div class="col-md-8 pl0">
+                                                    <input type="text" class="form-control b-r-4" ng-model="model.price" name="price" placeholder="Học phí" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0" style=""><i class="fas fa-qrcode file-icon mrr10" style=""></i>Ghi chú</div>
+                                                <div class="col-md-8 pl0">
+                                                    <textarea style="" rows="6" type="text" class="form-control text_area b-r-4" ng-model="model.note" name="note">Ghi chú</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label col-md-4 text-left t-a-l pr0" style=""><i class="fas fa-user mrr10" style=""></i>Người tạo</div>
+                                                <div class="col-md-8 pl0">
+                                                    <input type="text" class="form-control b-r-4" ng-model="model.userid" name="userid" placeholder="Người tạo" />
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            </DIV>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <!--<div class=" col-md-12">-->
+                <!--</div>-->
+            </div>
+
+        </div>
+        <div class="modal-footer b-t-n">
+            <div class="form-group pull-right b-n mrt35 mrr5">
+                <button type="submit" class="btn btn-red" ng-click="submit()"><i class="fa fa-plus"></i> Thêm mới</button>
+                <button type="submit" class="btn btn-blue" ng-click="edit()"><i class="glyphicon glyphicon-edit"></i> Sửa</button>
+                <button type="submit" class="btn btn-grey" ng-click="edit()">Hủy bỏ</button>
+            </div>
+        </div>
+  

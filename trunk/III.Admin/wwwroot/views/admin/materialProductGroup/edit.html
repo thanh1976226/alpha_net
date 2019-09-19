@@ -1,0 +1,62 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-edit icon-edit "></i>
+    <div class="modal-title custom-title " id="modal-title"> {{'MPG_CURD_TITLE_EDIT_MPG' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label ">{{'MPG_CURD_LBL_MPG_FATHER_GROUP' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <ui-select tagging ng-model="model.ParentID" theme="bootstrap">
+                            <ui-select-match placeholder="{{'MPG_CURD_COMBO_MPG_FATHER_GROUP' | translate}}">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="x.Id as x in treedataedit | filter:$select.Id| filter: $select.search">
+                                {{x.Name}}
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <label class="control-label ">{{'MPG_CURD_LBL_MPG_CODE' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Code" name="ProductCode" id="ProductCode" placeholder="{{'MPG_CURD_TXT_MPG_CODE' | translate}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <label class="control-label ">{{'MPG_CURD_LBL_MPG_NAME' | translate}} (*)</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" ng-model="model.Name" name="ProductName" placeholder="{{'MPG_CURD_TXT_MPG_NAME' | translate}}" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <label class="control-label ">{{'MPG_CURD_LBL_MPG_DESCRIPTION' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" ng-model="model.Description" rows="3" placeholder="{{'MPG_CURD_TXT_MPG_DESCRIPTION' | translate}}" name="Note"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_EDIT' | translate}}
+    </button>
+</div>

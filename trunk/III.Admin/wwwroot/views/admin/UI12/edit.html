@@ -1,0 +1,109 @@
+﻿<script>
+    function readURL(input) {
+        //alert('fine');
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log('link: ' + e.target.result);
+                $('#Image')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<style>
+    .nav-tabs {
+        height: 36px;
+    }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #3c8dbc;
+            color: #efecec;
+            height: 35px;
+        }
+</style>
+
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-edit" style="font-size: 18px;color: #e9edf0;"></i>Cập nhật thông tin danh mục</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="editform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Mã danh mục</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_code" name="cat_code" placeholder="Mã danh mục" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Tiêu đề</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_title" name="cat_title" placeholder="Tiêu đề" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-screenshot"></i> Mô tả</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" ng-model="model.cat_description" name="cat_description" placeholder="Mô tả" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 text-left"> <i class="glyphicon glyphicon-leaf"></i> Danh mục cha</label>
+                        <div class="col-md-8 form-col-control">
+                            <div class="bs-component">
+                                <div class="input-group col-md-8">
+                                    <ui-select ng-model="model.cat_parent_code" class="" style="width:304PX;" ui-select-required>
+                                        <ui-select-match placeholder="Danh mục cha...">{{$select.selected.cat_code}}</ui-select-match>
+                                        <ui-select-choices repeat="x.id as x in treeDatacategory | filter:$select.value">
+                                            {{x.cat_code}}
+                                        </ui-select-choices>
+                                    </ui-select>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class=" col-md-6">
+                    <div class="form-group">
+                        <div class="col-md-4 form-col-label text-left" style="border-left:none">
+                            <i class="sprite-image-16x16"></i>
+                            <label class="control-label" for="Status"> Ảnh</label>
+                        </div>
+                        <div class="col-md-8 form-col-control">
+                            <div class="fileupload-new thumbnail mb5">
+                                <img id="Image" src="{{model.cat_avarta}}" alt="holder" ng-src='{{model.cat_avarta}}' style="height:150px; width:150px" />
+                            </div>
+                            <input type="file" id="file" class="filestyle" accept=".png, .jpg, .jpeg, .gif, .bmp" files-input ng-model="model.cat_avarta" name="cat_avarta" onchange="readURL(this);">
+                            <script>
+                                $(":file").filestyle({ buttonName: "btn btn-primary" });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" style="border-radius: 4px !important; margin-top:15px;" ng-click="submit()"><i class="fa fa-plus"></i> Cập nhật</button>
+        <button type="submit" class="btn btn-primary" style="border-radius: 4px !important;  margin-top:15px;margin-right:20px;" ng-click="cancel()"><i class="fa fa-trash-o"></i> Đóng</button>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,61 @@
+﻿<div ng-controller="projectTabFile">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="mt-action-5">
+                <div class="col-md-2">
+                    <div class="form-group mr5">
+                        <label class="control-label">{{'PROJECT_CURD_TAB_FILE_LBL_FILENAME' | translate}}</label>
+                        <div class="input-group">
+                            <input ng-model="model.FileName" class="form-control" type="text" placeholder="{{'PROJECT_CURD_TAB_FILE_TXT_FILENAME' | translate}}..." ng-keydown="($event.keyCode == 13) && reload()" />
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.FileName=''" class="btn btn-default no-shadow">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 form-group mr5">
+                    <label class="control-label">{{'PROJECT_CURD_TAB_FILE_LBL_CREATETIME' | translate}}</label>
+                    <div class='input-group date' id='datefromFile'>
+                        <input type='text' class="form-control input-date" ng-model="model.FromDate" placeholder="{{'PROJECT_CURD_TAB_FILE_TXT_CREATETIME' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.FromDate=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 form-group mr5">
+                    <label class="control-label">{{'PROJECT_CURD_TAB_FILE_LBL_UPDATETIME' | translate}}</label>
+                    <div class='input-group date' id='datetoFile'>
+                        <input type='text' class="form-control input-date" ng-model="model.ToDate" placeholder="{{'PROJECT_CURD_TAB_FILE_TXT_UPDATETIME' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.ToDate=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2  pt25 pl-0">
+                    <button ng-click="reload()" class="btn btn-accent">
+                        <i class="fa fa-search"></i>
+                        {{'COM_BTN_SEARCH' | translate}}
+                    </button>
+                </div>
+                <div class="col-lg-2 pt25 pl-0">
+                    <button ng-click="add()" type="submit" class="btn btn-green">
+                        <i class="fa fa-plus"></i>
+                        {{'COM_BTN_ADD' | translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataFile"></table>
+</div>

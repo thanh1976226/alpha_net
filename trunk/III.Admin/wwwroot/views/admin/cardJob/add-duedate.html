@@ -1,0 +1,29 @@
+﻿<div class="modal-header no-color">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-calendar" style="padding-top: 10px;color:black"></i>
+    <span class="modal-title black" id="modal-title">Ngày hết hạn</span>
+</div>
+<div class="modal-body pt-0" id="modal-body">
+    <div class="row mt5">
+        <div class="col-md-12">
+            <div class='input-group'>
+                <input type="text" ng-model="duedate.DueDate" class="form-control" placeholder="Ngày hết hạn..." id="duedate" />
+                <span class="input-group-btn">
+                    <button type="button" ng-click="duedate.DueDate=''" class="btn btn-default no-shadow" style="">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row mt10">
+        <div class="col-md-12 text-right">
+            <button class="btn btn-default" ng-click="cancel()">
+                Hủy
+            </button>
+            <button class="btn btn-red" ng-click="submit()">
+                Lưu
+            </button>
+        </div>
+    </div>
+</div>

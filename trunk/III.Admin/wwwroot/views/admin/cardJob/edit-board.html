@@ -1,0 +1,95 @@
+﻿<style>
+    .modal .modal-dialog {
+        /*margin-top: 30px;*/
+        /*margin: auto;*/
+        width: 300px;
+        height: 60%;
+        -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .modal-header {
+        border-bottom: 0px !important;
+        border-radius: 5px;
+    }
+
+    .p0 {
+        padding: 0px ;
+    }
+
+    .close-icon {
+        color: #000000;
+        margin-right: 4px;
+    }
+
+    .control-label {
+        color: #bdc3c7;
+    }
+
+    .board-title {
+        border: 0 !important;
+    }
+
+        .board-title:focus {
+            background: #ecf0f1;
+        }
+
+        .board-title[placeholder] {
+            font-weight: bold;
+        }
+</style>
+<div class="modal-header no-color">
+    <div class="col-md-12 p0">
+        <div class="col-md-11 p0">
+            <input class="board-title form-control" ng-model="model.BoardCode" placeholder="Mã bảng" readonly />
+        </div>
+        <div class="col-md-1 p0 text-right">
+            <i class="fa fa-times close-icon cursor" title="Close" ng-click="cancel()"></i>
+        </div>
+    </div>
+    <div class="col-md-12 p0 mt10">
+        <input class="board-title form-control" ng-model="model.BoardName" placeholder="Tiêu đề bảng..." autofocus />
+    </div>
+    <div class="col-md-12 mt10 p0">
+        <input id="background-color" type="text" style="display: none" ng-model="model.Background" />
+        <button class="btn btn-color btn-icon-only" value="#9b59b6" style="background-color: #9b59b6"></button>
+        <button class="btn btn-color btn-icon-only" value="#e74c3c" style="background-color: #e74c3c"></button>
+        <button class="btn btn-color btn-icon-only" value="#2ecc71" style="background-color: #2ecc71"></button>
+        <button class="btn btn-color btn-icon-only" value="#f1c40f" style="background-color: #f1c40f"></button>
+        <button class="btn btn-color btn-icon-only" value="#f39c12" style="background-color: #f39c12"></button>
+        <button class="btn btn-color btn-icon-only" value="#c0392b" style="background-color: #c0392b"></button>
+        <button class="btn btn-color btn-icon-only" value="#34495e" style="background-color: #34495e"></button>
+    </div>
+    <div class="col-md-12 mt10">
+        <div class="col-md-6">
+            <input type="radio" id="radioPrivate" ng-model="model.Visibility" ng-checked="model.Visibility == 'PRIVATE'" value="PRIVATE" class="radio radio-inline" />
+            <label class="control-label" for="radioPrivate">Riêng tư</label>
+        </div>
+        <div class="col-md-6">
+            <input type="radio" id="radioPublic" ng-model="model.Visibility" ng-checked="model.Visibility == 'PUBLIC'" value="PUBLIC" class="radio radio-inline" />
+            <label class="control-label" for="radioPublic">Công khai</label>
+        </div>
+    </div>
+    <div class="col-md-12 p0">
+        <ui-select tagging ng-model="model.TeamCode" theme="bootstrap">
+            <ui-select-match placeholder="Nhóm">{{$select.selected.TeamName}}</ui-select-match>
+            <ui-select-choices repeat="x.TeamCode as x in Teams | filter: $select.search">
+                {{x.TeamName}}
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    <div class="col-md-12 mt10 text-right">
+        <button class="btn green" ng-click="submit()">Sửa bảng</button>
+    </div>
+</div>
+
+<script>
+    $('.btn-color').click(function () {
+        console.log(this.value);
+        //$('.modal-header').css("background-color", this.value);
+        $('.modal-header').attr('style', 'background-color: ' + this.value + ' !important;');
+        $('#background-color').val(this.value);
+    })
+</script>

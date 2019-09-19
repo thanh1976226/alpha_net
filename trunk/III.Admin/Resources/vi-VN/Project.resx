@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="%" xml:space="preserve">
+    <value>Thêm tệp tin cho dự án này?</value>
+  </data>
+  <data name="PROJECT_CHECK_CLICK_OPEN_TAB" xml:space="preserve">
+    <value>Vui lòng tạo trước dự án</value>
+  </data>
+  <data name="PROJECT_CURD_ATTRIBUTE_CODE_VALIDATE" xml:space="preserve">
+    <value>Mã thuộc tính yêu cầu bắt buộc</value>
+  </data>
+  <data name="PROJECT_CURD_ATTR_VALUE" xml:space="preserve">
+    <value>Giá trị yêu cầu bắt buộc</value>
+  </data>
+  <data name="PROJECT_CURD_COMBO_PROJECT_CURRENCY" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="PROJECT_CURD_COMBO_PROJECT_PROJECT_LANGUAGE" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="PROJECT_CURD_COMBO_PROJECT_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_BUGET_END" xml:space="preserve">
+    <value>Số tiền đến</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_BUGET_START" xml:space="preserve">
+    <value>Số tiền từ</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_BUDGET" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_CODE_PROJECT" xml:space="preserve">
+    <value>Mã dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_CURRENCY" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_ENDTIME" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_MODE" xml:space="preserve">
+    <value>Thiết lập</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_NAME_PROJECT" xml:space="preserve">
+    <value>Tên dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_PRIORITY" xml:space="preserve">
+    <value>Thiết lập ưu tiên</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_PRJ_BUDGET" xml:space="preserve">
+    <value>Giá trị dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_PRJ_TYPE" xml:space="preserve">
+    <value>Loại dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_PROJECT_LANGUAGE" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_STARTTIME" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_STARTTIME_VALIDATE" xml:space="preserve">
+    <value>Từ ngày không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_ENDTIME_VALIDATE" xml:space="preserve">
+    <value>Đến ngày không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_PROJECT_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_SEARCH_BUDGET" xml:space="preserve">
+    <value>Số tiền nhỏ nhất</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_SEARCH_CODE_PROJECT" xml:space="preserve">
+    <value>Mã dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_SEARCH_ENDTIME" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_SEARCH_NAME_PROJECT" xml:space="preserve">
+    <value>Tên dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_SEARCH_NAME_PROJECT_TYPE" xml:space="preserve">
+    <value>Loại dự án</value>
+  </data>
+  <data name="PROJECT_CURD_LBL_SEARCH_STARTTIME" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="PROJECT_CURD_MANDATORY" xml:space="preserve">
+    <value>Bắt buộc</value>
+  </data>
+  <data name="PROJECT_CURD_PROJECT_ATTR_CODE" xml:space="preserve">
+    <value>Mã thuộc tính</value>
+  </data>
+  <data name="PROJECT_CURD_PROJECT_ATTR_NAME" xml:space="preserve">
+    <value>Tên thuộc tính</value>
+  </data>
+  <data name="PROJECT_CURD_PROJECT_ATTR_VALUE" xml:space="preserve">
+    <value>Giá trị</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CARDJOB_LIST_COL_CARDCODE" xml:space="preserve">
+    <value>Mã thẻ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CARDJOB_LIST_COL_CARDNAME" xml:space="preserve">
+    <value>Tên thẻ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CARDJOB_LIST_COL_PROJECTCODE" xml:space="preserve">
+    <value>Mã dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CARD_JOB" xml:space="preserve">
+    <value>Hoạt động công việc</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_CASE_WORKER" xml:space="preserve">
+    <value>NV phụ trách</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_CURD_COMBO_CUSCODE" xml:space="preserve">
+    <value>Chọn khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_CURD_CUSCODE" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_CURD_LBL_CUSCODE" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_CURD_VALIDATE_CUSCODE" xml:space="preserve">
+    <value>Khách hàng không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LBL_CUSCODE" xml:space="preserve">
+    <value>Mã khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LBL_FROMDATE" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LBL_TODATE" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LIST_COL_ADDRESS" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LIST_COL_CUSCODE" xml:space="preserve">
+    <value>Mã khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LIST_COL_CUSNAME" xml:space="preserve">
+    <value>Tên khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_LIST_COL_EMAIL" xml:space="preserve">
+    <value>Thư điện tử</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_TITLE_ADD_CUSTOMER" xml:space="preserve">
+    <value>Thêm mới khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_TXT_CUSCODE" xml:space="preserve">
+    <value>Mã khách hàng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_TXT_FROMDATE" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_TXT_TODATE" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_CUSTOMER_VALIDATE_CHARACTERS_SPACE" xml:space="preserve">
+    <value>Mã khách hàng không chứa kí tự đặc biệt hoặc khoảng trắng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE" xml:space="preserve">
+    <value>Tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_COMBO_REPOSCODE" xml:space="preserve">
+    <value>Chọn kho dữ liệu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_COMBO_TAGS" xml:space="preserve">
+    <value>Chọn nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_LBL_FILECODE" xml:space="preserve">
+    <value>Mã tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_LBL_FILENAME" xml:space="preserve">
+    <value>Tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_LBL_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_LBL_REPOSCODE" xml:space="preserve">
+    <value>Kho dữ liệu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_LBL_TAGS" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_TXT_FILECODE" xml:space="preserve">
+    <value>Nhập mã tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_TXT_FILENAME" xml:space="preserve">
+    <value>Chọn tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_TXT_NOTE" xml:space="preserve">
+    <value>Nhập ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_VALIDATE_FILENAME" xml:space="preserve">
+    <value>Vui lòng chọn tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_CURD_VALIDATE_REPOSCODE" xml:space="preserve">
+    <value>Vui lòng chọn kho lưu trữ dữ liệu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_FORM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LBL_CREATETIME" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LBL_FILENAME" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LBL_UPDATETIME" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_CREATETIME" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_FILENAME" xml:space="preserve">
+    <value>Tên tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_REPOSNAME" xml:space="preserve">
+    <value>Kho dữ liệu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_TAGS" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_TYPE_FILE" xml:space="preserve">
+    <value>Loại tệp</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_LIST_COL_URL" xml:space="preserve">
+    <value>Xem trực tuyến</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_NAME" xml:space="preserve">
+    <value>Tên tệp</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_NUMBER_DOCUMENT" xml:space="preserve">
+    <value>Số văn bản</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_TITLE_ADD_FILE" xml:space="preserve">
+    <value>Thêm mới tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_TITLE_EDIT_FILE" xml:space="preserve">
+    <value>Chỉnh sửa tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_TO_DATE" xml:space="preserve">
+    <value>Đến Ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_TXT_CREATETIME" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_TXT_FILENAME" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_TXT_UPDATETIME" xml:space="preserve">
+    <value>Ngày sửa</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_VALIDATE_CHARACTERS_SPACE" xml:space="preserve">
+    <value>Mã tệp tin không chứa kí tự đặc biệt hoặc khoảng trắng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_FILE_VALIDATE_CLICK_FILE" xml:space="preserve">
+    <value>Vui lòng chọn trước tệp tin</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER" xml:space="preserve">
+    <value>Thành viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_CURD_COMBO_MEMBERCODE" xml:space="preserve">
+    <value>Chọn nhân viên tham gia dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_CURD_LBL_MEMBERCODE" xml:space="preserve">
+    <value>Nhân viên tham gia dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_CURD_LBL_POSITION" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_CURD_MEMBERCODE" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_CURD_TXT_POSITION" xml:space="preserve">
+    <value>Nhập vị trí</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_CURD_VALIDATE_MEMBERCODE" xml:space="preserve">
+    <value>Nhân viên không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_LBL_FULLNAME" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_LBL_POSITION" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_LIST_COL_EMAIL" xml:space="preserve">
+    <value>Thư điện tử</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_LIST_COL_FULLNAME" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_LIST_COL_POSITION" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_LIST_COL_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_TITLE_ADD_MEMBER" xml:space="preserve">
+    <value>Thêm thành viên mới cho dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_TITLE_EDIT_MEMBER" xml:space="preserve">
+    <value>Chỉnh sửa thành viên tham gia dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_TXT_FULLNAME" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_MEMBER_TXT_POSITION" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_COMBO_TAGS" xml:space="preserve">
+    <value>Chọn nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_COMBO_TAGS" xml:space="preserve">
+    <value>Chọn nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_LBL_NOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_LBL_TAGS" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_LBL_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_TXT_NOTE" xml:space="preserve">
+    <value>Nhập ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_TXT_TITLE" xml:space="preserve">
+    <value>Nhập tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_CURD_VALIDATE_TAGS" xml:space="preserve">
+    <value>Nhân viên không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_LIST_COL_ADDRESS" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_LIST_COL_CREATETIME" xml:space="preserve">
+    <value>Thời gian tạo</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_LIST_COL_NOTE" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_LIST_COL_TAGS" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_LIST_COL_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_TITLE_ADD_NOTE" xml:space="preserve">
+    <value>Thêm mới ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_TITLE_EDIT_NOTE" xml:space="preserve">
+    <value>Chỉnh sửa ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_NOTE_TXT_TITLE" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT" xml:space="preserve">
+    <value>Hoạt động tài chính</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_COMBO_PAYTYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_CURRENCY" xml:space="preserve">
+    <value>Loại tiền tệ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_PAYER" xml:space="preserve">
+    <value>Người thu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_PAYOFWAY" xml:space="preserve">
+    <value>Hình thức thanh toán</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_PAYTYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_RECEIPER" xml:space="preserve">
+    <value>Người thanh toán</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_CURRENCY" xml:space="preserve">
+    <value>Loại tiền tệ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAID" xml:space="preserve">
+    <value>Đã thanh toán hết</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYCODE" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYER" xml:space="preserve">
+    <value>Người thu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNAME" xml:space="preserve">
+    <value>Tên phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNEXTMONEY" xml:space="preserve">
+    <value>Số tiền thanh toán sau</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNEXTTIME" xml:space="preserve">
+    <value>Lần thanh toán sau</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYOFWAY" xml:space="preserve">
+    <value>Hình thức thanh toán</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYREST" xml:space="preserve">
+    <value>Số tiền còn lại</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYTYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_RECEIPER" xml:space="preserve">
+    <value>Người thanh toán</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_TOTAL" xml:space="preserve">
+    <value>Tổng thanh toán</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_LBL_TOTALSPEND" xml:space="preserve">
+    <value>Tổng tiền đã chi</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYCODE" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNAME" xml:space="preserve">
+    <value>Tên phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNEXTMONEY" xml:space="preserve">
+    <value>Số tiền thanh toán sau</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNEXTTIME" xml:space="preserve">
+    <value>Lần thanh toán sau</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNOTE" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYREST" xml:space="preserve">
+    <value>Số tiền còn lại</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_TOTAL" xml:space="preserve">
+    <value>Tổng thanh toán</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_TXT_TOTALSPEND" xml:space="preserve">
+    <value>Tổng tiền đã chi</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_CURRENCY" xml:space="preserve">
+    <value>Loại tiền không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYER" xml:space="preserve">
+    <value>Người thu không đươc để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYOFWAY" xml:space="preserve">
+    <value>Hình thức thanh toán không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYTYPE" xml:space="preserve">
+    <value>Loại phiếu không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_RECEIPER" xml:space="preserve">
+    <value>Người thanh toán không đươc để trống</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_LIST_COL_CREATETIME" xml:space="preserve">
+    <value>Ngày thu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_LIST_COL_PAYCODE" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_LIST_COL_PAYTITLE" xml:space="preserve">
+    <value>Tên phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_LIST_COL_PAYTYPE" xml:space="preserve">
+    <value>Loại phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_LIST_COL_TOTAL" xml:space="preserve">
+    <value>Tổng tiền</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_TITLE_ADD_PAYMENT" xml:space="preserve">
+    <value>Thêm mới phiếu thu - chi</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_TITLE_EDIT_PAYMENT" xml:space="preserve">
+    <value>Chỉnh sửa phiếu thu - chi</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_TXT_FROMDATE" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_TXT_PAYTITLE" xml:space="preserve">
+    <value>Tên phiếu</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_TXT_TODATE" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_PAYMENT_VALIDATE_CHARACTERS_SPACE" xml:space="preserve">
+    <value>Mã phiếu thu - chi không chứa kí tự đặc biệt hoặc khoảng trắng</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_ADD" xml:space="preserve">
+    <value>Thêm nhà cung cấp</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_CONTACT_NAME" xml:space="preserve">
+    <value>Mã nhà cung cấp</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_EXIT_CODE" xml:space="preserve">
+    <value>Mã</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_FROM_DATE" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_LEVEL" xml:space="preserve">
+    <value>Trình độ</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_NAME" xml:space="preserve">
+    <value>Nhà cung cấp</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_TO_DATE" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_SUPPLIER_VALUE" xml:space="preserve">
+    <value>Giá trị</value>
+  </data>
+  <data name="PROJECT_CURD_TAB_TEAM_CURD_TXT_TEAMCODE" xml:space="preserve">
+    <value>Nhập team</value>
+  </data>
+  <data name="PROJECT_CURD_TITLE_ADD_PROJECT" xml:space="preserve">
+    <value>Thêm mới dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TITLE_EDIT_PROJECT" xml:space="preserve">
+    <value>Chỉnh sửa dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_BUDGET" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_CODE_PROJECT" xml:space="preserve">
+    <value>Mã dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_ENDTIME" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_MODE" xml:space="preserve">
+    <value>Thiết lập</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_NAME_PROJECT" xml:space="preserve">
+    <value>Tên dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_PRIORITY" xml:space="preserve">
+    <value>Thiết lập ưu tiên</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_PROJECT_STARTTIME" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_SEARCH_BUDGET" xml:space="preserve">
+    <value>Số tiền nhỏ nhất</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_SEARCH_CODE_PROJECT" xml:space="preserve">
+    <value>Mã dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_SEARCH_ENDTIME" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_SEARCH_NAME_PROJECT" xml:space="preserve">
+    <value>Tên dự án</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_SEARCH_STARTTIME" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="PROJECT_CURD_TXT_TAB_CUSTOMER_CASE_WORKER" xml:space="preserve">
+    <value>Nhận viên phụ trách</value>
+  </data>
+  <data name="PROJECT_CURD_VALIDATE_CHARACTERS_SPACE" xml:space="preserve">
+    <value>Mã dự án không chứa kí tự đặc biệt hoặc khoảng trắng</value>
+  </data>
+  <data name="PROJECT_CURD_VALIDATE_CURRENCY" xml:space="preserve">
+    <value>Đơn vị không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_VALIDATE_STATUS" xml:space="preserve">
+    <value>Trạng thái không được để trống</value>
+  </data>
+  <data name="PROJECT_CURD_VALIDATE_TAB_CLICK" xml:space="preserve">
+    <value>Vui lòng tạo trước thông tin chính của dự án</value>
+  </data>
+  <data name="PROJECT_LBL_PROJECT" xml:space="preserve">
+    <value>Dự án/Đấu thầu</value>
+  </data>
+  <data name="PROJECT_LINK_HOME" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="PROJECT_LINK_PROJECT" xml:space="preserve">
+    <value>Dự án/Đấu thầu</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_BUDGET" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_CODE_PROJECT" xml:space="preserve">
+    <value>Mã dự án</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_CURRENCY" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_ENDTIME" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_NAME_PROJECT" xml:space="preserve">
+    <value>Tên dự án</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_PROGRESS" xml:space="preserve">
+    <value>Tiến độ</value>
+  </data>
+  <data name="PROJECT_LIST_COL_PROJECT_STARTTIME" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_BEGIN_TIME" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_BOARD_NAME" xml:space="preserve">
+    <value>Tên bảng</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_CARD_CODE" xml:space="preserve">
+    <value>Mã việc</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_CARD_NAME" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_COMPLATED" xml:space="preserve">
+    <value>Tiến độ</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_COST" xml:space="preserve">
+    <value>Kinh phí</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_END_TIME" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_LIST_NAME" xml:space="preserve">
+    <value>Tên danh sách</value>
+  </data>
+  <data name="PROJECT_LIST_COL_TAB_CARDJOB_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="PROJECT_MSG_ADD_ERR" xml:space="preserve">
+    <value>Có lỗi khi thêm dự án !</value>
+  </data>
+  <data name="PROJECT_MSG_ADD_FILE_SUCCESS" xml:space="preserve">
+    <value>Thêm tệp tin thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_ADD_MEMBER_SUCCESS" xml:space="preserve">
+    <value>Thêm thành viên cho dự án thành công</value>
+  </data>
+  <data name="PROJECT_MSG_ADD_NOTE_PROJECT" xml:space="preserve">
+    <value>Thêm ghi chú cho dự án thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_ADD_PROJECT" xml:space="preserve">
+    <value>Thêm dự án thành công</value>
+  </data>
+  <data name="PROJECT_MSG_ADD_PROPETIES" xml:space="preserve">
+    <value>Thêm thuộc tính thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_CJ_DEAD_LINE" xml:space="preserve">
+    <value>Ngày hết hạn yêu cầu bắt buộc</value>
+  </data>
+  <data name="PROJECT_MSG_CJ_WEIGHT_NUM_0" xml:space="preserve">
+    <value>Trọng số lớn hơn 0</value>
+  </data>
+  <data name="PROJECT_MSG_CJ_WEIGHT_NUM_100" xml:space="preserve">
+    <value>Trọng số nhỏ hơn 100</value>
+  </data>
+  <data name="PROJECT_MSG_CODE_PROPETIES_EXIST" xml:space="preserve">
+    <value>Mã thuộc tính đã tồn tại !</value>
+  </data>
+  <data name="PROJECT_MSG_COMMENT" xml:space="preserve">
+    <value>Nhập bình luận!</value>
+  </data>
+  <data name="PROJECT_MSG_DATA_WAREHOUSE_EXIST" xml:space="preserve">
+    <value>Kho dữ liệu không tồn tại !</value>
+  </data>
+  <data name="PROJECT_MSG_DELETE_FILE_SUCCESS" xml:space="preserve">
+    <value>Xóa tệp tin thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_DELETE_MEMBER" xml:space="preserve">
+    <value>Xóa thành viên thành công</value>
+  </data>
+  <data name="PROJECT_MSG_DELETE_NOTE_SUCCESS" xml:space="preserve">
+    <value>Xóa ghi chú thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_DELETE_PROPETIES_SUCCESS" xml:space="preserve">
+    <value>Xóa thuộc tính thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_DELETE_SUCCESS" xml:space="preserve">
+    <value>Xóa dự án thành công</value>
+  </data>
+  <data name="PROJECT_MSG_EDIT_ACC_ENTRY" xml:space="preserve">
+    <value>Sửa phiếu thu-chi này?</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO" xml:space="preserve">
+    <value>Có lỗi xảy ra !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_ADD_ATRIBUTE" xml:space="preserve">
+    <value>Có lỗi khi thêm thuộc tính !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_ADD_NOTE_PROJECT" xml:space="preserve">
+    <value>Có lỗi xảy ra khi thêm ghi chú vào dự án !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_ADD_PROPETIES" xml:space="preserve">
+    <value>Có lỗi khi thêm thuộc tính !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_DELETE" xml:space="preserve">
+    <value>Có lỗi xảy ra khi xóa</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_DELETE_FILE" xml:space="preserve">
+    <value>Có lỗi xảy ra khi xóa tệp tin !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_DELETE_NOTE_SUCCESS" xml:space="preserve">
+    <value>Có lỗi xảy ra khi xóa ghi chú !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_DELETE_PROPETIES_EXIST" xml:space="preserve">
+    <value>Có lỗi khi xóa thuộc tính !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_DOWLOAD_FILE" xml:space="preserve">
+    <value>Có lỗi xảy ra khi tải tệp tin !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_FILE_CHOSE" xml:space="preserve">
+    <value>Có lỗi khi lấy tệp tin !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Có lỗi xảy ra khi cập nhật !</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_UPPDATE" xml:space="preserve">
+    <value>Có lỗi khi cập nhật dự án!</value>
+  </data>
+  <data name="PROJECT_MSG_ERRO_UPPDATE_PROPETIES" xml:space="preserve">
+    <value>Có lỗi khi cập nhật thuộc tính !</value>
+  </data>
+  <data name="PROJECT_MSG_ERR_ADD_MEMBER_PROJECT" xml:space="preserve">
+    <value>Có lỗi xảy ra khi thêm thành viên vào dự án!</value>
+  </data>
+  <data name="PROJECT_MSG_ERR_UPPDATE_MEMBER" xml:space="preserve">
+    <value>Có lỗi xảy ra khi cập nhật thành viên!</value>
+  </data>
+  <data name="PROJECT_MSG_EXIST_ATRIBUTE" xml:space="preserve">
+    <value>Không tồn tại thuộc tính !</value>
+  </data>
+  <data name="PROJECT_MSG_FILE_EXIST" xml:space="preserve">
+    <value>Tệp tin không tồn tại !</value>
+  </data>
+  <data name="PROJECT_MSG_FILE_SHARE_FILE_CODE" xml:space="preserve">
+    <value>Chưa chọn tệp tin !</value>
+  </data>
+  <data name="PROJECT_MSG_FILE_SHARE_OBJECT_CODE" xml:space="preserve">
+    <value>Chưa chọn mã đối tượng !</value>
+  </data>
+  <data name="PROJECT_MSG_FILE_SHARE_OBJECT_TYPE" xml:space="preserve">
+    <value>Chưa chọn đối tượng !</value>
+  </data>
+  <data name="PROJECT_MSG_MONEY_TOTAL_PAYMENT" xml:space="preserve">
+    <value>Số tiền thanh toán không được lớn hơn số tiền còn lại</value>
+  </data>
+  <data name="PROJECT_MSG_PROJECT_ADD" xml:space="preserve">
+    <value>Thêm thành công</value>
+  </data>
+  <data name="PROJECT_MSG_PROJECT_ERRO" xml:space="preserve">
+    <value>Có lỗi xảy ra !</value>
+  </data>
+  <data name="PROJECT_MSG_PROJECT_EXIST" xml:space="preserve">
+    <value>Dự án không tồn tại !</value>
+  </data>
+  <data name="PROJECT_MSG_PROJECT_EXIST_PROJECT" xml:space="preserve">
+    <value>Dự án đã tồn tại !</value>
+  </data>
+  <data name="PROJECT_MSG_PROPETIES_EXIST" xml:space="preserve">
+    <value>Không tồn tại thuộc tính !</value>
+  </data>
+  <data name="PROJECT_MSG_TEAM_EXIST" xml:space="preserve">
+    <value>Team đã tồn tại!</value>
+  </data>
+  <data name="PROJECT_MSG_UPDATE_NOTE_SUCCESS" xml:space="preserve">
+    <value>Cập nhập ghi chú thành công </value>
+  </data>
+  <data name="PROJECT_MSG_UPDATE_SUCCESS" xml:space="preserve">
+    <value>Cập nhật dự án thành công</value>
+  </data>
+  <data name="PROJECT_MSG_UPPDATE_MEMBER_SUCCESS" xml:space="preserve">
+    <value>Cập nhật thành viên thành công</value>
+  </data>
+  <data name="PROJECT_MSG_UPPDATE_PROPETIES" xml:space="preserve">
+    <value>Cập nhật thuộc tính thành công !</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_BOARD" xml:space="preserve">
+    <value>Vui lòng chọn bảng công việc!</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_BOARD_LIST" xml:space="preserve">
+    <value>Vui lòng chọn Bảng công việc,Danh mục công việc trước!</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_CHOSE_AMOUNT" xml:space="preserve">
+    <value>Vui lòng nhập số lượng!</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_CHOSE_PRODUCT" xml:space="preserve">
+    <value>Vui lòng chọn sản phẩm!</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_CHOSE_PRODUCT_AMOUNT" xml:space="preserve">
+    <value>Vui lòng chọn sản phẩm,số lượng!</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_MEMBER_ADD_EXIST" xml:space="preserve">
+    <value>Thành viên muốn thêm đã tồn tại trong dự án!</value>
+  </data>
+  <data name="PROJECT_MSG_VALIDATE_PROJECT_EXIST" xml:space="preserve">
+    <value>Dự án không tồn tại</value>
+  </data>
+  <data name="PROJECT_MSG_VALUDE_CODE_EXIST" xml:space="preserve">
+    <value>Mã dự án đã tồn tại</value>
+  </data>
+  <data name="PROJECT_TITLE_PROJECT" xml:space="preserve">
+    <value>Dự án</value>
+  </data>
+</root>

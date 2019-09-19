@@ -1,0 +1,299 @@
+﻿<style>
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-edit icon-edit "></i>
+    <div class="modal-title custom-title " id="modal-title">{{'CONTRACT_CURD_TITLE_EDIT_CONTRACT' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form class="form-horizontal userFormAreaHeader" name="addform" method="post" ng-validate="validationOptions">
+            <div class="form-body pt-0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_CONTRACT_CODE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.ContractCode" name="ContractCode" type="text" placeholder="{{'CONTRACT_CURD_TXT_CONTRACT_CODE' | translate}}..." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_CONTRACT_NAME' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.Title" type="text" name="Title" placeholder="{{'CONTRACT_CURD_TXT_CONTRACT_NAME' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorContractType}">
+                            <div class="col-md-5">
+                                <i class="fa fa-tag"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_CONTRACT_TYPE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.ContractType" theme="bootstrap" on-select="changleSelect('ContractType')">
+                                        <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_CONTRACT_TYPE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListCommon | filter:{Group:'CONTRACT_TYPE'} | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.ContractType=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorContractType" class="label-color validation-message">
+                                    {{'CONTRACT_CURD_VALIDATE_CONTRACT_TYPE' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-calendar"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_CONTRACT_DATE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class='input-group date' id='datefrom'>
+                                    <input type='text' class="form-control input-date" ng-model="model.ContractDate" placeholder="{{'CONTRACT_CURD_TXT_CONTRACT_DATE' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-sort-numeric-asc"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_CONTRACT_NO' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.ContractNo" type="text" placeholder="{{'CONTRACT_CURD_TXT_CONTRACT_NO' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-lock"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_DURATION' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.Duration" type="text" placeholder="{{'CONTRACT_CURD_TXT_DURATION' | translate}}..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-codepen"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_VERSION' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.Version" type="text" placeholder="{{'CONTRACT_CURD_TXT_VERSION' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorStatus}">
+                            <div class="col-md-5">
+                                <i class="fa fa-flag"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_STATUS' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.Status" theme="bootstrap" on-select="changleSelect('Status')">
+                                        <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_STATUS' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListCommon | filter:{Group:'CONTRACT_STATUS'} | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.Status=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorStatus" class="label-color validation-message">
+                                    {{'CONTRACT_CURD_VALIDATE_STATUS' | translate}}!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-user-secret"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_SIGNER' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.Signer" type="text" placeholder="{{'CONTRACT_CURD_TXT_SIGNER' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorMainService}">
+                            <div class="col-md-5">
+                                <i class="fa fa-server"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_MAIN_SERVICE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.MainService" theme="bootstrap" on-select="changleSelect('MainService')">
+                                        <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_MAIN_SERVICE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListCommon | filter:{Group:'MAIN_SERVICE'}  | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.MainService=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorMainService" class="label-color validation-message">
+                                    {{'CONTRACT_CURD_VALIDATE_MAIN_SERVICE' | translate}}!
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-money"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_BUDGET' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" disabled style="font-weight: bold" ng-model="model.Budget" type="text" num-thousand='true' awnum num-int='21' placeholder="{{'CONTRACT_CURD_TXT_BUDGET' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorCurrency}">
+                            <div class="col-md-5">
+                                <i class="fa fa-money"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_CURRENCY' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.Currency" theme="bootstrap" on-select="changleSelect('Currency')">
+                                        <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_CURRENCY' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in ListCommon | filter:{Group:'CURRENCY_TYPE'}  | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.Currency=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorCurrency" class="label-color validation-message">
+                                    {{'CONTRACT_CURD_VALIDATE_CURRENCY' | translate}}!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-copy"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_LOCATION_HARD_COPY' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.LocationHardCopy" type="text" placeholder="{{'CONTRACT_CURD_TXT_LOCATION_HARD_COPY' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorCusCode}">
+                            <div class="col-md-5">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label require">{{'CONTRACT_CURD_LBL_CUSTOMER_CODE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CusCode" theme="bootstrap" on-select="changleSelect('CusCode')">
+                                        <ui-select-match placeholder="{{'CONTRACT_CURD_COMBO_CUSTOMER_CODE' | translate}}...">{{$select.selected.Code}} - {{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in Customers | filter: $select.search">
+                                            {{x.Code}} - {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CusCode=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+
+                                <span ng-show="errorCusCode" class="label-color validation-message">
+                                    {{'CONTRACT_CURD_VALIDATE_CUSTOMER_CODE' | translate}}!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-tags"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_TAGS' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" ng-model="model.Tags" type="text" placeholder="{{'CONTRACT_CURD_TXT_TAGS' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <i class="fa fa-code-fork"></i>
+                                <label class="control-label">{{'CONTRACT_CURD_LBL_DESCRIPTION' | translate}}</label>
+                            </div>
+                            <div class="col-md-7">
+                                <textarea style="height: 110px" class="form-control" ng-model="model.Describe" placeholder="{{'CONTRACT_CURD_TXT_DESCRIPTION' | translate}}..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="pull-right mr15 user-mt">
+                        <a ng-click="submit()" class="btn btn-green" href="javascript:;">
+                            <i class="fas fa-save"></i>&nbsp;{{'COM_BTN_SAVE' | translate}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row ">
+            <div class="col-md-12">
+                <uib-tabset>
+                    <uib-tab index="0" heading="{{'CONTRACT_CURD_TAB_DETAIL' | translate}}" >
+                        <div disable="tests" ng-include="'../views/admin/contract/contractTabDetail.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="1" heading="{{'CONTRACT_CURD_TAB_NOTE' | translate}}" >
+                        <div ng-include="'../views/admin/contract/contractTabNote.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="2" heading="{{'CONTRACT_CURD_TAB_NOTIFICATION' | translate}}">
+                        <div ng-include="'../views/admin/contract/contractTabNotification.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="3" heading="{{'CONTRACT_CURD_TAB_FILE' | translate}}">
+                        <div ng-include="'../views/admin/contract/contractTabFile.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="4" heading="{{'CONTRACT_CURD_TAB_ATTRIBUTE' | translate}}">
+                        <div ng-include="'../views/admin/contract/contractTabAttribute.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="5" heading="{{'CONTRACT_CURD_TAB_OTHER' | translate}}" >
+                        <div ng-include="'../views/admin/contract/contractTabOther.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="6" heading="{{'CONTRACT_CURD_TAB_MEMBER' | translate}}" >
+                        <div ng-include="'../views/admin/contract/contractTabMembers.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="7" heading="{{'CONTRACT_CURD_TAB_CARD_JOB' | translate}}" >
+                        <div ng-include="'../views/admin/contract/contractTabCardJob.html'"></div>
+                    </uib-tab>
+                    <uib-tab index="8" heading="{{'CONTRACT_CURD_TAB_PAYMENT' | translate}}">
+                        <div ng-include="'../views/admin/contract/contractTabPayment.html'"></div>
+                    </uib-tab>
+                    <uib style="float: right;">
+                        <a ng-click="addCardJob()" class="btn btn-card" style="padding: 7px 5px 7px !important;">
+                            <span class="mr5"><img src="/images/cardJob/WHITE.png" style="height: 17px;width: 13px;" />{{'CONTRACT_CURD_BTN_ADD_CARD_JOB' | translate}}</span>
+                        </a>
+                    </uib>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+</div>
+

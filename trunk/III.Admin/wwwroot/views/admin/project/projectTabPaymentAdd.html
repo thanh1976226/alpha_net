@@ -1,0 +1,240 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">{{'PROJECT_CURD_TAB_PAYMENT_TITLE_ADD_PAYMENT' | translate}}</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addformPayment" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptionsPayment">
+            <div class="form-body pt-0 pb-0">
+                <div class="row mt-action-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-barcode" aria-hidden="true"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYCODE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <input type="text" class="form-control" ng-model="model.PayCode" name="PayCode" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYCODE' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNAME' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <input class="form-control" ng-model="model.PayTitle" name="PayTitle" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNAME' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorPayType}">
+                            <div class="col-md-5 ">
+                                <i class="fas fa-file-alt" aria-hidden="true"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYTYPE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <ui-select tagging ng-model="model.PayType" ng-change="selectpayment(model.PayType)" theme="bootstrap" on-select="changleSelect('PayType')">
+                                    <ui-select-match placeholder="--{{'PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_PAYTYPE' | translate}}--">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Value as x in PaymentType | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorPayType" class="label-color validation-message">
+                                    {{'PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYTYPE' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <!--<div class="form-group" ng-class="{ 'has-error': errorPayObjType}">
+                            <div class="col-md-5">
+                                <i class="fa fa-mail-reply" aria-hidden="true"></i>
+                                <label class="control-label require">Loại đối tượng</label>
+                            </div>
+                            <div class="col-md-7">
+                                <ui-select tagging ng-model="model.PayObjType" theme="bootstrap" ng-change="selectObj(model.PayObjType)" on-select="changleSelect('PayObjType')">
+                                    <ui-select-match placeholder="--Chọn đối tượng--">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Code as x in PaymentObjType | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorPayObjType" class="label-color validation-message">
+                                    Loại đối tượng không được để trống
+                                </span>
+                            </div>
+                        </div>-->
+                        <!--<div class="form-group" ng-class="{ 'has-error': errorPayObjId}">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <label class="control-label require">Tên đối tượng</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <ui-select tagging ng-model="model.PayObjId" theme="bootstrap" ng-change="selectObjName(model.PayObjId)" on-select="changleSelect('PayObjId')">
+                                    <ui-select-match placeholder="--Chọn tên đối tượng--">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Code as x in ObjectName | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorPayObjId" class="label-color validation-message">
+                                    Tên đối tượng không được để trống
+                                </span>
+                            </div>
+                        </div>-->
+                        <div class="form-group" ng-show="model1.Total!=''">
+                            <div class="col-md-5 ">
+                                <i class="far fa-money-bill-alt" aria-hidden="true"></i>
+                                <label class="control-label">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYREST' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <input class="form-control" ng-model="model1.Total" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYREST' | translate}}" num-thousand='true' awnum num-int='21' disabled />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="model1.check">
+                            <div class="col-md-5 ">
+                                <i class="far fa-money-bill-alt" aria-hidden="true"></i>
+                                <label class="control-label">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_TOTALSPEND' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <input class="form-control" ng-model="model1.Total" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_TOTALSPEND' | translate}}" num-thousand='true' awnum num-int='21' disabled />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="model1.Paid">
+                            <div class="col-md-offset-4 col-md-8">
+                                <div class="checkbox-default pl5 pb10">
+                                    <input id="checkbox5" type="checkbox" ng-model="model1.PaymentCompleted" disabled>
+                                    <label class="bold" style="color:#02be45" for="checkbox5">
+                                        {{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAID' | translate}}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5 ">
+                                <i class="far fa-money-bill-alt" aria-hidden="true"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_TOTAL' | translate}} </label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <input type="text" class="form-control" ng-model="model.MoneyTotal" name="MoneyTotal" id="MoneyTotal" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_TOTAL' | translate}}" num-thousand='true' awnum num-int='21' />
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error': errorCurrency}">
+                            <div class="col-md-5 ">
+                                <i class="far fa-money-bill-alt" aria-hidden="true"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_CURRENCY' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <ui-select tagging ng-model="model.Currency" theme="bootstrap" on-select="changleSelect('Currency')">
+                                    <ui-select-match placeholder="--{{'PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_CURRENCY' | translate}}--">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Code as x in UnitData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorCurrency" class="label-color validation-message">
+                                    {{'PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_CURRENCY' | translate}}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error': errorPayOfWay}">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-mail-reply"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYOFWAY' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <ui-select tagging ng-model="model.PayOfWay" theme="bootstrap" on-select="changleSelect('PayOfWay')">
+                                    <ui-select-match placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_PAYOFWAY' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Code as x in PaymentTypeData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorPayOfWay" class="label-color validation-message">
+                                    {{'PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYOFWAY' | translate}}
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" ng-class="{ 'has-error': errorPayerId}">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYER' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <ui-select tagging ng-model="model.PayerId" theme="bootstrap" on-select="changleSelect('PayerId')">
+                                    <ui-select-match placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_PAYER' | translate}}...">{{$select.selected.UserName}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in PaymentUserData | filter: $select.search">
+                                        {{x.UserName}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorPayerId" class="label-color validation-message">
+                                    {{'PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_PAYER' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': errorReceiperId}">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label require">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_RECEIPER' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <ui-select tagging ng-model="model.ReceiperId" theme="bootstrap" on-select="changleSelect('ReceiperId')">
+                                    <ui-select-match placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_COMBO_RECEIPER' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                    <ui-select-choices repeat="x.Id as x in PaymentObjData | filter: $select.search">
+                                        {{x.Name}}
+                                    </ui-select-choices>
+                                </ui-select>
+                                <span ng-show="errorReceiperId" class="label-color validation-message">
+                                    {{'PROJECT_CURD_TAB_PAYMENT_CURD_VALIDATE_RECEIPER' | translate}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5 ">
+                                <i class="fa fa-calendar"></i>
+                                <label class="control-label">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNEXTTIME' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <div class='input-group date' id='paymentNext'>
+                                    <input type='text' class="form-control input-date" ng-model="model.PayNextTime" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNEXTTIME' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5 ">
+                                <i class="far fa-money-bill-alt"></i>
+                                <label class="control-label">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNEXTMONEY' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <input type="text" class="form-control" ng-model="model.PayNextMoney" name="PayNextMoney" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNEXTMONEY' | translate}}" num-thousand='true' awnum num-int='21' />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5 ">
+                                <i class="fas fa-comment"></i>
+                                <label class="control-label">{{'PROJECT_CURD_TAB_PAYMENT_CURD_LBL_PAYNOTE' | translate}}</label>
+                            </div>
+                            <div class="col-md-7 ">
+                                <textarea rows="6" class="form-control" ng-model="model.PayNote" type="text" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_CURD_TXT_PAYNOTE' | translate}}..." autocomplete="off"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>
+</div>
+
+
+
+

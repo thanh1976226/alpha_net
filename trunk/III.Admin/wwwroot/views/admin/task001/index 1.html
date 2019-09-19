@@ -1,0 +1,351 @@
+﻿<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../libary/css/site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <style>
+        .form-group select, .input-group select, .form-group textarea, .input-group input {
+            font-size: 12px;
+            color: #b2b2b2;
+        }
+
+        .shadow {
+            border-radius: 4px !important;
+            background-color: #E63C5F;
+            color: #fff !important;
+            background: #E63C5F;
+            background-image: none;
+            border-color: #E63C5F;
+            box-shadow: 0px 5px 10px 2px rgba(255, 69, 121, 0.2) !important;
+        }
+
+        .fl-l-ma-ce10-ma-lf10-cl-red {
+            float: left;
+            margin-center: 10px;
+            margin-left: 10px;
+            color: red;
+            font-size: 30px;
+            background: white;
+            border-radius: 100%;
+        }
+
+        .fl-r-ma-ce10-ma-lf10-cl-red {
+            float: right;
+            color: #E63C5F;
+            font-size: 30px;
+        }
+
+        .modal-header {
+            padding: 3px!important;
+            border-bottom: none;
+            background: #0984e3;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .modal-footer {
+            margin-top: -50px;
+            margin-bottom: -15px;
+        }
+
+        .btnedit {
+            border-color: silver;
+            background-color: #668cff;
+            box-shadow: 0px 5px 10px 2px #ccd9ff !important;
+        }
+
+        .btnadd {
+            border-radius: 4px !important;
+            border-color: silver;
+            width: 100px;
+            text-align: center;
+            height: 34px;
+        }
+
+        button.close {
+            opacity: 9;
+        }
+
+        .del {
+            background: white;
+            height: 34px;
+            border-top-left-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif !important;
+            font-size: 12px;
+        }
+
+        .icon-remove {
+            display: block;
+            opacity: 1;
+            width: 25px;
+            height: 25px;
+            float: right;
+            margin-top: 3;
+        }
+
+        .modal_header {
+            margin-left: -8;
+            margin-right: 2;
+        }
+
+        .modal_title {
+            font-size: 13px;
+            line-height: 2.5;
+        }
+
+        .h34 {
+            height: 34PX !important;
+        }
+
+        .m_l_10 {
+            margin-left: 10px;
+        }
+
+        .c999999 {
+            color: #999999;
+        }
+
+        .m10 {
+            margin: 10px;
+        }
+
+        .p0 {
+            padding: 0px;
+        }
+
+        .table-toolbar {
+            padding: 0px;
+            background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+            border-radius: 4px !important;
+            border: 0.5px solid #e9dada;
+            margin-bottom: 15px !important;
+            margin-left: 25px !important;
+            margin-right: 25px !important;
+            padding-top: 40px;
+            box-shadow: 0px 5px 10px 2px rgba(127, 143, 166,0.2) !important;
+            padding-bottom: 5px;
+            padding-top: 30px;
+            margin-top:-7px;
+        }
+
+        .mrr0-mrb5 {
+            margin-right: 0px !important;
+            margin-bottom: 5px;
+        }
+
+        .mrt-10_mrl-4 {
+            margin-top: -30px;
+            margin-left: -4px
+        }
+
+        .t-a-l {
+            text-align: left !important;
+        }
+
+        .mrr10 {
+            margin-right: 10px !important;
+        }
+
+        .b-r-4 {
+            border-radius: 4px !important;
+        }
+
+        .b-n {
+            border: none;
+        }
+
+        .mr11 {
+            margin: 11px;
+        }
+
+        .mrr38 {
+            margin-right: 38px;
+        }
+
+        .btn-blue {
+            background-color: #55A8FD;
+            color: white !important;
+            -webkit-box-shadow: 0 5px 10px 0 rgba(230,60,95,0.45) !important;
+            box-shadow: 0 5px 10px 0 rgba(85,168,253,0.45) !important;
+            height: 36px;
+            padding: 5px 10px;
+            min-width: 100px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn-red {
+            background-color: #E63C5F !important;
+            color: white !important;
+            -webkit-box-shadow: 0 5px 10px 0 rgba(230,60,95,0.45) !important;
+            box-shadow: 0 5px 10px 0 rgba(230,60,95,0.45) !important;
+            height: 36px;
+            padding: 5px 10px;
+            min-width: 100px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .b-t-n {
+            border-top: none;
+        }
+
+        .text_area {
+            resize: none;
+        }
+
+        .mrt0 {
+            margin-top: 0px;
+        }
+
+        .btn-grey {
+            height: 36px;
+            padding: 5px 10px;
+            min-width: 100px;
+            text-align: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .mrl10 {
+            margin-left: 10px !important;
+        }
+
+        .labelbodergroup {
+            margin-left: 55px;
+            margin-bottom: -10px;
+            font-weight: 700;
+            background: linear-gradient(to bottom,#f2eee6,#FBFCFC );
+            border: 0.5px solid #e9dada;
+            border-radius: 4px;
+            font-size: 11px;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-top: 3px !important;
+            padding-bottom: 3px !important;
+        }
+
+        .modal-body {
+            padding: 3px !important;
+        }
+
+        .mrt10 {
+            margin-top: 10px;
+        }
+
+        .mrr0 {
+            margin-right: 0px !important;
+        }
+
+        .pr0 {
+            padding-right: 0px !important;
+        }
+
+        .pl0 {
+            padding-left: 0px !important;
+        }
+        .modal-80 {
+            width: 50%;
+        }
+        .modal-footer {
+            padding-bottom: 5px !important;
+        }
+        .mrr5{
+            margin-right:5px;
+        }
+        .mrt35{
+
+            margin-top:35px;
+        }
+        .modal-content {
+            border-radius:4px;
+        }
+        .brl {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px; 
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .nobrl {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .form .form-bordered .form-group {
+            border: 0px!important;
+            margin-left: 5px;
+        }
+            .form .form-bordered .form-group > div{
+                border:0px;
+
+            }
+        .modal .modal-header {
+            border-bottom: 0px;
+        }
+        textarea.form-control {
+            height: 90px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br />
+
+
+        <div class="row h34">
+
+            <div class="col-md-2 h34 m_l_10">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Nhập tên..." ng-model="model.Key" name="Key" ng-change="reload()" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.Key4 = '';reload();" class="btn btn-default no-shadow del">
+                            <span class="glyphicon glyphicon-remove c999999"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <!--
+                <div class="col-md-3">
+                    <div class="input-group" >
+
+                        <ui-select ng-model="model.Key4" ng-change="reload()" class="" style="width: 170PX;border-bottom-right-radius:0px !important; border-top-right-radius:0px !important">
+                            <ui-select-match placeholder="Kiểu....">{{$select.selected.value}}</ui-select-match>
+                            <ui-select-choices repeat="x.id as x in treedataCoursetype | filter:$select.value| filter:$select.search">
+                                {{x.value}}
+                            </ui-select-choices>
+                        </ui-select>
+
+
+                    </div>
+
+                </div>
+            -->
+            <div class="col-md-3 pull-right">
+                <button type="submit" class="btn btn-blue" ng-click="submit()" ng-show="enableadd"><i class="fas fa-search"></i> Tìm kiếm</button>
+                <button type="submit" class="btn btn-grey" ng-click="edit()" ng-show="enableedit">Hủy bỏ</button>
+            </div>
+
+
+        </div>
+        <br />
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-blue mrl10 " data-toggle="modal" data-target="#myModal" ng-click="add()"><i class="fas fa-search"></i>&nbsp &nbspQuản lý trình độ</button>
+
+
+    </div>
+    <table class="table dataTable table-bordered table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblData" style="width:100%"></table>
+</body>

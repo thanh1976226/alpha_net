@@ -1,0 +1,133 @@
+﻿<style type="text/css">
+    .ui-select-match-close {
+        background-image: none;
+    }
+
+    .btn-system {
+        background-color: #37bc9b;
+        color: #ffffff;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+        .btn-system:hover {
+            color: #428bca;
+        }
+</style>
+<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <span class="modal-title" id="modal-title"> Thêm Extra Field</span>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body" style="padding: 10px;">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <input class="form-control pTip-top-left-alt" data-val="true" data-val-required="Tên không được để trống" id="Title" name="name" placeholder="Tên..." type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Group</label>
+                    </div>
+                    <div style="padding:0" class="col-md-8">
+                        <div class='input-group'>
+                            <div class="col-md-7">
+                                <select class="form-control select2-single" data-val="true" data-val-number="The field Group must be a number." id="Group" name="Group">
+                                    <option value="">--- Nhóm mở rộng ---</option>
+                                    <option value="1">Thủ tục h&#224;nh ch&#237;nh</option>
+                                    <option value="2">Văn bản quản l&#253;, chỉ đạo, hướng dẫn</option>
+                                    <option value="3">Quản l&#253; Slide</option>
+                                    <option value="4">Quản l&#253; Banner</option>
+                                    <option value="5">Quản l&#253; Link li&#234;n kết</option>
+                                    <option value="6">Quản l&#253; Untilities</option>
+                                    <option value="7">Quản l&#253; Video</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <input class="form-control pTip-top-left-alt" data-val="true" data-val-required="Tên không được để trống" id="Title" name="name" placeholder="Tên nhóm..." type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Type</label>
+                    </div>
+                    <div style="padding:0" class="col-md-8">
+                        <div class='input-group'>
+                            <div class="col-md-7">
+                                <select class="form-control" id="Type" name="Type">
+                                    <option value="">--- Loại mở rộng---</option>
+                                    <option value="TextField">Text Field</option>
+                                    <option value="Textarea">Textarea</option>
+                                    <option value="Select">Drop-down selection</option>
+                                    <option value="MultipleSelect">Multi-select list</option>
+                                    <option value="Radio">Radio buttons</option>
+                                    <option value="Checkbox">Checkbox buttons</option>
+                                    <option value="Label">Label</option>
+                                    <option value="Link">Link</option>
+                                    <option value="Date">Date</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <input class="form-control pTip-top-left-alt" data-val="true" data-val-required="Tên không được để trống" id="Title" name="name" placeholder="Săp xếp..." type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label class="control-label require">Published</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class='input-group'>
+                            <div class="bs-component">
+                                <div class="radio-custom mb5 radio-inline">
+                                    <input id="PublishedYes" name="Published" type="radio" value="True" />
+                                    <label for="PublishedYes">Yes</label>
+                                </div>
+                                <div class="radio-custom mb5 radio-inline">
+                                    <input id="PublishedNo" name="Published" type="radio" value="False" />
+                                    <label for="PublishedNo">No</label>
+                                </div>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <!--<a data-dismiss="modal" class="btn btn-red" href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr5" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>-->
+    <div class="btn-group actions d-flex pull-right">
+        <div class="text-center pl20">
+            <a class="btn btn-icon-only btn-circle btn-outline green-custom" ng-click="submit()" href="javascript:;">
+                <span><i class="fa fa-plus"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_ADD' | translate}}</p>
+        </div>
+        <div class="text-center pl20">
+            <a class="btn btn-icon-only btn-circle btn-outline red-custom" ng-click="cancel()">
+                <span><i class="fa fa-close"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_CANCEL' | translate}}</p>
+        </div>
+    </div>
+</div>

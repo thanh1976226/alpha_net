@@ -1,0 +1,198 @@
+﻿<script type="text/javascript">
+
+    // var buttons = document.getElementsByClassName('tablinks');
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    // var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent(id);
+        });
+    }
+    showContent('danhsachphongtrong');
+
+
+   
+</script>
+<style type="text/css">
+    div.container {
+        width: 100%;
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+    /* định dạng thẻ div chưa các button tab */
+    div.tab {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+
+        /* định dạng các button tab */
+        div.tab button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color:aliceblue;padding-top:5px"></i> DANH SÁCH PHÒNG TRỐNG </h3>
+</div>
+<div class="modal-footer" id="modal-footer">
+    <div class="row" style="height:30PX;margin-left: -12px;">
+
+        <div class="col-md-2" style="margin-left: -12px;">
+            <div class="bs-component">
+                <div class="input-group date pick-date" id="datetimepicker2">
+                    <input class="form-control" data-val="true" name="NextTimeCheck" placeholder="Từ ngày..." type="text" ng-model="model.Key5" ng-change="reload()">
+                    <span class="input-group-addon cursor">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+
+            </div>
+            <script>
+                $('#datetimepicker2').datetimepicker();
+            </script>
+        </div>
+
+        <div class="col-md-2" style="    margin-left: -29px;">
+            <div class="bs-component">
+                <div class="input-group date pick-date" id="datetimepicker1">
+                    <input class="form-control" data-val="true" name="NextTimeCheck" placeholder="Từ ngày..." type="text" ng-model="model.Key5" ng-change="reload()">
+                    <span class="input-group-addon cursor">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+
+            </div>
+            <script>
+                $('#datetimepicker1').datetimepicker();
+            </script>
+        </div>
+
+        <div class="col-md-2" style="    margin-left: -28px;">
+            <div class="bs-component">
+
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+
+
+            </div>
+            <script>
+                $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                        format: 'LT'
+                    });
+                });
+            </script>
+        </div>
+        <div class="col-md-2" style="margin-left: -30px;">
+            <div class="bs-component">
+
+                <div class='input-group date' id='datetimepicker3'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+
+
+            </div>
+            <script>
+                $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                        format: 'LT'
+                    });
+                });
+            </script>
+        </div>
+        <div class="col-md-2" style="margin-left: -28px;">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ngày..." ng-model="model.Key" name="Key" ng-change="reload()" />
+            </div>
+        </div>
+        <div class="col-md-2" style="margin-left: -29px;">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Địa điểm..." ng-model="model.Key" name="Key" ng-change="reload()" />
+            </div>
+        </div>
+        <div class="col-md-2" style="margin-left: -117px;">
+            <div class="btn-group pull-right actions">
+                <a class="btn btn-circle btn-icon-only btn-default" ng-click="add()" title="Thêm mới" style="background: #5b8ed0; color: white; "><i class="fa fa-search"></i></a>
+                <a class="btn btn-circle btn-icon-only btn-default" ng-click="edit()" title="Sửa chữa" style="background: #5b8ed0; color: white;"><i class="fa fa-times"></i></a>
+
+
+            </div>
+        </div>
+    </div>
+ 
+    <div class="tab" style="    margin-top: 19px;">
+        <button class="tablinks active" name="danhsachphongtrong">Danh sách phòng trống</button>
+
+    </div>
+    <div id="danhsachphongtrong" class="tabcontent">
+        <div class="portlet-body">
+            <div class="table-toolbar">
+
+                <div class="row" style="    margin:10px">
+
+                    <!--<div class=" col-md-12">-->
+                    <table class="table dataTable table-bordered table-hover table-striped"
+                           datatable
+                           dt-options="dtOptions"
+                           dt-columns="dtColumns"
+                           dt-instance="dtInstance"
+                           id="tblData" style="width:100%"></table>
+
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

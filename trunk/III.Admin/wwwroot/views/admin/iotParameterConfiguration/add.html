@@ -1,0 +1,123 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">Thêm mới cấu hình tham số</div>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-4 ">
+                                <i class="fas fa-sort-numeric-up"></i>
+                                <label class="control-label">&nbsp;Kiểu đối tượng</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select ng-model="model.ObjType" theme="bootstrap">
+                                        <ui-select-match placeholder="Kiểu đối tượng...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in listObjType | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.ObjType=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorObjType" class="label-color validation-message">
+                                    Kiểu đối tượng không được để trống
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4 ">
+                                <i class="fas fa-barcode"></i>
+                                <label class="control-label">&nbsp;Mã thiết bị</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select ng-model="model.DeceiveCode" theme="bootstrap">
+                                        <ui-select-match placeholder="Mã thiết bị...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in listDeceiveCode | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.DeceiveCode=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorDeceiveCode" class="label-color validation-message">
+                                    Mã thiết bị không được để trống
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4 ">
+                                <i class="fas fa-location-arrow"></i>
+                                <label class="control-label">&nbsp;Vị trí</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select ng-model="model.Role" theme="bootstrap">
+                                        <ui-select-match placeholder="Vị trí...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x in listRole | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.Role=''" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <span ng-show="errorRole" class="label-color validation-message">
+                                    Vị trí không được để trống
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fas fa-arrow-alt-circle-up"></i>
+                                <label class="control-label">Giá trị cận trên</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.CloseOn" name="CloseOn" placeholder="Giá trị cận trên..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="far fa-arrow-alt-circle-down"></i>
+                                <label class="control-label">Giá trị cận dưới</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" ng-model="model.CloseBelow" name="CloseBelow" placeholder="Giá trị cận dưới..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="btn-group pull-right actions d-flex">
+        <div class="pr10">
+            <a data-dismiss="modal" ng-click="cancel()" class="btn btn-icon-only btn-circle btn-outline red-custom">
+                <span><i class="glyphicon glyphicon-remove"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">Hủy bỏ</p>
+        </div>
+        <div class="pr10">
+            <a ng-click="submit()" class="btn btn-icon-only btn-circle btn-outline green-custom">
+                <span><i class="fa fa-plus"></i></span>
+            </a>
+            <p class="text-underline fs9 mb5 pt3">Thêm mới</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+﻿<form method="post" name="forms.advancedForm" class="form-horizontal" ng-validate="validationOptionsAdvanced">
+    <div class="form-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{'CM_CURD_LBL_CM_MAIN_SKILL' | translate}}</label>
+                    <div class="col-md-12" style="padding: 0px">
+                        <div class="input-group" style="padding: 0px">
+                            <input type="text" class="form-control" id="mainSkill" placeholder="{{'CM_CURD_TXT_CM_MAIN_SKILL' | translate}}..." ng-change="googleSearch('mainSkill')" ng-model="mainSkillStr" />
+                            <span class="input-group-btn">
+                                <button class="btn button-red" ng-click="addMainSkill()">{{'COM_BTN_ADD' | translate}}</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="example example_markup">
+                        <div class="bs-example" id="main-skill">
+                            <input type="text" class="tag-input"  name="MainSkill" ng-model="modelInfoMore.MainSkill" value="" data-role="tagsinput">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{'CM_CURD_LBL_CM_SUB_SKILL' | translate}}</label>
+                    <div class="col-md-12" style="padding: 0px">
+                        <div class="input-group" style="padding: 0px">
+                            <input type="text" class="form-control" id="subSkill" placeholder="{{'CM_CURD_TXT_CM_SUB_SKILL' | translate}}..." ng-change="googleSearch('subSkill')" ng-model="subSkillStr" />
+                            <span class="input-group-btn">
+                                <button class="btn button-red" ng-click="addSubSkill()">{{'COM_BTN_ADD' | translate}}</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="example example_markup">
+                        <div class="bs-example" id="sub-skill">
+                            <input type="text" class="tag-input" name="SubSkill" ng-model="modelInfoMore.SubSkill" value="" data-role="tagsinput" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="require">{{'CM_CURD_LBL_CM_MAIN_PRACTICE_TIME' | translate}}</label>
+                    <input type="text" name="MainPracticeTime" id="MainPracticeTime" class="form-control" ng-model="modelInfoMore.MainPracticeTime" placeholder="{{'CM_CURD_TXT_CM_MAIN_PRACTICE_TIME' | translate}}...">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{'CM_CURD_LBL_CM_WORKPLACE' | translate}}</label>
+                    <input type="text" name="workplace" class="form-control" ng-model="modelInfoMore.WorkPlace" placeholder="{{'CM_CURD_TXT_CM_WORKPLACE' | translate}}...">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{'CM_CURD_LBL_CM_LAPTOP_INFO' | translate}}</label>
+                    <textarea type="text" name="LaptopInfo" class="form-control" ng-model="modelInfoMore.LaptopInfo" placeholder="{{'CM_CURD_TXT_CM_LAPTOP_INFO' | translate}}..."></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>{{'CM_CURD_LBL_CM_SMARTPHONE_INFO' | translate}}</label>
+                    <textarea type="text" name="SmartphoneInfo" class="form-control" ng-model="modelInfoMore.SmartphoneInfo" placeholder="{{'CM_CURD_TXT_CM_SMARTPHONE_INFO' | translate}}..."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="col-md-12 row">
+                        <label>{{'CM_CURD_LBL_CM_ABILITY' | translate}}</label>
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="1">  &nbsp
+                        {{'CM_CURD_LBL_CM_LEADER' | translate}}
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="2"> &nbsp
+                        {{'CM_CURD_LBL_CM_WORKING_GROUP' | translate}}
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="3"> &nbsp
+                        {{'CM_CURD_LBL_CM_LISTEN' | translate}} 
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="4"> &nbsp
+                        {{'CM_CURD_LBL_CM_PRESENTATION' | translate}}
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="5"> &nbsp
+                        {{'CM_CURD_LBL_CM_SELF_LEARNING' | translate}} 
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="6"> &nbsp
+                        {{'CM_CURD_LBL_CM_PROBLEM SOLVING' | translate}} 
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="7"> &nbsp
+                        {{'CM_CURD_LBL_CM_CREATIVE_THINKING' | translate}}
+                    </div>
+                    <div class="col-md-6 row options">
+                        <input name="Ability" type="checkbox" value="8"> &nbsp
+                        {{'CM_CURD_LBL_CM_COMMUNICATION' | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="require">{{'CM_CURD_LBL_CM_SALARY_HOPE' | translate}}</label>
+                    <input ng-model="modelInfoMore.SalaryHope" class="form-control" name="" placeholder="{{'CM_CURD_TXT_CM_SALARY_HOPE' | translate}}..." num-thousand='true' awnum num-int='21'>
+                </div>
+                <div class="form-group">
+                    <label class="require">{{'CM_CURD_LBL_CM_CANJOINDATE' | translate}}</label>
+                    <div class='input-group date' id="can-join-date" data-provide="datepicker">
+                        <input ng-model="modelInfoMore.CanJoinDate" type='text' class="form-control" placeholder="{{'CM_CURD_TXT_CM_CANJOINDATE' | translate}}" />
+                        <span class="input-group-addon" style="border: 1px solid #ccc; border-left: 0px">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right mt10">
+                <div class="btn-group pull-right actions">
+                    <a class="btn btn-default prev-step br4" ng-click="prevTab()">
+                        <span><i class="fas fa-arrow-left"></i>&nbsp;{{'COM_BTN_BACK' | translate}}</span>
+                    </a>
+                    <a class="btn btn-red ml10" ng-click="submitNextTab(2)">
+                        <span><i class="fas fa-arrow-right"></i>&nbsp;{{'COM_BTN_CONTINUE' | translate}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

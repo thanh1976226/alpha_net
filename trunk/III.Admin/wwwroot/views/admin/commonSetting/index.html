@@ -1,0 +1,86 @@
+﻿<style>
+    .tab-content {
+        padding: 15px;
+        height: 100%;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .nav-pills, .nav-tabs {
+        margin-bottom: 0px !important;
+    }
+
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+
+    .tabbable {
+        overflow: hidden;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tab-content.panel {
+        border-top: none;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+</style>
+<div class="table-toolbar">
+    <div class="row">
+        <div class="col-lg-6 ">
+            <h1 class="bold mb-0">{{'COM_SET_LBL_COM_SET' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'COM_SET_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="#/user">{{'COM_SET_LINK_COM_SET' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <div class="btn-group pull-right actions" style="margin: 2px;">
+                <button ng-click="add()" type="submit" class="btn btn-green">
+                    <i class="fa fa-plus mr5"></i>
+                    {{'COM_BTN_ADD' | translate}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tabbable pt10">
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="{{'COM_SET_CURD_TAB_CONTRACT' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/contract.html'"></div>
+        </uib-tab>
+        <uib-tab index="1" heading="{{'COM_SET_CURD_TAB_PRỌJECT' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/project.html'"></div>
+        </uib-tab>
+        <uib-tab index="2" heading="{{'COM_SET_CURD_TAB_SUPPLIER' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/supplier.html'"></div>
+        </uib-tab>
+        <uib-tab index="3" heading="{{'COM_SET_CURD_TAB_CUSTOMER' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/customer.html'"></div>
+        </uib-tab>
+        <uib-tab index="4" heading="{{'COM_SET_CURD_TAB_FILE' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/file.html'"></div>
+        </uib-tab>
+        <uib-tab index="5" heading="{{'COM_SET_CURD_TAB_SERVICE' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/service.html'"></div>
+        </uib-tab>
+        <uib-tab index="6" heading="{{'COM_SET_CURD_TAB_ASSET' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/asset.html'"></div>
+        </uib-tab>
+        <uib-tab index="7" heading="{{'COM_SET_CURD_TAB_PAYMENT' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/payment.html'"></div>
+        </uib-tab>
+        <uib-tab index="8" heading="{{'COM_SET_CURD_TAB_CARD_JOB' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/cardjob.html'"></div>
+        </uib-tab>
+        <uib-tab index="9" heading="{{'COM_SET_CURD_TAB_PUBLISH' | translate}}">
+            <div ng-include="'../views/admin/CommonSetting/publish.html'"></div>
+        </uib-tab>
+    </uib-tabset>
+</div>

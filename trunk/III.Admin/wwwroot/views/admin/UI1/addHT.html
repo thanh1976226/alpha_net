@@ -1,0 +1,135 @@
+﻿
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color: #e9edf0;padding-top:5px"></i> HỌC BẠ HỌC VIÊN</h3>
+</div>
+<div class="modal-body no-space" id="modal-body">
+
+    <div class="portlet-body">
+        <div class="table-toolbar">
+
+            <div class="row" style="    margin:10px">
+                <!--<div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Thông tin tìm kiếm</h3>
+                </div>-->
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Thông tin</h3>
+                </div>
+
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                        <div class="row">
+                            <DIV class="portlet-body form">
+                                <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions2">
+                                    <div class="form-body">
+
+                                        <div class=" col-md-6">
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Môn học</label>
+                                                <div class="col-md-8" style="height:45px;border:none">
+                                                    <input type="text" class="form-control" ng-model="model.taxcode" name="taxcode" placeholder="Mã số thuế" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Trường</label>
+                                                <div class="col-md-8" style="height:45px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.bank" name="bank" placeholder="Tài khoản ngân hàng" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Thời gian bắt đầu</label>
+                                                <div class="bs-component col-md-8" style="height: 45px;border:none">
+                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker4">
+                                                        <input type="text" class="form-control" ng-model="model.birthday" name="birthday" placeholder="ngày sinh" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                    $('#datetimepicker4').datetimepicker();
+
+                                                </script>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-tint"></i> Giáo viên</label>
+                                                <div class="col-md-8" style="height:45px; border:none">
+                                                    <input type="text" class="form-control" ng-model="model.bank" name="bank" placeholder="Tài khoản ngân hàng" />
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class=" col-md-6">
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Điểm</label>
+                                                <div class="col-md-8" style="height:45px;border:none">
+                                                    <input type="text" class="form-control" ng-model="model.taxcode" name="taxcode" placeholder="Mã số thuế" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Lớp</label>
+                                                <div class="col-md-8" style="height:45px;border:none">
+                                                    <input type="text" class="form-control" ng-model="model.taxcode" name="taxcode" placeholder="Mã số thuế" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-gift"></i> Thời gian kết thúc</label>
+                                                <div class="bs-component col-md-8" style="height: 45px;border:none">
+                                                    <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker5">
+                                                        <input type="text" class="form-control" ng-model="model.birthday" name="birthday" placeholder="thời gian kết thúc" style="border-top-right-radius: 0px !important;border-bottom-right-radius:0px !important" />
+                                                        <span class="input-group-addon cursor" style="border-top-right-radius: 10px !important;border-bottom-right-radius:10px !important">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                                    $('#datetimepicker5').datetimepicker();
+
+                                                </script>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-4 text-left"><i class="glyphicon glyphicon-th-large"></i> Nhận xét</label>
+                                                <div class="col-md-8" style="height:45px;border:none">
+                                                    <input type="text" class="form-control" ng-model="model.taxcode" name="taxcode" placeholder="Mã số thuế" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group pull-right" style="border:none;    margin: 11px;">
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Tìm kiếm</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Huỷ tìm</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Tìm kiếm</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Huỷ tìm</button>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            </DIV>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <!--<div class=" col-md-12">-->
+                <table class="table dataTable table-bordered table-hover table-striped"
+                       datatable
+                       dt-options="dtOptions"
+                       dt-columns="dtColumns"
+                       dt-instance="dtInstance"
+                       id="tblData" style="width:100%"></table>
+
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>

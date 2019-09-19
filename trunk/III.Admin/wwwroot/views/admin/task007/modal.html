@@ -1,0 +1,122 @@
+﻿
+<div class="modal-header">
+    <div class="modal_header">
+        <i class="fa fa-plus-circle"> </i>
+        <span class="modal-title modal_title" id="modal-title">
+            Học bạ học viên
+            <button type="button" class="close" ng-click="cancel()" data-dismiss="modal"> <img src="../../images/AppIcon/close.png" class="icon-remove"></button>
+        </span>
+    </div>
+</div>
+<div class="modal-body">
+    <div class="row" style="">
+        <div class="modal-body p0 mt-12" id="modal-body">
+            <label class="labelbodergroup">cửa sổ</label>
+            <div class="table-toolbar table_toolbar">
+                <div class="row border">
+                    <DIV class="portlet-body form m-20">
+                        <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                            <div class="form-body">
+                                <div class=" col-md-6 p0">
+                                    <div class="form-group mrr20-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l"><i class="glyphicon glyphicon-th-list"></i> Môn học</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.subject" name="subject" placeholder="Môn học" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mrr20-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l"><i class="glyphicon glyphicon-home"></i> Trường</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.school" name="school" placeholder="Trường" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mrr20-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l" style="margin-bottom:-7px;"><i class="glyphicon glyphicon-calendar"></i> Thời gian bắt đầu</div>
+                                        <div class="bs-component col-md-8">
+                                            <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker4">
+                                                <input type="text" class="form-control" ng-model="model.starttime" name="starttime" placeholder="Thời gian bắt đầu" />
+                                                <span class="input-group-addon cursor">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <script>
+									    $('#datetimepicker4').datetimepicker();
+                                        </script>
+                                    </div>
+                                    <div class="form-group mrr20-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l"><i class="glyphicon glyphicon-home"></i> Trường</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.school" name="school" placeholder="Trường" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mrr20-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l"><i class="glyphicon glyphicon-user"></i> Giáo viên</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.teacher" name="teacher" placeholder="Giáo viên" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" col-md-6 p0">
+                                    <div class="form-group mrr0-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l" style=""><i class="glyphicon glyphicon-pencil"></i> Điểm</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.mark" name="mark" placeholder="Điểm" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mrr0-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l" style=""><i class="glyphicon glyphicon-home"></i> Lớp</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.classst" name="classst" placeholder="Lớp" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mrr0-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l" style=""><i class="glyphicon glyphicon-calendar"></i> Thời gian kết thúc</div>
+                                        <div class="bs-component col-md-8">
+                                            <div class="input-group date pick-date" data-date="1996-01-01T00:00:00Z" id="datetimepicker5">
+                                                <input type="text" class="form-control" ng-model="model.endtime" name="endtime" placeholder="Thời gian kết thúc" />
+                                                <span class="input-group-addon cursor">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <script>
+										    $('#datetimepicker5').datetimepicker();
+
+                                        </script>
+                                    </div>
+                                    <div class="form-group mrr0-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l" style=""><i class="glyphicon glyphicon-comment"></i> Nhận xét</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.note" name="note" placeholder="Nhận xét" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group mrr0-mrb5">
+                                        <div class="control-label col-md-4 text-left t-a-l" style=""><i class="glyphicon glyphicon-home"></i> Lớp</div>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" ng-model="model.classst" name="classst" placeholder="Lớp" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </DIV>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <!--<div class=" col-md-12">-->
+        <!--</div>-->
+    </div>
+</div>
+<div class="modal-footer b-t-n">
+    <div class="form-group pull-right b-n  mrt16 ">
+        <button type="submit" class="btn btn-red" ng-click="submit()"><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+        <button type="submit" class="btn btn-blue" ng-click="edit()"><i class="glyphicon glyphicon-edit"></i> Sửa đổi</button>
+        <button type="submit" class="btn btn-grey" ng-click="delete()"><i class="glyphicon glyphicon-delete"></i>Hủy bỏ</button>
+    </div>
+</div>

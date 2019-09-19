@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\wwwroot\eOffice\SSO</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/Lockout.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/LoggedOut.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>09/20/2017 14:04:34</publishTime>
+    </File>
+    <File Include="Views/Account/Logout.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Consent/Index.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Consent/_ScopeListItem.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Grants/Index.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_ValidationScriptsPartial.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_ValidationSummary.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/_ViewImports.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/14/2017 10:03:21</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

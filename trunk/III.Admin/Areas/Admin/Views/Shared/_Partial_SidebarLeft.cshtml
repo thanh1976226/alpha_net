@@ -1,0 +1,707 @@
+﻿ <!-- Left side column. contains the logo and sidebar -->
+@using ESEIM.Utils
+@using Microsoft.AspNetCore.Http
+@inject IParameterService ParameterService
+@inject IHttpContextAccessor HttpContextAccessor
+@inject ILanguageService LanguageService
+@{
+    int notification = ParameterService.GetCountNotification();
+    int countCandidateInterview = ParameterService.GetCountCandidateInterview();
+}
+@{
+    var cookieKey = "_CULTURE";
+    var culture = HttpContextAccessor.HttpContext.Request.Cookies[cookieKey];
+    if (string.IsNullOrEmpty(culture))
+    {
+        culture = "vi-VN";
+        CookieOptions options = new CookieOptions();
+        options.Expires = DateTime.Now.AddDays(15);
+        HttpContextAccessor.HttpContext.Response.Cookies.Append(cookieKey, culture, options);
+    }
+
+    var currentLanguage = LanguageService.GetLanguage(culture);
+    int pageLength = ParameterService.GetPagingLength();
+    var session = HttpContextAccessor.HttpContext.GetSessionUser();
+    int countIncomming = ParameterService.GetIncommingDocumentPending(session.UserId);
+    int countOut = ParameterService.GetOutDocumentPending(session.UserId);
+    bool hasAuthority = ParameterService.CheckAuthority(session.UserId);
+}
+<div data-scroll-to-active="true" class="main-menu menu-fixed menu-dark menu-accordion menu-shadow">
+    <!-- main menu content-->
+    <div class="main-menu-content">
+        <ul id="main-menu-navigation" class="navigation navigation-main">
+            <li class="nav-item pt20">
+                <a href="/Admin/DashBoard" class="fs14 text-uppercase"><i class="fas fa-tachometer-alt fs16"></i> @CommonUtil.ResourceValue("MENU_DASHBOARD")</a>
+            </li>
+            @*<li class="treeview">
+            <a href="#">
+                <span class="glyphicon glyphicon-cog"></span> <span> Smart Education</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="/Admin/EDMSMaterialProduct"><i class="fa fa-map-marker"></i> Mẫu tạm</a></li>
+                <li><a href="/Admin/edu_student"><i class="fa fa-map-marker"></i> Học sinh</a></li>
+                <li><a href="/Admin/UI1"><i class="fa fa-map-marker"></i> UI1</a></li>
+                <li><a href="/Admin/UI12"><i class="fa fa-map-marker"></i> UI12</a></li>
+                <li><a href="/Admin/task001"><i class="fa fa-map-marker"></i> task001</a></li>
+                <li><a href="/Admin/task002"><i class="fa fa-map-marker"></i> task002</a></li>
+                <li><a href="/Admin/task003"><i class="fa fa-map-marker"></i> task003</a></li>
+                <li><a href="/Admin/Location"><i class="fa fa-map-marker"></i> task004</a></li>
+                <li><a href="/Admin/task005"><i class="fa fa-map-marker"></i> task005</a></li>
+                <li><a href="/Admin/task006"><i class="fa fa-map-marker"></i> task006</a></li>
+                <li><a href="/Admin/task007"><i class="fa fa-map-marker"></i> task007</a></li>
+                <li><a href="/Admin/task008"><i class="fa fa-map-marker"></i> task008</a></li>
+                <li><a href="/Admin/task009"><i class="fa fa-map-marker"></i> task009</a></li>
+                <li><a href="/Admin/task010"><i class="fa fa-map-marker"></i> task010</a></li>
+                <li><a href="/Admin/task011"><i class="fa fa-map-marker"></i> task011</a></li>
+                <li><a href="/Admin/task012"><i class="fa fa-map-marker"></i> task012</a></li>
+                <li><a href="/Admin/task013"><i class="fa fa-map-marker"></i> task013</a></li>
+                <li><a href="/Admin/task014"><i class="fa fa-map-marker"></i> task014</a></li>
+                <li><a href="/Admin/task015"><i class="fa fa-map-marker"></i> task015</a></li>
+                <li><a href="/Admin/task016"><i class="fa fa-map-marker"></i> task016</a></li>
+                <li><a href="/Admin/task017"><i class="fa fa-map-marker"></i> task017</a></li>
+                <li><a href="/Admin/task018"><i class="fa fa-map-marker"></i> task018</a></li>
+                <li><a href="/Admin/test"><i class="fa fa-map-marker"></i> test</a></li>
+            </ul>
+        </li>*@
+
+            @*Quản lý nội dung*@
+            @*@if (session.UserType == 10 || session.GroupUserCode == "G_AD")*@
+
+            <li class="">
+                <a href="#"><i class="fas fa-list"></i><span data-i18n="nav.advance_cards.main" class="menu-title">Quản lý nội dung</span></a>
+                <ul class="menu-content">
+                    <li class="">
+                        <a href="/Admin/CMSCategory"><i class="fas fa-info"></i> Danh mục</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSItem"><i class="fa fa-info"></i> Bài viết</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSDocument"><i class="fa fa-info"></i> Quản lý văn bản</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSComment"><i class="fa fa-info"></i> Ý kiến bạn đọc</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSLink"><i class="fa fa-info"></i> Links liên kết</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSManagementUtilities"><i class="fa fa-info"></i> Quản lý tiện ích</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSManagementSlide"><i class="fa fa-info"></i> Quản lý slider</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSManagementBanner"><i class="fa fa-info"></i> Quản lý banner</a>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSVideo"><i class="fa fa-info"></i> Quản lý video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fab fa-apple"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("Quản lý Extra Field")</span></a>
+                        <ul class="menu-content">
+                            <li class="">
+                                <a href="/Admin/CMSExtraField"><i class="fas fa-users"></i> @CommonUtil.ResourceValue("Extra Field")</a>
+                            </li>
+                            <li class="dottet-sub-subMenu" />
+                            <li class="">
+                                <a href="/Admin/CMSExtraFieldGroup"><i class="fab fa-apple"></i> @CommonUtil.ResourceValue("Extra Field Group")</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dottet-sub-subMenu" />
+                    <li class="">
+                        <a href="/Admin/CMSTag"><i class="fa fa-info"></i> Quản lý tags</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item ">
+                <a href="#"><i class="fas fa-graduation-cap"></i><span data-i18n="nav.advance_cards.main" class="menu-title">Smart Education</span></a>
+                <ul class="menu-content">
+                    <li>@*<a href="/Admin/EDMSMaterialProduct"><i class="fa fa-map-marker"></i> Mẫu tạm</a>*@</li>
+                    <li><a href="/Admin/edu_student"><i class="fa fa-map-marker"></i> Học sinh</a></li>
+                    <li><a href="/Admin/UI1"><i class="fa fa-map-marker"></i> UI1</a></li>
+                    <li><a href="/Admin/UI12"><i class="fa fa-map-marker"></i> UI12</a></li>
+                    <li><a href="/Admin/task001"><i class="fa fa-map-marker"></i> task001</a></li>
+                    <li><a href="/Admin/task002"><i class="fa fa-map-marker"></i> task002</a></li>
+                    <li><a href="/Admin/task003"><i class="fa fa-map-marker"></i> task003</a></li>
+                    <li><a href="/Admin/Location"><i class="fa fa-map-marker"></i> task004</a></li>
+                    <li><a href="/Admin/task005"><i class="fa fa-map-marker"></i> task005</a></li>
+                    <li><a href="/Admin/task006"><i class="fa fa-map-marker"></i> task006</a></li>
+                    <li><a href="/Admin/task007"><i class="fa fa-map-marker"></i> task007</a></li>
+                    <li><a href="/Admin/task008"><i class="fa fa-map-marker"></i> task008</a></li>
+                    <li><a href="/Admin/task009"><i class="fa fa-map-marker"></i> task009</a></li>
+                    <li><a href="/Admin/task010"><i class="fa fa-map-marker"></i> task010</a></li>
+                    <li><a href="/Admin/task011"><i class="fa fa-map-marker"></i> task011</a></li>
+                    <li><a href="/Admin/task012"><i class="fa fa-map-marker"></i> task012</a></li>
+                    <li><a href="/Admin/task013"><i class="fa fa-map-marker"></i> task013</a></li>
+                    <li><a href="/Admin/task014"><i class="fa fa-map-marker"></i> task014</a></li>
+                    <li><a href="/Admin/task015"><i class="fa fa-map-marker"></i> task015</a></li>
+                    <li><a href="/Admin/task016"><i class="fa fa-map-marker"></i> task016</a></li>
+                    <li><a href="/Admin/task017"><i class="fa fa-map-marker"></i> task017</a></li>
+                    <li><a href="/Admin/task018"><i class="fa fa-map-marker"></i> task018</a></li>
+                    <li><a href="/Admin/test"><i class="fa fa-map-marker"></i> test</a></li>
+                    @*<li><a href="/Admin/CMSManagementSlide"><i class="fa fa-map-marker"></i>Quản lý Slider</a></li>
+                <li><a href="/Admin/CMSManagementBanner"><i class="fa fa-map-marker"></i>Quản lý Banner</a></li>
+                <li><a href="/Admin/CMSManagementUtilities"><i class="fa fa-map-marker"></i>Quản lý Tiện ích</a></li>
+                <li><a href="/Admin/CMSManagementExtraField"><i class="fa fa-map-marker"></i>Quản lý Extra Field</a></li>*@
+                </ul>
+            </li>
+
+            <li class="nav-item ">
+                <a href="#"><i class="fas fa-graduation-cap"></i><span data-i18n="nav.advance_cards.main" class="menu-title">Quản Lý Nội Dung</span></a>
+                <ul class="menu-content">
+                    @*<li><a href="/Admin/EDMSMaterialProduct"><i class="fa fa-map-marker"></i> Mẫu tạm</a></li>
+                <li><a href="/Admin/edu_student"><i class="fa fa-map-marker"></i> Học sinh</a></li>*@
+                    @*<li><a href="/Admin/CMSComMent"><i class="fa fa-map-marker"></i>Ý kiến bạn đọc</a></li>
+                <li><a href="/Admin/CMSVideo"><i class="fa fa-map-marker"></i>Quản lý video</a></li>*@
+
+
+
+                </ul>
+            </li>
+            @*<li class="navigation-header navigation-header_border-top">
+            <a data-i18n="nav.category.layouts"> @CommonUtil.ResourceValue("MENU_CONTRACT")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>*@
+            <li class="nav-item">
+                <a href="/Admin/Contract"><i class="fa fa-suitcase"></i> @CommonUtil.ResourceValue("MENU_CONTRACT_MANAGER")</a>
+            </li>
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts"><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i><span class="nav-toggle">@CommonUtil.ResourceValue("MENU_PROJECT")</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="/Admin/Project"><i class="fas fa-folder-open"></i> @CommonUtil.ResourceValue("MENU_PROJECT_MANAGEMENT")</a>
+            </li>
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_SUPPLIER")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="">
+                <a href="/Admin/Supplier"><i class="fa fa-users"></i>@CommonUtil.ResourceValue("MENU_SUPPLIER_LIST")</a>
+            </li>
+            <li class="">
+                <a href="/Admin/ContactSupplier"><i class="fas fa-phone-square"></i>@CommonUtil.ResourceValue("MENU_CONTACT_ADMIN")</a>
+            </li>
+            <li class="">
+                <a href="/Admin/CardJob"><i class="fas fa-user-check"></i>@CommonUtil.ResourceValue("MENU_PROJECT_CARE")</a>
+            </li>
+            <li class="">
+                <a href="/Admin/MapSupplier"><i class="fas fa-map-marker"></i>@CommonUtil.ResourceValue("MENU_PROJECT_MAP")</a>
+            </li>
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_CUSTOMER")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="">
+                <a href="/Admin/Customer"><i class="fa fa-users"></i> @CommonUtil.ResourceValue("MENU_CUSTOMER_LIST")</a>
+            </li>
+            <li class="">
+                <a href="/Admin/OrderRequestRaw"><i class="fas fa-user-cog"></i> @CommonUtil.ResourceValue("MENU_CUSTOMER_REQUIREMENTS")</a>
+            </li>
+            <li class="">
+                <a href="/Admin/ContactCustomer"><i class="fas fa-phone-square"></i> @CommonUtil.ResourceValue("MENU_CONTACT_ADMIN")</a>
+            </li>
+            <li class="">
+                <a href="/Admin/CardJob"><i class="fas fa-user-check"></i> @CommonUtil.ResourceValue("MENU_CUSTOMER_CARE")</a>
+            </li>
+
+            <li class="">
+                <a href="/Admin/MapCustomer"><i class="fas fa-map-marker"></i> @CommonUtil.ResourceValue("MENU_CUSTOMER_MAP")</a>
+            </li>
+
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("ĐỐI TÁC & NHÀ CUNG CẤP")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="nav-item ">
+                <a href="#"><i class="fas fa-user-check"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("Chăm Sóc Khách Hàng")</span></a>
+                <ul class="menu-content">
+                    <li class="">
+                        <a href="/Admin/Asset"><i class="fas fa-user"></i> @CommonUtil.ResourceValue("Đối tác")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/tms_crm_supplier"><i class="far fa-user"></i> @CommonUtil.ResourceValue("Nhà cung cấp hợp đồng")</a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            <i class="fas fa-briefcase"></i> <span>@CommonUtil.ResourceValue("Hợp đồng")</span>
+                            <span class="pull-right-container">
+                                <small class="label pull-right bg-green"></small>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            @*-------------------------------------------*@
+            <li class="dotted-menu" />
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fa fa-th-list"></i><span class="menu-title">@CommonUtil.ResourceValue("MENU_ASSET")</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="">
+                        <a href="/Admin/Asset"><i class="fas fa-book"></i>@CommonUtil.ResourceValue("MENU_ASSET_MANAGEMENT")</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/UrencoAssetsCategory"><i class="fas fa-globe"></i>DM loại TS</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/UrencoMaterialProductGroup"><i class="fas fa-globe"></i>DM nhóm TS</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="#"><i class="fas fa-file-signature"></i>Kiểm kê tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetAllocation"><i class="fas fa-location-arrow"></i>Cấp phát tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetBuy"><i class="fas fa-cart-plus"></i>Mua sắm tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetTransferHeader"><i class="fas fa-retweet"></i>Điều chuyển tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetRqMaintenanceRepair"><i class="fas fa-user-shield"></i>Y/C sửa chữa bảo dưỡng</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetMaintenance"><i class="fas fa-wrench"></i>Sửa chữa tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetMaintenance"><i class="fas fa-user-md"></i>Bảo dưỡng tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetCancel"><i class="fas fa-ban"></i>Hủy tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetLiquidation"><i class="fas fa-gavel"></i>Thanh lý tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetReceiptFail"><i class="fas fa-exclamation-triangle"></i>Báo hỏng/mất tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetRecalled"><i class="fas fa-user-lock"></i>Thu hồi tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetProfile"><i class="fas fa-file-alt"></i>Hồ sơ tài sản</a>
+                    </li>
+                    <li class="dottet-subMenu" />
+                    <li class="">
+                        <a href="/Admin/AssetCommonSetting"><i class="fa fa-cogs"></i>Thiết lập tham số</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/AssetActivity">
+                            <i class="fa fa-signal"></i> <span>@CommonUtil.ResourceValue("MENU_ASSET_ACTIVITY")</span>
+                            <span class="pull-right-container">
+                                <small class="label pull-right bg-green"></small>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            @*---------MENU Quản lý quỹ-----*@
+
+            @*<li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("QUẢN LÝ QUỸ")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class="">
+            <a href="/Admin/FundCatReptExps"><i class="fas fa-book"></i>Danh mục quỹ</a>
+        </li>
+        <li class="dottet-subMenu" />
+        <li class="">
+            <a href="/Admin/FundCurrency"><i class="fas fa-file-signature"></i>Loại tiền</a>
+        </li>
+        <li class="dottet-subMenu" />
+        <li class="">
+            <a href="/Admin/FundExchagRate"><i class="fas fa-file-signature"></i>Tỷ giá</a>
+        </li>
+        <li class="dottet-subMenu" />
+        <li class="">
+            <a href="/Admin/FundAccEntry"><i class="fas fa-file-signature"></i>Phiếu thu / chi</a>
+        </li>
+        <li class="dottet-subMenu" />
+        <li class="">
+            <a href="/Admin/FundPlanAccEntry"><i class="fas fa-file-signature"></i>Kế hoạch Thu / chi</a>
+        </li>
+        <li class="dottet-subMenu" />
+        <li class="">
+            <a href="/Admin/ParamForWarning"><i class="fas fa-file-signature"></i>Thiết lập cảnh báo</a>
+        </li>
+        <li class="dottet-subMenu" />
+        <li class="">
+            <a href="/Admin/FundReport"><i class="fas fa-file-signature"></i>Báo cáo thu chi</a>
+        </li>
+        <li class="">
+            <a href="/Admin/FundWarning"><i class="fas fa-file-signature"></i>Cảnh báo<span class="tag tag-pill tag-default tag-danger ml5" id="countWarning"></span></a>
+        </li>*@
+
+            @*Quản lý quỹ*@
+
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("Quản lý quỹ")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/FundCatReptExps"><i class="fas fa-book"></i>Danh mục quỹ</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/FundCurrency"><i class="fas fa-dollar-sign"></i>Loại tiền</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/FundExchagRate"><i class="fas fa-balance-scale"></i>Tỷ giá</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/FundAccEntry"><i class="fas fa-file-export"></i>Phiếu thu / chi</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/FundPlanAccEntry"><i class="fas fa-user-clock"></i>Kế hoạch Thu / chi</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/ParamForWarning"><i class="fas fa-exclamation-circle"></i>Thiết lập cảnh báo</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/FundReport"><i class="fas fa-flag"></i>Báo cáo thu chi</a>
+            </li>
+            <li class="">
+                <a href="/Admin/FundWarning"><i class="fas fa-exclamation-triangle"></i>Cảnh báo<span class="tag tag-pill tag-default tag-danger ml5" id="countWarning"></span></a>
+            </li>
+
+            @*---------------------------------------------*@
+
+
+            @*---------MENU IOT NETWORK-----*@
+
+
+
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("IOT Network")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/IOTMonitoring"><i class="fas fa-file-signature"></i>Dữ liệu quan trắc</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/IOTCarInAndOut"><i class="fas fa-file-signature"></i>Xe vào / ra</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/OBEAiRecognitionTracking"><i class="fas fa-file-signature"></i>Nhận diện người / vật</a>
+            </li>
+            <li class="dottet-subMenu" />
+            <li class="">
+                <a href="/Admin/IOTIdentify"><i class="fas fa-file-signature"></i>Phân tích hành động</a>
+            </li>
+            <li class="">
+                <a href="/Admin/IOTParameterConfiguration"><i class="fas fa-file-signature"></i>Cấu hình tham số</a>
+            </li>
+            <li class="">
+                <a href="/Admin/IOTWarning"><i class="fas fa-file-signature"></i>Cảnh báo</a>
+            </li>
+            @*---------------------------------------------*@
+
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_PERSONNEL")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="">
+                <a href="/Admin/HREmployee"><i class="fa fa-users"></i> @CommonUtil.ResourceValue("MENU_HUMAN_RESOURCE_MANAGEMENT")</a>
+            </li>
+            <li class="nav-item ">
+                <a href="/Admin/HolidayDate"><i class="fas fa-user-clock"></i> @CommonUtil.ResourceValue("MENU_HOLIDAY")</a>
+            </li>
+            @*<li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_WAREHOUSE_AND_DIGITIZATION")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class=" nav-item">
+            <a href="/Admin/DispatchesWeekWorkingSchedule">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="menu-title">@CommonUtil.ResourceValue("MENU_WAD_DISPATCHES_WEEK_WORKING_SCHEDULE")</span>
+                <span class="badge badge tag-danger badge-pill notification pull-right" id="notificationWeek">0</span>
+            </a>
+        </li>
+        <li class="nav-item ">
+            <a href="/Admin/EDMSDiagram"><i class="fas fa-sitemap"></i>@CommonUtil.ResourceValue("MENU_WAD_DIAGRAM")</a>
+        </li>
+        <li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_OFFICE_MANAGEMENT")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class="nav-item ">
+            <a href="#"><i class="fas fa-cart-plus"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_OM_DIRECTORY_MANAGEMENT")</span></a>
+            <ul class="menu-content">
+                <li class="">
+                    <a href="/Admin/DispatchesDocument"> @CommonUtil.ResourceValue("MENU_OM_DM_DISPATCHES_DOCUMENT")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/DispatchesDocumentType">@CommonUtil.ResourceValue("MENU_OM_DM_DISPATCHES_DOCUMENT_TYPE")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/DispatchesDocumentConfidentiality"> @CommonUtil.ResourceValue("MENU_OM_DM_DISPATCHES_DOCUMENT_CONFIDENTIALITY")</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item ">
+            <a href="#"><i class="far fa-file-alt"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_OM_TEXT_GOING")</span></a>
+            <ul class="menu-content">
+                <li class="">
+                    <a href="/Admin/DispatchesOutDispatches">@CommonUtil.ResourceValue("MENU_OM_TG_INTO_TEXT_NUMBER")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/DispatchesOutDispatchesPending">
+                        <span class="menu-title">@CommonUtil.ResourceValue("MENU_OM_TG_DOCUMENT_WAITING_HANDLING")</span>
+                        @if (countOut > 0)
+                        {
+                            <span class="badge badge tag-danger badge-pill notification">@countOut</span>
+                        }
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item ">
+            <a href="#"><i class="far fa-file-alt"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_OM_TEXT_TO")</span></a>
+            <ul class="menu-content">
+                <li class="">
+                    <a href="/Admin/DispatchesIncommingDispatches">@CommonUtil.ResourceValue("MENU_OM_TT_INTO_TEXT_NUMBER")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/DispatchesIncommingDispatchesPending">
+                        <span class="menu-title">@CommonUtil.ResourceValue("MENU_OM_TT_DOCUMENT_WAITING_HANDLING")</span>
+                        @if (countIncomming > 0)
+                        {
+                            <span class="badge badge tag-danger badge-pill notification">@countIncomming</span>
+                        }
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item ">
+            <a href="/Admin/Authoring">
+                <i class="fas fa-user-clock"></i>
+                <span class="menu-title">@CommonUtil.ResourceValue("MENU_OM_AUTHORING")</span>
+                @if (hasAuthority)
+                {
+                    <span class=" badge badge-pill tag-danger authority pull-right text-capitalize wiggle">Xác nhận</span>
+                }
+            </a>
+        </li>
+        <li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_PRODUCTS_AND_SERVICES")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class="nav-item ">
+            <a href="/Admin/Category"><i class="fas fa-shopping-cart"></i> @CommonUtil.ResourceValue("MENU_PAS_PRODUCT_MANAGEMENT")</a>
+        </li>
+        <li class="nav-item ">
+            <a href="/Admin/ServiceCategory"><i class="fa fa-cog"></i> @CommonUtil.ResourceValue("MENU_PAS_SERVICES_MANAGEMENT")</a>
+        </li>
+        <li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_WAREHOUSE_AND_SALES")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialProduct"><i class="fa fa-wrench"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_PRODUCT")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialStore"><i class="fa fa-university"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_STORE")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialProductGroup"><i class="fa fa-cube"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_PRODUCT_GROUP")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialsType"><i class="fa fa-cube"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_TYPE")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialSbatch"><i class="fa fa-database"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_SBATCH")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialImpStore"><i class="fa fa-database"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_IMP_STORE")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialExpStore"><i class="fas fa-file-export"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_EXP_STORE")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MaterialPaymentTicket"><i class="fas fa-money-bill"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_PAYMENT_TICKET")</a>
+        </li>
+        <li class="">
+            <a href="/Admin/MapStore"><i class="fas fa-map-marker"></i> @CommonUtil.ResourceValue("MENU_WAS_MATERIAL_MAP")</a>
+        </li>
+        <li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_OPERATE_WORK")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class="nav-item ">
+            <a href="#"><i class="fas fa-users"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_OW_CANDIDATE")</span></a>
+            <ul class="menu-content">
+                <li class="">
+                    <a href="/Admin/CandidatesManagement"><i class="fas fa-users"></i> @CommonUtil.ResourceValue("MENU_OW_CANDIDATE_CANDIDATES_MANAGEMENT")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/CalendarInterview">
+                        <span class="menu-title"><i class="fa fa-calendar"></i> @CommonUtil.ResourceValue("MENU_OW_CANDIDATE_CALENDAR_INTERVIEW")</span>
+                        @if (countCandidateInterview > 0)
+                        {
+                            <span class="badge badge tag-danger badge-pill notification pull-right">@countCandidateInterview</span>
+                        }
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/Admin/EDMSCalendarCandidate"><i class="fa fa-calendar"></i> @CommonUtil.ResourceValue("MENU_OW_CANDIDATE_CALENDAR_CANDIDATE")</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item ">
+            <a href="#"><i class="fas fa-user"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_OW_EMPLOYEES")</span></a>
+            <ul class="menu-content">
+                <li class="">
+                    <a href="/Admin/StaffRegistration"><i class="fas fa-user-plus"></i> @CommonUtil.ResourceValue("MENU_OW_EMPLOYEES_STAFF_REGISTRATION")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/StaffCalendar"><i class="fa fa-calendar"></i> @CommonUtil.ResourceValue("MENU_OW_EMPLOYEES_STAFF_CALENDAR")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/StaffTimekeeping"><i class="fas fa-user-circle"></i> @CommonUtil.ResourceValue("MENU_OW_EMPLOYEES_STAFF_TIME_KEEPING")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/StaffLate"><i class="fas fa-user-clock"></i> @CommonUtil.ResourceValue("MENU_OW_EMPLOYEES_STAFF_LATE")</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <a href="/Admin/CardJob"><i class="fas fa-tasks"></i> @CommonUtil.ResourceValue("MENU_OW_CARD_JOB")</a>
+        </li>
+        <li class="navigation-header">
+            <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_REPORT_AND_STATISTICS")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        </li>
+        <li class="">
+            <a href="#"><i class="fas fa-flag"></i> @CommonUtil.ResourceValue("MENU_RAS_INVENTORY")</a>
+        </li>*@
+            <li class="navigation-header">
+                <a data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_SETTING")</a><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="nav-item ">
+                <a href="#"><i class="fa fa-cogs"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_SETTING_SYSTEM_MANAGEMENT")</span></a>
+                <ul class="menu-content">
+                    <li class="">
+                        <a href="/Admin/User"><i class="fas fa-user"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_USER")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/Organization"><i class="fas fa-bezier-curve"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_ORGANIZATION")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/GroupUser"><i class="fas fa-warehouse"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_GROUP_USER")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/Role"><i class="fab fa-quora"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_ROLE")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/Function"><i class="fa fa-th"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_FUNCITION")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/Application"><i class="fab fa-apple"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_APPLICATION")</a>
+                    </li>
+                    <li class="">
+                    </li>
+                    <li class="">
+                        <a href="/Admin/Resource"><i class="icon-diamond"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_RESOURCE")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/Permission"><i class="fa fa-cogs"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_PERMISSION")</a>
+                    </li>
+                    <li class="">
+                        <a href="/Admin/PermissionUser"><i class="fa fa-group"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_PERMISSION_USER")</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/Admin/GalaxyKeyword"><i class="fab fa-google"></i> @CommonUtil.ResourceValue("MENU_SETTING_SM_GALAXY_KEYWORD")</a>
+                    </li>
+                </ul>
+            </li>
+            @*<li class="nav-item ">
+            <a href="/Admin/Notification">
+                <i class="fas fa-bell"></i> <span>@CommonUtil.ResourceValue("MENU_SETTING_NOTIFICATION")</span>
+                <span class="pull-right-container">
+                    <small class="label pull-right bg-blue">12</small>
+                </span>
+            </a>
+        </li>*@
+            @*<li class="nav-item">
+            <a href="#"><i class="fab fa-apple"></i><span data-i18n="nav.advance_cards.main" class="menu-title">@CommonUtil.ResourceValue("MENU_SETTING_APPLICATION")</span></a>
+            <ul class="menu-content">
+                <li class="">
+                    <a href="/Admin/AppVendor"><i class="fas fa-users"></i> @CommonUtil.ResourceValue("MENU_SETTING_APPLICATION_VENDOR")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/AddonApp"><i class="fab fa-apple"></i> @CommonUtil.ResourceValue("MENU_SETTING_APPLICATION_ADDON")</a>
+                </li>
+                <li class="">
+                    <a href="/Admin/AddonAppServer"><i class="fas fa-users"></i> @CommonUtil.ResourceValue("MENU_SETTING_APPLICATION_ADDON_APP_SERVER")</a>
+                </li>
+            </ul>
+        </li>*@
+            @*<li class="">
+            <a href="/Admin/VideoCall"><i class="fas fa-video"></i> @CommonUtil.ResourceValue("MENU_SETTING_VIDEO_CALL")</a>
+        </li>*@
+            @*Other*@
+            <li class="navigation-header navigation-header-no-expand navigation-header_border-top">
+                <span data-i18n="nav.category.layouts">@CommonUtil.ResourceValue("MENU_OTHER")</span><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+            </li>
+            <li class="">
+                <a href="/Admin/DashBoard/Logout"><i class="fas fa-sign-out-alt"></i>@CommonUtil.ResourceValue("MENU_LOGOUT")</a>
+            </li>
+            <div class="app-menu">
+                <a href="">
+                    <i style="color: #b8c7ce;" class="fab fa-facebook-square"></i>
+                </a>
+                <a href="" class="pl5">
+                    <i style="color: #b8c7ce;" class="fab fa-google-drive"></i>
+                </a>
+                <a href="" class="pl5">
+                    <i style="color: #b8c7ce;" class="fas fa-dove"></i>
+                </a>
+                <a href="" class="pl5">
+                    <i style="color: #b8c7ce;" class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    //Xu ly phan canh bao quy
+    setInterval(function () {
+        $.ajax({
+            url: "/Admin/FundWarning/GetCountWarning",
+            cache: false,
+            type: 'POST',
+            success: function (rs) {
+                var count = parseInt(rs);
+                if (count > 0)
+                    $('#countWarning').text(rs);
+            }
+        });
+    }, 5000);
+</script>

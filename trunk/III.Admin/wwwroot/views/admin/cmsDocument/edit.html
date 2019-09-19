@@ -1,0 +1,319 @@
+﻿<style>
+    .dataTables_wrapper .table-scrollable {
+        border: 1px solid #e7ecf1 !important;
+    }
+
+    @media (min-width:992px) and (max-width:1200px) {
+        .modal-80 {
+            width: 80%;
+        }
+    }
+
+    @media (min-width:1201px) and (max-width:1400px) {
+        .modal-80 {
+            width: 70%;
+        }
+    }
+
+    @media (min-width:1400px) {
+        .modal-80 {
+            width: 60%;
+        }
+    }
+</style>
+<div class="modal-header">
+    <img class="icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <span class="modal-title" id="modal-title">{{'Thêm mới danh mục' | translate}}</span>
+</div>
+<div class="modal-body pb-0" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal userFormAreaHeader" method="post" ng-validate="validationOptions">
+            <div class="form-body pt-0">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label require">{{'Tiêu đề' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'Tiêu đề' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label require">{{'Đường dẫn' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'Đường dẫn' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label require">{{'Chuyên mục' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CustomerCode" theme="bootstrap" on-select="changleSelect('CustomerCode')">
+                                        <ui-select-match placeholder="{{'Chuyên mục' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                                        <ui-select-choices repeat="x.Code as x  in Customers | filter: $select.search">
+                                            {{x.Name}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CustomerCode=''" class="btn btn-default no-shadow" style="">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 text-left"><i class="fas fa-gift"></i>&nbsp;{{'Ngày đăng' | translate}}</label>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='date-birthday'>
+                                    <input type='text' class="form-control input-date" name="birthday" ng-model="model.birthday" placeholder="{{'Ngày đăng' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label ">{{'Ngôn ngữ' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CaseWorker" theme="bootstrap" on-select="changleSelect('CaseWorker')">
+                                        <ui-select-match placeholder="{{'Chọn ngôn ngữ' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                        <ui-select-choices repeat="x.UserId as x in listUser | filter: $select.search">
+                                            {{x.GivenName}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CaseWorker='';" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label ">{{'kiểu mẫu hiển thị' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CaseWorker" theme="bootstrap" on-select="changleSelect('CaseWorker')">
+                                        <ui-select-match placeholder="{{'Lựa chọn kiểu mẫu hiển thị' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                        <ui-select-choices repeat="x.UserId as x in listUser | filter: $select.search">
+                                            {{x.GivenName}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CaseWorker='';" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label">{{'Tags' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'Tags' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label">{{'Mô tả' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <textarea name="Note" rows="5" class="form-control" ng-model="model.AetDescription" type="text" placeholder="{{'FAE_CURD_TXT_NOTE' |translate}}..." ng-disabled="IsPermission"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label require">{{'Số ký hiệu' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'Số ký hiệu' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label require col-md-4 text-left"><i class="fas fa-gift"></i>&nbsp;{{'Trích yếu' | translate}}</label>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='date-birthday'>
+                                    <input type='text' class="form-control input-date" name="birthday" ng-model="model.birthday" placeholder="{{'Trích yếu' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label ">{{'Cơ quan ban hành' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CaseWorker" theme="bootstrap" on-select="changleSelect('CaseWorker')">
+                                        <ui-select-match placeholder="{{'Cơ quan ban hành' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                        <ui-select-choices repeat="x.UserId as x in listUser | filter: $select.search">
+                                            {{x.GivenName}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CaseWorker='';" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label ">{{'Loại văn bản' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CaseWorker" theme="bootstrap" on-select="changleSelect('CaseWorker')">
+                                        <ui-select-match placeholder="{{'Loại văn bản' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                        <ui-select-choices repeat="x.UserId as x in listUser | filter: $select.search">
+                                            {{x.GivenName}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CaseWorker='';" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-user"></i>
+                                <label class="control-label ">{{'Lĩnh vực' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <ui-select tagging ng-model="model.CaseWorker" theme="bootstrap" on-select="changleSelect('CaseWorker')">
+                                        <ui-select-match placeholder="{{'Lĩnh vực' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                        <ui-select-choices repeat="x.UserId as x in listUser | filter: $select.search">
+                                            {{x.GivenName}}
+                                        </ui-select-choices>
+                                    </ui-select>
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="model.CaseWorker='';" class="btn btn-default no-shadow">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 text-left"><i class="fas fa-gift"></i>&nbsp;{{'Ngày ban hành' | translate}}</label>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='date-birthday'>
+                                    <input type='text' class="form-control input-date" name="birthday" ng-model="model.birthday" placeholder="{{'Ngày ban hành' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 text-left"><i class="fas fa-gift"></i>&nbsp;{{'Ngày có hiệu lực' | translate}}</label>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='date-birthday'>
+                                    <input type='text' class="form-control input-date" name="birthday" ng-model="model.birthday" placeholder="{{'Ngày có hiệu lực' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 text-left"><i class="fas fa-gift"></i>&nbsp;{{'Ngày hết hiệu lực' | translate}}</label>
+                            <div class="col-md-8">
+                                <div class='input-group date' id='date-birthday'>
+                                    <input type='text' class="form-control input-date" name="birthday" ng-model="model.birthday" placeholder="{{'Ngày hết hiệu lực' | translate}}..." />
+                                    <span class="input-group-addon">
+                                        <span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label">{{'Người ký' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'Người ký' | translate}}..." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <i class="fa fa-barcode"></i>
+                                <label class="control-label">{{'Thay thế văn bản' | translate}}</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control" name="ProjectCode" ng-model="model.ProjectCode" type="text" placeholder="{{'Thay thế văn bản' | translate}}..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <uib-tabset active="active">
+                <uib-tab class="mt5" index="0" heading="{{'Mô tả' | translate}}" disable="Object.SupplierId == ''" ng-click="chkSubTab()">
+                    <textarea ng-model="model.Description" ui-tinymce="tinymceOptions"></textarea>
+                </uib-tab>
+                <uib-tab class="mt5" index="1" heading="{{'Ảnh' | translate}}">
+                    <div ng-include="'../views/admin/cmsDocument/image.html'"></div>
+                </uib-tab>
+                <uib-tab class="mt5" index="2" heading="{{'File đính kèm' | translate}}">
+                    <div ng-include="'../views/admin/cmsDocument/file.html'"></div>
+                </uib-tab>
+                <div class="pull-right">
+                    <div class="btn-group actions d-flex">
+                        <div class="pr10">
+                            <a data-dismiss="modal" ng-click="cancel()" class="btn btn-icon-only btn-circle btn-outline red-custom">
+                                <span><i class="glyphicon glyphicon-remove"></i></span>
+                            </a>
+                            <p class="text-underline fs9 mb5 pt3">{{'COM_BTN_CANCEL' | translate}}</p>
+                        </div>
+                        <div class="text-center pl20" ng-click="submit()">
+                            <a class="btn btn-icon-only btn-circle btn-outline green-custom">
+                                <span><i class="fa fa-plus"></i></span>
+                            </a>
+                            <p class="text-underline mb-0 fs9  pt3">{{'COM_BTN_ADD' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </uib-tabset>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,40 @@
+﻿<div id="contact-main" ng-controller="contact">
+    <div class="table-toolbar">
+        <form name="searchform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_CONTACT_LBL_CONTACTNAME' | translate}}</label>
+                <input ng-model="model.ContactName" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_CONTACT_TXT_CONTACTNAME' | translate}}..." />
+            </div>
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_CONTACT_LBL_CONTACTEMAIL' | translate}}</label>
+                <input ng-model="model.ContactEmail" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_CONTACT_TXT_CONTACTEMAIL' | translate}}..." />
+            </div>
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_CONTACT_LBL_CONTACTTELEPHONE' | translate}}</label>
+                <input ng-model="model.ContactTelephone" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_CONTACT_TXT_CONTACTTELEPHONE' | translate}}..." />
+            </div>
+            <div class="col-lg-2  form-group mr5 mb5">
+                <label class="control-label">{{'CUS_CURD_TAB_CONTACT_LBL_CONTACTMOBIEPHONE' | translate}}</label>
+                <input ng-model="model.ContactMobilePhone" class="form-control" type="text" placeholder="{{'CUS_CURD_TAB_CONTACT_TXT_CONTACTMOBIEPHONE' | translate}}..." />
+            </div>
+            <div class="col-lg-2 pl-0 pt25 mb5">
+                <button ng-click="search()" class="btn btn-accent">
+                    <i class="fa fa-search"></i>
+                    {{'COM_BTN_SEARCH' | translate}}
+                </button>
+            </div>
+            <div class="col-lg-2 pl-0 pt25 mb5">
+                <button ng-click="add()" type="submit" class="btn btn-green">
+                    <i class="fa fa-plus mr5"></i>
+                    {{'COM_BTN_ADD' | translate}}
+                </button>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblData"></table>
+</div>

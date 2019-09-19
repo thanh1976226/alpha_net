@@ -1,0 +1,80 @@
+﻿<div ng-controller="projectTabPayment">
+    <div class="row">
+        <form name="search" method="post">
+            <div class="col-md-2 form-group">
+                <div class="form-group ">
+                    <div class="input-group">
+                        <input class="form-control" ng-model="model.PayTitle" name="Title" type="text" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_TXT_PAYTITLE' | translate}}..." />
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="model.PayTitle=''" class="btn btn-default no-shadow">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class="input-group">
+                    <ui-select tagging ng-model="model.PaymentType" theme="bootstrap">
+                        <ui-select-match placeholder="{{'PROJECT_CURD_TAB_PAYMENT_COMBO_PAYTYPE' | translate}}...">{{$select.selected.Name}}</ui-select-match>
+                        <ui-select-choices repeat="x.Value as x in PaymentType | filter: $select.search">
+                            {{x.Name}}
+                        </ui-select-choices>
+                    </ui-select>
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.PaymentType=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2 form-group">
+                <div class='input-group date' id='datefromPayment'>
+                    <input type='text' class="form-control input-date" ng-model="model.FromDate" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_TXT_FROMDATE' | translate}}..." />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.FromDate=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2 form-group ">
+                <div class='input-group date' id='datetoPayment'>
+                    <input type='text' class="form-control input-date" ng-model="model.ToDate" placeholder="{{'PROJECT_CURD_TAB_PAYMENT_TXT_TODATE' | translate}}..." />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="model.ToDate=''" class="btn btn-default no-shadow">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button ng-click="searchPayment()" class="btn btn-accent">
+                    <i class="fa fa-search"></i>
+                    {{'COM_BTN_SEARCH' | translate}}
+                </button>
+            </div>
+            <div class="col-lg-2 ">
+                <button ng-click="add()" type="submit" class="btn btn-green">
+                    <i class="fa fa-plus"></i>
+                    {{'COM_BTN_ADD' | translate}}
+                </button>
+            </div>
+        </form>
+    </div>
+    <table class="table dataTable table-hover table-striped"
+           datatable
+           dt-options="dtOptions"
+           dt-columns="dtColumns"
+           dt-instance="dtInstance"
+           id="tblDataPayment">
+        <tfoot>
+            <tr>
+                <th></th>
+                <th colspan="3" class="pl10">Tổng tiền</th>
+                <th colspan="1" class="pl10"><span> Số tiền thu - </span><span class="text-success">{{totalReceipts | number : fractionSize}}</span></th>
+                <th colspan="1" class="pl10">Số tiền chi - <span class="text-danger">{{totalPaymentSlip | number : fractionSize}}</span></th>
+            </tr>
+        </tfoot>
+    </table>
+</div>

@@ -1,0 +1,115 @@
+﻿<div class="modal-header">
+    <img class="close icon-remove" title="Close" src="/images/default/close.png" ng-click="cancel()" />
+    <i class="fa fa-plus-circle icon-insert "></i>
+    <div class="modal-title custom-title " id="modal-title">{{'STL_CURD_TITTLE_LATE_LEAVE' | translate}}</div>
+</div>
+<div class="modal-body pt-0 pb-0" id="modal-body">
+    <div class="portlet-body form">
+        <form name="addform" class="form-horizontal" method="post" ng-validate="validationOptions">
+            <div class="form-body pt0 pb-0">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label ng-repeat="x in entities" class="mt-checkbox mt-checkbox-outline fs12" style="margin: 6px 0 0 15px!important;">
+                            <input type="checkbox" ng-model="x.checked" ng-click="updateSelection($index, entities)"> {{x.name}}
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        <label class="control-label require">{{'STL_CURD_LBL_USER_ID' | translate}}</label>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                            <ui-select ng-model="model.UserId" theme="bootstrap" ng-class="{ 'has-error': errorUserId}" on-select="changleSelect('UserId')">
+                                <ui-select-match placeholder="{{'STL_CURD_COMBO_USER_ID' | translate}}...">{{$select.selected.GivenName}}</ui-select-match>
+                                <ui-select-choices repeat="x.Id as x in listEmployeeData | filter: $select.search">
+                                    {{x.GivenName}}
+                                </ui-select-choices>
+                            </ui-select>
+                            <span class="input-group-btn">
+                                <button type="button" ng-click="model.UserId='';" class="btn btn-default no-shadow">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <span ng-show="errorUserId" class="label-color validation-message">
+                            {{'STL_CURD_VALIDATE_EMPLOYEES' | translate}}
+                        </span>
+                    </div>
+                </div>
+                <div ng-class="notWork ? 'col-md-6':'col-md-12'">
+                    <div class="form-group">
+                        <div class="col-md-12 row">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <label class="control-label require">{{notWork ? 'STL_CURD_LBL_FROM_DAY':'STL_CURD_LBL_TIME' | translate}}</label>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="input-group">
+                                <input type="text" class="form-control" autocomplete="off" ng-model="model.ActionTime" name="ActionTime" placeholder="{{model.Action=='NOTWORK' ? 'STL_CURD_TXT_FROM_DAY':'STL_CURD_TXT_TIME' | translate}}" id="ActionTime" />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default no-shadow start-date" ng-click="model.ActionTime='';">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" ng-hide="!notWork">
+                    <div class="form-group">
+                        <div class="col-md-12 row">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <label class="control-label">{{notWork ? 'STL_CURD_LBL_TO_DAY':'STL_CURD_LBL_TIME' | translate}}</label>
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="input-group">
+                                <input type="text" class="form-control" autocomplete="off" ng-model="model.ActionTo" name="ActionTo" placeholder="{{model.Action=='NOTWORK' ? 'STL_CURD_TXT_TO_DAY':'STL_CURD_TXT_TIME' | translate}}" id="ActionTo" />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default no-shadow end-date" ng-click="model.ActionTo='';">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="col-md-12" style="border: 1px solid #ccc;border-radius: 4px;">
+                            <div class="col-md-7 row" style="padding:15px 0 0 0">
+                                <span class="text-success col-md-12">{{'STL_CURD_LBL_LOCATION' | translate}}: Hà Nội,Việt Nam,Việt Nam.</span>
+                                <span class="text-success col-md-12">{{'STL_CURD_LBL_IP' | translate}}: 192.168.1.1</span>
+                                <span class="text-success col-md-12">{{'STL_CURD_LBL_CREATE_TIME' | translate}}: 17/12/2018</span>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="thumbnail mb-0" style="border: 0; box-shadow: none">
+                                    <input id="File" accept=".png,.jpg,.jpeg,.gif,.tif" type="file" style="display:none" />
+                                    <img id="imageId" ng-click="uploadImage()" class="img-circle " style="height: 100px; width: 100px;cursor: pointer" src="/images/default/uploadimg.png" alt="Hình ảnh" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                        <label class="control-label ">{{'STL_CURD_LBL_NOTE' | translate}}</label>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" rows="4" name="Content" ng-model="model.Note" placeholder="{{'STL_CURD_TXT_NOTE' | translate}}..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <a data-dismiss="modal" class="btn btn-red " href="javascript:;" ng-click="cancel()">
+        {{'COM_BTN_CANCEL' | translate}}
+    </a>
+    <button ng-click="submit()" class="btn btn-green mr25" href="javascript:;">
+        {{'COM_BTN_ADD' | translate}}
+    </button>
+</div>

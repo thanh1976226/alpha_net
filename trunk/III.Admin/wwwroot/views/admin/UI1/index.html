@@ -1,0 +1,1615 @@
+﻿<script type="text/javascript">
+    //quatrinhhoctaptaisubmit
+    // var buttons = document.getElementsByClassName('tablinks');
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    // var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent(id);
+        });
+    }
+    showContent('lichsuthaydoitrangthai');
+
+
+    //phiếu thu chi
+    var buttons2 = document.getElementsByClassName('tablinks2');
+    var contents2 = document.getElementsByClassName('tabcontent2');
+    function showContent2(id) {
+        for (var i = 0; i < contents2.length; i++) {
+            contents2[i].style.display = 'none';
+        }
+        var content2 = document.getElementById(id);
+        content2.style.display = 'block';
+    }
+    for (var i = 0; i < buttons2.length; i++) {
+        buttons2[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons2.length; i++) {
+                buttons2[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent2(id);
+        });
+    }
+
+    showContent2('phieuchihocvien');
+
+
+    function readURL(input) {
+        //  $(this).parent().parent().parent().find('.form-control').html($(this).val());
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log('link: ' + e.target.result);
+                $('#picture')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks1;
+        tabcontent = document.getElementsByClassName("tabcontent1");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks1 = document.getElementsByClassName("tablinks1");
+        for (i = 0; i < tablinks1.length; i++) {
+            tablinks1[i].className = tablinks1[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+<style type="text/css">
+
+    div.frame {
+        width: 28%;
+        float: left;
+        margin-top: 5px;
+        
+    }
+
+    div.framefoot {
+        width: 84%;
+        float: left;
+        margin-bottom: 5px;
+        margin-top: 3px
+    }
+
+    div.frameimg {
+        width: 15.5%;
+        float: left;
+    }
+
+    label.width {
+        width: 49%;
+        float: left;
+        padding-left: 4px;
+        margin-bottom: 5px;
+    }
+
+    label.width1 {
+        width: 23.2%;
+        float: left;
+        padding-left: 4px;
+    }
+
+    div.width {
+        width: 51%;
+        float: left;
+    }
+
+    input.width {
+        width: 51%;
+        float: left;
+        margin-bottom: 5px;
+        border: 1px solid #B8B8B8;
+        border-radius: 7px !important;
+        height: 26px;
+    }
+
+    input.widthbutton {
+        width: 41%;
+        float: left;
+        margin-bottom: 5px;
+        border: 1px solid #B8B8B8;
+        border-radius: 7px !important;
+        height: 26px;
+    }
+    select.width {
+        width: 51%;
+        float: left;
+        margin-bottom: 5px;
+        height: 26px;
+        color: #62717A;
+        font-size: 12px;
+        padding: 2px 8px 6px 0px;
+        position: relative;
+        text-shadow: 0 1px #FFFFFF;
+        border: 1px solid #B8B8B8;
+        border-radius: 7px !important;
+    }
+
+    select.widthbutton {
+        width: 41%;
+        float: left;
+        margin-bottom: 5px;
+        height: 26px;
+        color: #62717A;
+        font-size: 12px;
+        padding: 6px 8px 6px 0px;
+        position: relative;
+        text-shadow: 0 1px #FFFFFF;
+        border: 1px solid #B8B8B8;
+        border-radius: 7px !important;
+    }
+
+    textarea.width {
+        width: 51%;
+        float: left;
+        border: 1px solid #B8B8B8;
+        border-radius: 7px !important;
+    }
+
+    div.layout {
+        width: 100%;
+        height:349px;
+    }
+
+    div.layoutsibe {
+        width: 18%;
+        float: left;
+        margin-left: 1%;
+        margin-right: 0.5%
+    }
+
+    div.layoutbody {
+        width: 79%;
+        float: left;
+    }
+
+    div.layout1 {
+        width: 30%;
+        float: left;
+        margin-left: 0%;
+        margin-top: 0.5%;
+    }
+
+    div.layout2 {
+        width: 68%;
+        float: left;
+        margin-left: 0.5%;
+        margin-top: 0.5%;
+    }
+
+    @media only screen and (max-width: 1170px) {
+        div.frame {
+            width: 100%;
+            float: none;
+            margin-top: 5px;
+        }
+        label.width {
+            width: 41%;
+            float: left;
+            padding-left: 4px;
+            margin-bottom: 5px;
+        }
+        div.frameimg {
+            width: 100%;
+            float: none;
+        }
+        div.framefoot {
+            width: 100%;
+            float: none;
+            margin-bottom: 5px;
+            margin-top: 3px
+        }
+    }
+    /*TAP NGANG */
+    /*quá trình học tập tại submit */
+    /* định dạng thẻ div chưa các button tab */
+    div.tab {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        margin-top: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+
+        /* định dạng các button tab */
+        div.tab button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        /*border-top: none;*/
+        margin-bottom: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+
+
+    /*phiếu thu chi */
+    /* định dạng thẻ div chưa các button tab */
+    div.tab2 {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        margin-top: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+
+        /* định dạng các button tab */
+        div.tab2 button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab2 button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks2.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent2 {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        /*border-top: none;*/
+        margin-bottom: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+
+    .tabcontent0 {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+        margin-bottom: 10PX;
+        margin-left: 10PX;
+        margin-right: 10PX;
+    }
+    /*TAP DOC*/
+    /* Style the tab */
+    div.tab1 {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f8f5f1;
+        width: 100%;
+        height: 465px;
+    }
+
+
+    /* Style the buttons that are used to open the tab content */
+    .tab1 button {
+        display: block;
+        background-color: #f8f5f1;
+        color: black;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 50px
+    }
+
+        /*div.tab2 button:hover*/
+        /* đổi màu khi một button tab được hover */
+        .tab1 button:hover {
+            background-color: #f3bdd1;
+        }
+        /*//  button.tablinks2.active*/
+        /* đổi màu nền cho tab đang được hiển thị nội dung */
+        .tab1 button.active {
+            background-color: #f3bdd1;
+        }
+
+    /* Style the tab content */
+    /*.tabcontent1 {
+        float: left;
+        padding: 0px 12px;
+        border: 1px solid #ccc;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+    }*/
+
+</style>
+<div class="row">
+    <div class=" layoutsibe">
+        <DIV>
+            <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Danh sách</h3>
+            </div>
+            <div class="modal-body" id="modal-body" style="padding:0px; ">
+                <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                    <div style="height:30px;margin-top:10px">
+                        <input type="text" class="width" style="    width: 52%;" ng-model="model.Id" name="Id" placeholder="Họ và tên" />
+
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:10px;text-align:center;background-color:#dbd3d3 ;height:25px;margin-left:2px;   border: 1px solid #B8B8B8;" ng-click="editQTLV()"><i class="fa fa-times" style="    margin-left: -5px;"></i> </button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:36%;text-align:center;background-color:#dbd3d3;height:25px;   border: 1px solid #B8B8B8;" ng-click="addNC()" name="btnNC"><i class=""></i> Nâng cao</button>
+                    </div>
+                    <div class="layout" style="overflow-x:scroll">
+
+                        <table class="table dataTable table-bordered table-hover table-striped"
+                               datatable
+                               dt-options="dtOptions"
+                               dt-columns="dtColumns"
+                               dt-instance="dtInstance"
+                               id="tblData"></table>
+                    </div>
+                    <div class="modal-header" style="    background-color: #f7f4f4">
+                        <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Chức năng</h3>
+                    </div>
+                    <div class="tab1">
+
+                        <button class="tablinks1" onclick="openCity(event, 'ketquathidauvaovaxeplop')" id="defaultOpen"><i class="fa fa-book"></i> Kết quả thi đầu vào và xếp lớp</button>
+                        <button class="tablinks1" onclick="openCity(event, 'thuchihocvien')"><i class="fa fa-money"></i> Thu chi học viên</button>
+                        <button class="tablinks1" onclick="openCity(event, 'quatrinhhoctaptaisubmit')"><i class="fa fa-list"></i> Quá trình học tập tại SUBMIT</button>
+                        <button class="tablinks1" onclick="openCity(event, 'lichsuthaydoi')"><i class="fa fa-history"></i> Lịch sử thay đổi</button>
+                    </div>
+                </div>
+            </div>
+
+        </DIV>
+        <div>
+
+
+            <!--<div id="London" class="tabcontent1">
+
+
+            </div>
+
+            <div id="Paris" class="tabcontent1">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+
+            <div id="Tokyo" class="tabcontent1">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>-->
+        </div>
+    </div>
+    <div class=" layoutbody">
+        <div>
+            <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Thông tin chi tiết học viên</h3>
+            </div>
+            <div class="modal-body" id="modal-body" style="padding:0px;">
+                <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                    <!--<div class="row" style="padding-right: 29px;">-->
+                    <!--</div>-->
+                    <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                        <div class="portlet-body form">
+                            <form name="addformstudent" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                <div class="form-body">
+                                    <div class="frame" style="margin-left:0.5%">
+                                        <div class="form-group" style="border:none; ">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Họ và tên</label>
+                                            <!--<div class="width" style="height:20px;border:none">-->
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Họ và tên" />
+                                            <!--</div>-->
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-envelope"></i> Email</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Email" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-th"></i> Mạng xã hội</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Mạng xã hội" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;   border: 1px solid #B8B8B8;" ng-click="addMXH() ;" name="btnMXH"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-home"></i> Địa chỉ</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Địa chỉ" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Kiểu học viên</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Kiểu học viên" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;   border: 1px solid #B8B8B8;" ng-click="addKHV()"name="btnKHV"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-university"></i> Lớp hiện tại</label>
+                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Lớp hiện tại" />-->
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="opel">Opel</option>
+                                                <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-university"></i> Công ty</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Công ty" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-heart"></i> Quan tâm</label>
+                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Quan tâm" />-->
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Người tạo</label>
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-sun-o"></i> Điều mong muốn</label>
+                                            <textarea type="text" class="width" ng-model="model.Id" name="Id" placeholder="Điều mong muốn" style="height:58px"/>
+                                        </div>
+                                    </div>
+                                    <div class="frame">
+                                        <div class="form-group" style="border:none; ">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Mã</label>
+                                            <!--<div class="width" style="height:20px;border:none">-->
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Mã" />
+                                            <!--</div>-->
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày sinh</label>
+                                            <div class="input-group date pick-date" id="datetimepicker3" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày sinh" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                </span>
+                                            </div>
+                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                            <script>
+                                                $('#datetimepicker3').datetimepicker();
+                                            </script>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width text-left"><i class="fa fa-phone"></i> Di động</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Di động" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-users"></i> Anh chị em</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Anh chị em" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="addACE()" name="btnACE"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-home"></i> Thành phố</label>
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-book"></i> Cấp học</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Cấp học" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="addCH()"name="btnCH"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-university"></i> Lớp chuyên</label>
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-book"></i> Học tập</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Học tập" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="addHT()" name="btnHT"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-sitemap"></i> Muốn du học</label>
+                                            <select class="widthbutton">
+                                                <!--<option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                            </select>
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="addMDH()" name="btnMDH"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> SUBMIT</label>
+                                            <select class="widthbutton">
+                                                <!--<option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                            </select>
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="addSubmit()"name="btnSubmit"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày tạo</label>
+                                            <div class="input-group date pick-date" id="datetimepicker10" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày tạo" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                </span>
+                                            </div>
+                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                            <script>
+                                                $('#datetimepicker10').datetimepicker();
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="frame">
+                                        <div class="form-group" style="border:none; ">
+                                            <label class="width pt5 text-left"><i class="fa fa-transgender"></i> Giới tính</label>
+                                            <!--<div class="width" style="height:20px;border:none">-->
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>-->
+                                            </select>
+                                            <!--</div>-->
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-phone"></i> Cố định</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Di động" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Người liên hệ</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Anh chị em" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="addNLH()" name="btnNLH"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-home"></i> Quận huyện</label>
+                                            <input type="text" class="widthbutton" ng-model="model.Id" name="Id" placeholder="Thành phố" />
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:9%;height:26px;text-align:center;background-color:#dbd3d3;margin-left:2px;border: 1px solid #B8B8B8;" ng-click="submitQTLV()"><i class="fa fa-plus" style="    margin-left: -1px;"></i></button>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-university"></i> Trường</label>
+                                            <select class="width" style="width:51%">
+                                                <!--<option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-book"></i> Chuyên ngành</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Lớp chuyên" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-star"></i> Xếp hạng</label>
+                                            <select class="width" style="width:51%">
+                                                <option value="volvo" style="font-size:10px">Volvo</option>
+                                                <!--<  <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>-->
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left"><i class="fa fa-book"></i> Mục tiêu</label>
+                                            <input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Muốn du học" />
+                                        </div>
+                                        <div class="form-group" style="border:none">
+                                            <label class="width pt5 text-left" ><i class="glyphicon glyphicon-pencil"></i> Ghi chú</label>
+                                            <textarea type="text" class="width" style="height: 88px;" ng-model="model.Id" name="Id" placeholder="SUBMIT" />
+                                        </div>
+
+                                    </div>
+                                    <div class="frameimg">
+                                        <!--<div class="form-group" style="border:none; padding-top:23px">
+
+
+                                            <div class="fileupload-new thumbnail mb5" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;padding: 0px;">
+                                                <img id="picture" src="{{model.picture}}" alt="" ng-src='{{model.picture}}' style="height:150px; width:150px; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%" />
+                                            </div>
+                                            <input type="file" id="file" class="filestyle" accept=".png, .jpg, .jpeg, .gif, .bmp" files-input ng-model="model.picture" onchange="readURL(this);">
+                                            <script>
+                                                $(":file").filestyle({ buttonName: "btn btn-primary" });
+                                            </script>
+
+                                        </div>-->
+                                        <div class="form-group" style="border:none;margin-top:10px">
+                                            <div class="fileupload-new thumbnail mb5" style="border-radius:50%;-moz-border-radius:50%; -webkit-border-radius:50%;padding: 0px; height:90%;width:90%;margin-left:5PX">
+                                                <img id="picture" src="{{model.picture}}" alt="" ng-src='{{model.picture}}' style="height:150px; width:150px; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%" />
+                                            </div>
+                                            <div class="input-group input-file" style="border:none;margin-left:19%;width:90%;padding:0">
+                                                <!--<span class="input-group-addon">-->
+                                                <a' href='javascript:;'>
+
+                                                    <input type="file" id="file" class="form-control" accept=".png, .jpg, .jpeg, .gif, .bmp" files-input ng-model="model.Profile_picture" name="Profile_picture" onchange="readURL(this); " style="    width: 100px;border: none;    background-color: #f8f5f1">
+                                                    </a>
+                                                    <!--</span>-->
+                                            </div>
+                                            <!--<input type="file" class="form-control" ng-model="model.Icon" name="Icon" />-->
+                                        </div>
+                                    </div>
+                                    <div class="framefoot ">
+                                        <div class="form-group pull-right" style="border:none">
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height: 29px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height: 29px" ng-click="editQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height: 29px" ng-click="submitQTLV()"><i class="fa fa-times"></i> Xoá</button>
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height: 29px" ng-click="editQTLV()"><i class="fa fa-plus"></i> Thêm mới</button>
+                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8; height: 29px" ng-click="editQTLV()"><i class="fa fa-file"></i> Tệp tin</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:500PX">
+            <div id="quatrinhhoctaptaisubmit" class="tabcontent1">
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Quá trình học tập tại SUBMIT</h3>
+                </div>
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                        <!--<div class="row" style="padding-right: 29px;">-->
+                        <!--</div>-->
+
+                        <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                            <div class="portlet-body form">
+                                <div class="tab">
+                                    <button class="tablinks" name="quatrinhhoctap">Quá trình học tập</button>
+                                    <button class="tablinks" name="ketquathitaisubmit">Kết quả thi tại submit</button>
+                                    <button class="tablinks" name="ketquathithat">Kết quả thi thật</button>
+                                    <button class="tablinks" name="quanlytrangthai">Quản lý trạng thái</button>
+                                    <button class="tablinks active" name="lichsuthaydoitrangthai">Lịch sử thay đổi trạng thái</button>
+                                </div>
+                                <div id="lichsuthaydoitrangthai" class="tabcontent" style="height:400px">
+
+                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;  margin:10px">
+                                        <!--<div class="layout">-->
+                                        <button type="submit" style="border-radius: 4px !important;border-color:silver;width:120px;height:30px;text-align:center;background-color:#dbd3d3;     margin-top: 7px;margin-left: 7px;border: 1px solid #B8B8B8;" ng-click="submitQTLV()"> Mã khoá học    <i class="fa fa-caret-up"></i></button>
+                                        <table class="table dataTable table-bordered table-hover table-striped"
+                                               datatable
+                                               dt-options="dtOptions"
+                                               dt-columns="dtColumns"
+                                               dt-instance="dtInstance"
+                                               id="tblData"></table>
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+
+
+                                <div id="quatrinhhoctap" class="tabcontent">
+
+
+                                    <div class="modal-body" id="modal-body" style="padding:0px;">
+                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;height:388px">
+                                            <!--<div class="row" style="padding-right: 29px;">-->
+                                            <!--</div>-->
+
+                                            <div class="layout1">
+                                                <div>
+                                                    <div class="portlet-body form">
+
+
+                                                        <!--</div>-->
+
+                                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin-left: 2%; margin-right: 1%;overflow-x: scroll;">
+                                                            <!--<div class="col-md-4">-->
+
+                                                            <table class="table dataTable table-bordered table-hover table-striped"
+                                                                   datatable
+                                                                   dt-options="dtOptions"
+                                                                   dt-columns="dtColumns"
+                                                                   dt-instance="dtInstance"
+                                                                   id="tblData"></table>
+
+                                                            <!--</div>-->
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layout2">
+                                                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                                                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Thông tin xếp lớp</h3>
+                                                </div>
+                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                                                        <!--<div class="row" style="padding-right: 29px;">-->
+                                                        <!--</div>-->
+                                                        <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                                                            <div class="portlet-body form">
+                                                                <form name="addformstudent" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                                                    <div class="form-body">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Trình độ</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-ok"></i> Trạng thái</label>
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày khai giảng</label>
+                                                                                <div class="input-group date pick-date" id="datetimepicker4" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                                    <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày khai giảng" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                                    <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                                        <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                                                <script>
+                                                                                    $('#datetimepicker4').datetimepicker();
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Thời gian bắt đầu</label>
+                                                                                <div class="input-group date pick-date" id="datetimepicker5" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                                    <input class="width" data-val="true" name="NextTimeCheck" placeholder="Thời gian bắt đầu" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                                    <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                                        <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                                                <script>
+                                                                                    $('#datetimepicker5').datetimepicker();
+                                                                                </script>
+                                                                            </div>
+
+
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Khoá học</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày học</label>
+                                                                                <div class="input-group date pick-date" id="datetimepicker6" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                                    <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày học" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                                    <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                                        <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                                                <script>
+                                                                                    $('#datetimepicker6').datetimepicker();
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày kết thúc</label>
+                                                                                <div class="input-group date pick-date" id="datetimepicker7" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                                    <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày kết thúc" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                                    <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                                        <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                                                <script>
+                                                                                    $('#datetimepicker7').datetimepicker();
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Thời gian kết thúc</label>
+                                                                                <div class="input-group date pick-date" id="datetimepicker8" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                                    <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày học" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                                    <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                                        <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                                                <script>
+                                                                                    $('#datetimepicker8').datetimepicker();
+                                                                                </script>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group" style="border:none">
+                                                                                <label class="width1 pt5 text-left"><i class="glyphicon glyphicon-pencil"></i> Ghi chú</label>
+                                                                                <textarea cols="9" type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ghi chú" style="width: 76.7%;height: 164px;" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="framefoot " style="margin-bottom: 10px;margin-top: 10px;margin-left: 13.5%;">
+                                                                            <div class="form-group pull-right" style="border:none">
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:29px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Xếp lớp</button>
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:29px" ng-click="editQTLV()"><i class="fa fa-times"></i> Xoá bỏ</button>
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8; height:29px" ng-click="submitQTLV()"><i class="fa fa-refresh"></i> Làm mới</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <!--</div>-->
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div id="ketquathitaisubmit" class="tabcontent">
+
+
+                                    <div class="modal-body" id="modal-body" style="padding:0px;">
+                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;height:388px">
+                                            <!--<div class="row" style="padding-right: 29px;">-->
+                                            <!--</div>-->
+
+                                            <div class="layout2">
+                                                <div>
+                                                    <div class="portlet-body form">
+
+
+                                                        <!--</div>-->
+
+                                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin-left: 2%; margin-right: 1%;overflow-x: scroll;">
+                                                            <!--<div class="col-md-4">-->
+
+                                                            <table class="table dataTable table-bordered table-hover table-striped"
+                                                                   datatable
+                                                                   dt-options="dtOptions"
+                                                                   dt-columns="dtColumns"
+                                                                   dt-instance="dtInstance"
+                                                                   id="tblData"></table>
+
+                                                            <!--</div>-->
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layout1">
+                                                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                                                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Nhập điểm học viên</h3>
+                                                </div>
+                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                                                        <!--<div class="row" style="padding-right: 29px;">-->
+                                                        <!--</div>-->
+                                                        <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                                                            <div class="portlet-body form">
+                                                                <form name="addformstudent" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                                                    <div class="form-body">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Trình độ</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Khoá học</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Kỳ thi</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Bài thi số</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="framefoot " style="margin-bottom: 10px;margin-top: 10px;margin-left: 9.5%;">
+                                                                            <div class="form-group pull-right" style="border:none">
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:114px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:28px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Cập nhật điểm</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <!--</div>-->
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div id="quanlytrangthai" class="tabcontent">
+
+
+                                    <div class="modal-body" id="modal-body" style="padding:0px;">
+                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;height:388px">
+                                            <!--<div class="row" style="padding-right: 29px;">-->
+                                            <!--</div>-->
+
+                                            <div class="layout2" style="width:64%">
+                                                <div>
+                                                    <div class="portlet-body form">
+
+
+                                                        <!--</div>-->
+
+                                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin-left: 2%; margin-right: 1%;overflow-x: scroll;">
+                                                            <!--<div class="col-md-4">-->
+
+                                                            <table class="table dataTable table-bordered table-hover table-striped"
+                                                                   datatable
+                                                                   dt-options="dtOptions"
+                                                                   dt-columns="dtColumns"
+                                                                   dt-instance="dtInstance"
+                                                                   id="tblData"></table>
+
+                                                            <!--</div>-->
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layout1" style="width:35%">
+                                                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                                                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Nhập điểm học viên</h3>
+                                                </div>
+                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                                                        <!--<div class="row" style="padding-right: 29px;">-->
+                                                        <!--</div>-->
+                                                        <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                                                            <div class="portlet-body form">
+                                                                <form name="addformstudent" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                                                    <div class="form-body">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Trình độ</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Khoá học</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Trạng thái xếp lớp</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Trạng thái học phí</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Ghi chú</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="framefoot " style="margin-bottom: 10px;margin-top: 10px;margin-left: 9.5%;">
+                                                                            <div class="form-group pull-right" style="border:none">
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:114px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:28px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <!--</div>-->
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div id="ketquathithat" class="tabcontent">
+
+
+                                    <div class="modal-body" id="modal-body" style="padding:0px;">
+                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;height:388px">
+                                            <!--<div class="row" style="padding-right: 29px;">-->
+                                            <!--</div>-->
+
+                                            <div class="layout2" style="width:64%">
+                                                <div>
+                                                    <div class="portlet-body form">
+
+
+                                                        <!--</div>-->
+
+                                                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin-left: 2%; margin-right: 1%;overflow-x: scroll;">
+                                                            <!--<div class="col-md-4">-->
+
+                                                            <table class="table dataTable table-bordered table-hover table-striped"
+                                                                   datatable
+                                                                   dt-options="dtOptions"
+                                                                   dt-columns="dtColumns"
+                                                                   dt-instance="dtInstance"
+                                                                   id="tblData"></table>
+
+                                                            <!--</div>-->
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="layout1" style="width:35%">
+                                                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                                                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Nhập kết quả thi</h3>
+                                                </div>
+                                                <div class="modal-body" id="modal-body" style="padding:0px;">
+                                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                                                        <!--<div class="row" style="padding-right: 29px;">-->
+                                                        <!--</div>-->
+                                                        <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                                                            <div class="portlet-body form">
+                                                                <form name="addformstudent" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                                                    <div class="form-body">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Tên kỳ thi</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none;    margin-top: 4px;">
+                                                                                <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày thi</label>
+                                                                                <div class="input-group date pick-date" id="datetimepicker4" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                                    <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày thi" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                                    <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                                        <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                                <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                                                <script>
+                                                                                    $('#datetimepicker4').datetimepicker();
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Lần thi</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Kết quả</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                            <div class="form-group" style="border:none; margin-top:5px">
+                                                                                <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Ghi chú</label>
+                                                                                <!--<div class="width" style="height:20px;border:none">-->
+                                                                                <select class="width" style="width:51%">
+                                                                                    <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                                    <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                                                </select>
+                                                                                <!--</div>-->
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class="framefoot " style="margin-bottom: 10px;margin-top: 10px;margin-left: 9.5%;">
+                                                                            <div class="form-group pull-right" style="border:none">
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:62px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:28px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Thêm </button>
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:54px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:28px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Sửa </button>
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:52px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:28px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Xoá </button>
+                                                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:80px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:28px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Làm mới</button>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <!--</div>-->
+
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="thuchihocvien" class="tabcontent1">
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Quá trình học tập tại SUBMIT</h3>
+                </div>
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                        <!--<div class="row" style="padding-right: 29px;">-->
+                        <!--</div>-->
+
+                        <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                            <div class="portlet-body form">
+                                <div class="tab2">
+                                    <button class="tablinks2" name="phieuthuhocvien">Phiếu thu học viên</button>
+                                    <button class="tablinks2 active" name="phieuchihocvien">Phiếu chi học viên</button>
+
+                                </div>
+                                <div id="phieuthuhocvien" class="tabcontent2" style="height:400px">
+
+                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin:10px">
+                                        <!--<div class="layout">-->
+
+                                            <table class="table dataTable table-bordered table-hover table-striped"
+                                                   datatable
+                                                   dt-options="dtOptions"
+                                                   dt-columns="dtColumns"
+                                                   dt-instance="dtInstance"
+                                                   id="tblData"></table>
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+                                <div id="phieuchihocvien" class="tabcontent2" style="height:400px">
+
+                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin:10px">
+                                        <!--<div class="layout">-->
+
+                                            <table class="table dataTable table-bordered table-hover table-striped"
+                                                   datatable
+                                                   dt-options="dtOptions"
+                                                   dt-columns="dtColumns"
+                                                   dt-instance="dtInstance"
+                                                   id="tblData"></table>
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="lichsuthaydoi" class="tabcontent1">
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Lịch sử thay đổi</h3>
+                </div>
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;height:460px">
+                        <!--<div class="row" style="padding-right: 29px;">-->
+                        <!--</div>-->
+
+                        <div class="row" style=" padding-right: 13px;padding-left: 15px;">
+                            <div class="portlet-body form">
+
+
+                                <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin:10px">
+                                    <!--<div class="layout">-->
+                                        <table  class="table dataTable table-bordered table-hover table-striped"
+                                               datatable
+                                               dt-options="dtOptions"
+                                               dt-columns="dtColumns"
+                                               dt-instance="dtInstance"
+                                               id="tblData"></table>
+                                    <!--</div>-->
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="ketquathidauvaovaxeplop" class="tabcontent1">
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Kết quả thi đầu vào và xếp lớp</h3>
+                </div>
+
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;height:460px;">
+                        <!--<div class="row" style="padding-right: 29px;">-->
+                        <!--</div>-->
+
+                        <div class="layout1" >
+                            <!--<div class="row" >-->
+                            <div style="width:100%; height:30px">
+                                <label class="pt5" style="float: left;width: 30%; padding-left: 2%;"><i class="glyphicon glyphicon-user"></i> Học viên</label>
+                                <!--<div class="width" style="height:20px;border:none">-->
+                                <input type="text" style="float: left;width: 68%; border: 1px solid #B8B8B8;height:26px; border-radius: 7px !important;" ng-model="model.Id" name="Id" placeholder="Họ tên" />
+                            </div>
+                            <div >
+                                <div class="portlet-body form" style=" overflow-x: scroll; height: 422px;">
+
+
+                                    <!--</div>-->
+
+                                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada; margin-left: 2%; margin-right: 1%;">
+                                        <!--<div class="col-md-4">-->
+
+                                        <table class="table dataTable table-bordered table-hover table-striped"
+                                               datatable
+                                               dt-options="dtOptions"
+                                               dt-columns="dtColumns"
+                                               dt-instance="dtInstance"
+                                               id="tblData"></table>
+
+                                        <!--</div>-->
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layout2">
+                            <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                                <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;">Thông tin xếp lớp</h3>
+                            </div>
+                            <div class="modal-body" id="modal-body" style="padding:0px;">
+                                <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                                    <!--<div class="row" style="padding-right: 29px;">-->
+                                    <!--</div>-->
+                                    <div class="row" style=" padding-right: 13px;padding-left: 10px;">
+                                        <div class="portlet-body form">
+                                            <form name="addformstudent" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                                <div class="form-body">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group" style="border:none; margin-top:5px">
+                                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-tint"></i> Trình độ</label>
+                                                            <!--<div class="width" style="height:20px;border:none">-->
+                                                            <select class="width" style="width:51%">
+                                                                <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                            </select>
+                                                            <!--</div>-->
+                                                        </div>
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-ok"></i> Trạng thái</label>
+                                                            <select class="width" style="width:51%">
+                                                                <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày khai giảng</label>
+                                                            <div class="input-group date pick-date" id="datetimepicker4" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày khai giảng" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                </span>
+                                                            </div>
+                                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                            <script>
+                                                                $('#datetimepicker4').datetimepicker();
+                                                            </script>
+                                                        </div>
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Thời gian bắt đầu</label>
+                                                            <div class="input-group date pick-date" id="datetimepicker5" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Thời gian bắt đầu" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                </span>
+                                                            </div>
+                                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                            <script>
+                                                                $('#datetimepicker5').datetimepicker();
+                                                            </script>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group" style="border:none; margin-top:5px">
+                                                            <label class="width pt5 text-left"><i class="glyphicon glyphicon-user"></i> Khoá học</label>
+                                                            <!--<div class="width" style="height:20px;border:none">-->
+                                                            <select class="width" style="width:51%">
+                                                                <option value="volvo" style="font-size:10px">Volvo</option>
+                                                                <!--<  <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>-->
+                                                            </select>
+                                                            <!--</div>-->
+                                                        </div>
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày học</label>
+                                                            <div class="input-group date pick-date" id="datetimepicker6" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày học" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                </span>
+                                                            </div>
+                                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                            <script>
+                                                                $('#datetimepicker6').datetimepicker();
+                                                            </script>
+                                                        </div>
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Ngày kết thúc</label>
+                                                            <div class="input-group date pick-date" id="datetimepicker7" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày kết thúc" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                </span>
+                                                            </div>
+                                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                            <script>
+                                                                $('#datetimepicker7').datetimepicker();
+                                                            </script>
+                                                        </div>
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width pt5 text-left" style="border:none"><i class="fa fa-calendar"></i> Thời gian kết thúc</label>
+                                                            <div class="input-group date pick-date" id="datetimepicker8" style="border:none;    padding-top: 0px;padding-bottom: 0px;">
+                                                                <input class="width" data-val="true" name="NextTimeCheck" placeholder="Ngày học" type="text" ng-model="model.Key5" style="margin-left:-10px;width:132%;">
+                                                                <span class="input-group-addon" style="border:none;background-color:#f8f5f1">
+                                                                    <i class="fa fa-calendar" style="color:#db8099;margin-left:134%"></i>
+                                                                </span>
+                                                            </div>
+                                                            <!--<input type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ngày học" />-->
+                                                            <script>
+                                                                $('#datetimepicker8').datetimepicker();
+                                                            </script>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group" style="border:none">
+                                                            <label class="width1 pt5 text-left"><i class="glyphicon glyphicon-pencil"></i> Ghi chú</label>
+                                                            <textarea cols="9" type="text" class="width" ng-model="model.Id" name="Id" placeholder="Ghi chú" style="width: 76.7%;height: 164px;" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="framefoot " style="margin-bottom: 10px;margin-top: 10px;margin-left: 13.5%;">
+                                                        <div class="form-group pull-right" style="border:none">
+                                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:29px" ng-click="submitQTLV()"><i class="fa fa-floppy-o"></i> Lưu</button>
+                                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8;height:29px" ng-click="editQTLV()"><i class="fa fa-times"></i> Xoá bỏ</button>
+                                                            <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;background-color:#dbd3d3;   border: 1px solid #B8B8B8; height:29px" ng-click="submitQTLV()"><i class="fa fa-refresh"></i> Làm mới</button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <!--</div>-->
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,283 @@
+﻿<script type="text/javascript">
+
+    // var buttons = document.getElementsByClassName('tablinks');
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    // var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function () {
+            var id = this.name;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+
+            showContent(id);
+        });
+    }
+    showContent('phieuthu');
+
+
+    function readURL(input) {
+        //  $(this).parent().parent().parent().find('.form-control').html($(this).val());
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log('link: ' + e.target.result);
+                $('#picture')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<style type="text/css">
+    div.container {
+        width: 100%;
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+    /* định dạng thẻ div chưa các button tab */
+    div.tab {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+
+        /* định dạng các button tab */
+        div.tab button {
+            background: #a1ccf1;
+            float: left;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 8px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+
+            /* đổi màu khi một button tab được hover */
+            div.tab button:hover {
+                background-color: #296a27;
+            }
+
+    /* đổi màu nền cho tab đang được hiển thị nội dung */
+    button.tablinks.active {
+        background-color: #296a27;
+        color: white;
+    }
+
+    /* định dạng nội dung hiển thị */
+    .tabcontent {
+        display: none;
+        padding: 0px 0px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+
+<div class="modal-footer" id="modal-footer" style="margin-top:-16PX">
+    <div class="tab">
+        <button class="tablinks active" name="phieuthu">Phiếu thu</button>
+        <button class="tablinks" name="phieuchi">Phiếu chi</button>
+
+    </div>
+    <div id="phieuthu" class="tabcontent">
+        <div class="portlet-body">
+            <div class="table-toolbar">
+                <div class="row" style="padding-bottom: 5px;">
+
+                    <div class="col-md-12 pull-right" style="margin-top:0px;height:33px;margin-right:24px">
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> In sao kê</button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Đọc file</button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> In phiếu</button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="add()"><i class="fa fa-plus"></i> Tạo phiếu</button>
+
+                    </div>
+                </div>
+                <div class="row" style="    margin:10px">
+                    <!--<div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                        <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Thông tin tìm kiếm</h3>
+                    </div>-->
+                    <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                        <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Thông tin tìm kiếm</h3>
+                    </div>
+
+                    <div class="modal-body" id="modal-body" style="padding:0px;">
+                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                            <div class="row">
+                                <DIV class="portlet-body form">
+                                    <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions1">
+                                        <div class="form-body">
+                                            <div class=" col-md-4">
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Tên phiếu</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key1" name="Key1" placeholder="Tên phiếu" ng-change="reload()" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Mã phiếu</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key2" name="Key2" placeholder="Mã phiếu" ng-change="reload()" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Đối tượng</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key3" name="Key3" placeholder="Đối tượng" ng-change="reload()" />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class=" col-md-4">
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Học viên</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key4" name="Key4" placeholder="Học viên" ng-change="reload()" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Địa chỉ</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key5" name="Key5" placeholder="Địa chỉ" ng-change="reload()" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="border:none">
+                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver; width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Tìm kiếm</button>
+                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Huỷ tìm</button>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </form>
+                                </DIV>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <!--<div class=" col-md-12">-->
+                    <table class="table dataTable table-bordered table-hover table-striped"
+                           datatable
+                           dt-options="dtOptions"
+                           dt-columns="dtColumns"
+                           dt-instance="dtInstance"
+                           id="tblData" style="width:100%"></table>
+
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="phieuchi" class="tabcontent">
+        <div class="portlet-body">
+            <div class="table-toolbar">
+                <div class="row" style="padding-bottom: 5px;">
+
+                    <div class="col-md-12 pull-right" style="margin-top:0px;height:33px;margin-right:24px">
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> In sao kê</button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Đọc file</button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> In phiếu</button>
+                        <button type="submit" style="border-radius: 4px !important;border-color:silver; margin-top:5px;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="addChi()"><i class="fa fa-plus"></i> Tạo phiếu</button>
+
+                    </div>
+                </div>
+                <div class="row" style="    margin:10px">
+                    <!--<div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                        <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Thông tin tìm kiếm</h3>
+                    </div>-->
+                    <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                        <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Thông tin tìm kiếm</h3>
+                    </div>
+
+                    <div class="modal-body" id="modal-body" style="padding:0px;">
+                        <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                            <div class="row">
+                                <DIV class="portlet-body form">
+                                    <form name="editformTT" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                        <div class="form-body">
+                                            <div class=" col-md-4">
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Tên phiếu</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key6" name="Key6" placeholder="Tên phiếu" ng-change="reload1()" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Mã phiếu</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key7" name="Key7" placeholder="Mã phiếu" ng-change="reload1()" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Đối tượng</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key8" name="Key8" placeholder="Đối tượng" ng-change="reload1()" />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class=" col-md-4">
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Học viên</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key9" name="Key9" placeholder="Học viên" ng-change="reload1()" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="border:none">
+                                                    <label class="control-label col-md-5 text-left"><i class="glyphicon glyphicon-th-list"></i> Địa chỉ</label>
+                                                    <div class="col-md-7" style="border:none">
+                                                        <input type="text" class="form-control" ng-model="model.Key10" name="Key10" placeholder="Địa chỉ" ng-change="reload1()" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="border:none">
+                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver; width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Tìm kiếm</button>
+                                                    <button type="submit" style="border-radius: 4px !important;border-color:silver;width:100px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()"><i class="fa fa-plus"></i> Huỷ tìm</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </DIV>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <!--<div class=" col-md-12">-->
+                    <table class="table dataTable table-bordered table-hover table-striped"
+                           datatable
+                           dt-options="dtOptions1"
+                           dt-columns="dtColumns1"
+                           dt-instance="dtInstance1"
+                           id="tblData1" style="width:100%"></table>
+
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+</div>

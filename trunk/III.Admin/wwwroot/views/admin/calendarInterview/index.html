@@ -1,0 +1,86 @@
+﻿<div class="table-toolbar">
+    <div class="row">
+        <div class="col-lg-4 ">
+            <h1 class="bold mb-0">{{'CI_LBL_CALENDAR_INTERVIEW' | translate}}</h1>
+            <ul class="breadcrumb-title">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="#">{{'CI_LINK_HOME' | translate}}</a>
+                    <span>&gt;</span>
+                </li>
+                <li>
+                    <a href="/Admin/CalendarInterview">{{'CI_LINK_CALENDAR_INTERVIEW' | translate}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row pt10 mb15">
+        <div class="col-md-3">
+            <label>{{'CI_LBL_SEARCH_FROM_DATE' | translate}}</label>
+            <div class='input-group date'>
+                <input ng-model="model.FromDate" type='text' class="form-control" placeholder="{{'CI_TXT_SEARCH_FROM_DATE' | translate}}" id="datefrom" />
+                <span class="input-group-addon start-date" ng-click="model.FromDate = ''">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label>{{'CI_LBL_SEARCH_TO_DATE' | translate}}</label>
+            <div class='input-group date'>
+                <input ng-model="model.ToDate" type='text' class="form-control" placeholder="{{'CI_TXT_SEARCH_TO_DATE' | translate}}" id="dateto" />
+                <span class="input-group-addon end-date" ng-click="model.ToDate = ''">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-6" style="padding-top:24px">
+            <a ng-click="search()" class="btn btn-accent">
+                <i class="fa fa-search"></i>{{'COM_BTN_SEARCH' | translate}}
+            </a>
+            <a class="btn btn-red" id="btnShowInterview">
+                <i class="fa fa-plus"></i>{{'COM_BTN_ADD_CALENDAR' | translate}}
+            </a>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4 col-md-offset-4 text-center p10" id="register-interview" style="background-color: #f7f1e3; border-radius: 5px;">
+            <b>{{'CI_CURD_LBL_CANDIDATE_CODE' | translate}}</b>
+            <div class="col-md-12">
+                <div class="input-group">
+                    <ui-select tagging ng-model="interview.CandidateCode" theme="bootstrap">
+                        <ui-select-match placeholder="{{'CI_CURD_COMBO_CANDIDATE_CODE' | translate}}...">{{$select.selected.name}}</ui-select-match>
+                        <ui-select-choices repeat="x.code as x in CandidateCode | filter: $select.search">
+                            {{x.name}}
+                        </ui-select-choices>
+                    </ui-select>
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="interview.CandidateCode='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-12 mt5">
+                <div class='input-group'>
+                    <input placeholder="{{'CI_CURD_TXT_INTERVIEW_DATE' | translate}}" ng-model="interview.InterviewDate" type='text' class="form-control interview-date" />
+                    <span class="input-group-btn">
+                        <button type="button" ng-click="interview.InterviewDate='';" class="btn btn-default no-shadow end-date">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-12 mt5 text-right">
+                <button class="btn btn-red" ng-click="saveInterviewDate()">{{'COM_BTN_SAVE' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="index-calendar">
+    <div class="calendar-wrap">
+        <div id="calendar-interview"></div>
+    </div>
+</div>
+<script>
+    
+</script>

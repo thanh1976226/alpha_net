@@ -1,0 +1,134 @@
+﻿
+<div class="modal-header">
+    <span class="close icon-remove" style="margin:0 auto" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></span>
+    <h3 class="modal-title" id="modal-title" style="font-weight:bold"><i class="glyphicon glyphicon-plus" style="font-size: 15px;color: #e9edf0;padding-top:5px"></i> NGƯỜI THÂN HỌC TẠI SUMMIT</h3>
+</div>
+<div class="modal-body no-space" id="modal-body">
+
+    <div class="portlet-body">
+        <div class="table-toolbar">
+
+            <div class="row" style="    margin:10px">
+                <!--<div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title" id="modal-title" style="color:black; font-weight: bold;"> Thông tin tìm kiếm</h3>
+                </div>-->
+                <div class="modal-header" style="    background-color: #f7f4f4;border:1px solid #e9dada;">
+                    <h3 class="modal-title pull-left" id="modal-title" style="color:black; font-weight: bold;">Thông tin anh chị em đã học ở SUBMIT</h3>
+                </div>
+
+                <div class="modal-body" id="modal-body" style="padding:0px;">
+                    <div class="table-toolbar" style="background-color:#f8f5f1;border:1px solid #e9dada;">
+                        <div class="row">
+                            <DIV class="portlet-body form">
+                                <form name="addform" class="form-horizontal  form-bordered" method="post" ng-validate="validationOptions">
+                                    <div class="form-body">
+
+                                        <div class=" col-md-6">
+                                            <div class="form-group" style="border:none" ng-show="show">
+                                                <label class="control-label col-md-3 text-left"> <i class="glyphicon glyphicon-leaf"></i> Họ tên</label>
+                                                <div class="col-md-9 form-col-control" style=" border:none;">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12" style=" border:none">
+                                                            <ui-select ng-model="model.idstudentb" ng-change="loadQuanHe()" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Họ tên...">{{$select.selected.firstname}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataIdstudentb | filter:$select.firstname| filter:$select.search">
+                                                                    {{x.firstname}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none" ng-show="hide">
+                                                <label class="control-label col-md-3 text-left"> <i class="glyphicon glyphicon-leaf"></i> Họ tên</label>
+                                                <div class="col-md-9 form-col-control" style=" border:none;">
+                                                    <div class="bs-component" >
+                                                        <div class="input-group col-md-12" style=" border:none" >
+                                                            <ui-select ng-model="model.idstudentb"  ng-change="loadQuanHe()" class="" ui-select-required  >
+                                                                <ui-select-match placeholder="Họ tên..."  ng-disabled>{{$select.selected.firstname}}</ui-select-match>
+                                                                <ui-select-choices  repeat="x.id as x in treedataIdstudentb | filter:$select.firstname| filter:$select.search" >
+                                                                    {{x.firstname}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-3 text-left"> <i class="glyphicon glyphicon-leaf"></i> Cấp học</label>
+                                                <div class="col-md-9 form-col-control" style=" border:none;   ">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12" style=" border:none">
+                                                            <ui-select ng-model="model.idlevel" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Cấp học...">{{$select.selected.value}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataLevel | filter:$select.value| filter:$select.search">
+                                                                    {{x.value}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class=" col-md-6">
+
+                                            <div class="form-group" style="border:none">
+                                                <label class="control-label col-md-3 text-left"> <i class="glyphicon glyphicon-leaf"></i> Quan hệ</label>
+                                                <div class="col-md-9 form-col-control" style=" border:none; ">
+                                                    <div class="bs-component">
+                                                        <div class="input-group col-md-12" style=" border:none">
+                                                            <ui-select ng-model="model.idrelative" class="" ui-select-required>
+                                                                <ui-select-match placeholder="Quan hệ...">{{$select.selected.value}}</ui-select-match>
+                                                                <ui-select-choices repeat="x.id as x in treedataRelationship | filter:$select.value| filter:$select.search">
+                                                                    {{x.value}}
+                                                                </ui-select-choices>
+                                                            </ui-select>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group pull-right" style="border:none;    margin: 11px;">
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="submit()" ng-show="enableadd" ><i class="fa fa-plus"></i> Thêm mới</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver;width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="edit()" ng-show="enableedit"><i class="fa fa-plus"></i> Sửa đổi</button>
+                                                <button type="submit" style="border-radius: 4px !important;border-color:silver; width:89px;text-align:center;height:34px;background-color:#dbd3d3" ng-click="delete()" ng-show="enableedit"><i class="fa fa-plus"></i> Xoá bỏ</button>
+                                       
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+                            </DIV>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <!--<div class=" col-md-12">-->
+                <table class="table dataTable table-bordered table-hover table-striped"
+                       datatable
+                       dt-options="dtOptions"
+                       dt-columns="dtColumns"
+                       dt-instance="dtInstance"
+                       id="tblData" style="width:100%"></table>
+
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
